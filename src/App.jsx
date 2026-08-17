@@ -14,6 +14,7 @@ import Management from './components/Management';
 import History from './components/History';
 import ImageGallery from './components/ImageGallery';
 import Scholarship from './components/Scholarship';
+import Rules from './components/Rules';
 
 function AppLayout() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -44,6 +45,7 @@ function AppLayout() {
           <Route path="/history" element={<History />} />
           <Route path="/gallery" element={<ImageGallery />} />
           <Route path="/scholarships" element={<Scholarship />} />
+          <Route path="/rules" element={<Rules />} />
         </Routes>
       </main>
 

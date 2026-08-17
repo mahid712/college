@@ -1,0 +1,173 @@
+/* ================================================= */
+/* --- Rules & Regulations Page Specific Styles --- */
+/* ================================================= */
+
+.rules-page-wrapper {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.rules-page-main {
+  flex: 1;
+}
+
+/* Content Container Layout */
+.rules-content-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Intro Card */
+.rules-intro-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+  border-left: 5px solid #8B0000;
+  line-height: 1.8;
+
+  p {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.05rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* Rules Panel Cards */
+.rules-panel {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  border-top: 4px solid #8B0000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.rules-panel-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #8B0000;
+  margin-top: 0;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  i {
+    color: #008080;
+  }
+}
+
+/* Rules Lists */
+.rules-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: #555;
+    font-size: 1rem;
+
+    &::before {
+      content: "•";
+      color: #8B0000;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1.2rem;
+    }
+
+    strong {
+      color: #333;
+    }
+  }
+}
+
+/* Grid Layout for Dos and Don'ts */
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+
+  .rules-panel {
+    margin-bottom: 0;
+  }
+
+  .dos {
+    border-top-color: #28a745;
+    
+    .rules-panel-heading i {
+      color: #28a745;
+    }
+  }
+
+  .donts {
+    border-top-color: #dc3545;
+    
+    .rules-panel-heading i {
+      color: #dc3545;
+    }
+  }
+}
+
+/* Footer Action Button */
+.rules-footer-action {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+
+  .code-conduct-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+
+    i {
+      color: #8B0000;
+    }
+
+    &:hover {
+      background-color: #f0f0f5;
+      color: #8B0000;
+      border-color: #8B0000;
+    }
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .rules-content-section {
+    padding: 40px 15px;
+  }
+  
+  .rules-panel {
+    padding: 20px;
+  }
+}
