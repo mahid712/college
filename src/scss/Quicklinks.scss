@@ -1,0 +1,99 @@
+.info-section {
+  padding: 5rem 2rem;
+  background-color: #fafbfc;
+
+  &.alt-bg {
+    background-color: #f4f5f7;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: #555555;
+      font-style: italic;
+      margin-bottom: 3rem;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      text-align: left;
+
+      .feature-card {
+        background: #ffffff;
+        padding: 2.5rem 2rem;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        border-top: none; /* Removed the crimson top bar to match your exact layout */
+        border: 1px solid rgba(0, 0, 0, 0.04);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-icon {
+          font-size: 2.2rem;
+          margin-bottom: 1.25rem;
+        }
+
+        h3 {
+          font-size: 1.35rem;
+          font-weight: 700;
+          color: #1a1a1a;
+          margin-bottom: 0.75rem;
+        }
+
+        p {
+          font-size: 0.95rem;
+          color: #555555;
+          line-height: 1.6;
+          margin-bottom: 1.5rem;
+        }
+
+        .card-link {
+          font-size: 0.9rem;
+          font-weight: 700;
+          color: #8b0000;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .center-btn-container {
+      margin-top: 3rem;
+
+      .btn-dark-pill {
+        display: inline-block;
+        background-color: #333333;
+        color: #ffffff;
+        padding: 0.75rem 2rem;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: #1a1a1a;
+        }
+      }
+    }
+  }
+}

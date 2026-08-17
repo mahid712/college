@@ -1,0 +1,122 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 750px;
+  border-radius: 8px;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #999;
+    
+    &:hover {
+      color: #333;
+    }
+  }
+
+  h2 {
+    color: #8b0000;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .title-divider {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin-bottom: 1.5rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .modal-body {
+    text-align: left;
+    
+    .instruction-box {
+      border-left: 4px solid #008080;
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+      
+      h3 {
+        font-size: 1.2rem;
+        color: #333;
+      }
+    }
+
+    .intro-text {
+      color: #555;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      
+      li {
+        color: #555;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+      }
+    }
+
+    .footer-text {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 1.5rem;
+
+    .btn-proceed {
+      background-color: #8b0000;
+      color: #ffffff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: #660000;
+      }
+    }
+  }
+}

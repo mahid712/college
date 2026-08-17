@@ -1,0 +1,33 @@
+:root {
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: light dark;
+  color: #333333;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}

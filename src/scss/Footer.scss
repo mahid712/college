@@ -1,0 +1,115 @@
+.site-footer {
+  background-color: #1c1c1c;
+  color: #cccccc;
+  padding: 4rem 2rem 1rem;
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2.5rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #2e2e2e;
+
+    .footer-column {
+      h3, h4 {
+        color: #ffffff;
+        margin-bottom: 1.2rem;
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+        color: #ffffff;
+      }
+
+      p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 0.75rem;
+        color: #aaaaaa;
+
+        &.footer-highlight {
+          color: #ffffff;
+          font-weight: 600;
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          margin-bottom: 0.6rem;
+
+          a {
+            color: #aaaaaa;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+
+            &:hover {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        a {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 32px;
+          height: 32px;
+          background-color: #2e2e2e;
+          color: #ffffff;
+          border-radius: 4px;
+          text-decoration: none;
+          font-weight: bold;
+
+          &:hover {
+            background-color: #8b0000;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    font-size: 0.85rem;
+    color: #888888;
+
+    .bottom-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      .footer-links {
+        display: flex;
+        gap: 0.75rem;
+
+        a {
+          color: #888888;
+          text-decoration: none;
+
+          &:hover {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}

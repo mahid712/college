@@ -1,0 +1,177 @@
+/* --- Management & Governance Page Styles --- */
+.management-page-wrapper {
+  background-color: #f0f0f5;
+  color: #333333;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+
+  .management-page-main {
+    padding-bottom: 80px;
+
+    /* Header Banner */
+    .page-header-banner {
+      background-color: #f0f0f5;
+      padding: 60px 20px;
+      text-align: center;
+      
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        h1 {
+          font-size: 2.7rem;
+          font-weight: 800;
+          color: #8B0000;
+          margin-bottom: 10px;
+          line-height: 1.2;
+        }
+
+        p {
+          font-size: 1.1rem;
+          color: #8B0000;
+          font-weight: 500;
+          margin-bottom: 15px;
+        }
+
+        .breadcrumb {
+          font-size: 0.9rem;
+          color: #8B0000;
+
+          a {
+            color: #8B0000;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    /* Content Section */
+    .management-content-section {
+      max-width: 1000px;
+      margin: 40px auto 0;
+      padding: 0 20px;
+
+      .container {
+        width: 100%;
+        padding: 0;
+      }
+
+      /* Section Headings with Gold Underline (Matching Image) */
+      .section-heading {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: #003366; /* Deep Navy Blue */
+        margin-top: 50px;
+        margin-bottom: 20px;
+        display: inline-block;
+        position: relative;
+        padding-bottom: 6px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 3px;
+          background-color: #f39c12; /* Golden Yellow Line */
+        }
+      }
+
+      /* Reusable Content Cards */
+      .content-card {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 4px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+        border: 1px solid #eaeaea;
+        border-left: 5px solid #8B0000; /* Deep Red Left Accent */
+
+        p {
+          font-size: 0.98rem;
+          line-height: 1.7;
+          color: #444444;
+          margin-bottom: 20px;
+        }
+
+        .card-footer-text {
+          margin-top: 20px;
+          margin-bottom: 0;
+        }
+
+        /* List Styling matching table structure */
+        .content-list {
+          list-style: none;
+          padding: 0;
+          margin: 15px 0;
+          border: 1px solid #eeeeee;
+          border-radius: 4px;
+          background-color: #ffffff;
+
+          li {
+            padding: 13px 18px;
+            border-bottom: 1px solid #eeeeee;
+            font-size: 0.95rem;
+            color: #555555;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            strong {
+              color: #8B0000; /* Dark Red Name Color */
+              font-weight: 700;
+            }
+
+            span {
+              color: #666666;
+            }
+          }
+        }
+      }
+
+      /* Color Variations for Left Borders if needed */
+      .trust-block {
+        border-left-color: #8B0000;
+      }
+
+      .council-block {
+        border-left-color: #008080;
+      }
+
+      .college-council-block {
+        border-left-color: #333333;
+      }
+    }
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .management-page-wrapper {
+    .management-page-main {
+      .management-content-section {
+        .content-card {
+          padding: 20px;
+
+          .content-list {
+            li {
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

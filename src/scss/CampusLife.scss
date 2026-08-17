@@ -1,0 +1,147 @@
+/* ================================================= */
+/* --- Campus Life Page SCSS Component Styles --- */
+/* ================================================= */
+
+.campus-life-page {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+
+  /* Inner Hero Specifics */
+  .inner-hero {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+    color: #8B0000;
+
+    .hero-content {
+      margin: 0 auto;
+      text-align: center;
+      max-width: 900px;
+      padding: 20px;
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 900;
+        color: #8B0000;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+      }
+
+      p.red-text {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        color: #8B0000;
+      }
+
+      .breadcrumb {
+        font-size: 0.9rem;
+        color: #8B0000;
+        margin-top: 15px;
+        margin-bottom: 0;
+
+        a {
+          color: #8B0000;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+            color: #b22222;
+          }
+        }
+      }
+    }
+  }
+
+  /* Campus Features Section */
+  .campus-features {
+    padding: 60px 20px 80px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      font-size: 1.5rem;
+      color: #666;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    /* Grid layout matching the original structure */
+    .campus-features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 40px auto 0;
+      padding: 0 20px;
+
+      .pillar-card {
+        background-color: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s, box-shadow 0.3s;
+        text-align: left;
+        border-left: 5px solid #008080;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .pillar-icon {
+          font-size: 2.5rem;
+          color: #8B0000;
+          margin-bottom: 10px;
+          display: block;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-top: 0;
+          color: #333;
+        }
+
+        p {
+          color: #555;
+          line-height: 1.6;
+        }
+
+        .learn-more {
+          display: inline-block;
+          margin-top: 15px;
+          color: #8B0000;
+          text-decoration: none;
+          font-weight: 600;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 900px) {
+    .campus-features-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

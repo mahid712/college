@@ -1,0 +1,234 @@
+/* --- Image Gallery Specific Styles --- */
+.page-wrapper {
+  width: 100%;
+}
+
+.gallery-hero {
+  background-color: #f8f8f8;
+  padding: 80px 20px;
+  text-align: center;
+  color: #8B0000;
+
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  p.red-text {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #8B0000;
+  }
+
+  .breadcrumb {
+    font-size: 0.9rem;
+    color: #8B0000;
+    margin-top: 15px;
+
+    a {
+      color: #8B0000;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.gallery-section {
+  padding: 60px 0;
+  background-color: #f8f8f8;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .section-title {
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0b2545; /* Deep Navy Blue matching the screenshot */
+    position: relative;
+    padding-bottom: 12px;
+
+    /* Bottom accent line */
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #f39c12; /* Golden/Orange accent line */
+    }
+  }
+}
+
+.image-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  width: 100%;
+  margin: 0 auto;
+
+  .gallery-item {
+    position: relative;
+    padding-top: 100%; /* Perfect square aspect ratio */
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: white;
+    border: 3px solid transparent;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.3s;
+    }
+
+    &:hover {
+      transform: scale(1.03);
+      border: 3px solid #333;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+/* --- Modal / Lightbox Styles --- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  &.active {
+    display: flex;
+  }
+
+  .close {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 300;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 2010;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+      color: #ff0000;
+    }
+  }
+
+  .modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2005;
+
+    .modal-image {
+      width: 100%;
+      height: auto;
+      max-height: 75vh;
+      object-fit: contain;
+      display: block;
+      animation: zoom 0.4s ease;
+    }
+
+    #caption {
+      width: 100%;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      font-size: 1.1rem;
+      background-color: rgba(0, 0, 0, 0.4);
+      margin-top: 10px;
+    }
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    padding: 20px 25px;
+    margin-top: -30px;
+    color: white;
+    font-weight: 900;
+    font-size: 30px;
+    transition: 0.3s ease;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2006;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+  }
+
+  .prev {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+  }
+
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+@keyframes zoom {
+  from { transform: scale(0.1); }
+  to { transform: scale(1); }
+}
+
+/* --- Responsive Breakpoints --- */
+@media (max-width: 900px) {
+  .image-gallery-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .image-gallery-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .image-gallery-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}

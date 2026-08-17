@@ -1,0 +1,246 @@
+// File: src/styles/research.scss
+
+$primary-color: #004080;
+$text-color: #333;
+$bg-light: #f9f9f9;
+$border-color: #e0e0e0;
+
+.research-page {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: $text-color;
+    background-color: #fff;
+
+    main {
+        display: block;
+    }
+
+    .inner-hero {
+        background-color: #f8f9fa;
+        color: #fff;
+        padding: 80px 20px;
+        text-align: center;
+        .hero-title {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #8b0000;
+      margin-bottom: 0.5rem;
+    }
+    .hero-subtitle {
+      color: #777777;
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
+    
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 15px;
+                font-weight: 900;
+            }
+
+            p {
+                font-size: 1.1rem;
+                margin-bottom: 20px;
+            }
+
+            .breadcrumb {
+                font-size: 0.9rem;
+                color: #ddd;
+
+                  a {
+        color: #8b0000;
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      span {
+        color: #555555;
+      }
+            }
+        }
+    }
+
+    .quality-overview {
+        padding: 60px 20px;
+        background-color: $bg-light;
+
+        .overview-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+
+            .quality-block {
+                background: #fff;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+                border-top: 4px solid $primary-color;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .section-title-small {
+                    font-size: 1.25rem;
+                    color: $primary-color;
+                    margin-bottom: 15px;
+                    font-weight: 700;
+                }
+
+                .naac-grade {
+                    display: inline-block;
+                    background-color: #e6f0fa;
+                    color: $primary-color;
+                    padding: 6px 12px;
+                    border-radius: 4px;
+                    font-weight: 700;
+                    font-size: 0.9rem;
+                    margin-bottom: 15px;
+                    width: fit-content;
+                }
+
+                p {
+                    font-size: 0.95rem;
+                    line-height: 1.6;
+                    color: #555;
+                    margin-bottom: 20px;
+
+                    strong {
+                        color: $text-color;
+                    }
+                }
+
+                .details-link {
+                    color: $primary-color;
+                    text-decoration: none;
+                    font-weight: 700;
+                    font-size: 0.9rem;
+                    margin-top: auto;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .research-cell-section, .documentation-section {
+        padding: 60px 20px;
+        background-color: #f8f9fa;
+        
+        .content-container {
+            max-width: 1000px;
+            margin: 0 auto;
+
+            .section-title {
+                font-size: 1.8rem;
+                color: $primary-color;
+                margin-top: 40px;
+                margin-bottom: 20px;
+                font-weight: 700;
+
+                &:first-of-type {
+                    margin-top: 0;
+                }
+            }
+
+            .section-subtitle {
+                font-size: 1.1rem;
+                color: #666;
+                margin-bottom: 30px;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.8;
+                color: #444;
+                margin-bottom: 20px;
+
+                strong {
+                    color: $text-color;
+                }
+            }
+
+            ul {
+                margin-bottom: 30px;
+                padding-left: 20px;
+
+                li {
+                    font-size: 1rem;
+                    line-height: 1.6;
+                    color: #444;
+                    margin-bottom: 10px;
+
+                    strong {
+                        color: $text-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .documentation-section {
+        background-color: $bg-light;
+
+        .docs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+
+            .doc-card {
+                background: #fff;
+                padding: 25px;
+                border-radius: 8px;
+                border: 1px solid $border-color;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .doc-icon {
+                    font-size: 2rem;
+                    color: $primary-color;
+                    margin-bottom: 15px;
+                }
+
+                h3 {
+                    font-size: 1.1rem;
+                    margin-bottom: 8px;
+                    color: $text-color;
+                }
+
+                p {
+                    font-size: 0.9rem;
+                    color: #666;
+                    margin-bottom: 20px;
+                }
+
+                .download-link {
+                    background-color: $primary-color;
+                    color: #fff;
+                    padding: 8px 16px;
+                    border-radius: 4px;
+                    text-decoration: none;
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    transition: background-color 0.2s;
+
+                    &:hover {
+                        background-color: darken($primary-color, 10%);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,137 @@
+// Principal Page Styles
+.principal-page {
+  .principal-hero {
+    background: #f9f9f9;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+
+      .hero-title {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #8b0000;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-subtitle {
+      color: #777777;
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
+
+
+      .breadcrumb {
+        font-size: 0.9rem;
+       a {
+          color: #8B0000;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+            color: #b22222;
+          }
+          
+        }
+        span {
+        color: #161616;
+      }
+      }
+    }
+  }
+
+  .principal-profile-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      .section-title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 40px;
+        color: #1a1a1a;
+      }
+
+      .principal-card {
+        display: flex;
+        flex-wrap: wrap;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        gap: 30px;
+        padding: 40px;
+
+        @media (max-width: 768px) {
+          flex-direction: column;
+          padding: 20px;
+        }
+
+        .principal-photo-block {
+          flex: 1;
+          min-width: 250px;
+          text-align: center;
+
+          .principal-photo {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            border-radius: 6px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+          }
+
+          h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+          }
+
+          .designation {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 15px;
+          }
+
+          .contact-link {
+            display: inline-block;
+            color: #e53935;
+            text-decoration: none;
+            font-weight: 600;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .principal-message-block {
+          flex: 2;
+          min-width: 300px;
+
+          p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1rem;
+            color: #444;
+            line-height: 1.6;
+          }
+
+          .signature-line {
+            margin-top: 30px;
+            font-weight: 600;
+            color: #222;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
