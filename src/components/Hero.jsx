@@ -9,7 +9,7 @@ const Hero = () => {
           <h1>A Legacy of Excellence<br />Since 1949.</h1>
           <p className="hero-quote">From virtue springs knowledge - Bhagavadgeetha.</p>
           <div className="badge-naac">
-            Accredited by NAAC with 'A+' Grade
+            Accredited by NAAC with 'A+' Grade 
           </div>
         </div>
       </div>
