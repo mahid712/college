@@ -165,7 +165,7 @@ function Academics() {
 
       {/* Ready to Start Your Journey Section */}
       <section className="journey-cta-section">
-        <h3>Ready to Start Your Journey?</h3>
+        <h3>Ready to Start Your Journey?in mgm</h3>
         <p>View admission deadlines and apply online for the upcoming academic year.</p>
         <div className="cta-actions">
           <button className="maroon-btn">Admission Details</button>
