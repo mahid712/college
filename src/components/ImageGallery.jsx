@@ -93,11 +93,11 @@ export default function ImageGallery() {
           <a className="prev" onClick={prevImage}>&#10094;</a>
           <a className="next" onClick={nextImage}>&#10095;</a>
 
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+         <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <img
               className="modal-image"
               id="modalImage"
-              src={`/src/assets/pics/IMG_${currentIndex}.png`}
+              src={`${import.meta.env.BASE_URL}pics/IMG_${currentIndex}.png`}
               alt={`Image ${currentIndex}`}
             />
             <div id="caption">Image {currentIndex} of {TOTAL_IMAGES}</div>
