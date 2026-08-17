@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/college/', // Must match your repository name exactly
+  base: '/', // Must match your repository name exactly
 })
