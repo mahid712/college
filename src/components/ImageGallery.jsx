@@ -7,12 +7,11 @@ export default function ImageGallery() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(1);
 
-  // Generate image data list
+  // Generate image data list safely resolving via BASE_URL
   const images = Array.from({ length: TOTAL_IMAGES }, (_, i) => {
     const index = i + 1;
     return {
       id: index,
-      // Use BASE_URL so it automatically resolves to /college/pics/IMG_X.png on GitHub Pages
       src: `${import.meta.env.BASE_URL}pics/IMG_${index}.png`,
       alt: `Image ${index} of ${TOTAL_IMAGES}`
     };
@@ -53,7 +52,6 @@ export default function ImageGallery() {
 
   return (
     <div className="page-wrapper">
-      {/* Navbar and Footer are rendered globally in App.jsx */}
       <main>
         {/* Hero Section */}
         <section className="inner-hero gallery-hero">
@@ -93,14 +91,14 @@ export default function ImageGallery() {
           <a className="prev" onClick={prevImage}>&#10094;</a>
           <a className="next" onClick={nextImage}>&#10095;</a>
 
-         <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <img
               className="modal-image"
               id="modalImage"
               src={`${import.meta.env.BASE_URL}pics/IMG_${currentIndex}.png`}
               alt={`Image ${currentIndex}`}
             />
-            <div id="caption">Images {currentIndex} of {TOTAL_IMAGES}</div>
+            <div id="caption">Image {currentIndex} of {TOTAL_IMAGES}</div>
           </div>
         </div>
       )}
