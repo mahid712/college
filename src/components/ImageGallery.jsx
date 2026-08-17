@@ -100,7 +100,7 @@ export default function ImageGallery() {
               src={`${import.meta.env.BASE_URL}pics/IMG_${currentIndex}.png`}
               alt={`Image ${currentIndex}`}
             />
-            <div id="caption">Image {currentIndex} of {TOTAL_IMAGES}</div>
+            <div id="caption">Images {currentIndex} of {TOTAL_IMAGES}</div>
           </div>
         </div>
       )}
