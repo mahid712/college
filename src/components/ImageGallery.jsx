@@ -12,7 +12,8 @@ export default function ImageGallery() {
     const index = i + 1;
     return {
       id: index,
-      src: `/src/assets/pics/IMG_${index}.png`,
+      // Use BASE_URL so it automatically resolves to /college/pics/IMG_X.png on GitHub Pages
+      src: `${import.meta.env.BASE_URL}pics/IMG_${index}.png`,
       alt: `Image ${index} of ${TOTAL_IMAGES}`
     };
   });
