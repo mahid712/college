@@ -1,5 +1,5 @@
 import React from 'react';
-import '../scss/QuickLinks.scss';
+import '../scss/Quicklinks.scss';
 
 const QuickLinks = ({ openModal }) => {
   return (
