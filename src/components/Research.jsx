@@ -24,26 +24,26 @@ export default function Research() {
                             <h2 className="section-title-small">NAAC Accreditation</h2>
                             <span className="naac-grade">A+ Grade (3.36 CGPA)</span>
                             <p>MGM College is proud to be accredited by the <strong>National Assessment and Accreditation Council (NAAC)</strong>, validating our commitment to high educational standards.</p>
-                            <a href="/NAAC" className="details-link">View Latest SSR Report &rarr;</a>
+                            <Link to="/NAAC" className="details-link">View Latest SSR Report &rarr;</Link>
                         </div>
 
                         <div className="quality-block iqac-block">
                             <h2 className="section-title-small">Internal Quality Assurance Cell (IQAC)</h2>
                             <p>The <strong>IQAC</strong> drives continuous improvement across all administrative and academic activities, ensuring stakeholder satisfaction and systemic efficiency.</p>
-                            <a href="/IQAC" className="details-link">Meet the IQAC Team &rarr;</a>
+                            <Link to="/IQAC" className="details-link">Meet the IQAC Team &rarr;</Link>
                         </div>
 
                         <div className="quality-block rank-block">
                             <h2 className="section-title-small">University Rank List</h2>
                             <p>MGM Udupi consistently produces top-tier academic achievers. Explore our students' success stories and university-level rankings across various streams.</p>
-                            <a href="/ranklist" className="details-link">View Rank Holders &rarr;</a>
+                            <Link to="/ranklist" className="details-link">View Rank Holders &rarr;</Link>
                         </div>
 
                         <div className="quality-block rank-block">
                             <h2 className="section-title-small">AICTE Approval</h2>
                             <span className="naac-grade">Approved Institution</span>
                             <p>MGM College is duly approved by the <strong>All India Council for Technical Education (AICTE)</strong>, ensuring high standards in technical education and professional development.</p>
-                            <a href="/aicte" className="details-link">View Approval Documents &rarr;</a>
+                            <Link to="/aicte" className="details-link">View Approval Documents &rarr;</Link>
                         </div>
                     </div>
                 </section>
@@ -84,7 +84,7 @@ export default function Research() {
                                 <i className="doc-icon fas fa-file-alt"></i>
                                 <h3>Annual Quality Assurance Report (AQAR)</h3>
                                 <p>Year: 2023-24</p>
-                                <a href="/pdf/IQAC 2023-24.pdf" className="download-link" target="_blank" rel="noopener noreferrer">Download PDF</a>
+                                <a href={"/pdf/IQAC 2023-24.pdf"} className="download-link" target="_blank" rel="noopener noreferrer">Download PDF</a>
                             </div>
                         </div>
                     </div>

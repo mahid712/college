@@ -12,7 +12,7 @@ const History = () => {
             <h1>Our Legacy: The History of MGM</h1>
             <p className="red-text">A tradition of pioneering education since 1949.</p>
             <div className="breadcrumb">
-              <a href="/">Home</a> / History
+              <Link to="/">Home</Link> / History
             </div>
           </div>
         </div>

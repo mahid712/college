@@ -59,7 +59,7 @@ export default function ImageGallery() {
             <h1>Image Gallery</h1>
             <p className="red-text">A visual journey through the campus, events, and cultural heritage of MGM.</p>
             <div className="breadcrumb">
-              <a href="/">Home</a> / Image Gallery
+              <Link to="/">Home</Link> / Image Gallery
             </div>
           </div>
         </section>

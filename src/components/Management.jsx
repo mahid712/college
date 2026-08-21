@@ -12,7 +12,7 @@ export default function Management() {
             <h1>College Management & Governance</h1>
             <p>Structure and leadership guiding the institution toward its goals.</p>
             <div className="breadcrumb">
-              <a href="/">Home</a> / Management
+              <Link to="/">Home</Link> / Management
             </div>
           </div>
         </section>
