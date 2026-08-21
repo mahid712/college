@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import princiImg from '../assets/mgm-pic/princi.png'; // 1. Import the image at the top
 
 import '../scss/Principal.scss';
 
@@ -25,10 +26,10 @@ export default function Principal() {
                         <div className="principal-card">
                             <div className="principal-photo-block">
                                 <img 
-  src={`${import.meta.env.BASE_URL}mgm-pic/princi.png`} 
-  alt="Photo of Prof. Vanitha Maiya" 
-  className="principal-photo" 
-/>
+                                    src={princiImg} /* 2. Use the imported variable here */
+                                    alt="Photo of Prof. Vanitha Maiya" 
+                                    className="principal-photo" 
+                                />
                                 <h3>Prof. Vanitha Maiya</h3>
                                 <p className="designation">Principal, MGM College, Udupi</p>
                                 <Link to="/contact" className="contact-link">📧 Contact Principal</Link>
