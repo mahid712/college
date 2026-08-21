@@ -1,5 +1,5 @@
 // src/App.jsx
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -61,12 +61,10 @@ function AppLayout() {
 }
 
 function App() {
-  const basename = import.meta.env.PROD ? '/college' : undefined;
-
   return (
-    <BrowserRouter basename={basename}>
+    <HashRouter>
       <AppLayout />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
