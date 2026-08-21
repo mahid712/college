@@ -1,6 +1,6 @@
 // src/App.jsx
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import QuickLinks from './components/Quicklinks';
