@@ -1,5 +1,5 @@
 // src/App.jsx
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -30,7 +30,7 @@ function AppLayout() {
       
       <main style={{ flex: '1' }}>
         <Routes>
-          <Route path="/" element={
+          <Route path="/college" element={
             <>
               <Hero />
               <QuickLinks openModal={() => setIsModalOpen(true)} />
@@ -56,7 +56,7 @@ function AppLayout() {
 
 function App() {
   return (
-    <BrowserRouter basename="/college">
+    <BrowserRouter>
       <AppLayout />
     </BrowserRouter>
   );
