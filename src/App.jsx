@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import QuickLinks from './components/QuickLinks';
+import QuickLinks from './components/Quicklinks';
 import Footer from './components/Footer';
 import Academics from './components/Academics';
 import Research from './components/Research';
@@ -56,7 +56,7 @@ function AppLayout() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/college">
       <AppLayout />
     </BrowserRouter>
   );
