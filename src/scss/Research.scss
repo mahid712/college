@@ -1,5 +1,6 @@
 // File: src/styles/research.scss
 @use 'sass:color';
+
 $primary-color: #004080;
 $text-color: #333;
 $bg-light: #f9f9f9;
@@ -237,7 +238,7 @@ $border-color: #e0e0e0;
                     transition: background-color 0.2s;
 
                     &:hover {
-                        background-color: darken($primary-color, 10%);
+                        background-color: color.adjust($primary-color, $lightness:10%);
                     }
                 }
             }
