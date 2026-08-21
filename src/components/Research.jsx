@@ -13,7 +13,7 @@ export default function Research() {
                         <h1 className='hero-title'>Quality Assurance & Research</h1>
                         <p className='hero-subtitle'>Upholding academic excellence through rigorous quality checks and pioneering research initiatives.</p>
                         <div className="breadcrumb">
-                            <a href="/">Home</a> <span>/ Research & Quality</span>
+                            <Link to="/">Home</Link> <span>/ Research & Quality</span>
                         </div>
                     </div>
                 </section>

@@ -30,6 +30,12 @@ function AppLayout() {
       
       <main style={{ flex: '1' }}>
         <Routes>
+          <Route path="/" element={
+            <>
+              <Hero />
+              <QuickLinks openModal={() => setIsModalOpen(true)} />
+            </>
+          } />
           <Route path="/college" element={
             <>
               <Hero />
@@ -55,8 +61,10 @@ function AppLayout() {
 }
 
 function App() {
+  const basename = import.meta.env.PROD ? '/college' : undefined;
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <AppLayout />
     </BrowserRouter>
   );
