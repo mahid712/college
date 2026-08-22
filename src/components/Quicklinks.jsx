@@ -15,7 +15,7 @@ const QuickLinks = ({ openModal }) => {
               <div className="card-icon">🎓</div>
               <h3>Academic Excellence</h3>
               <p>Recognized for high ranks, quality research, and an A+ NAAC Grade. Our faculty are devoted to scholarly achievement.</p>
-              <a href="#academics" className="card-link">Explore Academics →</a>
+              <a href="#research" className="card-link">Explore Academics →</a>
             </div>
 
             <div className="feature-card">

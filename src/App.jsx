@@ -1,6 +1,6 @@
 // src/App.jsx
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import QuickLinks from './components/Quicklinks';
@@ -20,6 +20,10 @@ function AppLayout() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const location = useLocation();
   const isScholarshipPage = location.pathname === '/scholarships';
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <div className="app-container" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
