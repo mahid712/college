@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Faculty Profile - Dr. M. Vishwanatha Pai</title>
+    <link rel="stylesheet" href="../styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #002347;
+            --accent: #b8860b;
+            --bezier-slow: cubic-bezier(0.7, 0, 0.3, 1); 
+        }
+
+        body { 
+            background-color: #f4f7fa; 
+            font-family: 'Montserrat', sans-serif; 
+            margin: 0; 
+        }
+
+        /* Adjusting layout for header compatibility */
+        .page-layout {
+            display: flex;
+            gap: 50px;
+            max-width: 1200px;
+            width: 92%;
+            margin: 40px auto 80px auto; /* Reduced top margin since header is present */
+            align-items: flex-start;
+        }
+
+        /* --- LEFT SIDE: FLOATING CARD --- */
+        .profile-sidebar-card {
+            flex: 0 0 350px;
+            background: white;
+            padding: 50px 30px;
+            border-radius: 30px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.06);
+            text-align: center;
+            position: sticky;
+            top: 100px; /* Adjusted so it doesn't hide behind the header when scrolling */
+            border-top: 12px solid var(--primary);
+        }
+
+        .profile-img {
+            width: 240px;
+            height: 240px;
+            border-radius: 25px;
+            object-fit: cover;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .profile-sidebar-card h1 { font-size: 1.8rem; color: var(--primary); margin: 0; font-weight: 800; }
+        .role-tag { color: var(--accent); font-weight: 700; display: block; margin: 12px 0 30px 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .contact-box { text-align: left; background: #fdfdfd; padding: 25px; border-radius: 20px; border: 1px solid #f0f0f0; }
+        .contact-box p { margin: 15px 0; font-size: 0.95rem; color: #444; display: flex; align-items: center; gap: 12px; }
+        .contact-box i { color: var(--accent); font-size: 1.1rem; }
+
+        /* --- RIGHT SIDE: CONTENT AREA --- */
+        .content-area {
+            flex: 1;
+            background: white;
+            padding: 60px;
+            border-radius: 30px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.06);
+        }
+
+        .back-btn { color: var(--primary); text-decoration: none; font-weight: 700; margin-bottom: 40px; display: inline-block; font-size: 1rem; opacity: 0.6; transition: 0.3s; }
+        .back-btn:hover { opacity: 1; color: var(--accent); }
+
+        .portfolio-title { color: var(--primary); font-size: 2.2rem; margin: 0 0 45px 0; font-weight: 800; border-left: 6px solid var(--accent); padding-left: 20px; }
+
+        /* --- SLOW SYNCHRONIZED ACCORDION --- */
+        .acc-item { border-bottom: 1px solid #f0f0f0; }
+
+        .acc-trigger {
+            width: 100%;
+            padding: 30px 0;
+            background: none;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .acc-trigger span { font-size: 1.3rem; font-weight: 700; color: var(--primary); transition: color 0.6s var(--bezier-slow); }
+        .acc-trigger i { transition: transform 0.8s var(--bezier-slow), color 0.6s var(--bezier-slow); color: #ddd; font-size: 1.1rem; }
+
+        .acc-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s var(--bezier-slow), opacity 0.6s var(--bezier-slow);
+            opacity: 0;
+        }
+
+        .acc-content { padding: 0 0 35px 0; line-height: 1.9; color: #555; font-size: 1.15rem; }
+
+        /* Active State */
+        .acc-item.is-active .acc-panel { max-height: 2500px; opacity: 1; }
+        .acc-item.is-active .acc-trigger span { color: var(--accent); }
+        .acc-item.is-active .acc-trigger i { transform: rotate(180deg); color: var(--accent); }
+
+        @media (max-width: 950px) {
+            .page-layout { flex-direction: column; margin: 40px auto; }
+            .profile-sidebar-card { width: 100%; position: static; }
+        }
+        /* Styling for tables inside the accordion */
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 1rem;
+    background: #fff;
+}
+
+.profile-table th {
+    background-color: #f8f9fa;
+    color: var(--primary);
+    text-align: left;
+    padding: 12px;
+    border-bottom: 2px solid var(--accent);
+    font-weight: 700;
+}
+
+.profile-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.profile-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Responsive table for mobile */
+@media (max-width: 600px) {
+    .profile-table {
+        font-size: 0.9rem;
+    }
+    .profile-table th, .profile-table td {
+        padding: 8px;
+    }
+}
+/* Styling for lists inside the accordion */
+.profile-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* Adds a small gold square bullet to match your accent color */
+.profile-list li::before {
+    content: "■";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    font-size: 0.8rem;
+    top: 14px;
+}
+
+.profile-list li:last-child {
+    border-bottom: none;
+}
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">MGM Udupi</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../academics.html">Academics</a></li>
+                    <li><a href="../research.html">Research & Quality</a></li>
+                    <li><a href="../campus_life.html">Campus Life</a></li>
+                    <li class="dropdown">
+                        <a class="dropbtn">About MGM</a>
+                        <div class="dropdown-content">
+                            <a href="../vision.html">Vision & Mission</a>
+                            <a href="../principal.html">Principal</a>
+                            <a href="../management.html">Management</a>
+                            <a href="../history.html">History</a>
+                            <a href="../image_gallery.html">Image Gallery</a>
+                            <a href="../scholarships.html">Scholarships</a>
+                            <a href="../pdf/mgm-ghandi.pdf">Gandhian Study Centre</a>
+                        </div>
+                    </li>
+                    <li><a href="../contact.html">Contact Us</a></li> 
+                </ul>
+            </nav>
+            <a href="#" class="nav-cta-button open-modal">Apply Now</a> 
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+        </div>
+    </header>
+
+    <div class="page-layout">
+        <aside class="profile-sidebar-card">
+            <img src="../mgm-pic/vp.png" alt="Dr. M. Vishwanatha Pai" class="profile-img">
+            <h1>Dr. Vishwanatha Pai M.a</h1>
+            <span class="role-tag">Vice Principal</span>
+            
+            <div class="contact-box">
+                <p><i class="fas fa-envelope"></i> vish_pai@yahoo.com</p>
+                <p><i class="fas fa-envelope"></i> m.vishwanath.pai@gmail.com</p>
+                <p><i class="fas fa-university"></i> Dept. of Commerce</p>
+                <p><i class="fas fa-phone"></i> +91 0820 2520359</p>
+            </div>
+        </aside>
+
+        <main class="content-area">
+            <a href="../department.html" class="back-btn"><i class="fas fa-chevron-left"></i> BACK TO DIRECTORY</a>
+            <h2 class="portfolio-title">Academic Portfolio</h2>
+
+            <div class="accordion">
+               <div class="acc-item">
+    <button class="acc-trigger" onclick="toggleItem(this)">
+        <span>Education / Qualification</span> <i class="fas fa-plus"></i>
+    </button>
+<div class="acc-panel">
+    <div class="acc-content">
+        <table class="profile-table">
+            <thead>
+                <tr>
+                    <th>Qualification</th>
+                    <th>Institute</th>
+                    <th>Marks</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>B.E.(Comp. Science)</td>
+                    <td>National Institute of Engineering, University of Mysore, Mysore, India</td>
+                    <td>69.67%</td>
+                    <td>1988</td>
+                </tr>
+                <tr>
+                    <td>M.Sc.-Information Technology</td>
+                    <td>Sikkim Manipal University, Sikkim, India</td>
+                    <td>60.72%</td>
+                    <td>2004</td>
+                </tr>
+                <tr>
+                    <td>MPhil-Computer Science</td>
+                    <td>Annamalai University, Tamilnadu, India</td>
+                    <td>66.6%</td>
+                    <td>2008</td>
+                </tr>
+                <tr>
+                    <td>Ph.D. Factors Influencing Innovation :An Empirical Study in Information Technology Sector (Developed an innovation index for IT sector)</td>
+                    <td>Manipal Academy of Higher Education, Manipal, Karnataka, India.</td>
+                    <td>---</td>
+                    <td>2019</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+<div class="acc-item">
+    <button class="acc-trigger" onclick="toggleItem(this)">
+        <span>Experience</span> <i class="fas fa-plus"></i>
+    </button>
+    <div class="acc-panel">
+        <div class="acc-content">
+            <h4 style="color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; margin-bottom: 15px;">Brief Summary of Work Experience</h4>
+            <p><strong>Total Work Experience : 29 Years</strong></p>
+            <table class="profile-table" style="margin-bottom: 30px;">
+                <tbody>
+                    <tr>
+                        <td style="width: 100px;">12 Years</td>
+                        <td>In the Industry in R&D, Entrepreneur, Consultant</td>
+                    </tr>
+                    <tr>
+                        <td>18 Years</td>
+                        <td>Head of the Department (UG & PG) Computer Science, Mahatma Gandhi Memorial College, Udupi-Manipal, India</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 style="color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; margin-bottom: 15px;">International Assignment</h4>
+            <table class="profile-table" style="margin-bottom: 30px;">
+                <thead>
+                    <tr>
+                        <th>Duration</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>70 Days</td><td>Taught the MSc.-IT students at Build Bright University, Phnom Penh, Cambodia. (July to September 2007)</td></tr>
+                    <tr><td>70 Days</td><td>Taught the MSc.-IT students at Build Bright University, Phnom Penh, Cambodia (June to August 2008)</td></tr>
+                    <tr><td>30 Days</td><td>Taught the MSc.-IT MSc-TT students at Build Bright University, Phnom Penh, Cambodia (August to September 2009)</td></tr>
+                    <tr><td>25 Days</td><td>Taught the MSc.-IT MSc-TT students at Build Bright University, Phnom Penh, Cambodia (July 2nd to July28th 2010)</td></tr>
+                    <tr><td>3 Days</td><td>Visited Hochi Minh,Vietnam to study the opportunity for IT Industry from 23rd July to 25th July 2010.</td></tr>
+                    <tr><td>18 Days</td><td>Taught the MSc.-IT MSc-TT students at Build Bright University, Phnom Penh, Cambodia (Feb. 4th to Feb 21st 2011)</td></tr>
+                    <tr><td>3 Days</td><td>Attended a meeting on IT Industries and IT Education in Build Bright University, Phnom Penh, Cambodia -July 29thto July 31st 2011</td></tr>
+                    <tr><td>22 Days</td><td>Taught the MSc.-IT students at Build Bright University, Phnom Penh, Cambodia (Nov. 6th to Nov. 27th 2011)</td></tr>
+                    <tr><td>26 Days</td><td>Taught the MSc.-IT students at Build Bright University, Phnom Penh, Cambodia (Aug. 4th to Aug. 28th 2012)</td></tr>
+                </tbody>
+            </table>
+
+            <h4 style="color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; margin-bottom: 15px;">Publication</h4>
+            <ul class="profile-list" style="margin-bottom: 30px;">
+                <li><strong>12 Books:</strong> On Various IT topics and on travel</li>
+                <li><strong>9 Papers:</strong> 5 International and 4 National</li>
+            </ul>
+
+            <h4 style="color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; margin-bottom: 15px;">Research</h4>
+            <p><strong>Minor Research Project</strong></p>
+            <ul class="profile-list" style="margin-bottom: 30px;">
+                <li>Funded by University Grants Commission- On security of Wireless LAN (Completed)</li>
+                <li>Funded by University Grants Commission- On security issues of Data in E-Commerce Transactions. (On going)</li>
+            </ul>
+
+            <h4 style="color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; margin-bottom: 15px;">Visiting Faculty</h4>
+            <p><strong>To Many Institutions:</strong> Build Bright University, Phnom Penh, Cambodia, Sikkim Manipal University, Karnataka State Open University, Rajiv Gandhi College of Management etc.</p>
+
+            <h4 style="color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; margin-bottom: 15px;">Empanelment</h4>
+            <p><strong>At IRQS and many other organizations:</strong> As an Industry Expert for ISO certification programs and many others</p>
+
+            <h4 style="color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; margin-bottom: 15px;">Consultancy</h4>
+            <table class="profile-table">
+                <thead>
+                    <tr>
+                        <th>Role</th>
+                        <th>Organization</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Business Development& Technical Consultant</td>
+                        <td>Invenger Technologies-California-US-Mangalore-Bangalore <br> www.lessons2all.com, Bangalore-Udupi</td>
+                    </tr>
+                    <tr>
+                        <td>Technical Advisor & Consultant</td>
+                        <td>Lcode Technologies Pvt. Ltd., Chennai-Mangalore <br> Mangalore Technologies & Services Pvt. Ltd, Mangalore</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h4 style="color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; margin-top: 25px; margin-bottom: 15px;">Work Experience Details - International Assignment</h4>
+            <p>Taught to the students of MSc_IT, and MSc. TT at the Sikkim Manipal University study center of Build Bright University, Phnom Penh, Cambodia.</p>
+            
+            <p><strong>Subjects taught are</strong></p>
+            <ul class="profile-list" style="margin-bottom: 20px;">
+                <li>VB.net</li>
+                <li>Computer Organization and architecture</li>
+                <li>Java</li>
+                <li>Software Engineering</li>
+                <li>Client Server architecture</li>
+                <li>Java Beans</li>
+                <li>Wireless Communication</li>
+                <li>WML</li>
+                <li>C++</li>
+            </ul>
+
+            <p><strong>Projects:</strong> Advisor for 9 students of 4th semester for their final projects</p>
+            <h4 style="color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; margin-top: 30px; margin-bottom: 15px;">Work Experience (26 Years Breakup)</h4>
+            <table class="profile-table" style="margin-bottom: 30px;">
+                <thead>
+                    <tr>
+                        <th style="width: 150px;">Duration</th>
+                        <th>Experience & Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>6 Months</td>
+                        <td>As Lecturer in the Department of Computer Science in Nitte Mahalinga Adyanthaya Memorial Engineering College, Nitte, D.K., Karnataka.</td>
+                    </tr>
+                    <tr>
+                        <td>36 Months</td>
+                        <td>
+                            As Software Engineer in R&D of Pycom Data Systems and ESCCO at Mumbai, Maharastra.<br>
+                            <strong>Projects carried out during this period:</strong>
+                            <ul class="profile-list">
+                                <li>Developed communication software in 'C' to connect remote computers using modem to transfer files using self designed 'ftp'.</li>
+                                <li>Worked on the hardware and software of Z-80 based terminals in Assembly and 'C' language.</li>
+                                <li>Developed the hardware and software for error correction card for Modems and other devices.</li>
+                                <li>Training the employees of TFCRI, BARC, and MTNL etc. about the products of our company</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>36 Months</td>
+                        <td>
+                            Owned one computer assembling unit at Mumbai<br>
+                            Owned one computer Institute<br>
+                            Owned data entry center<br>
+                            Consultant to many small and medium scale companies to set up their EDP facilities<br>
+                            Part time faculty in different colleges and Computer institutes
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>36 Months</td>
+                        <td>As Consultant in setting up Computer Institutes and real estate developer.</td>
+                    </tr>
+                    <tr>
+                        <td>8 Months</td>
+                        <td>Worked as Systems Administrator and faculty in CMS Computers Ltd. (Franchisee in Udupi) teaching Hardware, Networking Concepts, Windows NT, LINUX, UNIX, NOVELL, SQL Server, Exchange Server, Internet Information Server, and Apache Web Server.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Present Assignment</strong></td>
+                        <td><strong>Head Of The Department Computer Science at M.G.M. College Udupi since November 2000.</strong> The college has a history of 62 years.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>Activities carried out in the college besides the regular lectures:</strong></p>
+            <ul class="profile-list" style="margin-bottom: 30px;">
+                <li>Trained and guided a group of students in designing and developing the web site of the college. The URL is www.mgmudupi.org. The web site is regularly updated.</li>
+                <li>Formed IT Club, which is responsible for conducting seminars and work shops on latest IT topics and trends.</li>
+                <li>Convener of the University level IT fest ‘MegaBytes’ organized every year</li>
+                <li>A computer museum is arranged in the college campus.</li>
+                <li>Coordinator for 08 self financed computer courses.</li>
+                <li>Maintaining the Computer network of the lab and different Departments.</li>
+                <li>Placement Coordinator</li>
+            </ul>
+
+            <h4 style="color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; margin-bottom: 15px;">Work Experience (Part Time)</h4>
+            <table class="profile-table" style="margin-bottom: 30px;">
+                <tbody>
+                    <tr><td><strong>Sikkim Manipal University</strong></td><td>Taking part in on line teaching for the Distance education wing of Sikkim Manipal University teaching the following subjects- Computer Network, Client Server Architecture, Web Server Administration, Assembling PC and Installing Networks, Embedded Systems in Manipal for BSc.,BCA, MSc. and MCA students.</td></tr>
+                    <tr><td><strong>Manipal University</strong></td><td>As External examiner for various subjects.</td></tr>
+                    <tr><td><strong>Karnataka State Open University</strong></td><td>Teaching fundamental of Information Technology to BA, Bcom. students at Udupi.</td></tr>
+                    <tr><td><strong>Rajiv Gandhi College of Management</strong></td><td>Teaching Management Information Systems to MBA students.</td></tr>
+                    <tr><td><strong>ICFAI</strong></td><td>Taught the computer subjects to the MBA students.</td></tr>
+                </tbody>
+            </table>
+
+            <h4 style="color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; margin-bottom: 15px;">Web Projects & Empanelment</h4>
+            <p><strong>Designed and developed Web Sites:</strong><br>
+            URL: www.mahalasabasrur.org<br>
+            URL: www.nityanandgurudev-udupi.org</p>
+
+            <ul class="profile-list" style="margin-bottom: 30px;">
+                <li>Empanelled as Industry Expert of Indian Register Quality Systems (A Govt. Organization) which conducts ISO certification for South Zone in the Hardware /Software industry.</li>
+                <li>Vice President of Kadiyali Computer Education Centre, Computer education wing of Kadiyali Higher Primary School which is a 125 years old institution.</li>
+                <li>As technical expert on computer subject at Jawahar Navodaya Vidyalaya, Chara, Udupi District. A central government institution.</li>
+                <li>Present as subject expert in the interview panel of many well known institutions like Academy of General Education, Alvas Institutions etc.</li>
+                <li>Served/serving as member of Board of Examiners for BCA and PGDCA of Mangalore University</li>
+                <li>Chief Negotiator and Technical evaluator for the Purchases of Computers, Printers, UPS etc for the colleges coming under the Academy of General Education since 2005. In the academic year 2007-08 successfully negotiated the purchase of 200 desktop machines, 25 Printers and 100 UPS and saved a huge budget by a proper strategy.</li>
+                <li>Member of Board of Studies for MSc. Computer Science and MCA in Mangalore University</li>
+                <li>President of Mangalore University Computer Science Teachers Association.</li>
+            </ul>
+
+            <h4 style="color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; margin-bottom: 15px;">Software Projects & Consultancy</h4>
+            <p><strong>Software Projects:</strong></p>
+            <ul class="profile-list" style="margin-bottom: 20px;">
+                <li>Guided a team which is developed software for Co-operative stores and Canteen of a Residential School.</li>
+                <li>Coordinated the development of a Astrology software for Palm Top device</li>
+                <li>Advisor for about 50 different student projects in India and abroad at graduate and post graduate level.</li>
+            </ul>
+
+            <p><strong>Consultancy:</strong></p>
+            <ul class="profile-list">
+                <li>"My Computer", Udupi</li>
+                <li>Abhijnaa Computers, Udupi</li>
+                <li>IICT, Bangalore</li>
+                <li>Karnataka Computer Academy, Mangalore</li>
+                <li>www.lessons2all.com, Bangalore, India</li>
+            </ul>
+    </div>
+</div>
+
+              <div class="acc-item">
+    <button class="acc-trigger" onclick="toggleItem(this)">
+        <span>Research</span> <i class="fas fa-plus"></i>
+    </button>
+    <div class="acc-panel">
+        <div class="acc-content">
+            <p><strong>Research:</strong></p>
+            <ul class="profile-list">
+                <li>Completed Minor Research project on "Wireless Security Risks and Technical Challenges" by University Grants Commission, New Delhi.</li>
+                <li>Completed a Minor Research project on “Security issues of Data in E-Commerce Transactions” awarded by University Grants Commission, New Delhi.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+              <div class="acc-item">
+    <button class="acc-trigger" onclick="toggleItem(this)">
+        <span>Publications</span> <i class="fas fa-plus"></i>
+    </button>
+    <div class="acc-panel">
+        <div class="acc-content">
+            <p><strong>Publications:</strong></p>
+            <ul class="profile-list">
+                <li>Compiled a hand book on Internet published by Shathabdi Graphics, Udupi.</li>
+                <li>Compiled a book on Computer Networks for Msc.IT and M.C.A. students of Sikkim Manipal University.</li>
+                <li>Part of the team which compiled a book on Client Server Architecure for Msc.IT and M.C.A. students of Sikkim Manipal University.</li>
+                <li>Written a book on MS-OFFICE and WINDOWS-98 for Karnataka Computer Education.</li>
+                <li>Compiled a book on Web Server Administration which has the topics like Windows 2000 Server and Internet Information Server 5.0. for M.C.A. students of Sikkim Manipal University.</li>
+                <li>Written a book titled "Computer Learning Made Easy". The book is published by Bharath Prakashana Udupi. Third re print of the book will be done soon.</li>
+                <li>Compiled a book on 'C' programming language.</li>
+                <li>Written a book on Computer fundamentals and MS-office for Sikkim Manipal University</li>
+                <li>MPhil Dissertation: "Reliability problems in Loosely Coupled Processors"</li>
+                <li>WEB Designing using HTML</li>
+                <li>A book titled “C Programming Made Easy” released on June 18th 2010.</li>
+                <li>Compiled a book on Vb.Net</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+               <div class="acc-item">
+    <button class="acc-trigger" onclick="toggleItem(this)">
+        <span>Conference / Seminars Organized</span> <i class="fas fa-plus"></i>
+    </button>
+    <div class="acc-panel">
+        <div class="acc-content">
+            <ul class="profile-list">
+                <li>Convener for the UGC sponsored state level seminar on the topic Reliability Issues in Loosely Coupled Processor held on 14/3/2009 held at Nutana Ravindra Mantapa, MGM College, Udupi.</li>
+                <li><strong>Connections to ICAI activity ISA Course:</strong></li>
+                <li>CPE program of ICAI New Delhi conducted by Udupi Branch of SIRC of ICAI. (Paper presentation: Access Control Mechanism.)</li>
+                <li>Conducted Refresher course for ISA participants during July and August 2002 at Udupi. (Subjects handled: Networking, Access Controls, SDLC, Web Server and Disaster recovery.)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+     <div class="acc-item">
+    <button class="acc-trigger" onclick="toggleItem(this)">
+        <span>Conference / Seminars Attended</span> <i class="fas fa-plus"></i>
+    </button>
+    <div class="acc-panel">
+        <div class="acc-content">
+            <table class="profile-table">
+                <thead>
+                    <tr>
+                        <th style="width: 200px;">Seminar</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>International Seminar</strong></td>
+                        <td>
+                            Presented a paper on "Software Outsourcing Issues: A review" in the International conference organized jointly by Manipal Institute of Management, Manipal University Manipal and College of Business Administration, Northeastern University, Boston, USA.<br><br>
+                            Presented a Paper on “Use of ICT in Business” at Build Bright University, Phnom Penh, Cambodia in July 2010.<br><br>
+                            Presented a paper on “Categories of Factors Influencing the Innovation: An Empirical Study in the IT Sector” at the International Conference on Recent Trends in Engineering & Technology held in Bangalore on 13th January 2013.<br><br>
+                            Session Chair for the International Conference on Electronics and Computer Science Engineering held on 3rd March 2013 in Bangalore.<br><br>
+                            Participated in Global R & D summit held at New Delhi on 25th & 26th July 2013 organized by FICCI and the Department of Science and Technology-Government of India.<br><br>
+                            Presented a paper on Classes of attributes which may have significant influence on Innovation in February 2014 in the International conference held in Koulalumpur, Malaysia.<br><br>
+                            Presented a paper on List of parameters which may have significant influence on Innovation in Information technology sector in the IEEE sponsored International conference held at United Arab University, Al Ain, UAE from November 9-11, 2014.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>National Conference</strong></td>
+                        <td>
+                            Resource Person for the UGC Sponsored National Conference on “Recent Trends in Cloud Computing” held on 14th and 15th December 2011 at SDM College of Business Management.<br><br>
+                            Resource person for the topic titled “Data Security in Loosely Coupled Processor Environment” in the UGC sponsored national conference held on 2-8-2013 at SDM College of Business Management, Mangalore, India.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Seminar:</strong></td>
+                        <td>Presented a paper on “Use of Information Technology” at Build Bright University, Siem Riep, Cambodia on 26th November 2011.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>National Conference</strong></td>
+                        <td>
+                            1. Many national conferences were attended.<br>
+                            2. Participated in many national and state level seminars.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+                <div class="acc-item">
+    <button class="acc-trigger" onclick="toggleItem(this)">
+        <span>Additional Responsibilities</span> <i class="fas fa-plus"></i>
+    </button>
+    <div class="acc-panel">
+        <div class="acc-content">
+            <ul class="profile-list">
+                <li>Trained and guided a group of students in designing and developing the web site of the college. The URL is www.mgmudupi.org. the web site is regularly updated.</li>
+                <li>Coordinator for 08 self financed computer courses</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="acc-item">
+                    <button class="acc-trigger" onclick="toggleItem(this)">
+                        <span>Training Attended</span> <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="acc-panel"><div class="acc-content"></div></div>
+                </div>
+
+                <div class="acc-item">
+                    <button class="acc-trigger" onclick="toggleItem(this)">
+                        <span>Extension Work</span> <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="acc-panel"><div class="acc-content"></div></div>
+                </div>
+
+                <div class="acc-item">
+                    <button class="acc-trigger" onclick="toggleItem(this)">
+                        <span>Affiliation</span> <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="acc-panel"><div class="acc-content"></div></div>
+                </div>
+
+                <div class="acc-item">
+    <button class="acc-trigger" onclick="toggleItem(this)">
+        <span>Others</span> <i class="fas fa-plus"></i>
+    </button>
+    <div class="acc-panel">
+        <div class="acc-content">
+            <ul class="profile-list">
+                <li>Documentaries on Kbal Spean and Bamboo Train of Cambodia. <a href="https://www.youtube.com/watch?v=1y0e8HmR-ZI" style="color: var(--accent); font-weight: 600;">Kbal Spean</a>&nbsp;&nbsp;<a href="https://www.youtube.com/watch?v=hAd52ze1FEs" style="color: var(--accent); font-weight: 600;">Bamboo Train</a></li>
+                <li>A Book on “Indian Heritage in Cambodia”. Please visit the link for the details <a href="no-data-found.html" style="color: var(--accent); font-weight: 600;">Book</a></li>
+                <li>Formed IT Club, which is responsible for conducting seminars and work shops on latest IT topics and trends.</li>
+                <li>Convener of the University level IT fest MegaBytes organized every year.</li>
+                <li>A computer museum is arranged in the college campus.</li>
+                <li>Maintaining the Computer network of the lab and different Departments.</li>
+                <li>Placement Coordinator</li>
+                <li>Participated as resource person in the IT related activities of many institutions.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+            </div>
+        </main>
+        
+    </div>
+<footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column info-col">
+                <h4 class="footer-logo">MGM Udupi</h4>
+                <p>Mahatma Gandhi Memorial College, Udupi.</p>
+                <p class="accred-info">Accredited by NAAC with 'A+' Grade (CGPA 3.36).</p>
+            </div>
+            <div class="footer-column">
+                <h4>Academics</h4>
+                <ul>
+                    <li><a href="academics.html">Courses Offered</a></li>
+                    <li><a href="#">Admissions</a></li>
+                    <li><a href="placement.html">Job Placements</a></li>
+                    <li><a href="e-resources.html">E-Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Campus & Culture</h4>
+                <ul>
+                    <li><a href="department.html">Departments</a></li>
+                    <li><a href="campus_life.html">Campus Facilities</a></li>
+                    <li><a href="club.html">Activities & Clubs</a></li>
+                    <li><a href="yakshagana.html">Yakshagana Kendra</a></li>
+                </ul>
+            </div>
+            <div class="footer-column contact-col">
+                <h4>Contact Us</h4>
+                <p>MGM College, Kunjibettu, Udupi - 576102</p>
+                <p>Email: <a href="mailto:info@mgmudupi.ac.in">info@mgmudupi.ac.in</a></p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/@MGM-HODCS" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/mgmcollege_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="sub-footer">
+            <p>&copy; 2025 MGM College, Udupi. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#">RTI Act</a> |
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+<div id="admissionModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-button">&times;</span>
+                <h2 class="modal-title">Important Admission Instructions</h2>
+            </div>
+            <div class="modal-body">
+                <h3>Please Read Carefully Before Proceeding:</h3>
+                <p>Admission to all programs at MGM Udupi is provisional and subject to verification of documents and compliance with all institutional rules.</p>
+                <h4>General Rules:</h4>
+                <ul>
+                    <li>The College strictly follows the academic calendar. Ensure all deadlines for applications and fee payments are met.</li>
+                    <li>Students must adhere to the prescribed dress code/uniform.</li>
+                    <li>Use and possession of mobile phones on campus is strictly prohibited. Confiscated devices will be returned only at the end of the academic year.</li>
+                    <li>Ragging is strictly forbidden. Anyone found indulging will be summarily dismissed.</li>
+                    <li>Fees once paid will not be refunded.</li>
+                </ul>
+                <p class="modal-warning">Proceeding to the admission portal implies acceptance of all college rules, regulations, and fee policies.</p>
+                
+                <div class="modal-footer">
+                    <button id="modalOkButton" class="cta-primary">Proceed to Portal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html> 
+    <script>
+       function toggleItem(btn) {
+    const parent = btn.parentElement;
+    const panel = parent.querySelector('.acc-panel');
+    const isActive = parent.classList.contains('is-active');
+
+    // Close ALL items
+    document.querySelectorAll('.acc-item').forEach(item => {
+        item.classList.remove('is-active');
+        item.querySelector('.acc-panel').style.maxHeight = null;
+    });
+
+    // Open the clicked one
+    if (!isActive) {
+        parent.classList.add('is-active');
+        // This calculates the exact height of the content inside
+        panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+}
+    </script>
+
+</body>
+</html>

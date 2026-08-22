@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Faculty Profile - Prof. Veera Ida Pinto</title>
+    <link rel="stylesheet" href="../styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #002347;
+            --accent: #b8860b;
+            --bezier-slow: cubic-bezier(0.7, 0, 0.3, 1); 
+        }
+
+        body { 
+            background-color: #f4f7fa; 
+            font-family: 'Montserrat', sans-serif; 
+            margin: 0; 
+        }
+
+        /* Adjusting layout for header compatibility */
+        .page-layout {
+            display: flex;
+            gap: 50px;
+            max-width: 1200px;
+            width: 92%;
+            margin: 40px auto 80px auto; /* Reduced top margin since header is present */
+            align-items: flex-start;
+        }
+
+        /* --- LEFT SIDE: FLOATING CARD --- */
+        .profile-sidebar-card {
+            flex: 0 0 350px;
+            background: white;
+            padding: 50px 30px;
+            border-radius: 30px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.06);
+            text-align: center;
+            position: sticky;
+            top: 100px; /* Adjusted so it doesn't hide behind the header when scrolling */
+            border-top: 12px solid var(--primary);
+        }
+
+        .profile-img {
+            width: 240px;
+            height: 240px;
+            border-radius: 25px;
+            object-fit: cover;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .profile-sidebar-card h1 { font-size: 1.8rem; color: var(--primary); margin: 0; font-weight: 800; }
+        .role-tag { color: var(--accent); font-weight: 700; display: block; margin: 12px 0 30px 0; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .contact-box { text-align: left; background: #fdfdfd; padding: 25px; border-radius: 20px; border: 1px solid #f0f0f0; }
+        .contact-box p { margin: 15px 0; font-size: 0.95rem; color: #444; display: flex; align-items: center; gap: 12px; }
+        .contact-box i { color: var(--accent); font-size: 1.1rem; }
+
+        /* --- RIGHT SIDE: CONTENT AREA --- */
+        .content-area {
+            flex: 1;
+            background: white;
+            padding: 60px;
+            border-radius: 30px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.06);
+        }
+
+        .back-btn { color: var(--primary); text-decoration: none; font-weight: 700; margin-bottom: 40px; display: inline-block; font-size: 1rem; opacity: 0.6; transition: 0.3s; }
+        .back-btn:hover { opacity: 1; color: var(--accent); }
+
+        .portfolio-title { color: var(--primary); font-size: 2.2rem; margin: 0 0 45px 0; font-weight: 800; border-left: 6px solid var(--accent); padding-left: 20px; }
+
+        /* --- SLOW SYNCHRONIZED ACCORDION --- */
+        .acc-item { border-bottom: 1px solid #f0f0f0; }
+
+        .acc-trigger {
+            width: 100%;
+            padding: 30px 0;
+            background: none;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .acc-trigger span { font-size: 1.3rem; font-weight: 700; color: var(--primary); transition: color 0.6s var(--bezier-slow); }
+        .acc-trigger i { transition: transform 0.8s var(--bezier-slow), color 0.6s var(--bezier-slow); color: #ddd; font-size: 1.1rem; }
+
+        .acc-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s var(--bezier-slow), opacity 0.6s var(--bezier-slow);
+            opacity: 0;
+        }
+
+        .acc-content { padding: 0 0 35px 0; line-height: 1.9; color: #555; font-size: 1.15rem; }
+
+        /* Active State */
+        .acc-item.is-active .acc-panel { max-height: 800px; opacity: 1; }
+        .acc-item.is-active .acc-trigger span { color: var(--accent); }
+        .acc-item.is-active .acc-trigger i { transform: rotate(180deg); color: var(--accent); }
+
+        @media (max-width: 950px) {
+            .page-layout { flex-direction: column; margin: 40px auto; }
+            .profile-sidebar-card { width: 100%; position: static; }
+        }
+        /* Styling for tables inside the accordion */
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 1rem;
+    background: #fff;
+}
+
+.profile-table th {
+    background-color: #f8f9fa;
+    color: var(--primary);
+    text-align: left;
+    padding: 12px;
+    border-bottom: 2px solid var(--accent);
+    font-weight: 700;
+}
+
+.profile-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.profile-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Responsive table for mobile */
+@media (max-width: 600px) {
+    .profile-table {
+        font-size: 0.9rem;
+    }
+    .profile-table th, .profile-table td {
+        padding: 8px;
+    }
+}
+/* Styling for lists inside the accordion */
+.profile-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* Adds a small gold square bullet to match your accent color */
+.profile-list li::before {
+    content: "■";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    font-size: 0.8rem;
+    top: 14px;
+}
+
+.profile-list li:last-child {
+    border-bottom: none;
+}
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">MGM Udupi</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../academics.html">Academics</a></li>
+                    <li><a href="../research.html">Research & Quality</a></li>
+                    <li><a href="../campus_life.html">Campus Life</a></li>
+                    <li class="dropdown">
+                        <a class="dropbtn">About MGM</a>
+                        <div class="dropdown-content">
+                            <a href="../vision.html">Vision & Mission</a>
+                            <a href="../principal.html">Principal</a>
+                            <a href="../management.html">Management</a>
+                            <a href="../history.html">History</a>
+                            <a href="../image_gallery.html">Image Gallery</a>
+                            <a href="../scholarships.html">Scholarships</a>
+                            <a href="../pdf/mgm-ghandi.pdf">Gandhian Study Centre</a>
+                        </div>
+                    </li>
+                    <li><a href="../contact.html">Contact Us</a></li> 
+                </ul>
+            </nav>
+            <a href="#" class="nav-cta-button open-modal">Apply Now</a> 
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+        </div>
+    </header>
+
+    <div class="page-layout">
+        <aside class="profile-sidebar-card">
+            <img src="../mgm-pic/veera.png" alt="Prof. Vanitha Maiya" class="profile-img">
+            <h1>Prof. Veera Ida Pinto</h1>
+            <span class="role-tag">Asst. Professor</span>
+            
+            <div class="contact-box">
+                <p><i class="fas fa-envelope"></i>veeraidapinto@yahoo.co.in</p>
+                <p><i class="fas fa-university"></i> Department of Chemistry</p>
+                <p><i class="fas fa-phone"></i> </p>
+            </div>
+        </aside>
+
+        <main class="content-area">
+            <a href="../department.html" class="back-btn"><i class="fas fa-chevron-left"></i> BACK TO DIRECTORY</a>
+            <h2 class="portfolio-title">Academic Portfolio</h2>
+
+            <div class="accordion">
+               <div class="acc-item">
+    <button class="acc-trigger" onclick="toggleItem(this)">
+        <span>Education / Qualification</span> <i class="fas fa-plus"></i>
+    </button>
+    <div class="acc-panel">
+        <div class="acc-content">
+            <table class="profile-table">
+                <thead>
+                    <tr>
+                        <th>Sl.No</th>
+                        <th>Degree</th>
+                        <th>University / College</th>
+                        <th>Year</th>
+                        <th>%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>B.Com.</td>
+                        <td>SMS College, Brahmavar</td>
+                        <td>1987</td>
+                        <td>68%</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>M.Com.</td>
+                        <td>Mangalore University</td>
+                        <td>1989</td>
+                        <td>60%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+                <div class="acc-item">
+    <button class="acc-trigger" onclick="toggleItem(this)">
+        <span>Experience</span> <i class="fas fa-plus"></i>
+    </button>
+ <div class="acc-panel">
+    <div class="acc-content">
+        <table class="profile-table">
+            <thead>
+                <tr>
+                    <th>Sl.No.</th>
+                    <th>Name of the College / Designation</th>
+                    <th>From</th>
+                    <th>To</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Worked in Vijaya College, Mulki as a Lecturer in Chemistry</td>
+                    <td>10.07.1991</td>
+                    <td>19.02.1997</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Presently working in M.G.M. College, Udupi as a Lecturer</td>
+                    <td>20.02.1997</td>
+                    <td>---</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+</div>
+
+                <div class="acc-item">
+                    <button class="acc-trigger" onclick="toggleItem(this)">
+                        <span>Research</span> <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="acc-panel"><div class="acc-content"></div></div>
+                </div>
+
+                <div class="acc-item">
+                    <button class="acc-trigger" onclick="toggleItem(this)">
+                        <span>Publications</span> <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="acc-panel"><div class="acc-content"></div></div>
+                </div>
+
+                <div class="acc-item">
+                    <button class="acc-trigger" onclick="toggleItem(this)">
+                        <span>Conference/Seminars Organized</span> <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="acc-panel"><div class="acc-content"></div></div>
+                </div>
+
+               <div class="acc-item">
+    <button class="acc-trigger" onclick="toggleItem(this)">
+        <span>Conference / Seminars Attended</span> <i class="fas fa-plus"></i>
+    </button>
+<div class="acc-panel">
+    <div class="acc-content">
+        <ul class="profile-list">
+            <li>Participated in the One Day Workshop on "Teacher as Classroom Leader" held on 09.07.2009 at M.G.M. College, Udupi.</li>
+            <li>Participated One Day State Level Seminar on Recent trends in Science & Technology held on 09.02.2009 at Srinivas Institute of Technology, Mangalore</li>
+            <li>Participated in a Satellite Programme conducted for Chemistry Teachers of the District on 09.09.2008.</li>
+            <li>Participated in National Workshop for Teachers on Ethics & Human Values in Education sponsored by U.G.C. from 28.12.2007 to 01.01.2008.</li>
+            <li>Participated in a Workshop on a programmed on Students counseling Vision and Mission conducted on 14th & 15th October 2005.</li>
+            <li>Participated in a National Seminar cum Workshop on Improving Quality of Teaching & Training in the classroom conducted on 22nd & 23rd March 2004.</li>
+            <li>Participated in Workshop in Autonomy a new zone conducted on 26.09.2004.</li>
+            <li>Participated in U.G.C. sponsored orientation programme held at Mysore from 08.06.2004 to 05.07.2004 and obtained Grade 'A'.</li>
+            <li>Participated in stste level Workshop on Exciting world of Polymers held at Milagres College - Kallianpur on 20.08.2010 & 21.08.2010</li>
+            <li>Participated in stste level Seminar on Gandhian Principles Relevance to the Contempory period at Gandhian Study Centre. M.G.M. College, Udupi on 17.09.2011.</li>
+            <li>Participated in stste level Seminar on Chemical Science & Chemistry in Daily Life at Vision Group on Science & Technology Govt. of Karnataka. M.G.M. College, Udupi on 13.12.2011.</li>
+            <li>Participated in national level Seminar on Expanding Frontiers of Chemistry at Vijaya College, Mulky on 15.12.2011 & 16.12.2011.</li>
+            <li>Participated in AGE – CT Convention at Sri Bhuvanendra College, Karkala on 18.12.2011.</li>
+            <li>Participated in AGE – CT Convention Sri Bhandarkars Arts & Science College, Kundapura on 30.12.2012.</li>
+            <li>Participated in stste level Seminar on Recent Advances in Chemistry at Sri Venkataramana Swamy College, Bantwal on 25.01.2013.</li>
+            <li>Participated in national level seminar on Symposium on Recent Advances in Chemical Plants at Mangalore University, Konaje on 30.04.2013.</li>
+            <li>Participated in national level seminar on Frontiers in Photonics at Karnataka Science & Technology Academy. M.G.M. College, Udupi on 13.12.2013 & 14.12.2013.</li>
+            <li>Participated in national level seminar on World’s Emerging Advancements in Chemical Technology at Govindadasa College, Surathkal on 10.01.2014 & 10.01.2014.</li>
+            <li>Participated in AGE – CT Convention at Vijaya College, Mulky on 12.01.2014.</li>
+            <li>Participated in national level Seminar on Modern Methods in Chemistry at St. Aloysius College (Autonomous), Mangalore on 16.01.2014 & 17.01.2014.</li>
+            <li>Participated in national level Seminar on Plant Biodiversity of Western Ghats & the Sustainable Management at M.G.M. College, Udupi on 23.01.2014 & 24.01.2014.</li>
+            <li>Participated in national level Seminar on Polymer Technology for Industry & Society at Sri Bhandarkars Arts & Science College, Kundapura on 20.12.2014.</li>
+            <li>Participated in stste level Conference on Ecosystem Emerging Issues at Karnataka Academy of Science & Technology, (KSTA) & PPC College, Udupi on 09.01.2015 & 10.01.2015.</li>
+            <li>Participated in stste level Seminar on Recent Trends in Green Chemistry Issues & Challenges at Chemistry Department. M.G.M. College, Udupi on 17.01.2015.</li>
+        </ul>
+    </div>
+</div>
+               </div>
+
+                <div class="acc-item">
+                    <button class="acc-trigger" onclick="toggleItem(this)">
+                        <span>Training Organized</span> <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="acc-panel"><div class="acc-content"></div></div>
+                </div>
+
+                <div class="acc-item">
+    <button class="acc-trigger" onclick="toggleItem(this)">
+        <span>Training Attended</span> <i class="fas fa-plus"></i>
+    </button>
+    <div class="acc-panel"><div class="acc-content"></div></div>
+</div>
+
+                <div class="acc-item">
+                    <button class="acc-trigger" onclick="toggleItem(this)">
+                        <span>Extension Work</span> <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="acc-panel"><div class="acc-content"></div></div>
+                </div>
+
+                <div class="acc-item">
+                    <button class="acc-trigger" onclick="toggleItem(this)">
+                        <span>Affiliation</span> <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="acc-panel"><div class="acc-content"></div></div>
+                </div>
+
+             <div class="acc-item">
+    <button class="acc-trigger" onclick="toggleItem(this)">
+        <span>Others</span> <i class="fas fa-plus"></i>
+    </button>
+    <div class="acc-panel">
+        <div class="acc-content">
+            <ul class="profile-list">
+                <li>Participated in the UGC Sponsored Refresher Course in “Emerging Trends in Chemistry” from 10.11.2010 to 30.11.2010 at Academic Staff College of Madurai Kamraj University.</li>
+                <li>Participated in the UGC Sponsored Refresher Course in “Nanoscience” (Interdisciplinary) from 10.11.2011 to 30.11.2011 at Academic Staff College of University of Calicut.</li>
+                <li>Participated in the UGC Sponsored Refresher Course in Chemistry from 04.03.2014 to 24.03.2014 at Academic Staff College, University of Kerala, Kariavattom.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+            </div>
+        </main>
+        
+    </div>
+<footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column info-col">
+                <h4 class="footer-logo">MGM Udupi</h4>
+                <p>Mahatma Gandhi Memorial College, Udupi.</p>
+                <p class="accred-info">Accredited by NAAC with 'A+' Grade (CGPA 3.36).</p>
+            </div>
+            <div class="footer-column">
+                <h4>Academics</h4>
+                <ul>
+                    <li><a href="academics.html">Courses Offered</a></li>
+                    <li><a href="#">Admissions</a></li>
+                    <li><a href="placement.html">Job Placements</a></li>
+                    <li><a href="e-resources.html">E-Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Campus & Culture</h4>
+                <ul>
+                    <li><a href="department.html">Departments</a></li>
+                    <li><a href="campus_life.html">Campus Facilities</a></li>
+                    <li><a href="club.html">Activities & Clubs</a></li>
+                    <li><a href="yakshagana.html">Yakshagana Kendra</a></li>
+                </ul>
+            </div>
+            <div class="footer-column contact-col">
+                <h4>Contact Us</h4>
+                <p>MGM College, Kunjibettu, Udupi - 576102</p>
+                <p>Email: <a href="mailto:info@mgmudupi.ac.in">info@mgmudupi.ac.in</a></p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/@MGM-HODCS" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/mgmcollege_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="sub-footer">
+            <p>&copy; 2025 MGM College, Udupi. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#">RTI Act</a> |
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+<div id="admissionModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-button">&times;</span>
+                <h2 class="modal-title">Important Admission Instructions</h2>
+            </div>
+            <div class="modal-body">
+                <h3>Please Read Carefully Before Proceeding:</h3>
+                <p>Admission to all programs at MGM Udupi is provisional and subject to verification of documents and compliance with all institutional rules.</p>
+                <h4>General Rules:</h4>
+                <ul>
+                    <li>The College strictly follows the academic calendar. Ensure all deadlines for applications and fee payments are met.</li>
+                    <li>Students must adhere to the prescribed dress code/uniform.</li>
+                    <li>Use and possession of mobile phones on campus is strictly prohibited. Confiscated devices will be returned only at the end of the academic year.</li>
+                    <li>Ragging is strictly forbidden. Anyone found indulging will be summarily dismissed.</li>
+                    <li>Fees once paid will not be refunded.</li>
+                </ul>
+                <p class="modal-warning">Proceeding to the admission portal implies acceptance of all college rules, regulations, and fee policies.</p>
+                
+                <div class="modal-footer">
+                    <button id="modalOkButton" class="cta-primary">Proceed to Portal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html> 
+    <script>
+       function toggleItem(btn) {
+    const parent = btn.parentElement;
+    const panel = parent.querySelector('.acc-panel');
+    const isActive = parent.classList.contains('is-active');
+
+    // Close ALL items
+    document.querySelectorAll('.acc-item').forEach(item => {
+        item.classList.remove('is-active');
+        item.querySelector('.acc-panel').style.maxHeight = null;
+    });
+
+    // Open the clicked one
+    if (!isActive) {
+        parent.classList.add('is-active');
+        // This calculates the exact height of the content inside
+        panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+}
+    </script>
+
+</body>
+</html>

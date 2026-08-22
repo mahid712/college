@@ -19,6 +19,8 @@ import Rules from './components/Rules';
 import Placement from './components/Placement';
 import Syllabus from './components/Syllabus';
 import EResources from './components/EResources';
+import AdmissionRules from './components/AdmissionRules';
+import NAAC from './components/NAAC';
 
 function AppLayout() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -63,6 +65,8 @@ function AppLayout() {
           <Route path="/placements" element={<Placement />} />
           <Route path="/syllabus" element={<Syllabus />} />
           <Route path="/e-resources" element={<EResources />} />
+          <Route path="/admission-rules" element={<AdmissionRules />} />
+          <Route path="/naac" element={<NAAC />} />
         </Routes>
       </main>
 

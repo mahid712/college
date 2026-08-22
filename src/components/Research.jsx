@@ -22,12 +22,12 @@ export default function Research() {
 
                 <section className="quality-overview">
                     <div className="overview-container">
-                        <div id="naac" className="quality-block naac-block">
+                    <Link to="/naac" className="quality-block naac-block naac-block-link">
                             <h2 className="section-title-small">NAAC Accreditation</h2>
                             <span className="naac-grade">A+ Grade (3.36 CGPA)</span>
                             <p>MGM College is proud to be accredited by the <strong>National Assessment and Accreditation Council (NAAC)</strong>, validating our commitment to high educational standards.</p>
-                            <a href={ssrPdf} target="_blank" rel="noopener noreferrer" className="details-link">View Latest SSR Report &rarr;</a>
-                        </div>
+                            <span className="details-link">View Details &rarr;</span>
+                        </Link>
 
                         <div id="iqac" className="quality-block iqac-block">
                             <h2 className="section-title-small">Internal Quality Assurance Cell (IQAC)</h2>

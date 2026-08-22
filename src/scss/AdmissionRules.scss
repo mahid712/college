@@ -1,0 +1,240 @@
+// AdmissionRules.scss
+$maroon: #8b0000;
+$dark-blue: #0d1e3a;
+$light-bg: #f9f9f9;
+$border-color: #e0e0e0;
+$text-dark: #333;
+$text-light: #666;
+
+.admission-rules-page {
+  font-family: 'Montserrat', sans-serif;
+  color: $text-dark;
+  background-color: #fff;
+
+  // Hero Section
+  .admission-rules-hero {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e8e8e8 100%);
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 50px;
+
+    .hero-content {
+      max-width: 1000px;
+      margin: 0 auto 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+
+      i {
+        font-size: 3rem;
+        color: $maroon;
+        flex-shrink: 0;
+      }
+
+      h1 {
+        font-size: 2.8rem;
+        font-weight: 900;
+        color: $maroon;
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    .breadcrumb-trail {
+      font-size: 0.95rem;
+      color: $text-light;
+      max-width: 1000px;
+      margin: 0 auto;
+
+      a {
+        color: $maroon;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      span {
+        color: $text-light;
+        font-weight: 500;
+      }
+    }
+  }
+
+  // Rules Content Wrapper
+  .rules-content-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  // Rules Panel
+  .rules-panel {
+    background: #fff;
+    border-left: 5px solid $maroon;
+    padding: 30px;
+    margin-bottom: 35px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    // Panel Heading
+    .rules-panel-heading {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: $dark-blue;
+      margin: 0 0 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      i {
+        color: $maroon;
+        font-size: 1.3rem;
+      }
+    }
+
+    // Intro Text
+    .rules-intro {
+      margin-bottom: 20px;
+      padding-left: 25px;
+      color: $text-light;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    // Rules List
+    .rules-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 15px;
+        padding-left: 30px;
+        position: relative;
+        color: $text-dark;
+        line-height: 1.7;
+        font-size: 0.95rem;
+
+        &:before {
+          content: '•';
+          position: absolute;
+          left: 8px;
+          color: $maroon;
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    // Sub Heading
+    .rules-sub-heading {
+      color: $dark-blue;
+      margin: 30px 0 20px 0;
+      padding-left: 10px;
+      border-left: 3px solid $maroon;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+  }
+
+  // Responsive Design
+  @media (max-width: 768px) {
+    .admission-rules-hero {
+      padding: 60px 15px;
+
+      .hero-content {
+        flex-direction: column;
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        i {
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    .rules-content-wrapper {
+      padding: 0 15px 40px;
+    }
+
+    .rules-panel {
+      padding: 20px;
+      margin-bottom: 25px;
+
+      .rules-panel-heading {
+        font-size: 1.2rem;
+        gap: 10px;
+
+        i {
+          font-size: 1.1rem;
+        }
+      }
+
+      .rules-list li {
+        padding-left: 25px;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .admission-rules-hero {
+      padding: 50px 15px;
+
+      .hero-content {
+        flex-direction: column;
+        gap: 10px;
+
+        h1 {
+          font-size: 1.6rem;
+        }
+
+        i {
+          font-size: 2rem;
+        }
+      }
+
+      .breadcrumb-trail {
+        font-size: 0.85rem;
+      }
+    }
+
+    .rules-panel {
+      padding: 15px;
+      margin-bottom: 20px;
+      border-left-width: 4px;
+
+      .rules-panel-heading {
+        font-size: 1.05rem;
+      }
+
+      .rules-list li {
+        padding-left: 22px;
+        font-size: 0.85rem;
+        line-height: 1.6;
+      }
+
+      .rules-sub-heading {
+        font-size: 0.95rem;
+        margin: 20px 0 15px 0;
+      }
+    }
+  }
+}
