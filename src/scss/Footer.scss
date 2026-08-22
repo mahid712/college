@@ -45,10 +45,16 @@
         li {
           margin-bottom: 0.6rem;
 
-          a {
+          a,
+          .footer-action {
+            background: none;
+            border: 0;
+            padding: 0;
+            cursor: pointer;
             color: #aaaaaa;
             text-decoration: none;
             font-size: 0.9rem;
+            font-family: inherit;
             transition: color 0.2s;
 
             &:hover {

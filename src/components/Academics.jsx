@@ -159,8 +159,7 @@ function Academics() {
       {/* Syllabus Section */}
       <section className="syllabus-section">
         <h3>Syllabus for the academic year</h3>
-        <Link></Link>
-        <button className="maroon-btn">Syllabus</button>
+        <Link to="/syllabus" className="maroon-btn">Syllabus</Link>
       </section>
 
       {/* Ready to Start Your Journey Section */}

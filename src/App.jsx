@@ -17,6 +17,8 @@ import ImageGallery from './components/ImageGallery';
 import Scholarship from './components/Scholarship';
 import Rules from './components/Rules';
 import Placement from './components/Placement';
+import Syllabus from './components/Syllabus';
+import EResources from './components/EResources';
 
 function AppLayout() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -59,6 +61,8 @@ function AppLayout() {
           <Route path="/scholarships" element={<Scholarship />} />
           <Route path="/rules" element={<Rules />} />
           <Route path="/placements" element={<Placement />} />
+          <Route path="/syllabus" element={<Syllabus />} />
+          <Route path="/e-resources" element={<EResources />} />
         </Routes>
       </main>
 
@@ -67,7 +71,7 @@ function AppLayout() {
         closeModal={() => setIsModalOpen(false)}
       />
 
-      <Footer />
+      <Footer openModal={() => setIsModalOpen(true)} />
     </div>
   );
 }

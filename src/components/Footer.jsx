@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../scss/Footer.scss';
 
-const Footer = () => {
+const Footer = ({ openModal }) => {
   return (
     <footer className="site-footer" id="contact">
       <div className="footer-container">
@@ -15,10 +16,10 @@ const Footer = () => {
         <div className="footer-column">
           <h4>Academics</h4>
           <ul>
-            <li><a href="#courses">Courses Offered</a></li>
-            <li><a href="#admissions">Admissions</a></li>
+            <li><a href="#academics">Courses Offered</a></li>
+            <li><button type="button" className="footer-action" onClick={openModal}>Admissions</button></li>
             <li><a href="#placements">Job Placements</a></li>
-            <li><a href="#resources">E-Resources</a></li>
+            <li><Link to="/e-resources">E-Resources</Link></li>
           </ul>
         </div>
 
