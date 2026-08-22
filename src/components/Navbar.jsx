@@ -3,11 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../scss/Navbar.scss';
 import gandhiPdf from '../assets/pdf/mgm-ghandi.pdf';
-import AdmissionModal from './AdmissionModal';
 
-const Navbar = () => {
+const Navbar = ({ setIsModalOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleOpenModal = () => setIsModalOpen(true);
@@ -15,7 +13,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('openAdmissionModal', handleOpenModal);
     };
-  }, []);
+  }, [setIsModalOpen]);
 
   return (
     <>
@@ -61,10 +59,6 @@ const Navbar = () => {
         </div>
       </header>
 
-      <AdmissionModal 
-        isOpen={isModalOpen} 
-        closeModal={() => setIsModalOpen(false)} 
-      />
     </>
   );
 };

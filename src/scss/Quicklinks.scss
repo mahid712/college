@@ -33,11 +33,13 @@
 
       .feature-card {
         background: #ffffff;
+        color: inherit;
         padding: 2.5rem 2rem;
         border-radius: 12px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
         border-top: none; /* Removed the crimson top bar to match your exact layout */
         border: 1px solid rgba(0, 0, 0, 0.04);
+        text-decoration: none;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
 
         &:hover {

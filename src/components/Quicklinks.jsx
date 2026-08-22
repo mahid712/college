@@ -50,17 +50,17 @@ const QuickLinks = ({ openModal }) => {
               <p>Click here to check eligibility and proceed to the portal.</p>
             </div>
 
-            <div className="feature-card">
+            <Link to="/academics" className="feature-card">
               <div className="card-icon">📚</div>
               <h3>Our Academics</h3>
               <p>Explore a wide range of courses in Arts, Science, and Commerce.</p>
-            </div>
+            </Link>
 
-            <div className="feature-card">
+            <Link to="/campus" className="feature-card">
               <div className="card-icon">🖼️</div>
               <h3>View Campus Life</h3>
               <p>See our facilities, events, and student activities in the image gallery.</p>
-            </div>
+            </Link>
           </div>
 
           <div className="center-btn-container">

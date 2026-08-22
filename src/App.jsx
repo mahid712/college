@@ -2,6 +2,7 @@
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
+import AdmissionModal from './components/AdmissionModal';
 import Hero from './components/Hero';
 import QuickLinks from './components/Quicklinks';
 import Footer from './components/Footer';
@@ -60,6 +61,11 @@ function AppLayout() {
           <Route path="/placements" element={<Placement />} />
         </Routes>
       </main>
+
+      <AdmissionModal
+        isOpen={isModalOpen}
+        closeModal={() => setIsModalOpen(false)}
+      />
 
       <Footer />
     </div>
