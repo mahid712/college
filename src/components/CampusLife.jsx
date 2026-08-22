@@ -36,91 +36,91 @@ export default function CampusLife() {
                 <i className="pillar-icon fas fa-book-open"></i>
                 <h3>Library & Resources</h3>
                 <p>Access one of the largest academic libraries in the region, featuring over 1.5 lakh volumes, e-journals, and modern study spaces.</p>
-                <Link to="/library" className="learn-more">View Library Details &rarr;</Link>
+                <Link to="/campus#campus-features" className="learn-more">View Library Details &rarr;</Link>
               </div>
               
               <div className="pillar-card">
                 <i className="pillar-icon fas fa-theater-masks"></i>
                 <h3>Yakshagana</h3>
                 <p>Home to the famous Yakshagana Kendra and numerous performing arts clubs that celebrate coastal Karnataka’s rich heritage.</p>
-                <Link to="/yakshagana" className="learn-more">Explore Yakshagana &rarr;</Link>
+                <Link to="/campus#campus-features" className="learn-more">Explore Yakshagana &rarr;</Link>
               </div>
               
               <div className="pillar-card">
                 <i className="pillar-icon fas fa-futbol"></i>
                 <h3>Sports & Fitness</h3>
                 <p>Modern indoor sports complex, large playfields, and a fully equipped gymnasium promoting student health and competitive spirit.</p>
-                <Link to="/sports" className="learn-more">See Sports Facilities &rarr;</Link>
+                <Link to="/campus#campus-features" className="learn-more">See Sports Facilities &rarr;</Link>
               </div>
               
               <div className="pillar-card">
                 <i className="pillar-icon fas fa-users"></i>
                 <h3>Student Clubs & Activities</h3>
                 <p>Join NCC, NSS, and over 20 active student clubs dedicated to debate, nature, science, and social outreach.</p>
-                <Link to="/club" className="learn-more">Join a Club &rarr;</Link>
+                <Link to="/campus#campus-features" className="learn-more">Join a Club &rarr;</Link>
               </div>
               
               <div className="pillar-card">
                 <i className="pillar-icon fas fa-flask"></i>
                 <h3>Science Museum</h3>
                 <p>Visit the Regional Science Museum, an invaluable resource for practical learning and scientific exploration for all students.</p>
-                <Link to="/museum" className="learn-more">Plan Your Visit &rarr;</Link>
+                <Link to="/campus#campus-features" className="learn-more">Plan Your Visit &rarr;</Link>
               </div>
               
               <div className="pillar-card">
                 <i className="pillar-icon fas fa-utensils"></i>
                 <h3>Hostel & Mess</h3>
                 <p>Safe, comfortable hostel accommodations available for male and female students, with high-quality and hygienic dining facilities.</p>
-                <Link to="/canteen" className="learn-more">Check Availability &rarr;</Link>
+                <Link to="/campus#campus-features" className="learn-more">Check Availability &rarr;</Link>
               </div>
 
               <div className="pillar-card">
                 <i className="pillar-icon fas fa-medal"></i>
                 <h3>NCC & NSS</h3>
                 <p>Fostering discipline, leadership, and social service through active cadet training and community development camps.</p>
-                <Link to="/ncc" className="learn-more">Check Availability &rarr;</Link>
+                <Link to="/campus#campus-features" className="learn-more">Check Availability &rarr;</Link>
               </div>
 
               <div className="pillar-card">
                 <i className="pillar-icon fas fa-graduation-cap"></i>
                 <h3>Alumni</h3>
                 <p>Connecting a vast global network of former students to mentor current batches and support institutional growth.</p>
-                <Link to="/alumni" className="learn-more">Check Availability &rarr;</Link>
+                <Link to="/campus#campus-features" className="learn-more">Check Availability &rarr;</Link>
               </div>
 
               <div className="pillar-card">
                 <i className="pillar-icon fas fa-university"></i>
                 <h3>Campus Cells</h3>
                 <p>Dedicated student and faculty cells ensuring guidance, grievance redressal, and holistic skill enhancement.</p>
-                <Link to="/cells" className="learn-more">Check Availability &rarr;</Link>
+                <Link to="/campus#campus-features" className="learn-more">Check Availability &rarr;</Link>
               </div>
 
               <div className="pillar-card">
                 <i className="pillar-icon fas fa-building"></i>
                 <h3>Campus Facilities</h3>
                 <p>Modern infrastructure, well-equipped labs, libraries, and common spaces designed to facilitate seamless learning.</p>
-                <Link to="/facility" className="learn-more">Check Availability &rarr;</Link>
+                <Link to="/campus#campus-features" className="learn-more">Check Availability &rarr;</Link>
               </div>
 
               <div className="pillar-card">
                 <i className="pillar-icon fas fa-tree"></i>
                 <h3>Garden</h3>
                 <p>Serene, lush green botanical environments providing students with peaceful spaces to relax and study outdoors.</p>
-                <Link to="/garden" className="learn-more">Check Availability &rarr;</Link>
+                <Link to="/campus#campus-features" className="learn-more">Check Availability &rarr;</Link>
               </div>
 
               <div className="pillar-card">
                 <i className="pillar-icon fas fa-landmark"></i>
                 <h3>Campus Block</h3>
                 <p>State-of-the-art academic blocks featuring modern classrooms, well-equipped labs, and collaborative seminar halls.</p>
-                <Link to="/campus_block" className="learn-more">Check Availability &rarr;</Link>
+                <Link to="/campus#campus-features" className="learn-more">Check Availability &rarr;</Link>
               </div>
 
               <div className="pillar-card">
                 <i className="pillar-icon fas fa-theater-masks"></i>
                 <h3>Culture Center</h3>
                 <p>Vibrant hubs dedicated to the performing arts, traditional heritage, and cultural events, including our renowned Yakshagana Kendra.</p>
-                <Link to="/culture_center" className="learn-more">Check Availability &rarr;</Link>
+                <Link to="/campus#campus-features" className="learn-more">Check Availability &rarr;</Link>
               </div>
             </div>
           </div>

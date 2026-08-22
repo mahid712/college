@@ -1,6 +1,8 @@
 // src/pages/Research.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ssrPdf from '../assets/pdf/SSR.pdf';
+import aqarPdf from '../assets/pdf/IQAC 2018-19.pdf';
 import '../scss/Research.scss';
 
 export default function Research() {
@@ -20,30 +22,30 @@ export default function Research() {
 
                 <section className="quality-overview">
                     <div className="overview-container">
-                        <div className="quality-block naac-block">
+                        <div id="naac" className="quality-block naac-block">
                             <h2 className="section-title-small">NAAC Accreditation</h2>
                             <span className="naac-grade">A+ Grade (3.36 CGPA)</span>
                             <p>MGM College is proud to be accredited by the <strong>National Assessment and Accreditation Council (NAAC)</strong>, validating our commitment to high educational standards.</p>
-                            <Link to="/NAAC" className="details-link">View Latest SSR Report &rarr;</Link>
+                            <a href={ssrPdf} target="_blank" rel="noopener noreferrer" className="details-link">View Latest SSR Report &rarr;</a>
                         </div>
 
-                        <div className="quality-block iqac-block">
+                        <div id="iqac" className="quality-block iqac-block">
                             <h2 className="section-title-small">Internal Quality Assurance Cell (IQAC)</h2>
                             <p>The <strong>IQAC</strong> drives continuous improvement across all administrative and academic activities, ensuring stakeholder satisfaction and systemic efficiency.</p>
-                            <Link to="/IQAC" className="details-link">Meet the IQAC Team &rarr;</Link>
+                            <a href="#iqac" className="details-link">Meet the IQAC Team &rarr;</a>
                         </div>
 
-                        <div className="quality-block rank-block">
+                        <div id="ranklist" className="quality-block rank-block">
                             <h2 className="section-title-small">University Rank List</h2>
                             <p>MGM Udupi consistently produces top-tier academic achievers. Explore our students' success stories and university-level rankings across various streams.</p>
-                            <Link to="/ranklist" className="details-link">View Rank Holders &rarr;</Link>
+                            <a href="#ranklist" className="details-link">View Rank Holders &rarr;</a>
                         </div>
 
-                        <div className="quality-block rank-block">
+                        <div id="aicte" className="quality-block rank-block">
                             <h2 className="section-title-small">AICTE Approval</h2>
                             <span className="naac-grade">Approved Institution</span>
                             <p>MGM College is duly approved by the <strong>All India Council for Technical Education (AICTE)</strong>, ensuring high standards in technical education and professional development.</p>
-                            <Link to="/aicte" className="details-link">View Approval Documents &rarr;</Link>
+                            <a href="#aicte" className="details-link">View Approval Documents &rarr;</a>
                         </div>
                     </div>
                 </section>
@@ -83,8 +85,8 @@ export default function Research() {
                             <div className="doc-card">
                                 <i className="doc-icon fas fa-file-alt"></i>
                                 <h3>Annual Quality Assurance Report (AQAR)</h3>
-                                <p>Year: 2023-24</p>
-                                <a href={"/pdf/IQAC 2023-24.pdf"} className="download-link" target="_blank" rel="noopener noreferrer">Download PDF</a>
+                                <p>Year: 2018-19</p>
+                                <a href={aqarPdf} className="download-link" target="_blank" rel="noopener noreferrer">Download PDF</a>
                             </div>
                         </div>
                     </div>

@@ -32,7 +32,7 @@ export default function Principal() {
                                 />
                                 <h3>Prof. Vanitha Maiya</h3>
                                 <p className="designation">Principal, MGM College, Udupi</p>
-                                <Link to="/contact" className="contact-link">📧 Contact Principal</Link>
+                                <a href="#contact" className="contact-link">📧 Contact Principal</a>
                             </div>
                             
                             <div className="principal-message-block">
