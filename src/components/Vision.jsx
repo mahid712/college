@@ -12,8 +12,8 @@ export default function Vision() {
             <h1>Vision & Mission</h1>
             <p>Mahatma Gandhi Memorial College</p>
             <div className="breadcrumb">
-                                        <Link to="/">Home</Link> <span>/ Message from Principal</span>
-                                    </div>
+            <Link to="/">Home</Link> <span>/ Message from Principal</span>
+            </div>
           </div>
         </section>
 

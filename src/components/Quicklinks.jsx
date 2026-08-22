@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../scss/Quicklinks.scss';
 
 const QuickLinks = ({ openModal }) => {
@@ -29,7 +30,7 @@ const QuickLinks = ({ openModal }) => {
               <div className="card-icon">💼</div>
               <h3>Career Focused</h3>
               <p>We prepare students for tomorrow's careers with dedicated placement cells, practical skills training, and industry linkages.</p>
-              <a href="#placements" className="card-link">Check Placements →</a>
+              <Link to="/placements" className="card-link">Check Placements →</Link>
             </div>
           </div>
         </div>

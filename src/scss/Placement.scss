@@ -1,0 +1,302 @@
+/* ================================================= */
+/* --- Placement Page Specific Styles (Vite / React) --- */
+/* ================================================= */
+
+.placement-page {
+  background: #f8f9fa;
+  color: #333;
+
+  /* Hero Section Style - Centered Layout */
+  .placement-hero {
+    background-color: #f0f0f5;
+    padding: 140px 20px 70px 20px;
+    margin-top: 0;
+    text-align: center;
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .hero-content {
+      h1 {
+        font-size: 2.7rem;
+        color: #8B0000;
+        margin-bottom: 18px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .red-text {
+        color: #8B0000;
+        font-weight: 600;
+        font-size: 1.15rem;
+        margin-bottom: 20px;
+      }
+
+      .breadcrumb {
+        font-size: 0.95rem;
+        color: #8B0000;
+        letter-spacing: 0.3px;
+
+        a {
+          color: #8B0000;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .placement-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+
+    .container {
+      max-width: none;
+      padding: 0;
+    }
+  }
+
+  .placement-html {
+    width: 100%;
+
+    main {
+      padding-bottom: 0;
+    }
+
+    .content-block {
+      padding: 0;
+    }
+
+    .container {
+      max-width: none;
+      padding: 0;
+    }
+  }
+
+  .placement-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 2.2fr) minmax(260px, 1fr);
+    gap: 40px;
+    align-items: start;
+  }
+
+  .placement-main {
+    min-width: 0;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border-left: 5px solid #8B0000;
+
+    h2,
+    h3 {
+      color: #8B0000;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+    }
+
+    h3 {
+      margin: 35px 0 15px;
+      font-size: 1.3rem;
+      color: #008080;
+    }
+
+    h4 {
+      color: #0d1e3a;
+      margin: 0 0 15px;
+    }
+
+    p {
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 22px;
+      font-size: 1.05rem;
+      letter-spacing: 0.2px;
+    }
+  }
+
+  .placement-section {
+    margin-top: 45px;
+    padding-top: 30px;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .placement-company-list,
+  .placement-year-card ul,
+  .placement-sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .placement-company-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 20px;
+
+    li {
+      padding: 11px 14px;
+      border-left: 4px solid #008080;
+      background: #f5f7f8;
+      line-height: 1.5;
+    }
+  }
+
+  .placement-year-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .placement-year-card {
+    padding: 22px;
+    border: 1px solid #e2e6e8;
+    border-top: 4px solid #8B0000;
+    background: #fff;
+    border-radius: 8px;
+
+    li {
+      margin-bottom: 10px;
+      line-height: 1.45;
+    }
+
+    .placement-total {
+      margin: 18px 0 0;
+      padding-top: 12px;
+      border-top: 1px solid #e5e5e5;
+      color: #8B0000;
+      font-weight: 700;
+    }
+  }
+
+  .placement-table-wrapper {
+    margin-top: 28px;
+    overflow-x: auto;
+  }
+
+  .placement-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 480px;
+
+    th,
+    td {
+      padding: 12px 15px;
+      border: 1px solid #dfe3e5;
+      text-align: left;
+    }
+
+    th {
+      background: #0d1e3a;
+      color: #fff;
+    }
+
+    th:last-child,
+    td:last-child {
+      width: 30%;
+      text-align: center;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f7f8f9;
+    }
+  }
+
+  .placement-sidebar {
+    position: sticky;
+    top: 100px;
+    padding: 30px 24px;
+    border-radius: 10px;
+    background: #fafafa;
+    border: 1px solid #eaeaea;
+    text-align: left;
+
+    h3 {
+      margin: 0 0 10px;
+      color: #8B0000;
+      font-size: 1.3rem;
+    }
+
+    h4 {
+      margin: 28px 0 12px;
+      color: #0d1e3a;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    li {
+      padding: 12px 14px;
+      border-bottom: 1px solid #eaeaea;
+      text-align: left;
+      line-height: 1.45;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .placement-logo {
+    display: block;
+    margin-bottom: 15px;
+    color: #ffaa00;
+    font-size: 4.5rem;
+    text-align: center;
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(139, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    margin: 60px 0;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .placement-page {
+    .placement-layout,
+    .placement-year-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .placement-sidebar {
+      position: static;
+      order: -1;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .placement-page {
+    .placement-hero {
+      padding: 100px 15px 40px 15px;
+    }
+
+    .placement-content {
+      padding: 35px 12px 55px;
+    }
+
+    .placement-main {
+      padding: 24px 18px;
+    }
+
+    .placement-company-list {
+      grid-template-columns: 1fr;
+    }
+  }
+}
