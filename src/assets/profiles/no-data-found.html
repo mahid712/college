@@ -1,116 +1,118 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200">
-    <title>404 - Data Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Using your specific variables */
+        /* Variables */
         :root {
-            --bg-main: #0B2447;
-            --text-primary: #A5D7E8;
-            --text-heading: #E5B8F4;
-            --accent-glow: #8E05C2;
-            --accent-royal: #810CA8;
-            --accent-blue: #576CBC;
+            --primary-color: #8B0000;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f8f9fa;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-main);
-            background-image: linear-gradient(180deg, var(--bg-main) 0%, #1a1a2e 100%);
-            height: 100vh;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--text-primary);
-            overflow: hidden;
+            padding: 20px;
         }
 
-        .error-container {
+        .not-found-page {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .not-found-container {
+            background: #ffffff;
+            padding: 50px 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
             text-align: center;
-            padding: 50px;
-            background: linear-gradient(135deg, rgba(25, 55, 109, 0.6), rgba(62, 6, 95, 0.6));
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(229, 184, 244, 0.2);
-            border-radius: 20px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
             max-width: 500px;
-            width: 90%;
+            width: 100%;
+            position: relative;
+        }
+
+        .icon-wrapper {
+            font-size: 50px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            background: rgba(139, 0, 0, 0.08);
+            width: 90px;
+            height: 90px;
+            line-height: 90px;
+            border-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .error-code {
-            font-size: 100px;
-            font-weight: bold;
-            color: var(--text-heading);
-            text-shadow: 0 0 20px var(--accent-glow);
-            margin: 0;
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin: 0 0 10px 0;
             line-height: 1;
         }
 
-        .error-icon {
-            font-size: 60px;
-            color: var(--accent-blue);
-            margin: 20px 0;
-            display: block;
-        }
-
         h2 {
-            color: var(--text-heading);
-            font-size: 24px;
-            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-weight: 700;
         }
 
         p {
-            font-size: 16px;
+            font-size: 0.95rem;
+            color: var(--text-light);
             line-height: 1.6;
-            margin-bottom: 30px;
-            opacity: 0.8;
+            margin: 0;
         }
 
-        .back-btn {
-            display: inline-block;
-            background: linear-gradient(45deg, var(--accent-royal), var(--accent-blue));
-            color: #ffffff;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            box-shadow: 0 4px 15px rgba(129, 12, 168, 0.4);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .back-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(129, 12, 168, 0.6);
-        }
-
-        /* Subtle animated background circles */
-        .circle {
-            position: absolute;
-            border-radius: 50%;
-            background: var(--accent-royal);
-            filter: blur(80px);
-            z-index: -1;
-            opacity: 0.3;
+        .trademark {
+            margin-top: 35px;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            letter-spacing: 0.5px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
         }
     </style>
 </head>
 <body>
 
-    <div class="circle" style="width: 300px; height: 300px; top: 10%; left: 10%;"></div>
-    <div class="circle" style="width: 400px; height: 400px; bottom: 10%; right: 10%; background: var(--accent-blue);"></div>
-
-    <div class="error-container">
-        <span class="error-icon"><i class="fas fa-search-minus"></i></span>
-        <h1 class="error-code">404</h1>
-        <h2>Data Not Found</h2>
-        <p>The information you are looking for has either been moved or doesn't exist in our records.</p>
-        <a href="../department.html" class="back-btn"><i class="fas fa-home"></i> Back to Portal</a>
+    <div class="not-found-page">
+        <div class="not-found-container">
+            <div class="icon-wrapper">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h1 class="error-code">404</h1>
+            <h2>Page Not Found</h2>
+            <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+            
+            <!-- Custom Trademark -->
+            <div class="trademark">
+                &copy; 2026 Department Portal &trade; &bull; All Rights Reserved
+            </div>
+        </div>
     </div>
 
 </body>
