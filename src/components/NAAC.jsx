@@ -148,4 +148,3 @@ function NAAC() {
 }
 
 export default NAAC;
-no
