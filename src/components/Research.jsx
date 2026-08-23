@@ -1,7 +1,5 @@
 // src/pages/Research.jsx
-import React from 'react';
 import { Link } from 'react-router-dom';
-import ssrPdf from '../assets/pdf/SSR.pdf';
 import aqarPdf from '../assets/pdf/IQAC 2018-19.pdf';
 import '../scss/Research.scss';
 
@@ -29,11 +27,11 @@ export default function Research() {
                             <span className="details-link">View Details &rarr;</span>
                         </Link>
 
-                        <div id="iqac" className="quality-block iqac-block">
+                        <Link to="/iqac" className="quality-block iqac-block quality-block-link">
                             <h2 className="section-title-small">Internal Quality Assurance Cell (IQAC)</h2>
                             <p>The <strong>IQAC</strong> drives continuous improvement across all administrative and academic activities, ensuring stakeholder satisfaction and systemic efficiency.</p>
-                            <a href="#iqac" className="details-link">Meet the IQAC Team &rarr;</a>
-                        </div>
+                            <span className="details-link">Meet the IQAC Team &rarr;</span>
+                        </Link>
 
                         <div id="ranklist" className="quality-block rank-block">
                             <h2 className="section-title-small">University Rank List</h2>

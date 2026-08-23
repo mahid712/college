@@ -1,0 +1,94 @@
+$maroon: #8b0000;
+$ink: #17202a;
+$muted: #66727d;
+$paper: #f7f5f1;
+$line: #ddd8d0;
+
+.iqac-page {
+  min-height: 100%;
+  padding-bottom: 5rem;
+  color: $ink;
+  background: #f7f8fa;
+  font-family: 'Montserrat', sans-serif;
+
+  .iqac-hero {
+    padding: 4.5rem 1.5rem 3.5rem;
+    background: #f0f2f5;
+    border-bottom: 1px solid #e1e4e8;
+  }
+
+  .iqac-hero-content,
+  .iqac-content { width: min(100%, 1200px); margin: 0 auto; }
+  .iqac-hero-content { text-align: center; }
+
+  .eyebrow, .section-kicker, .role {
+    color: #b64e4e;
+    font-size: .74rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+
+  .iqac-hero .eyebrow { margin-bottom: .75rem; }
+
+  h1, h2, h3, p { margin-top: 0; }
+
+  h1 { margin: 0 0 .85rem; color: $maroon; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; }
+
+  .hero-description { max-width: 700px; margin: 0 auto 1.25rem; color: #666; line-height: 1.65; }
+
+  .breadcrumb { color: #555; font-size: .9rem; }
+  .breadcrumb a { color: $maroon; font-weight: 700; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+
+  .iqac-content { padding: 0 1.5rem 4rem; }
+
+  .iqac-nav { display: flex; flex-wrap: wrap; gap: 26px; padding: 19px 0; border-bottom: 1px solid $line; }
+  .iqac-nav a { color: $ink; font-size: .8rem; font-weight: 800; text-decoration: none; text-transform: uppercase; }
+  .iqac-nav a:hover { color: $maroon; }
+
+  .iqac-intro, .nirf-section { display: grid; grid-template-columns: minmax(240px, .8fr) 1.2fr; gap: 50px; padding: 4rem 0; border-bottom: 1px solid $line; }
+  .iqac-intro h2, .iqac-section h2 { margin-bottom: 15px; color: $ink; font-size: clamp(1.8rem, 3vw, 2.7rem); line-height: 1.1; }
+  .iqac-intro > p, .section-heading > p:last-child, .nirf-section p:last-child { color: $muted; font-size: 1rem; line-height: 1.8; }
+
+  .iqac-section { padding: 4rem 0; border-bottom: 1px solid $line; }
+  .iqac-section, .iqac-intro { scroll-margin-top: 1.5rem; }
+  .section-heading { max-width: 720px; margin-bottom: 32px; }
+  .section-heading .section-kicker, .iqac-intro .section-kicker, .nirf-section .section-kicker { margin-bottom: 14px; }
+
+  .report-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .iqac-document-link { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 58px; padding: 15px 17px; color: $ink; background: $paper; border: 1px solid transparent; text-decoration: none; font-size: .82rem; font-weight: 700; transition: border-color .2s, color .2s, transform .2s; }
+  .iqac-document-link span:last-child { color: $maroon; font-size: 1.1rem; }
+  .iqac-document-link:hover { color: $maroon; border-color: $maroon; transform: translateY(-2px); }
+
+  .split-section { display: grid; grid-template-columns: .8fr 1.2fr; gap: 50px; }
+  .split-section .section-heading { margin-bottom: 0; }
+  .document-stack { display: grid; gap: 10px; align-content: start; }
+
+  .people-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .people-grid article, .principles-grid article { padding: 25px; background: $paper; border-top: 3px solid $maroon; }
+  .people-grid h3 { margin: 12px 0 6px; font-size: 1.05rem; }
+  .people-grid p { color: $muted; font-size: .88rem; line-height: 1.65; }
+  .people-wide { grid-column: span 2; }
+
+  .principles-section { display: grid; grid-template-columns: .65fr 1.35fr; gap: 50px; }
+  .principles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .principles-grid h3 { margin-bottom: 15px; font-size: 1.1rem; }
+  .principles-grid ul { margin: 0; padding-left: 18px; color: $muted; font-size: .86rem; line-height: 1.65; }
+  .principles-grid li + li { margin-top: 10px; }
+
+  .upload-year + .upload-year { margin-top: 40px; }
+  .upload-year h3 { margin-bottom: 13px; color: $maroon; font-size: 1.15rem; }
+  .nirf-section { border-bottom: 0; }
+
+  @media (max-width: 760px) {
+    .iqac-hero { padding: 3.25rem 1rem 2.5rem; }
+    .iqac-content { padding: 0 1rem 2.75rem; }
+    .iqac-nav { gap: 15px; }
+    .iqac-intro, .split-section, .principles-section, .nirf-section { display: block; padding: 52px 0; }
+    .iqac-intro > p, .split-section .section-heading, .principles-section > div:first-child, .nirf-section > div:first-child { margin-top: 25px; }
+    .report-grid, .people-grid, .principles-grid { grid-template-columns: 1fr; }
+    .people-wide { grid-column: auto; }
+    .document-stack { margin-top: 25px; }
+  }
+}

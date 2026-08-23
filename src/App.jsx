@@ -1,6 +1,6 @@
 // src/App.jsx
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import AdmissionModal from './components/AdmissionModal';
 import Hero from './components/Hero';
@@ -21,6 +21,7 @@ import Syllabus from './components/Syllabus';
 import EResources from './components/EResources';
 import AdmissionRules from './components/AdmissionRules';
 import NAAC from './components/NAAC';
+import IQAC from './components/IQAC';
 
 function AppLayout() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -67,6 +68,7 @@ function AppLayout() {
           <Route path="/e-resources" element={<EResources />} />
           <Route path="/admission-rules" element={<AdmissionRules />} />
           <Route path="/naac" element={<NAAC />} />
+          <Route path="/iqac" element={<IQAC />} />
         </Routes>
       </main>
 

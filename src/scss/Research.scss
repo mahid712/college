@@ -133,7 +133,8 @@ $border-color: #e0e0e0;
                     }
                 }
 
-                &.naac-block-link {
+                &.naac-block-link,
+                &.quality-block-link {
                     text-decoration: none;
                     color: inherit;
                     cursor: pointer;
