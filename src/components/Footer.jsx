@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import '../scss/Footer.scss';
 
@@ -16,9 +15,9 @@ const Footer = ({ openModal }) => {
         <div className="footer-column">
           <h4>Academics</h4>
           <ul>
-            <li><a href="#academics">Courses Offered</a></li>
+            <li><Link to="/academics">Courses Offered</Link></li>
             <li><button type="button" className="footer-action" onClick={openModal}>Admissions</button></li>
-            <li><a href="#placements">Job Placements</a></li>
+            <li><Link to="/placements">Job Placements</Link></li>
             <li><Link to="/e-resources">E-Resources</Link></li>
           </ul>
         </div>
@@ -26,10 +25,10 @@ const Footer = ({ openModal }) => {
         <div className="footer-column">
           <h4>Campus & Culture</h4>
           <ul>
-            <li><a href="#departments">Departments</a></li>
-            <li><a href="#facilities">Campus Facilities</a></li>
-            <li><a href="#clubs">Activities & Clubs</a></li>
-            <li><a href="#yakshagana">Yakshagana Kendra</a></li>
+            <li><Link to="/departments">Departments</Link></li>
+            <li><Link to="/campus">Campus Facilities</Link></li>
+            <li><Link to="/clubs">Activities & Clubs</Link></li>
+            <li><Link to="/campus#campus-features">Yakshagana Kendra</Link></li>
           </ul>
         </div>
 

@@ -33,18 +33,18 @@ export default function Research() {
                             <span className="details-link">Meet the IQAC Team &rarr;</span>
                         </Link>
 
-                        <div id="ranklist" className="quality-block rank-block">
+                        <Link to="/ranklist" className="quality-block rank-block quality-block-link">
                             <h2 className="section-title-small">University Rank List</h2>
                             <p>MGM Udupi consistently produces top-tier academic achievers. Explore our students' success stories and university-level rankings across various streams.</p>
-                            <a href="#ranklist" className="details-link">View Rank Holders &rarr;</a>
-                        </div>
+                            <span className="details-link">View Rank Holders &rarr;</span>
+                        </Link>
 
-                        <div id="aicte" className="quality-block rank-block">
+                        <Link to="/aicte" className="quality-block rank-block quality-block-link">
                             <h2 className="section-title-small">AICTE Approval</h2>
                             <span className="naac-grade">Approved Institution</span>
                             <p>MGM College is duly approved by the <strong>All India Council for Technical Education (AICTE)</strong>, ensuring high standards in technical education and professional development.</p>
-                            <a href="#aicte" className="details-link">View Approval Documents &rarr;</a>
-                        </div>
+                            <span className="details-link">View Approval Documents &rarr;</span>
+                        </Link>
                     </div>
                 </section>
 

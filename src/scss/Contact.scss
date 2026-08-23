@@ -1,0 +1,221 @@
+// Variables
+$primary-color: #8B0000;
+$text-dark: #333333;
+$text-light: #666666;
+$bg-light: #f9f9f9;
+$border-color: #e0e0e0;
+$transition-speed: 0.3s ease;
+
+.contact-page-wrapper {
+  font-family: 'Montserrat', sans-serif;
+  color: $text-dark;
+  background-color: #f8f9fa;
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  // Header Banner / Hero Section (Border line removed)
+  .page-header-banner {
+    background-color: #f8f9fa;
+    color: $text-dark;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 40px;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: $primary-color;
+    }
+
+    p {
+      font-size: 1.05rem;
+      color: $text-light;
+      margin-bottom: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .breadcrumb {
+      font-size: 0.9rem;
+      color: $text-light;
+      
+      a {
+        color: $text-dark;
+        text-decoration: none;
+        font-weight: 500;
+        
+        &:hover {
+          color: $primary-color;
+          text-decoration: underline;
+        }
+      }
+
+      span {
+        color: $text-light;
+      }
+    }
+  }
+
+  // Contact Details & Map Grid
+  .contact-details-section {
+    margin-bottom: 60px;
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+
+      @media (max-width: 968px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contact-info-card,
+    .contact-map-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      border: 1px solid $border-color;
+
+      h2 {
+        font-size: 1.5rem;
+        color: $primary-color;
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 10px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 50px;
+          height: 3px;
+          background-color: $primary-color;
+        }
+      }
+    }
+
+    .info-block {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+
+      .info-icon {
+        font-size: 1.25rem;
+        color: $primary-color;
+        margin-right: 15px;
+        margin-top: 3px;
+      }
+
+      .info-content {
+        h3 {
+          font-size: 1.05rem;
+          margin-bottom: 5px;
+          font-weight: 600;
+        }
+
+        p {
+          font-size: 0.95rem;
+          color: $text-light;
+          line-height: 1.5;
+          margin-bottom: 3px;
+
+          a {
+            color: $primary-color;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .map-responsive-wrapper {
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  }
+
+  // Feedback & Grievance Portal Section
+  .contact-form-section {
+    margin-bottom: 80px;
+
+    .portal-header-wrapper {
+      margin-bottom: 30px;
+
+      .section-title {
+        font-size: 1.8rem;
+        color: $text-dark;
+        margin-bottom: 10px;
+      }
+
+      .portal-description {
+        color: $text-light;
+        font-size: 1rem;
+      }
+    }
+
+    .portal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+
+      .portal-card {
+        background: $bg-light;
+        padding: 20px;
+        border-radius: 6px;
+        border-left: 4px solid $primary-color;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+        transition: transform $transition-speed;
+
+        &:hover {
+          transform: translateY(-3px);
+        }
+
+        h4 {
+          color: $primary-color;
+          margin-bottom: 15px;
+          font-size: 1.1rem;
+          font-weight: 700;
+        }
+
+        .portal-links {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            margin-bottom: 10px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            a {
+              color: $text-dark;
+              text-decoration: none;
+              font-size: 0.9rem;
+              transition: color $transition-speed;
+
+              &:hover {
+                color: $primary-color;
+                padding-left: 3px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

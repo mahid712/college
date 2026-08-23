@@ -22,6 +22,12 @@ import EResources from './components/EResources';
 import AdmissionRules from './components/AdmissionRules';
 import NAAC from './components/NAAC';
 import IQAC from './components/IQAC';
+import Ranklist from './components/Ranklist';
+import AICTE from './components/AICTE';
+import Department from './components/Department';
+import Clubs from './components/Clubs';
+import Profile from './components/Profile';
+import Contact from './components/Contact';
 
 function AppLayout() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -69,6 +75,12 @@ function AppLayout() {
           <Route path="/admission-rules" element={<AdmissionRules />} />
           <Route path="/naac" element={<NAAC />} />
           <Route path="/iqac" element={<IQAC />} />
+          <Route path="/ranklist" element={<Ranklist />} />
+          <Route path="/aicte" element={<AICTE />} />
+          <Route path="/departments" element={<Department />} />
+          <Route path="/clubs" element={<Clubs />} />
+          <Route path="/profiles/:profileSlug" element={<Profile />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
 

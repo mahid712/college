@@ -36,7 +36,7 @@ const ScholarshipNavbar = ({ onOpenModal }) => {
             </div>
           </div>
 
-          <a href="#contact">Contact Us</a>
+          <Link to="/contact">Contact Us</Link>
           <a href="#login" className="login-link">Login</a>
         </nav>
 

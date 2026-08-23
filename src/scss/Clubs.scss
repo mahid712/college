@@ -1,0 +1,31 @@
+.clubs-page {
+  min-height: 100%;
+  padding-bottom: 5rem;
+  background: #f7f8fa;
+  color: #242424;
+  font-family: 'Montserrat', sans-serif;
+
+  .clubs-hero { padding: 4.5rem 1.5rem 3.5rem; background: #f0f2f5; border-bottom: 1px solid #e1e4e8; }
+  .clubs-hero-content, .clubs-content { width: min(100%, 1200px); margin: 0 auto; }
+  .clubs-hero-content { text-align: center; }
+  .eyebrow, .section-kicker { margin: 0 0 .75rem; color: #8b0000; font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+  h1 { margin: 0 0 .85rem; color: #8b0000; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; }
+  .hero-description { max-width: 700px; margin: 0 auto 1.25rem; color: #666; line-height: 1.65; }
+  .breadcrumb { color: #555; font-size: .9rem; }
+  .breadcrumb a { color: #8b0000; font-weight: 700; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .clubs-content { padding: 4rem 1.5rem; }
+  .clubs-intro { max-width: 780px; margin-bottom: 3rem; }
+  .clubs-intro h2, .activity-section h2 { margin: 0 0 .8rem; color: #1e1e1e; font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.2; }
+  .clubs-intro p:last-child, .section-heading p:last-child { color: #666; line-height: 1.7; }
+  .activity-section { margin-bottom: 4rem; }
+  .section-heading { margin-bottom: 1.25rem; }
+  .activity-table-container { overflow-x: auto; background: #fff; border: 1px solid #e1e3e6; border-top: 4px solid #8b0000; border-radius: 8px; box-shadow: 0 5px 16px rgba(31, 35, 40, .06); }
+  .activity-table { width: 100%; min-width: 620px; border-collapse: collapse; text-align: left; }
+  .activity-table th { padding: 1rem 1.25rem; background: #8b0000; color: #fff; font-size: .82rem; letter-spacing: .04em; text-transform: uppercase; }
+  .activity-table td { padding: .9rem 1.25rem; border-bottom: 1px solid #e8eaec; color: #444; font-size: .92rem; line-height: 1.45; }
+  .activity-table tbody tr:nth-child(even) { background: #fafafa; }
+  .activity-table tbody tr:hover { background: #fff4f4; }
+  .activity-table td:first-child { color: #1e1e1e; font-weight: 700; }
+  @media (max-width: 700px) { .clubs-hero { padding: 3.25rem 1rem 2.5rem; } .clubs-content { padding: 2.75rem 1rem; } .activity-section { margin-bottom: 3rem; } .activity-table th, .activity-table td { padding: .75rem .85rem; } }
+}

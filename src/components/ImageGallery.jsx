@@ -1,19 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../scss/ImageGallery.scss';
 
 const TOTAL_IMAGES = 119;
+const galleryAssets = import.meta.glob('../assets/pics/IMG_*.png', {
+  eager: true,
+  import: 'default',
+  query: '?url',
+});
+
+const imageUrl = (index) => galleryAssets[`../assets/pics/IMG_${index}.png`];
 
 export default function ImageGallery() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(1);
 
-  // Generate image data list safely resolving via BASE_URL
   const images = Array.from({ length: TOTAL_IMAGES }, (_, i) => {
     const index = i + 1;
     return {
       id: index,
-      src: `${import.meta.env.BASE_URL}pics/IMG_${index}.png`,
+      src: imageUrl(index),
       alt: `Image ${index} of ${TOTAL_IMAGES}`
     };
   });
@@ -96,7 +102,7 @@ export default function ImageGallery() {
             <img
               className="modal-image"
               id="modalImage"
-              src={`${import.meta.env.BASE_URL}pics/IMG_${currentIndex}.png`}
+              src={imageUrl(currentIndex)}
               alt={`Image ${currentIndex}`}
             />
             <div id="caption">Image {currentIndex} of {TOTAL_IMAGES}</div>
