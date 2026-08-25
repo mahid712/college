@@ -106,16 +106,16 @@ function NAAC() {
           </div>
         </section>
 
-        {/* Photo Gallery Section */}
-        <section className="gallery-section">
-          <div className="gallery-content">
-            <h3>NAAC Peer Team Visit</h3>
-            <p>Click below to view photos from the NAAC Peer Team Visit to our campus</p>
-            <Link to="/gallery" className="gallery-link">
-              View NAAC Peer Team Visit Photos <i className="fas fa-arrow-right"></i>
-            </Link>
-          </div>
-        </section>
+      {/* Photo Gallery Section */}
+<section className="gallery-section">
+  <div className="gallery-content">
+    <h3>NAAC Peer Team Visit</h3>
+    <p>Click below to view photos from the NAAC Peer Team Visit to our campus</p>
+    <Link to="/naac-peer-photos" className="gallery-link">
+      View NAAC Peer Team Visit Photos <i className="fas fa-arrow-right"></i>
+    </Link>
+  </div>
+</section>
 
         {/* Quality Assurance Info */}
         <section className="quality-info-section">

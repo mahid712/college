@@ -28,6 +28,9 @@ import Department from './components/Department';
 import Clubs from './components/Clubs';
 import Profile from './components/Profile';
 import Contact from './components/Contact';
+import NaacPeerPhotos from './components/naac-peer-photos';
+
+
 
 function AppLayout() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -81,6 +84,8 @@ function AppLayout() {
           <Route path="/clubs" element={<Clubs />} />
           <Route path="/profiles/:profileSlug" element={<Profile />} />
           <Route path="/contact" element={<Contact />} />
+          // Inside your Router / Routes block:
+<Route path="/naac-peer-photos" element={<NaacPeerPhotos />} />
         </Routes>
       </main>
 

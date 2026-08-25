@@ -24,7 +24,7 @@ const programs = [
         sections: [
           ['1st & 2nd Semester', [['View Semester 1 & 2 Syllabus', 'bca(syllabus)/general/BCA.pdf']]],
           ['3rd & 4th Semester', [['View Semester 3 & 4 Syllabus', 'bca(syllabus)/general/2-BCA-syllabus-III-IV.pdf']]],
-          ['5th & 6th Semester', [['View Semester 5 & 6 Syllabus', 'bca(syllabus)/general/BCA Syllabus (V-VI).pdf']]],
+          ['5th & 6th Semester', [['View Semester 5 & 6 Syllabus', 'bca(syllabus)/general/BCA-V-VI-Sem-26-27.pdf']]],
           ['Updated Course List', [['View Updated Course List', 'bca(syllabus)/general/Corrected skill course in IV sem BCA.pdf']]],
         ],
       },
@@ -35,7 +35,7 @@ const programs = [
         sections: [
           ['1st & 2nd Semester', [['View Semester 1 & 2 Syllabus', 'bca(syllabus)/aiml/BCA (AIML).pdf']]],
           ['3rd & 4th Semester', [['View Semester 3 & 4 Syllabus', 'bca(syllabus)/aiml/4-BCA-AIML-syllabus-III-IV.pdf']]],
-          ['5th & 6th Semester', [['View Semester 5 & 6 Syllabus', 'bca(syllabus)/aiml/BCA(AIML)-V_VI.pdf']]],
+          ['5th & 6th Semester', [['View Semester 5 & 6 Syllabus', 'bca(syllabus)/aiml/BCA-(AI&ML)-V-VI-sem-26-27.pdf']]],
           ['Updated Course List', [['View Updated Course List', 'bca(syllabus)/aiml/Corrected skill course in IV semBCA AI-ML   (1).pdf']]],
         ],
       },
@@ -50,41 +50,41 @@ const programs = [
       {
         id: 'bzc', label: 'Botany, Zoology & Chemistry', description: 'Life sciences blended with animal biology and chemical laboratory sciences.',
         sections: [
-          ['Botany', [['Botany Syllabus (Sem I - VI)', 'bsc/bzc/Botany-syllabus-SEP-I-VI updated Feb 2026 2.pdf']]],
-          ['Zoology', [['Zoology Syllabus', 'bsc/bzc/Zoology Syllabus.pdf']]],
-          ['Chemistry', [['Chemistry Syllabus (Sem I - VI)', 'bsc/bzc/Chemistry-Syllabus-I-VI.pdf'], ['B.Sc. Chemistry Overview', 'bsc/bzc/B.Sc.Chemistry.pdf'], ['Scheme of Valuation Changes', 'bsc/bzc/Chemistry Changes in Scheme of Valuation Practicals Sem  I and II-SEP.pdf']]],
+          ['Botany', [['Botany Syllabus (Sem I - VI)', 'bsc/bzc/Botany-syllabus-I-VI revised Aug 2026.pdf']]],
+          ['Zoology', [['Zoology Syllabus', 'bsc/bzc/Zoology-I-VI-24-25.pdf']]],
+          ['Chemistry', [['Chemistry Syllabus (Sem I - VI)', 'bsc/bzc/Chemistry -2024-25-I-VI.pdf'],  ['Scheme of Valuation Changes', 'bsc/bzc/Chemistry Changes in Scheme of Valuation Practicals Sem  I and II-SEP.pdf']]],
         ],
       },
       {
         id: 'msp', label: 'Mathematics, Statistics & Physics', description: 'Mathematical modeling, statistical data theory, and classical physics.',
         sections: [
-          ['Mathematics', [['Mathematics Syllabus (Sem I - VI)', 'bsc/msp/MathematicsSyllabus-I-VI-sem.pdf'], ['B.Sc. Mathematics Overview', 'bsc/msp/B. Sc-Mathematics.pdf']]],
-          ['Statistics', [['Statistics Overview', 'bsc/msp/Statistics.pdf'], ['Statistics Syllabus', 'bsc/msp/14-Statistics-Syllabus-for-BSC-Programme.pdf'], ['IV Semester Elective Course', 'bsc/msp/IV sem Elective course in Statistics-.pdf']]],
-          ['Physics', [['B.Sc. Physics Syllabus', 'bsc/msp/B.Sc. Physics.pdf'], ['Skill Course in Physics', 'bsc/msp/Skill course in Physics.pdf']]],
+          ['Mathematics', [['Mathematics Syllabus (Sem I - VI)', 'bsc/msp/MathematicsSyllabus-I-VI-sem.pdf'],['Mathematics Syllabus (Sem V -VI)', 'bsc/msp/Mathematics-V-VI Sem -2026-27.pdf']]],
+          ['Statistics', [['Statistics Syllabus', 'bsc/msp/Statistics-I-VIsem -24-25.pdf'], ['IV Semester Elective Course', 'bsc/msp/IV sem Elective course in Statistics-.pdf']]],
+          ['Physics', [['B.Sc. Physics Syllabus', 'bsc/msp/Physics Syllabus I-VI.pdf']]],
         ],
       },
       {
         id: 'mpc', label: 'Mathematics, Physics & Chemistry', description: 'Mathematical reasoning, physical laws, and chemical reactions and synthesis.',
         sections: [
-          ['Mathematics', [['Mathematics Syllabus (Sem I - VI)', 'bsc/mpc/MathematicsSyllabus-I-VI-sem.pdf'], ['B.Sc. Mathematics Overview', 'bsc/mpc/B. Sc-Mathematics.pdf']]],
-          ['Physics', [['B.Sc. Physics Syllabus', 'bsc/mpc/B.Sc. Physics.pdf'], ['Skill Course in Physics', 'bsc/mpc/Skill course in Physics.pdf']]],
-          ['Chemistry', [['Chemistry Syllabus (Sem I - VI)', 'bsc/mpc/Chemistry-Syllabus-I-VI.pdf'], ['B.Sc. Chemistry Overview', 'bsc/mpc/B.Sc.Chemistry.pdf'], ['Scheme of Valuation Changes', 'bsc/mpc/Chemistry Changes in Scheme of Valuation Practicals Sem  I and II-SEP.pdf']]],
+          ['Mathematics', [['Mathematics Syllabus (Sem I - VI)', 'bsc/mpc/MathematicsSyllabus-I-VI-sem.pdf'],['Mathematics Syllabus (Sem V -VI)', 'bsc/mpc/Mathematics-V-VI Sem -2026-27.pdf']]],
+          ['Physics', [['B.Sc. Physics Syllabus', 'bsc/mpc/Physics Syllabus I-VI.pdf']]],
+          ['Chemistry', [['Chemistry Syllabus (Sem I - VI)', 'bsc/mpc/Chemistry -2024-25-I-VI.pdf'],  ['Scheme of Valuation Changes', 'bsc/mpc/Chemistry Changes in Scheme of Valuation Practicals Sem  I and II-SEP.pdf']]],
         ],
       },
       {
         id: 'mpcs', label: 'Mathematics, Physics & Computer Science', description: 'Mathematics, physical concepts, and practical software computing and programming.',
         sections: [
-          ['Mathematics', [['Mathematics Syllabus (Sem I - VI)', 'bsc/mpcs/MathematicsSyllabus-I-VI-sem.pdf'], ['B.Sc. Mathematics Overview', 'bsc/mpcs/B. Sc-Mathematics.pdf']]],
-          ['Physics', [['B.Sc. Physics Syllabus', 'bsc/mpcs/B.Sc. Physics.pdf'], ['Skill Course in Physics', 'bsc/mpcs/Skill course in Physics.pdf']]],
-          ['Computer Science', [['B.Sc. Computer Science Overview', 'bsc/mpcs/B.Sc. Computer Science.pdf'], ['Computer Science Syllabus', 'bsc/mpcs/9-Computer-sc-Syllabus.pdf'], ['Computer Science (Sem V - VI)', 'bsc/mpcs/Computer sc Syllabus-V-VI.pdf'], ['Corrected Skill Course (Sem IV)', 'bsc/mpcs/Corrected skill course in comp sc for IV sem BSC.pdf']]],
+          ['Mathematics', [['Mathematics Syllabus (Sem I - VI)', 'bsc/mpcs/MathematicsSyllabus-I-VI-sem.pdf'],['Mathematics Syllabus (Sem V -VI)', 'bsc/mpcs/Mathematics-V-VI Sem -2026-27.pdf']]],
+          ['Physics', [['B.Sc. Physics Syllabus', 'bsc/mpcs/Physics Syllabus I-VI.pdf']]],
+          ['Computer Science', [['B.Sc. Computer Science Overview', 'bsc/mpcs/9-Computer-sc-Syllabus.pdf'], ['Computer Science Syllabus', 'bsc/mpcs/B.Sc. Computer Science.pdf'], ['Computer Science (Sem V - VI)', 'bsc/mpcs/Computer-Science-V-VI-Sem-26-27.pdf'], ['Corrected Skill Course (Sem IV)', 'bsc/mpcs/Corrected skill course in comp sc for IV sem BSC.pdf']]],
         ],
       },
       {
         id: 'mscs', label: 'Mathematics, Statistics & Computer Science', description: 'Analytical computing, statistical analytics, and algorithmic problem-solving.',
         sections: [
-          ['Mathematics', [['Mathematics Syllabus (Sem I - VI)', 'bsc/mscs/MathematicsSyllabus-I-VI-sem.pdf'], ['B.Sc. Mathematics Overview', 'bsc/mscs/B. Sc-Mathematics.pdf']]],
-          ['Statistics', [['Statistics Overview', 'bsc/mscs/Statistics.pdf'], ['Statistics Syllabus', 'bsc/mscs/14-Statistics-Syllabus-for-BSC-Programme.pdf'], ['IV Semester Elective Course', 'bsc/mscs/IV sem Elective course in Statistics-.pdf']]],
-          ['Computer Science', [['B.Sc. Computer Science Overview', 'bsc/mscs/B.Sc. Computer Science.pdf'], ['Computer Science Syllabus', 'bsc/mscs/9-Computer-sc-Syllabus.pdf'], ['Computer Science (Sem V - VI)', 'bsc/mscs/Computer sc Syllabus-V-VI.pdf'], ['Corrected Skill Course (Sem IV)', 'bsc/mscs/Corrected skill course in comp sc for IV sem BSC.pdf']]],
+          ['Mathematics', [['Mathematics Syllabus (Sem I - VI)', 'bsc/mscs/MathematicsSyllabus-I-VI-sem.pdf'],['Mathematics Syllabus (Sem V -VI)', 'bsc/mscs/Mathematics-V-VI Sem -2026-27.pdf']]],
+          ['Statistics', [['Statistics Syllabus', 'bsc/mscs/Statistics-I-VIsem -24-25.pdf'], ['IV Semester Elective Course', 'bsc/mscs/IV sem Elective course in Statistics-.pdf']]],
+          ['Computer Science', [['B.Sc. Computer Science Overview', 'bsc/mscs/9-Computer-sc-Syllabus.pdf'], ['Computer Science Syllabus', 'bsc/mscs/B.Sc. Computer Science.pdf'], ['Computer Science (Sem V - VI)', 'bsc/mscs/Computer-Science-V-VI-Sem-26-27.pdf'], ['Corrected Skill Course (Sem IV)', 'bsc/mscs/Corrected skill course in comp sc for IV sem BSC.pdf']]],
         ],
       },
     ],
