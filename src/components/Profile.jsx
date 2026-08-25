@@ -2,7 +2,8 @@ import { useEffect, useMemo } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import vanithaSource from '../assets/profiles/vanitha-maiya.html?raw';
 import veeraSource from '../assets/profiles/veera-pinto.html?raw';
-import vishwanathaSource from '../assets/profiles/vishwanatha-pai.html?raw';
+// Imported with the exact hyphenated filename from assets/profiles/
+import VishwanathaPai from '../assets/profiles/vishwanatha-pai'; 
 import principalImage from '../assets/mgm-pic/princi.png';
 import vicePrincipalImage from '../assets/mgm-pic/vp.png';
 import veeraImage from '../assets/mgm-pic/veera.png';
@@ -15,7 +16,8 @@ const profileData = {
     name: 'Prof. Vanitha Maiya',
     role: 'Principal',
     email: 'principal@mgmudupi.ac.in',
-    dept: 'Department of Computer Science'
+    dept: 'Department of Computer Science',
+    isNative: false
   },
   'veera-pinto': { 
     source: veeraSource, 
@@ -23,20 +25,21 @@ const profileData = {
     name: 'Dr. Veera Pinto',
     role: 'Vice Principal',
     email: 'veera.pinto@mgmudupi.ac.in',
-    dept: 'Department of English'
+    dept: 'Department of English',
+    isNative: false
   },
   'vishwanatha-pai': { 
-    source: vishwanathaSource, 
     image: vicePrincipalImage,
     name: 'Dr. Vishwanatha Pai M.a',
     role: 'Vice Principal',
     email: 'vish_pai@yahoo.com',
-    dept: 'Dept. of Commerce'
+    dept: 'Dept. of Commerce',
+    isNative: true // Flag to render the native component instead of raw HTML
   },
 };
 
 function extractInnerContent(source) {
-  // Grab everything inside the raw file's content-area tag
+  if (!source) return '';
   const match = source.match(/<main class="content-area">([\s\S]*?)<\/main>/);
   const rawHtml = match ? match[1] : source;
 
@@ -50,11 +53,15 @@ export default function Profile() {
   const { profileSlug } = useParams();
   const profile = profileData[profileSlug] || profileData['vishwanatha-pai'];
   
-  // Memoize the inner HTML parsing
-  const innerMarkup = useMemo(() => extractInnerContent(profile.source), [profile.source]);
+  // Memoize inner HTML only if it's not a native component
+  const innerMarkup = useMemo(() => {
+    return profile.isNative ? '' : extractInnerContent(profile.source);
+  }, [profile]);
 
-  // Accordion toggle behavior with proper opening and closing support
+  // Accordion toggle behavior for raw HTML profiles
   useEffect(() => {
+    if (profile.isNative) return;
+
     const timer = setTimeout(() => {
       const accordionItems = document.querySelectorAll('.faculty-profile-page .acc-item');
       const cleanups = [];
@@ -68,14 +75,12 @@ export default function Profile() {
           e.preventDefault();
           const isActive = item.classList.contains('is-active');
 
-          // Close all items first
           accordionItems.forEach((otherItem) => {
             const otherPanel = otherItem.querySelector('.acc-panel');
             otherItem.classList.remove('is-active');
             if (otherPanel) otherPanel.style.maxHeight = null;
           });
 
-          // If it wasn't active before, open it now
           if (!isActive) {
             item.classList.add('is-active');
             panel.style.maxHeight = `${panel.scrollHeight}px`;
@@ -87,10 +92,10 @@ export default function Profile() {
       });
 
       return () => cleanups.forEach((cleanup) => cleanup());
-    }, 50); // Small delay ensures DOM is fully updated from dangerouslySetInnerHTML
+    }, 50);
 
     return () => clearTimeout(timer);
-  }, [innerMarkup]);
+  }, [innerMarkup, profile.isNative]);
 
   return (
     <div className="faculty-profile-page">
@@ -123,11 +128,15 @@ export default function Profile() {
           </div>
         </aside>
 
-        {/* Right Content Area handled natively by React */}
-        <main 
-          className="content-area" 
-          dangerouslySetInnerHTML={{ __html: innerMarkup }} 
-        />
+        {/* Conditional Rendering: Native Component vs Raw HTML */}
+        {profile.isNative ? (
+          <VishwanathaPai />
+        ) : (
+          <main 
+            className="content-area" 
+            dangerouslySetInnerHTML={{ __html: innerMarkup }} 
+          />
+        )}
 
       </div>
     </div>

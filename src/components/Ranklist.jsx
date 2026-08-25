@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import ranklistHtml from '../data/ranklist.html?raw';
+import RankList from '../data/ranklistdata';
 import '../scss/Ranklist.scss';
 
 export default function Ranklist() {
@@ -20,7 +20,9 @@ export default function Ranklist() {
           <h2>University Rank List</h2>
           <p>MGM College celebrates the academic excellence of students who have secured university ranks over the decades.</p>
         </div>
-        <div className="ranklist-html" dangerouslySetInnerHTML={{ __html: ranklistHtml.trim() }} />
+        <div className="ranklist-html-wrapper">
+          <RankList />
+        </div>
       </main>
     </div>
   );

@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import placementHtml from '../data/placement.html?raw';
+import PlacementData from '../data/placementdata';
 import '../scss/Placement.scss';
-
-const placementContent = placementHtml.trim();
 
 export default function Placement() {
   return (
@@ -19,7 +17,9 @@ export default function Placement() {
       </section>
 
       <main className="placement-content">
-        <div className="placement-html" dangerouslySetInnerHTML={{ __html: placementContent }} />
+        <div className="placement-html">
+          <PlacementData />
+        </div>
       </main>
     </div>
   );
