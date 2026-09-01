@@ -1,2162 +1,1751 @@
+export const placementData = {
+  overview: {
+    title: "Campus Placement",
+    tagline: "The highlights of the academic years speaks for itself",
+    introParagraphs: [
+      'Here is an opportunity for you to "Dream Big" and realize that Dream Too. The giants of I.T./B.P.O./Finance/Insurance & Marketing industry are convinced that an MGMite always stands out. Our College has ensured campus placement for more than 950 final year degree students since 2003. Don’t you think it is a golden opportunity to have an Order in your pockets even before you have a Degree in your hands?',
+      'Our students from B.A./B.Sc./B.Com./B.C.A. and P.G.D.C.A. were placed as Software Junior Engineers, Test Engineers, Quality Analysts, Process Executives, Unit Managers with a salary of upto Rs. 16,000/- per month in lead Companies. Some of the Companies even offer opportunity for higher studies like MS-Software, MCA & MBA.'
+    ],
+    leadingRecruiters: [
+      "Wipro Infotech",
+      "Infosys Technologies Ltd.",
+      "Wipro Technologies",
+      "Tata Consultancy Services (TCS)",
+      "Convergys",
+      "IBM",
+      "Infosys B.P.O.",
+      "Outsource Partner International",
+      "First Source",
+      "Mphasis B.P.O.",
+      "ICICI Prudential",
+      "TV9 (English Channel)"
+    ],
+    sidebar: {
+      title: "Placement Cell",
+      description: "The highlights of the academic years speak for themselves. We prepare our students not just for a degree, but for a career.",
+      keyStats: [
+        { label: "Since 2003", value: "950+ students placed" },
+        { label: "Top Salary", value: "₹16,000/- per month" },
+        { label: "Top Recruiters", value: "12+ Major Companies" },
+        { label: "2020-21 Total", value: "85 students placed" },
+        { label: "2019-20 Total", value: "138 students placed" },
+        { label: "2018-19 Total", value: "139 students placed" },
+        { label: "2017-18 Total", value: "111 students placed" },
+        { label: "2016-17 Total", value: "130 students placed" },
+        { label: "2015-16 Total", value: "228 students placed" },
+        { label: "2014-15 Total", value: "161 students placed" },
+        { label: "2013-14 Total", value: "127 students placed" },
+        { label: "2012-13 Total", value: "48 students placed" },
+        { label: "2011-12 Total", value: "114 students placed" },
+        { label: "2010-11 Total", value: "95 students placed" }
+      ],
+      footerNote: "For more details, contact the Placement Cell Coordinator."
+    }
+  },
 
-export default function PlacementData() {
-  return (
-    <div>
-      <div className="container placement-layout">
-    <div className="placement-main">
-        
-        <h2>Campus Placement</h2>
-        
-        <p>Here is an opportunity for you to "Dream Big" and realize that Dream Too. The giants of I.T./B.P.O./Finance/Insurance & Marketing industry are convinced that an MGMite always stands out. Our College has ensured campus placement for more than <strong>950 final year degree students since 2003</strong>. Don’t you think it is a golden opportunity to have an Order in your pockets even before you have a Degree in your hands?</p>
-        <p className="section-subtitle">The highlights of the academic years speaks for itself</p>
-        <p>Our students from B.A./B.Sc./B.Com./B.C.A. and P.G.D.C.A. were placed as Software Junior Engineers, Test Engineers, Quality Analysts, Process Executives, Unit Managers with a salary of upto <strong>Rs. 16,000/- per month</strong> in lead Companies. Some of the Companies even offer opportunity for higher studies like MS-Software, MCA & MBA.</p>
-        <h3>Leading Recruiters</h3>
-        
-        <ul className="placement-company-list">
-            <li>Wipro Infotech</li>
-            <li>Infosys Technologies Ltd.</li>
-            <li>Wipro Technologies</li>
-            <li>Tata Consultancy Services (TCS)</li>
-            <li>Convergys</li>
-            <li>IBM</li>
-            <li>Infosys B.P.O.</li>
-            <li>Outsource Partner International</li>
-            <li>First Source</li>
-            <li>Mphasis B.P.O.</li>
-            <li>ICICI Prudential</li>
-            <li>TV9 (English Channel)</li>
-        </ul>
-        <hr />
-        
-        <h3>Campus Placements for the year 2020-21</h3>
-        <ul className="student-stats">
-            <li><strong>Infosys Technologies:</strong> 40 students selected</li>
-            <li><strong>Deloitte:</strong> 05 students selected</li>
-            <li><strong>TCS:</strong> 08 students selected</li>
-            <li><strong>Wipro:</strong> 30 students selected</li>
-            <li><strong>Cognizant:</strong> 02 students selected</li>
-        </ul>
-        
-        <p className="final-total" style={{ marginTop: '20px', padding: '10px' }}><strong>Total Selected for the year 2020-21 : 85</strong></p>
-        <h3>Campus Placements for the year 2019-20</h3>
-        
-        <h4>Congratulations to the following students who got placed in Cognizant</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Varun Bhat</td><td>B.Sc</td></tr>
-                <tr><td>Adarsh Janardhan Acharya</td><td>B.Sc</td></tr>
-                <tr><td>Vishesh S Amin</td><td>B.Sc</td></tr>
-                <tr><td>Narayan Pai</td><td>B.Sc</td></tr>
-                <tr><td>Udupi Prajnashree Naik</td><td>B.Sc</td></tr>
-                <tr><td>Priya S Poojary</td><td>B.Sc</td></tr>
-                <tr><td>Keerthi U Pai</td><td>B.Sc</td></tr>
-                <tr><td>Anusha Rao</td><td>B.Sc</td></tr>
-                <tr><td>Melona Dsouza</td><td>B.Sc</td></tr>
-                <tr><td>Riha Fahika</td><td>BA</td></tr>
-                <tr><td>Adolf Shervin Amanna</td><td>B.Com</td></tr>
-                <tr><td>Chaitra Prabhu</td><td>B.Com</td></tr>
-                <tr><td>Dsouza Melisha Melwyn</td><td>B.Com</td></tr>
-                <tr><td>Sharon Reeshma Prasad</td><td>B.Com</td></tr>
-                <tr><td>Vibha Shanbhogue</td><td>BCA</td></tr>
-                <tr><td>Nidhi Pratap Shetty</td><td>BCA</td></tr>
-                <tr><td>Shreya Kamath</td><td>BCA</td></tr>
-                <tr><td>Deepali Shetty</td><td>BCA</td></tr>
-                <tr><td>K Deeksha Nayak</td><td>BCA</td></tr>
-                <tr><td>Rashmi Shenoy</td><td>BCA</td></tr>
-                <tr><td>Vimanshu Kumar V Bhandary</td><td>BCA</td></tr>
-                <tr><td>Sandhya H B Bhaskar</td><td>BCA</td></tr>
-                <tr><td>Joyce Rashel Saldanha</td><td>BCA</td></tr>
-                <tr><td>Deekshitha Acharya</td><td>BCA</td></tr>
-                <tr><td>Vaishnavi Kedlaya</td><td>BCA</td></tr>
-                <tr><td>Vandana Nayak</td><td>BCA</td></tr>
-                <tr><td>Rachita Patkar</td><td>BCA</td></tr>
-                <tr><td>Priyanka Acharya</td><td>BCA</td></tr>
-                <tr><td>Shradda Thrivikrama Kini</td><td>BCA</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>29</strong></p>
-        
-        
-        <h4>Congratulations to the following students who got placed in Infosys Technology</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Aman Sameer Chikodi</td><td>BCA</td></tr>
-                <tr><td>Amrutha</td><td>BCA</td></tr>
-                <tr><td>Asthik K</td><td>BCA</td></tr>
-                <tr><td>Chirashree P</td><td>BCA</td></tr>
-                <tr><td>Deekshitha Acharya</td><td>BCA</td></tr>
-                <tr><td>Harshitha S Kotian</td><td>BCA</td></tr>
-                <tr><td>Deepali Shetty</td><td>BCA</td></tr>
-                <tr><td>Joyce Rashel Saldanha</td><td>BCA</td></tr>
-                <tr><td>Kedar S Shenoy</td><td>BCA</td></tr>
-                <tr><td>Manoj B V</td><td>BCA</td></tr>
-                <tr><td>Nihal Prasad</td><td>BCA</td></tr>
-                <tr><td>Pranil kotian</td><td>BCA</td></tr>
-                <tr><td>Preethika V Wagle</td><td>BCA</td></tr>
-                <tr><td>Rachita R Patkar</td><td>BCA</td></tr>
-                <tr><td>Radhika K Bhat</td><td>BCA</td></tr>
-                <tr><td>Rahul Jogi</td><td>BCA</td></tr>
-                <tr><td>Raksha Shetty</td><td>BCA</td></tr>
-                <tr><td>Rashmi R bhat</td><td>BCA</td></tr>
-                <tr><td>Ravithej</td><td>BCA</td></tr>
-                <tr><td>Rekha Kamath</td><td>BCA</td></tr>
-                <tr><td>Rohan S Kamath</td><td>BCA</td></tr>
-                <tr><td>Sakshi kamath</td><td>BCA</td></tr>
-                <tr><td>Sanjay gautam</td><td>BCA</td></tr>
-                <tr><td>Shetty Nidhi Pratap</td><td>BCA</td></tr>
-                <tr><td>Shradda Thrivikrama Kini</td><td>BCA</td></tr>
-                <tr><td>Shreya Kamath</td><td>BCA</td></tr>
-                <tr><td>Shreya R Rao</td><td>BCA</td></tr>
-                <tr><td>Sneha Annappa Achari</td><td>BCA</td></tr>
-                <tr><td>Soundarya Bhat</td><td>BCA</td></tr>
-                <tr><td>Srilakshmi</td><td>BCA</td></tr>
-                <tr><td>Swarnakala</td><td>BCA</td></tr>
-                <tr><td>Vidyashree Shetty</td><td>BCA</td></tr>
-                <tr><td>Vaishnavi Kedlaya H</td><td>BCA</td></tr>
-                <tr><td>Thashvika</td><td>BCA</td></tr>
-                <tr><td>Vimanshu kumar</td><td>BCA</td></tr>
-                <tr><td>Yogeesh H M</td><td>BCA</td></tr>
-                <tr><td>Rakshitha</td><td>B.Sc</td></tr>
-                <tr><td>Deekshitha</td><td>B.Sc</td></tr>
-                <tr><td>Adithya S</td><td>B.Sc</td></tr>
-                <tr><td>Vranda Amin</td><td>B.Sc</td></tr>
-                <tr><td>Dhruthi K N</td><td>B.Sc</td></tr>
-                <tr><td>Disha U</td><td>B.Sc</td></tr>
-                <tr><td>Gaurav R Kanchan</td><td>B.Sc</td></tr>
-                <tr><td>Gauthami R Kanchan</td><td>B.Sc</td></tr>
-                <tr><td>Deeksha Chandrashekar Shetty</td><td>B.Sc</td></tr>
-                <tr><td>Adarsh Acharya</td><td>B.Sc</td></tr>
-                <tr><td>Kiran S G</td><td>B.Sc</td></tr>
-                <tr><td>Kishore Bhat T R</td><td>B.Sc</td></tr>
-                <tr><td>M Rachitha Achaiah</td><td>B.Sc</td></tr>
-                <tr><td>Mahesha P Nayak</td><td>B.Sc</td></tr>
-                <tr><td>Manasa G Bhat</td><td>B.Sc</td></tr>
-                <tr><td>Melona Dsouza</td><td>B.Sc</td></tr>
-                <tr><td>Narayan Pai K</td><td>B.Sc</td></tr>
-                <tr><td>Nikitha</td><td>B.Sc</td></tr>
-                <tr><td>Nikitha S</td><td>B.Sc</td></tr>
-                <tr><td>Pareekshith</td><td>B.Sc</td></tr>
-                <tr><td>Pratheek Bhandary</td><td>B.Sc</td></tr>
-                <tr><td>Priya S Poojary</td><td>B.Sc</td></tr>
-                <tr><td>Priyanka D Kotian</td><td>B.Sc</td></tr>
-                <tr><td>Raghavendra Kaushal</td><td>B.Sc</td></tr>
-                <tr><td>Shetty Vinanti Dinesh</td><td>B.Sc</td></tr>
-                <tr><td>Ranjitha A</td><td>B.Sc</td></tr>
-                <tr><td>Rashmitha S Naik</td><td>B.Sc</td></tr>
-                <tr><td>Shraddha Shriyan</td><td>B.Sc</td></tr>
-                <tr><td>Shreendhi Poojary</td><td>B.Sc</td></tr>
-                <tr><td>Spoorthi</td><td>B.Sc</td></tr>
-                <tr><td>Sudarsh</td><td>B.Sc</td></tr>
-                <tr><td>Sukrutha K Devadiga</td><td>B.Sc</td></tr>
-                <tr><td>V P Rani</td><td>B.Sc</td></tr>
-                <tr><td>Varun S Tonse</td><td>B.Sc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>70</strong></p>
-        
-        
-        <h4>Congratulations to the following students who got placed in TCS</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Vaishnavi Kedlaya</td><td>BCA</td></tr>
-                <tr><td>Rachita R Patkar</td><td>BCA</td></tr>
-                <tr><td>Soubhagya Vidyadhar Pai</td><td>BCA</td></tr>
-                <tr><td>Rahul Shenoy</td><td>BCA</td></tr>
-                <tr><td>Nihal Prasad</td><td>BCA</td></tr>
-                <tr><td>Sanjay Gautham</td><td>BCA</td></tr>
-                <tr><td>Thashvika</td><td>BCA</td></tr>
-                <tr><td>Preethika V Wagle</td><td>BCA</td></tr>
-                <tr><td>Aleena Bangeera</td><td>BCA</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>9</strong></p>
-        
-        
-        <h4>Congratulations to the following students who got placed in WIPRO Technology</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Vaishnavi Kedlaya</td><td>BCA</td></tr>
-                <tr><td>Rachita R Patkar</td><td>BCA</td></tr>
-                <tr><td>Sumitha</td><td>BCA</td></tr>
-                <tr><td>Amrutha</td><td>BCA</td></tr>
-                <tr><td>Joyce Rashel Saldanha</td><td>BCA</td></tr>
-                <tr><td>Anushka S Kotian</td><td>BCA</td></tr>
-                <tr><td>Rashmi Shenoy</td><td>BCA</td></tr>
-                <tr><td>Pranil Kotian</td><td>BCA</td></tr>
-                <tr><td>K Deeksha Nayak</td><td>BCA</td></tr>
-                <tr><td>Soundarya Bhat</td><td>BCA</td></tr>
-                <tr><td>Rakshitha</td><td>BCA</td></tr>
-                <tr><td>Adithi N Prabhu</td><td>BCA</td></tr>
-                <tr><td>Shradda Thirivikrama Kini</td><td>BCA</td></tr>
-                <tr><td>Rahul Jogi</td><td>BCA</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>14</strong></p>
-        
-        
-        <h4>Congratulations to the following students who got placed in Deloitte</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Manoj B V</td><td>BCA</td></tr>
-                <tr><td>Srilakshmi Vasanth</td><td>BCA</td></tr>
-                <tr><td>Radhika K Bhat</td><td>BCA</td></tr>
-                <tr><td>Varun Bhat</td><td>B.Sc (MPCs)</td></tr>
-                <tr><td>Disha G Shetty</td><td>B.Sc (MPCs)</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>5</strong></p>
-        
-        
-        <p className="final-total"><strong>Total Selected for the year 2019-20 : 138</strong></p>
-        <h3>Campus Placements for the year 2018-19</h3>
-        <h4>Congratulations to the following student who got placed in Deloitte</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Shubhanidhi Mestha</td><td>B.Sc (MPCs)</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>1</strong></p>
-        
-        
-        <h4>Congratulations to the following students who got placed in Wipro Technologies</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Kartik Hegde</td><td>BCA</td></tr>
-                <tr><td>Annabelle Dsouza</td><td>BCA</td></tr>
-                <tr><td>Mihir Udupa</td><td>BCA</td></tr>
-                <tr><td>Pratiksha Nayak</td><td>BCA</td></tr>
-                <tr><td>Kavana U Rao</td><td>BCA</td></tr>
-                <tr><td>Sadhana</td><td>BCA</td></tr>
-                <tr><td>Jayalaxmi Anchan</td><td>BCA</td></tr>
-                <tr><td>Amrutha Acharya</td><td>BCA</td></tr>
-                <tr><td>Sunidhi Sudhakar</td><td>BCA</td></tr>
-                <tr><td>Nithish Poojary</td><td>B.Sc (MPC)</td></tr>
-                <tr><td>Chaithra Bhat</td><td>B.Sc (MPSCs)</td></tr>
-                <tr><td>Smitha R</td><td>B.Sc (MPC)</td></tr>
-                <tr><td>Rakshitha A R</td><td>B.Sc (MPCs)</td></tr>
-                <tr><td>Shwetha S N</td><td>B.Sc (MPC)</td></tr>
-                <tr><td>Gaurav Shetty</td><td>B.Sc (MPCs)</td></tr>
-                <tr><td>Shubhanidhi Mestha</td><td>B.Sc (MPCs)</td></tr>
-                <tr><td>Rhia Agha</td><td>B.Sc (MPCs)</td></tr>
-                <tr><td>Shruthi S</td><td>B.Sc (MPCs)</td></tr>
-                <tr><td>Swathi S</td><td>B.Sc (MSP)</td></tr>
-                <tr><td>Mahima Marlene Rodrigues</td><td>B.Sc (MPC)</td></tr>
-                <tr><td>Kanchi Sadanand Kotian</td><td>B.Sc (MSCs)</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>21</strong></p>
-        
-        
-        <h4>Congratulations to the following students who got placed in Infosys Technologies</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Amrutha Acharya</td><td>BCA</td></tr>
-                <tr><td>Annabelle D’souza</td><td>BCA</td></tr>
-                <tr><td>Anush S</td><td>BCA</td></tr>
-                <tr><td>Anusha S</td><td>BCA</td></tr>
-                <tr><td>Gilroy Maynard Lobo</td><td>BCA</td></tr>
-                <tr><td>Harshitha H V</td><td>BCA</td></tr>
-                <tr><td>Jayalaxmi Anchan</td><td>BCA</td></tr>
-                <tr><td>Kartik Ganesh Hegde</td><td>BCA</td></tr>
-                <tr><td>Kavana U Rao</td><td>BCA</td></tr>
-                <tr><td>Kavya Bhatta</td><td>BCA</td></tr>
-                <tr><td>Keneith Wilton Maben</td><td>BCA</td></tr>
-                <tr><td>Manjunath Naik</td><td>BCA</td></tr>
-                <tr><td>Muthahir</td><td>BCA</td></tr>
-                <tr><td>Nitesh P</td><td>BCA</td></tr>
-                <tr><td>Nithesh Shetty</td><td>BCA</td></tr>
-                <tr><td>Pooja H B</td><td>BCA</td></tr>
-                <tr><td>Prashanth Madivala</td><td>BCA</td></tr>
-                <tr><td>Pushpak Sanil</td><td>BCA</td></tr>
-                <tr><td>Rachana Shet</td><td>BCA</td></tr>
-                <tr><td>Raghavendra Pai</td><td>BCA</td></tr>
-                <tr><td>Rakshitha Acharya N</td><td>BCA</td></tr>
-                <tr><td>Rashfiya Razak</td><td>BCA</td></tr>
-                <tr><td>Reem</td><td>BCA</td></tr>
-                <tr><td>Sadhana Acharya</td><td>BCA</td></tr>
-                <tr><td>Sheikh Simra Begum</td><td>BCA</td></tr>
-                <tr><td>Sheetal Salian</td><td>BCA</td></tr>
-                <tr><td>Srikanth Bhat</td><td>BCA</td></tr>
-                <tr><td>Sumeeth Kumar S Naik</td><td>BCA</td></tr>
-                <tr><td>Sunidhi Sudhakar</td><td>BCA</td></tr>
-                <tr><td>Prathiksha Nayak</td><td>BCA</td></tr>
-                <tr><td>Swathi S</td><td>B.Sc (MSP)</td></tr>
-                <tr><td>A Chinmay Rao</td><td>B.Sc (MPC)</td></tr>
-                <tr><td>Anusha R Bhat</td><td>B.Sc (MPC)</td></tr>
-                <tr><td>Chaithra Bhat</td><td>B.Sc (MSCs)</td></tr>
-                <tr><td>Harshitha Kunder</td><td>B.Sc (MPCs)</td></tr>
-                <tr><td>Harshitha Shetty</td><td>B.Sc (MPC)</td></tr>
-                <tr><td>Kanchi sadananda kotian</td><td>B.Sc (MSCs)</td></tr>
-                <tr><td>Kruthika A G</td><td>B.Sc (MSP)</td></tr>
-                <tr><td>Mahima Marlene Rodrigues</td><td>B.Sc (MPC)</td></tr>
-                <tr><td>Nandan Hegde</td><td>B.Sc (MSCs)</td></tr>
-                <tr><td>P Prajna Rao</td><td>B.Sc (MPC)</td></tr>
-                <tr><td>Prathibha Bharathi S D</td><td>B.Sc (MPCs)</td></tr>
-                <tr><td>Prathik R Shetty</td><td>B.Sc (MPC)</td></tr>
-                <tr><td>Rhia</td><td>B.Sc (MPCs)</td></tr>
-                <tr><td>Shubhanidhi Mestha</td><td>B.Sc (MPCs)</td></tr>
-                <tr><td>Shwetha S N</td><td>B.Sc (MPC)</td></tr>
-                <tr><td>Sowmya</td><td>B.Sc (MPC)</td></tr>
-                <tr><td>Swarna Mendon</td><td>B.Sc (MPCs)</td></tr>
-                <tr><td>Varshala Hegde</td><td>B.Sc (MPC)</td></tr>
-                <tr><td>Vishnu N</td><td>B.Sc (MPCs)</td></tr>
-                <tr><td>Vidya</td><td>B.Sc (MPCs)</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>51</strong></p>
-        
-        
-        <h4>Congratulations to the following student who got placed in Concenrix</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Skanda</td><td>BCA</td></tr>
-                <tr><td>Roopa</td><td>BCA</td></tr>
-                <tr><td>Prathiksha kotian</td><td>BCA</td></tr>
-                <tr><td>Shreyas</td><td>BCA</td></tr>
-                <tr><td>Nidha</td><td>BCA</td></tr>
-                <tr><td>Chaithanya</td><td>BCA</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>6</strong></p>
-        
-        
-        <h4>Congratulations to the following students who got placed in Infosys BPM</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Keerthan</td><td>BCA</td></tr>
-                <tr><td>Kaushik M R</td><td>BCA</td></tr>
-                <tr><td>Shreyas</td><td>BCA</td></tr>
-                <tr><td>Vignesh</td><td>BCA</td></tr>
-                <tr><td>Renukha</td><td>BCA</td></tr>
-                <tr><td>Harshitha</td><td>BCA</td></tr>
-                <tr><td>Prathiksha Rao</td><td>BCA</td></tr>
-                <tr><td>Prathiksha kotian</td><td>BCA</td></tr>
-                <tr><td>Swathi Bhat</td><td>B.Com</td></tr>
-                <tr><td>Dhatri K S</td><td>B.Com</td></tr>
-                <tr><td>Niriksha R Prasad</td><td>B.Com</td></tr>
-                <tr><td>Shamita B U</td><td>B.Com</td></tr>
-                <tr><td>Sumana R</td><td>B.Com</td></tr>
-                <tr><td>Pooja shetty</td><td>B.Com</td></tr>
-                <tr><td>Srnidhi C Rao</td><td>B.Com</td></tr>
-                <tr><td>Pooja Nayak</td><td>B.Com</td></tr>
-                <tr><td>Namrata Prabhu</td><td>B.Com</td></tr>
-                <tr><td>Dhanya Prabhu</td><td>B.Com</td></tr>
-                <tr><td>Nethravathi kini</td><td>B.Com</td></tr>
-                <tr><td>Akshata</td><td>B.Com</td></tr>
-                <tr><td>Archana</td><td>B.Com</td></tr>
-                <tr><td>Nidhi M Shetty</td><td>B.Com</td></tr>
-                <tr><td>Bhava Bhat M B</td><td>B.Com</td></tr>
-                <tr><td>Aqsa Suraiya</td><td>B.Com</td></tr>
-                <tr><td>Varsha Prakash</td><td>B.Com</td></tr>
-                <tr><td>Sumitra Shenoy</td><td>B.Com</td></tr>
-                <tr><td>Anusha Kini</td><td>B.Com</td></tr>
-                <tr><td>Madhavi H V</td><td>B.Com</td></tr>
-                <tr><td>Madhupal</td><td>B.Com</td></tr>
-                <tr><td>Aman Chandrashekar shetty</td><td>B.Com</td></tr>
-                <tr><td>Ashray Acharya</td><td>B.Com</td></tr>
-                <tr><td>Sachidananda T S</td><td>B.Com</td></tr>
-                <tr><td>Maneesh Hegde</td><td>B.Com</td></tr>
-                <tr><td>Ashish</td><td>B.Com</td></tr>
-                <tr><td>Sandesh</td><td>B.Com</td></tr>
-                <tr><td>Pradeep</td><td>B.Com</td></tr>
-                <tr><td>Ajay Kamath</td><td>B.Com</td></tr>
-                <tr><td>Afrin</td><td>B.Com</td></tr>
-                <tr><td>Rachitha</td><td>B.Com</td></tr>
-                <tr><td>Ashwitha</td><td>B.Com</td></tr>
-                <tr><td>Swathi V</td><td>B.Com</td></tr>
-                <tr><td>Rahul</td><td>B.Com</td></tr>
-                <tr><td>Vignesh kamath</td><td>B.Com</td></tr>
-                <tr><td>Manish</td><td>B.Com</td></tr>
-                <tr><td>Karthik</td><td>B.Com</td></tr>
-                <tr><td>Marwah</td><td>B.Com</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>46</strong></p>
-        
-        
-        <h4>Congratulations to the following students who got placed in TCS</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Kartik Ganesh Hegde</td><td>BCA</td></tr>
-                <tr><td>Sumeeth Kumar S Naik</td><td>BCA</td></tr>
-                <tr><td>Anusha T A</td><td>BCA</td></tr>
-                <tr><td>Keneith Wilton Maben</td><td>BCA</td></tr>
-                <tr><td>Gilroy Maynard Lobo</td><td>BCA</td></tr>
-                <tr><td>Sadhana</td><td>BCA</td></tr>
-                <tr><td>Sudharma</td><td>BCA</td></tr>
-                <tr><td>Amrutha Acharya</td><td>BCA</td></tr>
-                <tr><td>Sunidhi Sudhakar</td><td>BCA</td></tr>
-                <tr><td>Rhia Agha</td><td>BSc (MPCs)</td></tr>
-                <tr><td>Nandan Nagapati Hegde</td><td>BSc (MSCs)</td></tr>
-                <tr><td>Swarna Mendon</td><td>BSc (MSCs)</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>12</strong></p>
-        
-        
-        <p className="total-selected" style={{ marginTop: '20px' }}>Number of students selected in JARO Education: <strong>02</strong></p>
-        <p className="final-total"><strong>Total Selected for the year 2018-19 : 139</strong></p>
-        <h3>Campus Placements for the year 2017-18</h3>
-        <h4>Congratulations to the following students who got placed in Wipro (WASE & WIMS & GIS)</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Anam Alvira</td><td>BCA</td></tr>
-                <tr><td>Ankush Prabhu</td><td>BCA</td></tr>
-                <tr><td>Suraksha</td><td>BCA</td></tr>
-                <tr><td>Shriraj Narayan Gaonkar</td><td>BCA</td></tr>
-                <tr><td>Sapna</td><td>BCA</td></tr>
-                <tr><td>Shivani</td><td>BCA</td></tr>
-                <tr><td>Prajwal</td><td>BCA</td></tr>
-                <tr><td>Deepika</td><td>BCA</td></tr>
-                <tr><td>Rohan</td><td>B.Sc</td></tr>
-                <tr><td>Divyashree</td><td>B.Sc</td></tr>
-                <tr><td>Sanjana</td><td>B.Sc</td></tr>
-                <tr><td>Divyashree Nayak</td><td>B.Sc</td></tr>
-                <tr><td>Shriram Chethan</td><td>B.Sc</td></tr>
-                <tr><td>Kavya Pai</td><td>B.Sc</td></tr>
-                <tr><td>Raeesa</td><td>B.Sc</td></tr>
-                <tr><td>Preethi S</td><td>B.Sc</td></tr>
-                <tr><td>Bharathi K</td><td>B.Com</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>17</strong></p>
-        <h4>Congratulations to the following students who got placed in Concentrix</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Shreyas</td><td>BCA</td></tr>
-                <tr><td>Pooja K</td><td>BCA</td></tr>
-                <tr><td>Niyathi</td><td>BCA</td></tr>
-                <tr><td>Vedamata M</td><td>BCA</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>4</strong></p>
-        <h4>Congratulations to the following students who got placed in Deloitte</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Santhosh V</td><td>BCA</td></tr>
-                <tr><td>Kiran Kamath</td><td>BCA</td></tr>
-                <tr><td>Ankush Prabhu</td><td>BCA</td></tr>
-                <tr><td>Akarsh Salian</td><td>BCA</td></tr>
-                <tr><td>Anam Alvira</td><td>BCA</td></tr>
-                <tr><td>Aravid Patkar</td><td>BCA</td></tr>
-                <tr><td>Jason Noronha</td><td>BCA</td></tr>
-                <tr><td>Prajwal Augustine</td><td>BCA</td></tr>
-                <tr><td>Shriraj Gaonkar</td><td>BCA</td></tr>
-                <tr><td>Viraj Kanchan</td><td>B.Sc(MSCs)</td></tr>
-                <tr><td>Megha R</td><td>B.Sc(MPCs)</td></tr>
-                <tr><td>Sanjana Bhat</td><td>B.Sc(MPCs)</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>12</strong></p>
-        <h4>Congratulations to the following students who got placed in Infosys BPM</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>T Madhava Pai</td><td>BA</td></tr>
-                <tr><td>Amruthavarshini K P</td><td>B.Com</td></tr>
-                <tr><td>Nikita R Shettigar</td><td>B.Com</td></tr>
-                <tr><td>Rahel Sharlet</td><td>B.Com</td></tr>
-                <tr><td>Bharath Kumar A S</td><td>B.Com</td></tr>
-                <tr><td>Raksha Kamath</td><td>B.Com</td></tr>
-                <tr><td>Anjana</td><td>B.Com</td></tr>
-                <tr><td>Kiran N G</td><td>B.Com</td></tr>
-                <tr><td>Nishma H</td><td>B.Com</td></tr>
-                <tr><td>Akshay</td><td>B.Com</td></tr>
-                <tr><td>Shivani</td><td>B.Com</td></tr>
-                <tr><td>Shredhar Rao</td><td>B.Com</td></tr>
-                <tr><td>Edrine R Dsouza</td><td>B.Com</td></tr>
-                <tr><td>Rausa Jasleem</td><td>B.Com</td></tr>
-                <tr><td>M B Bhargavi</td><td>B.Com</td></tr>
-                <tr><td>Sharadhi S M</td><td>B.Com</td></tr>
-                <tr><td>Sahana S Shetty</td><td>B.Com</td></tr>
-                <tr><td>Soujanya Bhat B</td><td>B.Com</td></tr>
-                <tr><td>Shreyas Kamath</td><td>B.Com</td></tr>
-                <tr><td>Sushmitha H Patil</td><td>B.Com</td></tr>
-                <tr><td>B Saishree</td><td>B.Com</td></tr>
-                <tr><td>Gaurav Padiyar</td><td>B.Com</td></tr>
-                <tr><td>Kavyashree K R</td><td>B.Com</td></tr>
-                <tr><td>Divyashree H S</td><td>B.Com</td></tr>
-                <tr><td>Sudharshan</td><td>B.Com</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>25</strong></p>
-        <h4>Congratulations to the following students who got placed in Tata Consultancy Services (TCS)</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>T Madhava Pai</td><td>BA</td></tr>
-                <tr><td>Shanthi S Rao K</td><td>BA</td></tr>
-                <tr><td>K Karthik Pai</td><td>BA</td></tr>
-                <tr><td>Vishwanatha</td><td>B.Com</td></tr>
-                <tr><td>Kavyashree K R</td><td>B.Com</td></tr>
-                <tr><td>Amrutha varshini K P</td><td>B.Com</td></tr>
-                <tr><td>Ganapathi Pai</td><td>B.Com</td></tr>
-                <tr><td>Deeksha</td><td>B.Com</td></tr>
-                <tr><td>Bhargavi M B</td><td>B.Com</td></tr>
-                <tr><td>Aishwarya G S</td><td>B.Com</td></tr>
-                <tr><td>B A Deeksha</td><td>B.Com</td></tr>
-                <tr><td>Kumari Rashmitha</td><td>B.Com</td></tr>
-                <tr><td>Unnath K A</td><td>B.Com</td></tr>
-                <tr><td>Sindhu Shetty</td><td>B.Com</td></tr>
-                <tr><td>Princslie Gloria Lewis</td><td>B.Com</td></tr>
-                <tr><td>Shridhar Ganapathi Bhat</td><td>B.Com</td></tr>
-                <tr><td>B Saishree</td><td>B.Com</td></tr>
-                <tr><td>Prathima</td><td>B.Com</td></tr>
-                <tr><td>Jyothi Madhav Bhat</td><td>B.Com</td></tr>
-                <tr><td>Bharath B S</td><td>B.Com</td></tr>
-                <tr><td>Gleeven Cristi Lewis</td><td>B.Com</td></tr>
-                <tr><td>Edrine Reachel D’Souza</td><td>B.Com</td></tr>
-                <tr><td>Shettigar Nikitha Raju</td><td>B.Com</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>23</strong></p>
-        <h4>Congratulations to the following students who got placed in Infosys Technologies</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Anam Alvira</td><td>BCA</td></tr>
-                <tr><td>Avanish Anil Chippalkatti</td><td>BCA</td></tr>
-                <tr><td>Ankush Prabhu</td><td>BCA</td></tr>
-                <tr><td>Kiran Kamath</td><td>BCA</td></tr>
-                <tr><td>Hamna Siraj Bava</td><td>BCA</td></tr>
-                <tr><td>Shriraj Narayan Gaonkar</td><td>BCA</td></tr>
-                <tr><td>Vineeth R</td><td>BCA</td></tr>
-                <tr><td>Rajath Kedlaya K</td><td>BCA</td></tr>
-                <tr><td>Suraksha R Poojary</td><td>BCA</td></tr>
-                <tr><td>Amritha Nayak</td><td>B.Sc</td></tr>
-                <tr><td>Ancilla Maria Saldanha</td><td>B.Sc</td></tr>
-                <tr><td>Anupama</td><td>B.Sc</td></tr>
-                <tr><td>Abhishek B</td><td>B.Sc</td></tr>
-                <tr><td>Deola Helena Vas</td><td>B.Sc</td></tr>
-                <tr><td>Divyashree</td><td>B.Sc</td></tr>
-                <tr><td>Divyashree V. Nayak</td><td>B.Sc</td></tr>
-                <tr><td>Pooja S P</td><td>B.Sc</td></tr>
-                <tr><td>Prajna Nayak</td><td>B.Sc</td></tr>
-                <tr><td>Prajna Shreedhar Hegde</td><td>B.Sc</td></tr>
-                <tr><td>Pranitha</td><td>B.Sc</td></tr>
-                <tr><td>Priyanka</td><td>B.Sc</td></tr>
-                <tr><td>Priyanka Milind Datar</td><td>B.Sc</td></tr>
-                <tr><td>Rachana P</td><td>B.Sc</td></tr>
-                <tr><td>Sanjana Sandesh Bhat</td><td>B.Sc</td></tr>
-                <tr><td>Sharath Shettigar</td><td>B.Sc</td></tr>
-                <tr><td>Shreenidhi Shridhar Bhat</td><td>B.Sc</td></tr>
-                <tr><td>Siri S Rao</td><td>B.Sc</td></tr>
-                <tr><td>Sriramachetan S</td><td>B.Sc</td></tr>
-                <tr><td>Tripthi B Palan</td><td>B.Sc</td></tr>
-                <tr><td>Sushma Bhat</td><td>B.Sc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>30</strong></p>
-        <p className="final-total"><strong>Total Selected for the year 2017-18 : 111</strong></p>
-        <h3>Campus Placements for the year 2016-17</h3>
-        <h4>Congratulations to the following students who got placed in Infosys BPO</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Anarghya Y</td><td>BCA</td></tr>
-                <tr><td>Shrishaila</td><td>BCA</td></tr>
-                <tr><td>Gaelyn B Rodrigues</td><td>BCA</td></tr>
-                <tr><td>Anjum Ali</td><td>BCA</td></tr>
-                <tr><td>Pavithra</td><td>BCA</td></tr>
-                <tr><td>Abhishek</td><td>BCA</td></tr>
-                <tr><td>Prathiksha</td><td>BCA</td></tr>
-                <tr><td>Manorama</td><td>B.Sc</td></tr>
-                <tr><td>Raksha Prabhu</td><td>B.Sc</td></tr>
-                <tr><td>H Sharvya</td><td>B.Sc</td></tr>
-                <tr><td>Shreegandha M R</td><td>B.Sc</td></tr>
-                <tr><td>Vandana A S</td><td>B.Sc</td></tr>
-                <tr><td>Kavitha Umanath Bangera</td><td>B.Sc</td></tr>
-                <tr><td>Guruprasad</td><td>B.Sc</td></tr>
-                <tr><td>Anuapa A R</td><td>B.Sc</td></tr>
-                <tr><td>Anvayee B P</td><td>B.Sc</td></tr>
-                <tr><td>Niveditha</td><td>B.Sc</td></tr>
-                <tr><td>Ramya</td><td>B.Sc</td></tr>
-                <tr><td>Lavanya</td><td>B.Sc</td></tr>
-                <tr><td>Lakshmeesh Umesh Hegde</td><td>BCom</td></tr>
-                <tr><td>Akanksha Sham Shetty</td><td>BCom</td></tr>
-                <tr><td>Shwetha H G</td><td>BCom</td></tr>
-                <tr><td>Veeraj S K</td><td>BCom</td></tr>
-                <tr><td>Sushmitha</td><td>BCom</td></tr>
-                <tr><td>Ashwini Nayak H</td><td>BCom</td></tr>
-                <tr><td>Ashwini</td><td>BCom</td></tr>
-                <tr><td>Lakshmeesha Shettigar</td><td>BCom</td></tr>
-                <tr><td>Ashwini Ganesh Hegde</td><td>BCom</td></tr>
-                <tr><td>Huda Anwar</td><td>BCom</td></tr>
-                <tr><td>Achinthya M B</td><td>BCom</td></tr>
-                <tr><td>Swathi G R</td><td>BCom</td></tr>
-                <tr><td>Roystan</td><td>BCom</td></tr>
-                <tr><td>Manisha</td><td>BCom</td></tr>
-                <tr><td>K Dhanusha Kini</td><td>BCom</td></tr>
-                <tr><td>Swathi D Nayak</td><td>BCom</td></tr>
-                <tr><td>Ridha</td><td>BCom</td></tr>
-                <tr><td>Manvitha</td><td>BCom</td></tr>
-                <tr><td>Kiran Ganesh Shettigar</td><td>BCom</td></tr>
-                <tr><td>Akhila Hande</td><td>BCom</td></tr>
-                <tr><td>Anushree K Salian</td><td>BCom</td></tr>
-                <tr><td>Pooja Nayak</td><td>BCom</td></tr>
-                <tr><td>Arjun Shetty</td><td>BCom</td></tr>
-                <tr><td>Aishwarya Holla</td><td>BCom</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>43</strong></p>
-        <h4>Congratulations to the following students who got placed in Infosys Technology</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Adithya Bhagavat</td><td>BCA</td></tr>
-                <tr><td>Akshara Chakrapani Bhat</td><td>BCA</td></tr>
-                <tr><td>Akshay Kumar</td><td>BCA</td></tr>
-                <tr><td>Anoop H N</td><td>BCA</td></tr>
-                <tr><td>Anusha Devadiga</td><td>BCA</td></tr>
-                <tr><td>Arfan M Rafique</td><td>BCA</td></tr>
-                <tr><td>Latha B</td><td>BCA</td></tr>
-                <tr><td>Maina M V</td><td>BCA</td></tr>
-                <tr><td>Mithesha Kumara</td><td>BCA</td></tr>
-                <tr><td>Mohammed Adil Taj</td><td>BCA</td></tr>
-                <tr><td>Nikhitha Salian</td><td>BCA</td></tr>
-                <tr><td>Pranathi S Acharya</td><td>BCA</td></tr>
-                <tr><td>Raksha S Rao</td><td>BCA</td></tr>
-                <tr><td>Rashmi R Upadhya</td><td>BCA</td></tr>
-                <tr><td>Sanjana Poojary</td><td>BCA</td></tr>
-                <tr><td>Saurabh K Saralaya</td><td>BCA</td></tr>
-                <tr><td>Shreeya Acharya</td><td>BCA</td></tr>
-                <tr><td>Shweta Bhagwath</td><td>BCA</td></tr>
-                <tr><td>Veena Harish Prabhu</td><td>BCA</td></tr>
-                <tr><td>Vidya Kamath</td><td>BCA</td></tr>
-                <tr><td>Aysh Minaz</td><td>B.Sc</td></tr>
-                <tr><td>Ayishathul Rameeza</td><td>B.Sc</td></tr>
-                <tr><td>Akanksh A Shetty</td><td>B.Sc</td></tr>
-                <tr><td>Amrutha B.U</td><td>B.Sc</td></tr>
-                <tr><td>Amrutha H S</td><td>B.Sc</td></tr>
-                <tr><td>Chaithra</td><td>B.Sc</td></tr>
-                <tr><td>Chaithra Poojary</td><td>B.Sc</td></tr>
-                <tr><td>Isra Shaikh</td><td>B.Sc</td></tr>
-                <tr><td>Nafeesath salwa Niha</td><td>B.Sc</td></tr>
-                <tr><td>Divya.K.Aithal</td><td>B.Sc</td></tr>
-                <tr><td>Deepika B.R.</td><td>B.Sc</td></tr>
-                <tr><td>Deeksha B.R Kamath</td><td>B.Sc</td></tr>
-                <tr><td>Chethan Kumar</td><td>B.Sc</td></tr>
-                <tr><td>Ravish Subrahmanya Hegde</td><td>B.Sc</td></tr>
-                <tr><td>Rithika Prabhu</td><td>B.Sc</td></tr>
-                <tr><td>Shwetha Bhat</td><td>B.Sc</td></tr>
-                <tr><td>Pallavi Shriram Bhagavath</td><td>B.Sc</td></tr>
-                <tr><td>Prathvi Shetty</td><td>B.Sc</td></tr>
-                <tr><td>Supritha Rama Handa</td><td>B.Sc</td></tr>
-                <tr><td>Usha Prabhu</td><td>B.Sc</td></tr>
-                <tr><td>Vidyashri</td><td>B.Sc</td></tr>
-                <tr><td>Vindhya H L Lingappa</td><td>B.Sc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>42</strong></p>
-        <h4>Congratulations to the following students who got placed in Deloitte</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Pranathi Acharya</td><td>BCA</td></tr>
-                <tr><td>Akshara</td><td>BCA</td></tr>
-                <tr><td>Ravish</td><td>B.Sc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>3</strong></p>
-        <h4>Congratulations to the following students who got placed in Cognizant Technologies</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Arfan M</td><td>BCA</td></tr>
-                <tr><td>Sanjana Poojary</td><td>BCA</td></tr>
-                <tr><td>Anarghya</td><td>BCA</td></tr>
-                <tr><td>Pavithra</td><td>BCA</td></tr>
-                <tr><td>Sanjana Kidiyoor</td><td>B.Sc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>5</strong></p>
-        <h4>The following number of students have got placed in Different Companies</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Company</th>
-                    <th>No. of Students</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>TCS</td><td>26</td></tr>
-                <tr><td>Concentrix</td><td>09</td></tr>
-                <tr><td>Northen Trust Bank</td><td>02</td></tr>
-            </tbody>
-        </table>
-        <p className="final-total"><strong>Total Selected for the year 2016-17 : 130</strong></p>
-        <h3>Campus Placements for the year 2015-16</h3>
-        <h4>Congratulations to the following students who got placed in Northern Trust Bank</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>SMITHA MOHAN RAO</td><td>B.Com</td></tr>
-                <tr><td>SHEIKH MOHAMMAD FARAN</td><td>B.Com</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>2</strong></p>
-        <h4>Congratulations to the following students who got placed in WASE/WiSTA & GIS</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Adarsh Shetty</td><td>BCA</td></tr>
-                <tr><td>Akash S</td><td>BCA</td></tr>
-                <tr><td>Manoj Amin</td><td>BCA</td></tr>
-                <tr><td>Naveesh Kumar</td><td>BCA</td></tr>
-                <tr><td>Sandesh U</td><td>BCA</td></tr>
-                <tr><td>Rashmitha Kulal</td><td>BCA</td></tr>
-                <tr><td>Saurabh Kaup</td><td>BCA</td></tr>
-                <tr><td>Vasundhara Mallya</td><td>B.Sc</td></tr>
-                <tr><td>Brahmananda Nayak</td><td>B.Sc</td></tr>
-                <tr><td>Jeevith Shetty</td><td>B.Sc</td></tr>
-                <tr><td>Harshitha Shanbhag</td><td>B.Sc</td></tr>
-                <tr><td>Vinaya Naik</td><td>B.Sc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>12</strong></p>
-        <h4>Congratulations to the following students who got placed in TCS</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Nayamratha</td><td>BCA</td></tr>
-                <tr><td>Vijetha</td><td>BCA</td></tr>
-                <tr><td>Dayasagar Salian</td><td>BCA</td></tr>
-                <tr><td>Sudhindra Nayak</td><td>BCA</td></tr>
-                <tr><td>Sunil</td><td>BCA</td></tr>
-                <tr><td>Mahendra Hegde</td><td>BCA</td></tr>
-                <tr><td>Sowmya Kamath</td><td>BCA</td></tr>
-                <tr><td>Akshitha</td><td>BCA</td></tr>
-                <tr><td>Christan Dsouza</td><td>BCA</td></tr>
-                <tr><td>Manoj Amin</td><td>BCA</td></tr>
-                <tr><td>Sandeep Nayak</td><td>BCA</td></tr>
-                <tr><td>Ashwin Karkada</td><td>BCA</td></tr>
-                <tr><td>Shrividya Rao</td><td>BCA</td></tr>
-                <tr><td>Naveesh Kumar</td><td>BCA</td></tr>
-                <tr><td>Manjunatha Upadhya</td><td>BCA</td></tr>
-                <tr><td>Arun Kunder</td><td>BCA</td></tr>
-                <tr><td>Mukesh Nayak</td><td>B.Sc</td></tr>
-                <tr><td>Vinay Borkar</td><td>B.Sc</td></tr>
-                <tr><td>Ashwath Jadhava</td><td>B.Sc</td></tr>
-                <tr><td>Brahmananda Nayak</td><td>B.Sc</td></tr>
-                <tr><td>Supradha</td><td>B.Sc</td></tr>
-                <tr><td>Pramoda Bs</td><td>B.Sc</td></tr>
-                <tr><td>Chakitha</td><td>B.Sc</td></tr>
-                <tr><td>Anushree</td><td>B.Sc</td></tr>
-                <tr><td>Pratheeksha</td><td>B.Sc</td></tr>
-                <tr><td>Madhavi</td><td>B.Sc</td></tr>
-                <tr><td>Soumya</td><td>B.Sc</td></tr>
-                <tr><td>Sanjana As</td><td>B.Sc</td></tr>
-                <tr><td>Shruthi Kamath</td><td>B.Sc</td></tr>
-                <tr><td>Srinidhi</td><td>B.Sc</td></tr>
-                <tr><td>Agraj</td><td>B.Sc</td></tr>
-                <tr><td>Suraksha Naik</td><td>B.Sc</td></tr>
-                <tr><td>Deepthi K</td><td>B.Sc</td></tr>
-                <tr><td>Shachidevi</td><td>B.Sc</td></tr>
-                <tr><td>Pratheek</td><td>B.Sc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>35</strong></p>
-        <h4>Congratulations to the following students who got placed in Infosys BPO</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Anisha</td><td>BCA</td></tr>
-                <tr><td>Adarsh Shetty</td><td>BCA</td></tr>
-                <tr><td>Dhanya Shenoy</td><td>BCA</td></tr>
-                <tr><td>Faiza Iqbal</td><td>B.Sc</td></tr>
-                <tr><td>Anusha S Poojary</td><td>B.Sc</td></tr>
-                <tr><td>Nayak Deeksha Dayanand</td><td>B.Sc</td></tr>
-                <tr><td>Aparna Dravid U</td><td>B.Sc</td></tr>
-                <tr><td>Athoofa Qareen</td><td>B.Sc</td></tr>
-                <tr><td>Ritesh S Suvarna</td><td>B.Sc</td></tr>
-                <tr><td>Navya Acharya M V</td><td>B.Sc</td></tr>
-                <tr><td>Fathima Nikhar D</td><td>B.Sc</td></tr>
-                <tr><td>Srilakshmi P</td><td>B.Sc</td></tr>
-                <tr><td>Ashwin Shanbhag</td><td>B.Com</td></tr>
-                <tr><td>Lionel Pereira</td><td>B.Com</td></tr>
-                <tr><td>Nisha S Amin</td><td>B.Com</td></tr>
-                <tr><td>Jeevan</td><td>B.Com</td></tr>
-                <tr><td>Sadhana H P</td><td>B.Com</td></tr>
-                <tr><td>Rinu Thomas</td><td>B.Com</td></tr>
-                <tr><td>Zareena</td><td>B.Com</td></tr>
-                <tr><td>Rajath R K</td><td>B.Com</td></tr>
-                <tr><td>Pooja</td><td>B.Com</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>21</strong></p>
-        <h4>Congratulations to the following students who got placed in Tata Consultancy Services (TCS)</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Savitha</td><td>B.Com</td></tr>
-                <tr><td>Afreen</td><td>B.Com</td></tr>
-                <tr><td>Gourav</td><td>B.Com</td></tr>
-                <tr><td>Meghana J</td><td>B.Com</td></tr>
-                <tr><td>Chinmay</td><td>B.Com</td></tr>
-                <tr><td>Nithesh Hegde</td><td>B.Com</td></tr>
-                <tr><td>Mahesh</td><td>B.Com</td></tr>
-                <tr><td>Deeksha Prabhu</td><td>B.Com</td></tr>
-                <tr><td>Suchithra</td><td>B.Com</td></tr>
-                <tr><td>Harshitha</td><td>B.Com</td></tr>
-                <tr><td>Ashika</td><td>B.Com</td></tr>
-                <tr><td>Pavan</td><td>B.Com</td></tr>
-                <tr><td>Anupama</td><td>B.Com</td></tr>
-                <tr><td>Prajwal</td><td>B.Com</td></tr>
-                <tr><td>Varsha Shetty</td><td>B.Com</td></tr>
-                <tr><td>Kajal</td><td>B.Com</td></tr>
-                <tr><td>Namratha Ballal</td><td>B.Com</td></tr>
-                <tr><td>Namratha</td><td>B.Com</td></tr>
-                <tr><td>Dheeraj</td><td>B.Com</td></tr>
-                <tr><td>Gautham</td><td>B.Com</td></tr>
-                <tr><td>Suvarna Jois</td><td>B.Com</td></tr>
-                <tr><td>Ravikiran</td><td>B.Com</td></tr>
-                <tr><td>Rekha</td><td>B.Com</td></tr>
-                <tr><td>Akhilesh</td><td>BA</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>24</strong></p>
-        <h4>Congratulations to the following students who got placed in Infosys</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Akash S</td><td>BCA</td></tr>
-                <tr><td>Christan Paul Dsouza</td><td>BCA</td></tr>
-                <tr><td>Inchara G C</td><td>BCA</td></tr>
-                <tr><td>Karthik Nayak</td><td>BCA</td></tr>
-                <tr><td>Mahendra Kumar Hegde</td><td>BCA</td></tr>
-                <tr><td>Manjunatha Upadhya</td><td>BCA</td></tr>
-                <tr><td>Narasimha Kini</td><td>BCA</td></tr>
-                <tr><td>Nayamratha</td><td>BCA</td></tr>
-                <tr><td>Prabhu Pratiksha Venkatesh</td><td>BCA</td></tr>
-                <tr><td>Prashant Hegde</td><td>BCA</td></tr>
-                <tr><td>Vijetha</td><td>BCA</td></tr>
-                <tr><td>Ratna Rajesh Bhat</td><td>BCA</td></tr>
-                <tr><td>Rakshith Shetty</td><td>BCA</td></tr>
-                <tr><td>Shrividya Rao</td><td>BCA</td></tr>
-                <tr><td>Sunil</td><td>BCA</td></tr>
-                <tr><td>Sandeep S Nayak</td><td>BCA</td></tr>
-                <tr><td>Sowmya Kamath</td><td>BCA</td></tr>
-                <tr><td>Sudhindra Nayak</td><td>BCA</td></tr>
-                <tr><td>Rajani Salvankar</td><td>B.Sc</td></tr>
-                <tr><td>Agraja Raghav</td><td>B.Sc</td></tr>
-                <tr><td>Supradha</td><td>B.Sc</td></tr>
-                <tr><td>Surabhi P P</td><td>B.Sc</td></tr>
-                <tr><td>Suraksha Naik</td><td>B.Sc</td></tr>
-                <tr><td>Sushmitha</td><td>B.Sc</td></tr>
-                <tr><td>Gowtham Shetty</td><td>B.Sc</td></tr>
-                <tr><td>Pratheeksha</td><td>B.Sc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>26</strong></p>
-        <h4>Congratulations to the following students who got placed in Accenture</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Christan Paul Dsouza</td><td>BCA</td></tr>
-                <tr><td>Sriraksha K</td><td>BCA</td></tr>
-                <tr><td>Pratiksha Venkatesh</td><td>BCA</td></tr>
-                <tr><td>Akshitha Amin</td><td>BCA</td></tr>
-                <tr><td>Sowmya Kamath</td><td>BCA</td></tr>
-                <tr><td>Rashmitha S</td><td>BCA</td></tr>
-                <tr><td>Sudhindra Nayak</td><td>BCA</td></tr>
-                <tr><td>Mahendra Kumar Hegde</td><td>BCA</td></tr>
-                <tr><td>Ratna Bhat</td><td>BCA</td></tr>
-                <tr><td>Abhilash Kunder</td><td>BCA</td></tr>
-                <tr><td>Sandeep S Nayak</td><td>BCA</td></tr>
-                <tr><td>Surabhi P P</td><td>B.Sc</td></tr>
-                <tr><td>Pooja N Kumari</td><td>B.Sc</td></tr>
-                <tr><td>Soujanya Acharya</td><td>B.Sc</td></tr>
-                <tr><td>Shruthi D Kamath</td><td>B.Sc</td></tr>
-                <tr><td>Supradha</td><td>B.Sc</td></tr>
-                <tr><td>Rajani Salvankar</td><td>B.Sc</td></tr>
-                <tr><td>Soumya P K</td><td>B.Sc</td></tr>
-                <tr><td>Vinay Ramesh Borkar</td><td>B.Sc</td></tr>
-                <tr><td>Ashritha M G</td><td>B.Sc</td></tr>
-                <tr><td>Rakshitha H S</td><td>B.Sc</td></tr>
-                <tr><td>Chakitha Parkala</td><td>B.Sc</td></tr>
-                <tr><td>Gowtham Shetty</td><td>B.Sc</td></tr>
-                <tr><td>Sharanya K S</td><td>B.Sc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>24</strong></p>
-        <h4>Congratulations to the following students who got placed in WIPRO (WASE/WISTA)</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Shobitha Rao</td><td>M.Sc</td></tr>
-                <tr><td>Poojitha Hande</td><td>M.Sc</td></tr>
-                <tr><td>Ankita Moghe</td><td>M.Sc</td></tr>
-                <tr><td>Deepa Shetty</td><td>M.Sc</td></tr>
-                <tr><td>Vilasini Nayak</td><td>M.Sc</td></tr>
-                <tr><td>Reshma K</td><td>M.Sc</td></tr>
-                <tr><td>Sneha Prabhu</td><td>M.Sc</td></tr>
-                <tr><td>Samyukta Naik</td><td>M.Sc</td></tr>
-                <tr><td>Shilpa N</td><td>M.Sc</td></tr>
-                <tr><td>Prajna Sagar</td><td>M.Sc</td></tr>
-                <tr><td>Divya Shetty</td><td>M.Sc</td></tr>
-                <tr><td>Preethi Prabhu</td><td>M.Sc</td></tr>
-                <tr><td>Akshatha Pai</td><td>M.Sc</td></tr>
-                <tr><td>Vaishnavi K</td><td>M.Sc</td></tr>
-                <tr><td>Varna Upadhya</td><td>M.Sc</td></tr>
-                <tr><td>Megha Prabhu</td><td>BCA</td></tr>
-                <tr><td>Akshitha Amin</td><td>BCA</td></tr>
-                <tr><td>Sudhindra Nayak</td><td>BCA</td></tr>
-                <tr><td>Pratiksha Prabhu</td><td>BCA</td></tr>
-                <tr><td>Mohammed Saqib</td><td>BCA</td></tr>
-                <tr><td>Hemant Poojar</td><td>BCA</td></tr>
-                <tr><td>Naveesh Kumar</td><td>BCA</td></tr>
-                <tr><td>Sriraksha K</td><td>BCA</td></tr>
-                <tr><td>K Swathi</td><td>BCA</td></tr>
-                <tr><td>Ratna Bhat</td><td>BCA</td></tr>
-                <tr><td>Sowmya Kamath</td><td>BCA</td></tr>
-                <tr><td>Akash S</td><td>BCA</td></tr>
-                <tr><td>Christan Dsouza</td><td>BCA</td></tr>
-                <tr><td>Inchara GC</td><td>BCA</td></tr>
-                <tr><td>Karthik Nayak</td><td>BCA</td></tr>
-                <tr><td>Deevith Shetty</td><td>BCA</td></tr>
-                <tr><td>Adarsh Shetty</td><td>BCA</td></tr>
-                <tr><td>Anusha Shetty</td><td>BCA</td></tr>
-                <tr><td>Sandesh U</td><td>BCA</td></tr>
-                <tr><td>Bhavya Rani</td><td>BCA</td></tr>
-                <tr><td>Chandrika Kamath</td><td>BCA</td></tr>
-                <tr><td>Prashant Hegde</td><td>BCA</td></tr>
-                <tr><td>Mohammad Rayhan</td><td>BCA</td></tr>
-                <tr><td>Narasimha Kini</td><td>BCA</td></tr>
-                <tr><td>Shritesh Shekar</td><td>BCA</td></tr>
-                <tr><td>Sanketh PN</td><td>BCA</td></tr>
-                <tr><td>Manoj Amin</td><td>BCA</td></tr>
-                <tr><td>Vijetha Shetty</td><td>BCA</td></tr>
-                <tr><td>Prajna Kunder</td><td>BCA</td></tr>
-                <tr><td>Ashwin Karkada</td><td>BCA</td></tr>
-                <tr><td>Sandeep Nayak</td><td>BCA</td></tr>
-                <tr><td>Mahendra Hegde</td><td>BCA</td></tr>
-                <tr><td>Archana Shetty</td><td>BCA</td></tr>
-                <tr><td>Abhilash Kunder</td><td>BCA</td></tr>
-                <tr><td>Anushree Bhat</td><td>B.Sc</td></tr>
-                <tr><td>Anusha BS</td><td>B.Sc</td></tr>
-                <tr><td>Faiza Iqbal</td><td>B.Sc</td></tr>
-                <tr><td>Supradha PG</td><td>B.Sc</td></tr>
-                <tr><td>Shruthi Kamath</td><td>B.Sc</td></tr>
-                <tr><td>Vinay Borkar</td><td>B.Sc</td></tr>
-                <tr><td>Rakshitha Devadiga</td><td>B.Sc</td></tr>
-                <tr><td>Srinidhi Devadiga</td><td>B.Sc</td></tr>
-                <tr><td>Aparna Dravid</td><td>B.Sc</td></tr>
-                <tr><td>Sanjana AS</td><td>B.Sc</td></tr>
-                <tr><td>Soumya PK</td><td>B.Sc</td></tr>
-                <tr><td>Suraksha Naik</td><td>B.Sc</td></tr>
-                <tr><td>Sonali Prabhu</td><td>B.Sc</td></tr>
-                <tr><td>Varsha Shenoy</td><td>B.Sc</td></tr>
-                <tr><td>Sharath Rao</td><td>B.Sc</td></tr>
-                <tr><td>Navya Acharya</td><td>B.Sc</td></tr>
-                <tr><td>Umalasya Hande</td><td>B.Sc</td></tr>
-                <tr><td>Tribhuvan Malpe</td><td>B.Sc</td></tr>
-                <tr><td>Rajani Salvankar</td><td>B.Sc</td></tr>
-                <tr><td>Harshitha Shanbhag</td><td>B.Sc</td></tr>
-                <tr><td>Raghavendre Bhat</td><td>B.Sc</td></tr>
-                <tr><td>Megha Anchan</td><td>B.Sc</td></tr>
-                <tr><td>Anusha Shetty</td><td>B.Sc</td></tr>
-                <tr><td>Anushree S</td><td>B.Sc</td></tr>
-                <tr><td>Chakitha Parkala</td><td>B.Sc</td></tr>
-                <tr><td>Rakshitha Mayya</td><td>B.Sc</td></tr>
-                <tr><td>Rakshapoorni Bhandary</td><td>B.Sc</td></tr>
-                <tr><td>Deepthi K</td><td>B.Sc</td></tr>
-                <tr><td>Chethana Kumari</td><td>B.Sc</td></tr>
-                <tr><td>Sangeetha Devadiga</td><td>B.Sc</td></tr>
-                <tr><td>Palguna Nayak</td><td>B.Sc</td></tr>
-                <tr><td>Aishwarya K</td><td>B.Sc</td></tr>
-                <tr><td>Soujanya Acharya</td><td>B.Sc</td></tr>
-                <tr><td>Padigar Keerthi</td><td>B.Sc</td></tr>
-                <tr><td>BG Sampada</td><td>B.Sc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>84</strong></p>
-        <p className="final-total"><strong>Total Selected for the year 2015-16 : 228</strong></p>
-        <h3>Campus Placements for the year 2014-15</h3>
-        <h4>Congratulations to the following students who got placed in WIPRO (WASE/WISTA)</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Sathpathi Prabhu</td><td>M.Sc</td></tr>
-                <tr><td>Shilpashree</td><td>M.Sc</td></tr>
-                <tr><td>Mehewish Sheik</td><td>M.Sc</td></tr>
-                <tr><td>Deepa kumari D</td><td>M.Sc</td></tr>
-                <tr><td>Sandhya</td><td>M.Sc</td></tr>
-                <tr><td>Reema Inish Lobo</td><td>M.Sc</td></tr>
-                <tr><td>Sumitha Lobo</td><td>M.Sc</td></tr>
-                <tr><td>Swathi S Karanth</td><td>M.Sc</td></tr>
-                <tr><td>Nikitha Kamath</td><td>BCA</td></tr>
-                <tr><td>Akshatha Ballal</td><td>BCA</td></tr>
-                <tr><td>Deepa D</td><td>BCA</td></tr>
-                <tr><td>Chethan Kumar Hegde</td><td>BCA</td></tr>
-                <tr><td>Nagesh M Shenoy</td><td>BCA</td></tr>
-                <tr><td>Nihad Ismail</td><td>BCA</td></tr>
-                <tr><td>Roshan shetty</td><td>BCA</td></tr>
-                <tr><td>Pratheek Acharya</td><td>BCA</td></tr>
-                <tr><td>Chaithra</td><td>BCA</td></tr>
-                <tr><td>Balachandra Bhat</td><td>BCA</td></tr>
-                <tr><td>Madhumitha Shet</td><td>BCA</td></tr>
-                <tr><td>Nagendra Shet</td><td>BCA</td></tr>
-                <tr><td>Akash Mendon</td><td>BCA</td></tr>
-                <tr><td>Poornima Nayak</td><td>BCA</td></tr>
-                <tr><td>Keerthan nayak</td><td>BCA</td></tr>
-                <tr><td>Vilkinson Menezes</td><td>BCA</td></tr>
-                <tr><td>SwarnaRekha Nayak</td><td>BCA</td></tr>
-                <tr><td>Varsha Bhat</td><td>BCA</td></tr>
-                <tr><td>Puneeth Kumar</td><td>BCA</td></tr>
-                <tr><td>Threeshma Y Amin</td><td>BCA</td></tr>
-                <tr><td>Kaushik A S</td><td>BCA</td></tr>
-                <tr><td>Rahul Bhat</td><td>BCA</td></tr>
-                <tr><td>Mahalakshmi</td><td>B.Sc</td></tr>
-                <tr><td>Akshay Kumar</td><td>B.Sc</td></tr>
-                <tr><td>Santhosh Acharya</td><td>B.Sc</td></tr>
-                <tr><td>Soumya</td><td>B.Sc</td></tr>
-                <tr><td>Manoj S P</td><td>B.Sc</td></tr>
-                <tr><td>Soumyashree Bhat D</td><td>B.Sc</td></tr>
-                <tr><td>Ranjith Hegde</td><td>B.Sc</td></tr>
-                <tr><td>Pavan Kumar</td><td>B.Sc</td></tr>
-                <tr><td>Pooja Hegde</td><td>B.Sc</td></tr>
-                <tr><td>Srinidhi B</td><td>B.Sc</td></tr>
-                <tr><td>Chaithra</td><td>B.Sc</td></tr>
-                <tr><td>Madhuri</td><td>B.Sc</td></tr>
-                <tr><td>Roopa</td><td>B.Sc</td></tr>
-                <tr><td>Rohini Kini</td><td>B.Sc</td></tr>
-                <tr><td>Ramya</td><td>B.Sc</td></tr>
-                <tr><td>Swathi R Shettigar</td><td>B.Sc</td></tr>
-                <tr><td>Pavithra</td><td>B.Sc</td></tr>
-                <tr><td>Meghana P M</td><td>B.Sc</td></tr>
-                <tr><td>Archana A J</td><td>B.Sc</td></tr>
-                <tr><td>Jyothishree</td><td>B.Sc</td></tr>
-                <tr><td>Prgathi</td><td>B.Sc</td></tr>
-                <tr><td>Amulya NS</td><td>B.Sc</td></tr>
-                <tr><td>Sumitha</td><td>B.Sc</td></tr>
-                <tr><td>Swathi s Shetty</td><td>B.Sc</td></tr>
-                <tr><td>Pooja</td><td>B.Sc</td></tr>
-                <tr><td>Sudeeksha Somayaji</td><td>B.Sc</td></tr>
-                <tr><td>Raksha</td><td>B.Sc</td></tr>
-                <tr><td>Sushmitha J S</td><td>B.Sc</td></tr>
-                <tr><td>Sandhya Nayak</td><td>B.Sc</td></tr>
-                <tr><td>Shetty Niveditha Krishna</td><td>B.Sc</td></tr>
-                <tr><td>Rachitha</td><td>B.Sc</td></tr>
-                <tr><td>Kaushik N</td><td>B.Sc</td></tr>
-                <tr><td>Priya K B</td><td>B.Sc</td></tr>
-                <tr><td>Meghana N</td><td>B.Sc</td></tr>
-                <tr><td>Prasanna Nayak</td><td>B.Sc</td></tr>
-                <tr><td>Anarghya D</td><td>B.Sc</td></tr>
-                <tr><td>Spoorthy A Bhat</td><td>B.Sc</td></tr>
-                <tr><td>Deeksha Shetty</td><td>B.Sc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>68</strong></p>
-        <h4>Congratulations to the following students who got placed in L & T</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Nidhish Shetty</td><td>B.Com</td></tr>
-                <tr><td>Pradeepa Naik</td><td>B.Com</td></tr>
-                <tr><td>Prajwal Ravindra</td><td>B.Com</td></tr>
-                <tr><td>Bharath Kini</td><td>B.Com</td></tr>
-                <tr><td>Vighneshwar Bhat</td><td>B.Com</td></tr>
-                <tr><td>Vignesh Nayak</td><td>B.Com</td></tr>
-                <tr><td>Vijayakumar Hegde</td><td>B.Com</td></tr>
-                <tr><td>Nazil Udupi</td><td>B.Com</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>8</strong></p>
-        <h4>Congratulations to the following students who got placed in Infosys BPO</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Deepika Adiga</td><td>B.Com</td></tr>
-                <tr><td>Keerthi Naik</td><td>B.A</td></tr>
-                <tr><td>Sowmya Nayak</td><td>BCA</td></tr>
-                <tr><td>Amrutha S Devadiga</td><td>B.Com</td></tr>
-                <tr><td>Aishwarya</td><td>B.Com</td></tr>
-                <tr><td>Madhura A K</td><td>B.Com</td></tr>
-                <tr><td>Vivek V Nayak</td><td>B.Com</td></tr>
-                <tr><td>Nazil Ahmed udupi</td><td>B.Com</td></tr>
-                <tr><td>Kshama D</td><td>B.Com</td></tr>
-                <tr><td>Prathvi K</td><td>B.Com</td></tr>
-                <tr><td>Shubhana Shetty</td><td>B.Com</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>11</strong></p>
-        <h4>Congratulations to the following students who got placed in Infosys Technologies</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Aisha Awathif</td><td>BCA</td></tr>
-                <tr><td>Akash Mendon</td><td>BCA</td></tr>
-                <tr><td>Akshatha Ballal</td><td>BCA</td></tr>
-                <tr><td>Balachandra Bhat S</td><td>BCA</td></tr>
-                <tr><td>Bhagyashree</td><td>BCA</td></tr>
-                <tr><td>Briyon Gary Rodrigues</td><td>BCA</td></tr>
-                <tr><td>Chaithra</td><td>BCA</td></tr>
-                <tr><td>Dakshayini</td><td>BCA</td></tr>
-                <tr><td>Haifa Parveen</td><td>BCA</td></tr>
-                <tr><td>Keerthan Nayak</td><td>BCA</td></tr>
-                <tr><td>Koushik A S</td><td>BCA</td></tr>
-                <tr><td>M Siddarth Kumar</td><td>BCA</td></tr>
-                <tr><td>Madhumith Shet</td><td>BCA</td></tr>
-                <tr><td>Madhura</td><td>BCA</td></tr>
-                <tr><td>Maithri R</td><td>BCA</td></tr>
-                <tr><td>Nikhitha Kamath</td><td>BCA</td></tr>
-                <tr><td>Poornima Nayak</td><td>BCA</td></tr>
-                <tr><td>Puneeth Kumar J</td><td>BCA</td></tr>
-                <tr><td>Raksha Bhat</td><td>BCA</td></tr>
-                <tr><td>Ramya Hebbar</td><td>BCA</td></tr>
-                <tr><td>Ranjan R Suvarna</td><td>BCA</td></tr>
-                <tr><td>Sana Parveen</td><td>BCA</td></tr>
-                <tr><td>Sharanya U</td><td>BCA</td></tr>
-                <tr><td>Vilkinson Derick Menzes</td><td>BCA</td></tr>
-                <tr><td>Viona Jeesal Gomes</td><td>BCA</td></tr>
-                <tr><td>Adithi P</td><td>B.Sc</td></tr>
-                <tr><td>Anargya D</td><td>B.Sc</td></tr>
-                <tr><td>Arthika</td><td>B.Sc</td></tr>
-                <tr><td>Ashish Nayak</td><td>B.Sc</td></tr>
-                <tr><td>Ashwini Bhat</td><td>B.Sc</td></tr>
-                <tr><td>Bhargavi</td><td>B.Sc</td></tr>
-                <tr><td>Chaithra</td><td>B.Sc</td></tr>
-                <tr><td>Madhuri Bhat</td><td>B.Sc</td></tr>
-                <tr><td>Mahalaxmi Shenoy</td><td>B.Sc</td></tr>
-                <tr><td>Manoj S P</td><td>B.Sc</td></tr>
-                <tr><td>Meghana N</td><td>B.Sc</td></tr>
-                <tr><td>Pooja Sridhar Hegde</td><td>B.Sc</td></tr>
-                <tr><td>Poornima G S</td><td>B.Sc</td></tr>
-                <tr><td>Ramya</td><td>B.Sc</td></tr>
-                <tr><td>Rohini Kini</td><td>B.Sc</td></tr>
-                <tr><td>Roopa</td><td>B.Sc</td></tr>
-                <tr><td>Santhosh</td><td>B.Sc</td></tr>
-                <tr><td>Shenoy Shridhar T Subraya</td><td>B.Sc</td></tr>
-                <tr><td>Sinchanan D S</td><td>B.Sc</td></tr>
-                <tr><td>Sowmya</td><td>B.Sc</td></tr>
-                <tr><td>Swathi H S</td><td>B.Sc</td></tr>
-                <tr><td>Swathi Rathnakar Shettigar</td><td>B.Sc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>47</strong></p>
-        <h4>Congratulations to the following students who got placed in TCS</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Amrutha S Devadiga</td><td>B.Com</td></tr>
-                <tr><td>Pallavi Hegde</td><td>B.Com</td></tr>
-                <tr><td>Arpita V Bhat</td><td>B.Com</td></tr>
-                <tr><td>Swathi</td><td>B.Com</td></tr>
-                <tr><td>Vaishnavi L</td><td>B.Com</td></tr>
-                <tr><td>Vismitha Shenoy</td><td>B.Com</td></tr>
-                <tr><td>Vinit Shetty</td><td>B.Com</td></tr>
-                <tr><td>Shamoon</td><td>B.Com</td></tr>
-                <tr><td>Prashanth</td><td>B.Com</td></tr>
-                <tr><td>Jeevraj</td><td>B.Com</td></tr>
-                <tr><td>Vignesh V Nayak</td><td>B.Com</td></tr>
-                <tr><td>Ajith Bhat</td><td>B.Com</td></tr>
-                <tr><td>Nazil Ahmed Udupi</td><td>B.Com</td></tr>
-                <tr><td>Varun Acharya</td><td>B.Com</td></tr>
-                <tr><td>Adarsha B Rao</td><td>B.Com</td></tr>
-                <tr><td>Prathvi K</td><td>B.Com</td></tr>
-                <tr><td>Vidya</td><td>B.Com</td></tr>
-                <tr><td>Kshama D</td><td>B.Com</td></tr>
-                <tr><td>Pragathi N G</td><td>B.Com</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>19</strong></p>
-        <h4>Congratulations to the following students who got placed in Tech Mahindra</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>BALACHANDRA BHAT S</td><td>BCA</td></tr>
-                <tr><td>MANOJ S P</td><td>B.Sc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>2</strong></p>
-        <h4>Congratulations to the following student who got placed in Northern Trust Bank</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Vivek Nayak</td><td>B.Com</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>1</strong></p>
-        <h4>Congratulations to the following student who got placed in ITC Infotech</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>BALACHANDRA BHAT S</td><td>BCA</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>1</strong></p>
-        <h4>Congratulations to the following student who got placed in Goldman Sachs (GS)</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Shobhitha</td><td>M.Sc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>1</strong></p>
-        <h4>Congratulations to the following student who got placed in Dheemahi</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Swathi Deepak</td><td>M.Sc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>1</strong></p>
-        <h4>Congratulations to the following students who got placed in MCA140</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Naveen Shet</td><td>M.Sc</td></tr>
-                <tr><td>Deepa</td><td>M.Sc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>2</strong></p>
-        <p className="final-total"><strong>Total Selected for the year 2014-15 : 161</strong></p>
-        <h3>Campus Placements for the year 2013-14</h3>
-        <h4>Congratulations to the following students who got placed in WIPRO (WASE/WISTA)</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Shilpa K</td><td>M.Sc</td></tr>
-                <tr><td>Sahana K</td><td>M.Sc</td></tr>
-                <tr><td>Akshay Kumar</td><td>M.Sc</td></tr>
-                <tr><td>Vedavyas Kamath</td><td>BCA</td></tr>
-                <tr><td>Meenakshi Shetty</td><td>BCA</td></tr>
-                <tr><td>Vernon Lewis</td><td>BCA</td></tr>
-                <tr><td>Sharath Kumar</td><td>BCA</td></tr>
-                <tr><td>Manasa</td><td>BCA</td></tr>
-                <tr><td>Melba Lewis</td><td>BCA</td></tr>
-                <tr><td>Sanjana Adiga</td><td>BCA</td></tr>
-                <tr><td>Raihana M</td><td>BCA</td></tr>
-                <tr><td>Aishwarya U</td><td>BCA</td></tr>
-                <tr><td>Swathi U</td><td>BCA</td></tr>
-                <tr><td>Suraksha Shetty</td><td>B.Sc(BZC)</td></tr>
-                <tr><td>Ananya L N</td><td>B.Sc(BZC)</td></tr>
-                <tr><td>Sowjanya Shetty</td><td>B.Sc(BZC)</td></tr>
-                <tr><td>Shwetha Shetty</td><td>B.Sc(MSP)</td></tr>
-                <tr><td>Shobhitha</td><td>B.Sc(C.Sc)</td></tr>
-                <tr><td>Vijetha</td><td>B.Sc(C.Sc)</td></tr>
-                <tr><td>Kotarimane Laxmi</td><td>B.Sc(C.Sc)</td></tr>
-                <tr><td>Aishwarya</td><td>B.Sc(MPC)</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>21</strong></p>
-        <h4>Congratulations to the following students who got placed in IBM</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Sonal Nayak</td><td>B.Com</td></tr>
-                <tr><td>Aishwarya U</td><td>BCA</td></tr>
-                <tr><td>Vijetha</td><td>B.Sc(MPCs)</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>3</strong></p>
-        <h4>Congratulations to the following students who got placed in TCS</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Disha S P</td><td>B.Com</td></tr>
-                <tr><td>Amitha R Nayak</td><td>B.Com</td></tr>
-                <tr><td>Chitra Dayanand Shetty</td><td>B.Com</td></tr>
-                <tr><td>Chetana S</td><td>B.Com</td></tr>
-                <tr><td>Prakruthi H P</td><td>B.Sc</td></tr>
-                <tr><td>Pratap Naik U</td><td>B.Com</td></tr>
-                <tr><td>Raiza Verina Sequira</td><td>B.Com</td></tr>
-                <tr><td>Sonal Nayak</td><td>B.Com</td></tr>
-                <tr><td>Divya Silkina Maben</td><td>B.Com</td></tr>
-                <tr><td>Swathy G Nayak</td><td>B.Com</td></tr>
-                <tr><td>Geetha Shenoy Balkunje</td><td>B.Com</td></tr>
-                <tr><td>Pooja D Kanchan</td><td>B.Com</td></tr>
-                <tr><td>Bharath Shetty</td><td>B.Com</td></tr>
-                <tr><td>Suchitra</td><td>B.Com</td></tr>
-                <tr><td>Rakshitha R Shetty</td><td>B.Com</td></tr>
-                <tr><td>Sapthami A</td><td>B.Com</td></tr>
-                <tr><td>Vani S Nayak</td><td>B.Com</td></tr>
-                <tr><td>Slany Jathanna</td><td>B.Com</td></tr>
-                <tr><td>Ganesh P Pai</td><td>B.Com</td></tr>
-                <tr><td>Sudheendra A Acharya</td><td>B.Com</td></tr>
-                <tr><td>Ritesh</td><td>B.Com</td></tr>
-                <tr><td>Pavan Kumar B</td><td>B.Com</td></tr>
-                <tr><td>Shreesha L Kanchan</td><td>B.Com</td></tr>
-                <tr><td>Karthika marathe</td><td>B.Com</td></tr>
-                <tr><td>Ashwin Kumar</td><td>B.Com</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>25</strong></p>
-        <h4>Congratulations to the following students who got placed in L&T</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Ganesh P Pai</td><td>B.Com</td></tr>
-                <tr><td>Ashwath madival</td><td>B.Com</td></tr>
-                <tr><td>Akshay kumar</td><td>B.Com</td></tr>
-                <tr><td>Mithun</td><td>B.Com</td></tr>
-                <tr><td>Bharath Shetty</td><td>B.Com</td></tr>
-                <tr><td>Akhil S P</td><td>B.Com</td></tr>
-                <tr><td>Krishna Naik</td><td>B.Com</td></tr>
-                <tr><td>Kishor Shetty</td><td>B.Com</td></tr>
-                <tr><td>Manjunath Subrahmanya Hegde</td><td>B.Com</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>9</strong></p>
-        <h4>Congratulations to the following students who got placed in Wipro Technologies</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Adithi Nijoor S</td><td>BCA</td></tr>
-                <tr><td>Chetan L Kamath</td><td>BCA</td></tr>
-                <tr><td>Aprameya Aithal</td><td>BCA</td></tr>
-                <tr><td>Yashaswini</td><td>BCA</td></tr>
-                <tr><td>Rakshitha</td><td>BCA</td></tr>
-                <tr><td>Kankana Deva G</td><td>BCA</td></tr>
-                <tr><td>Ishrath Banu</td><td>BCA</td></tr>
-                <tr><td>Ashwin Nair P</td><td>BCA</td></tr>
-                <tr><td>Chaitra Cahndra S</td><td>BCA</td></tr>
-                <tr><td>Nisha</td><td>BCA</td></tr>
-                <tr><td>Prajna B</td><td>BCA</td></tr>
-                <tr><td>Sanyuktha G</td><td>BCA</td></tr>
-                <tr><td>Anjana S Shetty</td><td>BCA</td></tr>
-                <tr><td>Archana U Nayak</td><td>B.Sc</td></tr>
-                <tr><td>Shrisha Kumari</td><td>B.Sc</td></tr>
-                <tr><td>Ramakrishna Acharya</td><td>B.Sc</td></tr>
-                <tr><td>Shubha</td><td>B.Sc</td></tr>
-                <tr><td>Ashalatha</td><td>B.Sc</td></tr>
-                <tr><td>Amogha</td><td>B.Sc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>19</strong></p>
-        <h4>Congratulations to the following students who got placed in Infosys BPO</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Swathy G Nayak</td><td>B.Com</td></tr>
-                <tr><td>Harshitha Kn</td><td>B.Com</td></tr>
-                <tr><td>Vidya A Vasudev</td><td>B.Com</td></tr>
-                <tr><td>Ramakrishna Acharya</td><td>B.Com</td></tr>
-                <tr><td>Chaithra</td><td>B.Com</td></tr>
-                <tr><td>Manasa</td><td>BCA</td></tr>
-                <tr><td>Disha S P</td><td>B.Com</td></tr>
-                <tr><td>Chetana Subray Hegde</td><td>B.Sc</td></tr>
-                <tr><td>Geetha Shenoy B</td><td>B.Com</td></tr>
-                <tr><td>Amitha R Nayak</td><td>B.Com</td></tr>
-                <tr><td>Bhavya</td><td>B.Com</td></tr>
-                <tr><td>Vani S Nayak</td><td>B.Com</td></tr>
-                <tr><td>Tejaswini B Yaji</td><td>B.Sc</td></tr>
-                <tr><td>Sumanth S Varna</td><td>B.Com</td></tr>
-                <tr><td>Damini Damodar</td><td>B.Com</td></tr>
-                <tr><td>Divya Ganesh Hegde</td><td>B.Com</td></tr>
-                <tr><td>Tarunya Sharade</td><td>B.Com</td></tr>
-                <tr><td>Deeksha D Puthran</td><td>B.Com</td></tr>
-                <tr><td>Kankana Deva Gouda</td><td>BCA</td></tr>
-                <tr><td>Adithi H U</td><td>BCA</td></tr>
-                <tr><td>Supritha Rai</td><td>BCA</td></tr>
-                <tr><td>Giridhar Prabhu</td><td>B.Com</td></tr>
-                <tr><td>Prakrithi B</td><td>B.Com</td></tr>
-                <tr><td>Shetty Chaitra Dayanand</td><td>BCA</td></tr>
-                <tr><td>Slany Jathanna</td><td>B.Com</td></tr>
-                <tr><td>Ashwin Kumar</td><td>B.Com</td></tr>
-                <tr><td>Rakshitha R Shetty</td><td>B.Com</td></tr>
-                <tr><td>Shreesha D Palan</td><td>BCA</td></tr>
-                <tr><td>Chetan L Kamath</td><td>BCA</td></tr>
-                <tr><td>Darshan D Jagathap</td><td>BCA</td></tr>
-                <tr><td>Rakshatha Nayak</td><td>B.A</td></tr>
-                <tr><td>Vernon Martin Lewis</td><td>BCA</td></tr>
-                <tr><td>Sanyuktha G</td><td>BCA</td></tr>
-                <tr><td>Akshatha G P</td><td>BCA</td></tr>
-                <tr><td>Ganesh P Pai</td><td>B.Com</td></tr>
-                <tr><td>Pavan Kumar B</td><td>B.Com</td></tr>
-                <tr><td>Vikram K S</td><td>B.Com</td></tr>
-                <tr><td>Sudheendra A Acharya</td><td>B.Com</td></tr>
-                <tr><td>Prajna S</td><td>B.Sc</td></tr>
-                <tr><td>Shwetha Shetty</td><td>B.Sc</td></tr>
-                <tr><td>Prakruthi H P</td><td>B.Sc</td></tr>
-                <tr><td>Ashalatha</td><td>B.Sc</td></tr>
-                <tr><td>Prajna B</td><td>BCA</td></tr>
-                <tr><td>Anjana Shetty</td><td>BCA</td></tr>
-                <tr><td>Sapthami A</td><td>B.Com</td></tr>
-                <tr><td>Suchithra</td><td>B.Com</td></tr>
-                <tr><td>Melba Deena Lewis</td><td>BCA</td></tr>
-                <tr><td>Shruthi Dinesh Shenoy</td><td>BCA</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>48</strong></p>
-        <h4>Congratulations to the following students who got placed in Axis bank</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>TARUNYA SHARADE</td><td>B.Com</td></tr>
-                <tr><td>JOANNA CHALCEDONY SAMUEL</td><td>B.Com</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>2</strong></p>
-        <p className="final-total"><strong>Total Selected for the year 2013-14 : 127</strong></p>
-        <h3>Campus Placements for the year 2012-13</h3>
-        <h4>Congratulations to the following students who got placed in WIPRO (WASE/WISTA)</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Sapna K</td><td>BCA</td></tr>
-                <tr><td>Pooja Rani H S</td><td>BCA</td></tr>
-                <tr><td>Roopesh Prabhu</td><td>BCA</td></tr>
-                <tr><td>Pavan Kumar K</td><td>B.Sc</td></tr>
-                <tr><td>Sakshi Shetty</td><td>B.Sc</td></tr>
-                <tr><td>Anitha Rao</td><td>B.Sc</td></tr>
-                <tr><td>Nagesh Shenoy</td><td>B.Sc</td></tr>
-                <tr><td>Nischitha Hegde</td><td>B.Sc</td></tr>
-                <tr><td>Vinay</td><td>B.Sc</td></tr>
-                <tr><td>Sowmya</td><td>B.Sc</td></tr>
-                <tr><td>Anusha M S</td><td>B.Sc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>11</strong></p>
-        <h4>Congratulations to the following students who got placed in INFOSYS BPO</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>KRASHNANANDA DATTATRAYA BHAT</td><td>B.Com.</td></tr>
-                <tr><td>MD JUNED</td><td>B.Com.</td></tr>
-                <tr><td>POOJARY MAMTA BHUJANG</td><td>B.Com.</td></tr>
-                <tr><td>SHARADA V</td><td>B.Com.</td></tr>
-                <tr><td>SWATHI H S</td><td>B.Com.</td></tr>
-                <tr><td>K GAYATHRI NAYAK</td><td>B.Com.</td></tr>
-                <tr><td>SWATI SHETTY</td><td>B.Com.</td></tr>
-                <tr><td>ARPITHA K R</td><td>B.Com.</td></tr>
-                <tr><td>OLGA ROBERT LEWIS</td><td>B.Com.</td></tr>
-                <tr><td>SUCHITHRA NAIK</td><td>B.Com.</td></tr>
-                <tr><td>AMRITHA SHANBHOGUE</td><td>B.Com.</td></tr>
-                <tr><td>AKSHATHA A ANCHA N</td><td>B.Com.</td></tr>
-                <tr><td>ALIYA ASHRAF ALI</td><td>B.Com.</td></tr>
-                <tr><td>AKSHITA BHASKARA SHETTY</td><td>B.Com.</td></tr>
-                <tr><td>NAGMA KHANUM</td><td>B.Sc.</td></tr>
-                <tr><td>ARENZA KAREN SEQUEIRA</td><td>B.Sc.</td></tr>
-                <tr><td>SNEHA R</td><td>B.Sc.</td></tr>
-                <tr><td>SUSHMA R</td><td>B.Sc.</td></tr>
-                <tr><td>SHAMBHAVI P R</td><td>B.Sc.</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>19</strong></p>
-        <h4>Congratulations to the following students who got placed in Wipro WASE</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Aparna P</td><td>BCA</td></tr>
-                <tr><td>Rashmi Poojary</td><td>BCA</td></tr>
-                <tr><td>Swathi V</td><td>BCA</td></tr>
-                <tr><td>Madhumitha R K</td><td>BCA</td></tr>
-                <tr><td>Darshan</td><td>BCA</td></tr>
-                <tr><td>Manjunath D H</td><td>BCA</td></tr>
-                <tr><td>Rohith Nayak</td><td>BSc(MPCs)</td></tr>
-                <tr><td>Srilaxmi Bhat</td><td>BSc(MPCs)</td></tr>
-                <tr><td>Seema</td><td>BSc(MPCs)</td></tr>
-                <tr><td>Namratha</td><td>BSc(BZC)</td></tr>
-                <tr><td>Gururaj</td><td>BSc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>11</strong></p>
-        <h4>Congratulations to the following students who got placed in Axis bank</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Ravindra Mattu</td><td>B.Sc</td></tr>
-                <tr><td>Ashish Kanchan</td><td>B.Sc</td></tr>
-                <tr><td>Pavan Kumar</td><td>B.Sc</td></tr>
-                <tr><td>Ashish</td><td>B.Sc</td></tr>
-                <tr><td>Sanjaya</td><td>B.Sc</td></tr>
-                <tr><td>Seema</td><td>B.Sc</td></tr>
-                <tr><td>Vanishree</td><td>B.Sc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>7</strong></p>
-        <p className="final-total"><strong>Total Selected for the year 2012-13 : 48</strong></p>
-        <h3>Campus Placements for the year 2011-12</h3>
-        <h4>Congratulations to the following student who got placed in Accenture</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Shodhana Srinivas Nayak</td><td>B.C.A.</td></tr>
-                <tr><td>Sharadhi R</td><td>B.C.A.</td></tr>
-                <tr><td>Rashmi</td><td>B.C.A.</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>3</strong></p>
-        <h4>Congratulations to the following students who got placed in Wipro Infotech</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Samprada K J</td><td>B.Sc</td></tr>
-                <tr><td>Saritha Bhandary</td><td>B.Sc</td></tr>
-                <tr><td>Anona Laura Lewis</td><td>B.Sc</td></tr>
-                <tr><td>Laxmi Pradhyumna J</td><td>BCA</td></tr>
-                <tr><td>Shreeprabha M</td><td>B.Sc</td></tr>
-                <tr><td>Shilpashree P</td><td>BCA</td></tr>
-                <tr><td>Swathi N</td><td>BCA</td></tr>
-                <tr><td>Manasa S P</td><td>B.Sc</td></tr>
-                <tr><td>Shodhana Srinivas Nayak</td><td>BCA</td></tr>
-                <tr><td>Reenarose A Soans</td><td>BCA</td></tr>
-                <tr><td>Sahana K</td><td>BCA</td></tr>
-                <tr><td>Deepa V Prabhu</td><td>B.Sc</td></tr>
-                <tr><td>Vanditha Pai</td><td>B.Sc</td></tr>
-                <tr><td>Sanjana N R</td><td>B.Sc</td></tr>
-                <tr><td>Vineetha N K</td><td>BCA</td></tr>
-                <tr><td>Deepthi K R</td><td>B.Sc</td></tr>
-                <tr><td>Shilpa K</td><td>BCA</td></tr>
-                <tr><td>Sanketh Shekar</td><td>BCA</td></tr>
-                <tr><td>Shwetha Suvarna</td><td>BCA</td></tr>
-                <tr><td>Vinutha</td><td>BCA</td></tr>
-                <tr><td>Rajesh Nayak</td><td>BCA</td></tr>
-                <tr><td>Namitha Ballal</td><td>B.Sc</td></tr>
-                <tr><td>Rashmi Shanbhogue</td><td>BCA</td></tr>
-                <tr><td>Nikhitha V Poojary</td><td>BCA</td></tr>
-                <tr><td>Madhura R Somayaji</td><td>B.Sc</td></tr>
-                <tr><td>Misba Naaz</td><td>BCA</td></tr>
-                <tr><td>Chaithra N S</td><td>B.Sc</td></tr>
-                <tr><td>Sachin P N</td><td>BCA</td></tr>
-                <tr><td>Jakson James Monterio</td><td>BCA</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected from MGM: <strong>29</strong></p>
-        <h4>Congratulations to the following students who got placed in iGate Global Solutions</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Shodhana Srinivas Nayak</td><td>BCA</td></tr>
-                <tr><td>Rashmi</td><td>BCA</td></tr>
-                <tr><td>Shilpashree Podamale</td><td>BCA</td></tr>
-                <tr><td>Namitha</td><td>BSc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>4</strong></p>
-        <h4>Congratulations to the following students who got placed in Wipro-Wase</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Shodhana Srinivas Nayak</td><td>BCA</td></tr>
-                <tr><td>Vineetha N Karkera</td><td>BCA</td></tr>
-                <tr><td>Sanketh Shekar</td><td>BCA</td></tr>
-                <tr><td>Sachin P N</td><td>BCA</td></tr>
-                <tr><td>Misba Naaz</td><td>BCA</td></tr>
-                <tr><td>Archana Pai H V</td><td>BCA</td></tr>
-                <tr><td>Vinutha Suvarna</td><td>BCA</td></tr>
-                <tr><td>Laxmi Pradhyumna J</td><td>BCA</td></tr>
-                <tr><td>Sharadhi R</td><td>BCA</td></tr>
-                <tr><td>Sahana K</td><td>BCA</td></tr>
-                <tr><td>Shilpa K</td><td>BCA</td></tr>
-                <tr><td>Kavya B Kotian</td><td>BCA</td></tr>
-                <tr><td>Sana</td><td>BCA</td></tr>
-                <tr><td>Rashmi Shanbhogue</td><td>BCA</td></tr>
-                <tr><td>Puneeth L N</td><td>BSc(MPC)</td></tr>
-                <tr><td>Vigneshwar Bhat</td><td>BSc(MPC)</td></tr>
-                <tr><td>Sabeena</td><td>BSc(MPC)</td></tr>
-                <tr><td>Ashwini A T</td><td>BSc(MPC)</td></tr>
-                <tr><td>Sharanya Shetty</td><td>BSc(MPC)</td></tr>
-                <tr><td>Shreeprabha M</td><td>BSc(MPC)</td></tr>
-                <tr><td>Anoosha S Shetty</td><td>BSc(MPC)</td></tr>
-                <tr><td>Nagesh Ganiga Manjunath</td><td>BSc(MPC)</td></tr>
-                <tr><td>Deepak Kamath</td><td>BSc(MPC)</td></tr>
-                <tr><td>Rajani Acharya</td><td>BSc(MSP)</td></tr>
-                <tr><td>Ashwini K</td><td>BSc(MSP)</td></tr>
-                <tr><td>Manasa S P</td><td>BSc(MPCs)</td></tr>
-                <tr><td>Chaitra N S Adiga</td><td>BSc(MPCs)</td></tr>
-                <tr><td>Shwetha Kiran</td><td>BSc(MPCs)</td></tr>
-                <tr><td>Deepthi K R</td><td>BSc(MPCs)</td></tr>
-                <tr><td>Maithri S N</td><td>BSc(MPCs)</td></tr>
-                <tr><td>Anusha G Shetty</td><td>BSc(MPCs)</td></tr>
-                <tr><td>Karthika A G</td><td>BSc(MPCs)</td></tr>
-                <tr><td>Devdas Nayak</td><td>BSc(MPCs)</td></tr>
-                <tr><td>Vanditha Pai</td><td>BSc(MSCs)</td></tr>
-                <tr><td>Namitha Ballal</td><td>BSc(MSCs)</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>35</strong></p>
-        <h4>Congratulations to the following students who got placed in Wipro-Wista</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Vinutha H V</td><td>BZC</td></tr>
-                <tr><td>Sridevi K Bhat</td><td>BZC</td></tr>
-                <tr><td>Surabhi</td><td>BZC</td></tr>
-                <tr><td>Pooja Shetty B</td><td>BZC</td></tr>
-                <tr><td>Shetty Anusha Krishna</td><td>BZC</td></tr>
-                <tr><td>Sushmitha K N</td><td>BZC</td></tr>
-                <tr><td>Rakshitha A</td><td>BZC</td></tr>
-                <tr><td>Anusha Shenoy</td><td>BZC</td></tr>
-                <tr><td>Vinaya Kallalli</td><td>BZC</td></tr>
-                <tr><td>Sridevi Prabhu M</td><td>BZC</td></tr>
-                <tr><td>Shwetha</td><td>BCA</td></tr>
-                <tr><td>Swathi N</td><td>BCA</td></tr>
-                <tr><td>Shilpashree P</td><td>BCA</td></tr>
-                <tr><td>Nameesha Naik</td><td>BCA</td></tr>
-                <tr><td>Jakson Monteiro</td><td>BCA</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>15</strong></p>
-        <h4>Congratulations to the following student who got placed in Winman Software</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Nikitha V Poojary</td><td>B.C.A.</td></tr>
-                <tr><td>Rashmi</td><td>B.C.A.</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>2</strong></p>
-        <h4>Congratulations to the following student who got placed in Infosys Technology</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>ARCHANA BHOJA AMIN</td><td>B.C.A.</td></tr>
-                <tr><td>SHWETHA SUVARNA</td><td>B.C.A.</td></tr>
-                <tr><td>JACKSON JAMES MONTEIRO</td><td>B.C.A.</td></tr>
-                <tr><td>SHODHNA SRINIVAS NAYAK</td><td>B.C.A.</td></tr>
-                <tr><td>RASHMI</td><td>B.C.A.</td></tr>
-                <tr><td>PRAMOD ROLAN D'SOUZA</td><td>B.C.A.</td></tr>
-                <tr><td>MISBA NAAZ</td><td>B.C.A.</td></tr>
-                <tr><td>SHARATH KUMAR</td><td>B.C.A.</td></tr>
-                <tr><td>VINEETHA KARKERA</td><td>B.C.A.</td></tr>
-                <tr><td>CHAITHRA N S ADIGA</td><td>B.Sc.</td></tr>
-                <tr><td>DEEPA V PRABHU</td><td>B.Sc.</td></tr>
-                <tr><td>ASHWINI KANNARPADY</td><td>B.Sc.</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>12</strong></p>
-        <h4>Congratulations to the following student who got placed in Infosys BPO</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>ASMA Y</td><td>B.A.</td></tr>
-                <tr><td>SOUMYA N V</td><td>B.Com.</td></tr>
-                <tr><td>SAHANA HEGDE</td><td>B.Com.</td></tr>
-                <tr><td>JOY SEQUEIRA</td><td>B.Com.</td></tr>
-                <tr><td>SUDHIR DSOUZA</td><td>B.Com.</td></tr>
-                <tr><td>SRIDEVI PRABHU M</td><td>B.Sc</td></tr>
-                <tr><td>MAITHRI S N</td><td>B.Sc</td></tr>
-                <tr><td>SUSHMA</td><td>B.C.A.</td></tr>
-                <tr><td>PRAJNA SHETTY</td><td>B.C.A.</td></tr>
-                <tr><td>RAKSHATHA S</td><td>B.C.A.</td></tr>
-                <tr><td>SWARNA RANI U P</td><td>B.C.A.</td></tr>
-                <tr><td>RAKSHITH R NADIG</td><td>B.C.A.</td></tr>
-                <tr><td>MAHESH NAYAK</td><td>B.C.A.</td></tr>
-                <tr><td>RAJESH NAYAK</td><td>B.C.A.</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>14</strong></p>
-        <p className="final-total"><strong>Total Selected for the year 2011-12 : 114</strong></p>
-        <h3>Campus Placements for the year 2010-11</h3>
-        <h4>Congratulations to the following students who got placed in ROBOSOFT</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Divya</td><td>BCA</td></tr>
-                <tr><td>Suraksha Seetharama</td><td>BCA</td></tr>
-                <tr><td>Bhavani</td><td>BCA</td></tr>
-                <tr><td>Bhamini</td><td>BCA</td></tr>
-                <tr><td>Archana</td><td>BCA</td></tr>
-                <tr><td>Shwetha Shet U</td><td>BCA</td></tr>
-                <tr><td>Salitha D'Almeida</td><td>BCA</td></tr>
-                <tr><td>Gautham Nayak</td><td>BCA</td></tr>
-                <tr><td>Siddarth Maiya</td><td>BCA</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>9</strong></p>
-        <h4>Congratulations to the following students who got placed in WIPRO Technology</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Vinitha H Saldanha</td><td>B.Sc</td></tr>
-                <tr><td>Hamsa Nayak</td><td>B.Sc</td></tr>
-                <tr><td>Shruthi Rao</td><td>B.Sc</td></tr>
-                <tr><td>Ashwini Sanil</td><td>B.Sc</td></tr>
-                <tr><td>Amritha Puranik</td><td>B.Sc</td></tr>
-                <tr><td>Abhilasha M</td><td>B.Sc</td></tr>
-                <tr><td>Priya R Acharya</td><td>B.Sc</td></tr>
-                <tr><td>Rekha Pai</td><td>B.Sc</td></tr>
-                <tr><td>Nayana J Karkada</td><td>B.Sc</td></tr>
-                <tr><td>Niveditha G Baliga</td><td>B.Sc</td></tr>
-                <tr><td>Sharath G Pai</td><td>B.Sc</td></tr>
-                <tr><td>Ambika Rani K</td><td>B.Sc</td></tr>
-                <tr><td>Apeksha Bhat V</td><td>B.Sc</td></tr>
-                <tr><td>Sonali Salian P</td><td>B.Sc</td></tr>
-                <tr><td>Mridula M</td><td>B.Sc</td></tr>
-                <tr><td>Salitha D' Almeida</td><td>B.C.A.</td></tr>
-                <tr><td>Varsha V Nayak</td><td>B.C.A.</td></tr>
-                <tr><td>Siddartha Maiya</td><td>B.C.A.</td></tr>
-                <tr><td>Vani M Shanbhag</td><td>B.C.A.</td></tr>
-                <tr><td>Shraman J Sequeira</td><td>B.C.A.</td></tr>
-                <tr><td>Usha</td><td>B.C.A.</td></tr>
-                <tr><td>Shwetha Shet U</td><td>B.C.A.</td></tr>
-                <tr><td>Archana Harish</td><td>B.C.A.</td></tr>
-                <tr><td>Rashmi</td><td>B.C.A.</td></tr>
-                <tr><td>Nagesha Acharya</td><td>B.C.A.</td></tr>
-                <tr><td>Deekshitha</td><td>B.C.A.</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>26</strong></p>
-        <h4>Congratulations to the following students who got placed in Infosys BPO</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>PRIYANKA PAI H</td><td>B.Sc(B.Z.C)</td></tr>
-                <tr><td>ASMITHA JYOTHI SHETTY</td><td>B.Com</td></tr>
-                <tr><td>VANDANA K R</td><td>B.Com</td></tr>
-                <tr><td>SHRUTI D BANGERA</td><td>B.Com</td></tr>
-                <tr><td>MANISHA B POOJARY</td><td>B.Com</td></tr>
-                <tr><td>DEEPIKA Y</td><td>B.Com</td></tr>
-                <tr><td>UMESH KAJAL K</td><td>B.Com</td></tr>
-                <tr><td>MOHAMMED ALFAZ</td><td>B.Com</td></tr>
-                <tr><td>VANII BHAT</td><td>B.Com</td></tr>
-                <tr><td>SAMUEL PEREIRA</td><td>B.Com</td></tr>
-                <tr><td>GAUTHAM</td><td>B.Com</td></tr>
-                <tr><td>KAVITHA NAYAK</td><td>B.Com</td></tr>
-                <tr><td>TEJASWINI A R</td><td>B.C.A.</td></tr>
-                <tr><td>USHA</td><td>B.C.A.</td></tr>
-                <tr><td>HAMSA NAYAK</td><td>B.Sc</td></tr>
-                <tr><td>MELISSA GLENDA LEWIS</td><td>B.Sc</td></tr>
-                <tr><td>VINITHA HELVEERA SALDANHA</td><td>B.Sc</td></tr>
-                <tr><td>RADHIKA T</td><td>B.C.A.</td></tr>
-                <tr><td>APEKSHA BHAT V</td><td>B.Sc</td></tr>
-                <tr><td>SONALI SALIAN P</td><td>B.Sc</td></tr>
-                <tr><td>NIVEDITA G BALIGA</td><td>B.Sc</td></tr>
-                <tr><td>FARHANAZ</td><td>B.Sc</td></tr>
-                <tr><td>SHETTY DEEPA SUMAN</td><td>B.Sc</td></tr>
-                <tr><td>ARCHANA HARISH</td><td>B.C.A.</td></tr>
-                <tr><td>KIRANMAYI O</td><td>B.C.A.</td></tr>
-                <tr><td>DIVYA</td><td>B.C.A.</td></tr>
-                <tr><td>SANDHYA P R</td><td>B.C.A.</td></tr>
-                <tr><td>KRITIKA MAHALE V</td><td>B.C.A.</td></tr>
-                <tr><td>PRIYA RAVINDRA ACHARYA</td><td>B.Sc</td></tr>
-                <tr><td>SPOORTHI SHETTY SUDHAKAR</td><td>B.Sc</td></tr>
-                <tr><td>VAISHALI P RAO</td><td>B.Sc</td></tr>
-                <tr><td>CHAITRA C KOTIAN</td><td>B.Sc</td></tr>
-                <tr><td>SURAKSHA SEETHARAMA GUNDIBAIL</td><td>B.C.A.</td></tr>
-                <tr><td>JAIRAM KRISHNA DEVADIGA</td><td>B.Sc</td></tr>
-                <tr><td>GANESH KALKURA</td><td>B.Sc</td></tr>
-                <tr><td>AMBIKA RANI K</td><td>B.Sc</td></tr>
-                <tr><td>RASHMI S SHETTY</td><td>B.Sc</td></tr>
-                <tr><td>VIBHA MADA V</td><td>B.Sc</td></tr>
-                <tr><td>KEERTHI KUMAR S D</td><td>B.Sc</td></tr>
-                <tr><td>SHARATH G PAI</td><td>B.Sc</td></tr>
-                <tr><td>APOORVA</td><td>B.Sc</td></tr>
-                <tr><td>AMITHA PURANIK</td><td>B.Sc</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>42</strong></p>
-        <h4>Congratulations to the following student who got placed in I-Gate</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>ALVA ROYSTON ROBERT</td><td>B.C.A.</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>1</strong></p>
-        <h4>Congratulations to the following student who got placed in Vijaya Bank</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Raghuvaran</td><td>B.C.A.</td></tr>
-                <tr><td>Sushma Poojary</td><td>B.Sc.</td></tr>
-                <tr><td>Suraksha Seetharama Gundibail</td><td>B.C.A.</td></tr>
-                <tr><td>Rahul K.A.</td><td>B.C.A.</td></tr>
-                <tr><td>Shetty Deepa Suman</td><td>B.Sc.</td></tr>
-                <tr><td>Shetty Spoorthi Sudhakar</td><td>B.Sc.</td></tr>
-                <tr><td>Subramanya</td><td>B.Sc.</td></tr>
-                <tr><td>Pushpalatha B</td><td>B.Sc.</td></tr>
-                <tr><td>Askhatha</td><td>B.Sc.</td></tr>
-                <tr><td>Divya</td><td>B.C.A.</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>10</strong></p>
-        <h4>Congratulations to the following student who got placed in Balaji telefilms</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>VAISHALI</td><td>B.Sc.</td></tr>
-                <tr><td>NISHA</td><td>B.Sc.</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>2</strong></p>
-        <h4>Congratulations to the following student who got placed in wipro bpo</h4>
-        <table className="placement-table">
-            <thead>
-                <tr>
-                    <th>Name of the Student</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>APOORVA POOJARY</td><td>B.Sc.</td></tr>
-                <tr><td>SHRUTHI</td><td>B.Sc.</td></tr>
-                <tr><td>CHAITRA KOTIAN</td><td>B.Sc.</td></tr>
-                <tr><td>AMBIKA RANI</td><td>B.Sc.</td></tr>
-                <tr><td>ROHAN BONNY PEREIRA</td><td>B.Sc.</td></tr>
-            </tbody>
-        </table>
-        <p className="total-selected">Total Selected: <strong>5</strong></p>
-        <p className="final-total"><strong>Total Placements for the year 2010-11 : 95</strong></p>
-    </div>
-    
-    <div className="placement-sidebar">
-        <i className="fas fa-trophy placement-logo"></i> 
-        <h3>Placement Cell</h3>
-        <p>The highlights of the academic years speak for themselves. We prepare our students not just for a degree, but for a career.</p>
-        
-        <h4>Key Statistics</h4>
-        <ul className="student-stats">
-            <li><strong>Since 2003:</strong> 950+ students placed</li>
-            <li><strong>Top Salary:</strong> ₹16,000/- per month</li>
-            <li><strong>Top Recruiters:</strong> 12+ Major Companies</li>
-            <li><strong>2020-21 Total:</strong> 85 students placed</li>
-            <li><strong>2019-20 Total:</strong> 138 students placed</li>
-            <li><strong>2018-19 Total:</strong> 139 students placed</li>
-            <li><strong>2017-18 Total:</strong> 111 students placed</li>
-            <li><strong>2016-17 Total:</strong> 130 students placed</li>
-            <li><strong>2015-16 Total:</strong> 228 students placed</li>
-            <li><strong>2014-15 Total:</strong> 161 students placed</li>
-            <li><strong>2013-14 Total:</strong> 127 students placed</li>
-            <li><strong>2012-13 Total:</strong> 48 students placed</li>
-            <li><strong>2011-12 Total:</strong> 114 students placed</li>
-            <li><strong>2010-11 Total:</strong> 95 students placed</li>
-        </ul>
-        
-        <p>For more details, contact the Placement Cell Coordinator.</p>
-    </div>
-</div>
-    </div>
-  );
-}
+  yearlyRecords: [
+    {
+      year: "2020-21",
+      totalSelected: 85,
+      summaryStats: [
+        { company: "Infosys Technologies", count: 40 },
+        { company: "Deloitte", count: 5 },
+        { company: "TCS", count: 8 },
+        { company: "Wipro", count: 30 },
+        { company: "Cognizant", count: 2 }
+      ]
+    },
+    {
+      year: "2019-20",
+      totalSelected: 138,
+      companies: [
+        {
+          companyName: "Cognizant",
+          totalSelected: 29,
+          students: [
+            { name: "Varun Bhat", class: "B.Sc" },
+            { name: "Adarsh Janardhan Acharya", class: "B.Sc" },
+            { name: "Vishesh S Amin", class: "B.Sc" },
+            { name: "Narayan Pai", class: "B.Sc" },
+            { name: "Udupi Prajnashree Naik", class: "B.Sc" },
+            { name: "Priya S Poojary", class: "B.Sc" },
+            { name: "Keerthi U Pai", class: "B.Sc" },
+            { name: "Anusha Rao", class: "B.Sc" },
+            { name: "Melona Dsouza", class: "B.Sc" },
+            { name: "Riha Fahika", class: "BA" },
+            { name: "Adolf Shervin Amanna", class: "B.Com" },
+            { name: "Chaitra Prabhu", class: "B.Com" },
+            { name: "Dsouza Melisha Melwyn", class: "B.Com" },
+            { name: "Sharon Reeshma Prasad", class: "B.Com" },
+            { name: "Vibha Shanbhogue", class: "BCA" },
+            { name: "Nidhi Pratap Shetty", class: "BCA" },
+            { name: "Shreya Kamath", class: "BCA" },
+            { name: "Deepali Shetty", class: "BCA" },
+            { name: "K Deeksha Nayak", class: "BCA" },
+            { name: "Rashmi Shenoy", class: "BCA" },
+            { name: "Vimanshu Kumar V Bhandary", class: "BCA" },
+            { name: "Sandhya H B Bhaskar", class: "BCA" },
+            { name: "Joyce Rashel Saldanha", class: "BCA" },
+            { name: "Deekshitha Acharya", class: "BCA" },
+            { name: "Vaishnavi Kedlaya", class: "BCA" },
+            { name: "Vandana Nayak", class: "BCA" },
+            { name: "Rachita Patkar", class: "BCA" },
+            { name: "Priyanka Acharya", class: "BCA" },
+            { name: "Shradda Thrivikrama Kini", class: "BCA" }
+          ]
+        },
+        {
+          companyName: "Infosys Technology",
+          totalSelected: 70,
+          students: [
+            { name: "Aman Sameer Chikodi", class: "BCA" },
+            { name: "Amrutha", class: "BCA" },
+            { name: "Asthik K", class: "BCA" },
+            { name: "Chirashree P", class: "BCA" },
+            { name: "Deekshitha Acharya", class: "BCA" },
+            { name: "Harshitha S Kotian", class: "BCA" },
+            { name: "Deepali Shetty", class: "BCA" },
+            { name: "Joyce Rashel Saldanha", class: "BCA" },
+            { name: "Kedar S Shenoy", class: "BCA" },
+            { name: "Manoj B V", class: "BCA" },
+            { name: "Nihal Prasad", class: "BCA" },
+            { name: "Pranil kotian", class: "BCA" },
+            { name: "Preethika V Wagle", class: "BCA" },
+            { name: "Rachita R Patkar", class: "BCA" },
+            { name: "Radhika K Bhat", class: "BCA" },
+            { name: "Rahul Jogi", class: "BCA" },
+            { name: "Raksha Shetty", class: "BCA" },
+            { name: "Rashmi R bhat", class: "BCA" },
+            { name: "Ravithej", class: "BCA" },
+            { name: "Rekha Kamath", class: "BCA" },
+            { name: "Rohan S Kamath", class: "BCA" },
+            { name: "Sakshi kamath", class: "BCA" },
+            { name: "Sanjay gautam", class: "BCA" },
+            { name: "Shetty Nidhi Pratap", class: "BCA" },
+            { name: "Shradda Thrivikrama Kini", class: "BCA" },
+            { name: "Shreya Kamath", class: "BCA" },
+            { name: "Shreya R Rao", class: "BCA" },
+            { name: "Sneha Annappa Achari", class: "BCA" },
+            { name: "Soundarya Bhat", class: "BCA" },
+            { name: "Srilakshmi", class: "BCA" },
+            { name: "Swarnakala", class: "BCA" },
+            { name: "Vidyashree Shetty", class: "BCA" },
+            { name: "Vaishnavi Kedlaya H", class: "BCA" },
+            { name: "Thashvika", class: "BCA" },
+            { name: "Vimanshu kumar", class: "BCA" },
+            { name: "Yogeesh H M", class: "BCA" },
+            { name: "Rakshitha", class: "B.Sc" },
+            { name: "Deekshitha", class: "B.Sc" },
+            { name: "Adithya S", class: "B.Sc" },
+            { name: "Vranda Amin", class: "B.Sc" },
+            { name: "Dhruthi K N", class: "B.Sc" },
+            { name: "Disha U", class: "B.Sc" },
+            { name: "Gaurav R Kanchan", class: "B.Sc" },
+            { name: "Gauthami R Kanchan", class: "B.Sc" },
+            { name: "Deeksha Chandrashekar Shetty", class: "B.Sc" },
+            { name: "Adarsh Acharya", class: "B.Sc" },
+            { name: "Kiran S G", class: "B.Sc" },
+            { name: "Kishore Bhat T R", class: "B.Sc" },
+            { name: "M Rachitha Achaiah", class: "B.Sc" },
+            { name: "Mahesha P Nayak", class: "B.Sc" },
+            { name: "Manasa G Bhat", class: "B.Sc" },
+            { name: "Melona Dsouza", class: "B.Sc" },
+            { name: "Narayan Pai K", class: "B.Sc" },
+            { name: "Nikitha", class: "B.Sc" },
+            { name: "Nikitha S", class: "B.Sc" },
+            { name: "Pareekshith", class: "B.Sc" },
+            { name: "Pratheek Bhandary", class: "B.Sc" },
+            { name: "Priya S Poojary", class: "B.Sc" },
+            { name: "Priyanka D Kotian", class: "B.Sc" },
+            { name: "Raghavendra Kaushal", class: "B.Sc" },
+            { name: "Shetty Vinanti Dinesh", class: "B.Sc" },
+            { name: "Ranjitha A", class: "B.Sc" },
+            { name: "Rashmitha S Naik", class: "B.Sc" },
+            { name: "Shraddha Shriyan", class: "B.Sc" },
+            { name: "Shreendhi Poojary", class: "B.Sc" },
+            { name: "Spoorthi", class: "B.Sc" },
+            { name: "Sudarsh", class: "B.Sc" },
+            { name: "Sukrutha K Devadiga", class: "B.Sc" },
+            { name: "V P Rani", class: "B.Sc" },
+            { name: "Varun S Tonse", class: "B.Sc" }
+          ]
+        },
+        {
+          companyName: "TCS",
+          totalSelected: 9,
+          students: [
+            { name: "Vaishnavi Kedlaya", class: "BCA" },
+            { name: "Rachita R Patkar", class: "BCA" },
+            { name: "Soubhagya Vidyadhar Pai", class: "BCA" },
+            { name: "Rahul Shenoy", class: "BCA" },
+            { name: "Nihal Prasad", class: "BCA" },
+            { name: "Sanjay Gautham", class: "BCA" },
+            { name: "Thashvika", class: "BCA" },
+            { name: "Preethika V Wagle", class: "BCA" },
+            { name: "Aleena Bangeera", class: "BCA" }
+          ]
+        },
+        {
+          companyName: "WIPRO Technology",
+          totalSelected: 14,
+          students: [
+            { name: "Vaishnavi Kedlaya", class: "BCA" },
+            { name: "Rachita R Patkar", class: "BCA" },
+            { name: "Sumitha", class: "BCA" },
+            { name: "Amrutha", class: "BCA" },
+            { name: "Joyce Rashel Saldanha", class: "BCA" },
+            { name: "Anushka S Kotian", class: "BCA" },
+            { name: "Rashmi Shenoy", class: "BCA" },
+            { name: "Pranil Kotian", class: "BCA" },
+            { name: "K Deeksha Nayak", class: "BCA" },
+            { name: "Soundarya Bhat", class: "BCA" },
+            { name: "Rakshitha", class: "BCA" },
+            { name: "Adithi N Prabhu", class: "BCA" },
+            { name: "Shradda Thirivikrama Kini", class: "BCA" },
+            { name: "Rahul Jogi", class: "BCA" }
+          ]
+        },
+        {
+          companyName: "Deloitte",
+          totalSelected: 5,
+          students: [
+            { name: "Manoj B V", class: "BCA" },
+            { name: "Srilakshmi Vasanth", class: "BCA" },
+            { name: "Radhika K Bhat", class: "BCA" },
+            { name: "Varun Bhat", class: "B.Sc (MPCs)" },
+            { name: "Disha G Shetty", class: "B.Sc (MPCs)" }
+          ]
+        }
+      ]
+    },
+    {
+      year: "2018-19",
+      totalSelected: 139,
+      companies: [
+        {
+          companyName: "Deloitte",
+          totalSelected: 1,
+          students: [{ name: "Shubhanidhi Mestha", class: "B.Sc (MPCs)" }]
+        },
+        {
+          companyName: "Wipro Technologies",
+          totalSelected: 21,
+          students: [
+            { name: "Kartik Hegde", class: "BCA" },
+            { name: "Annabelle Dsouza", class: "BCA" },
+            { name: "Mihir Udupa", class: "BCA" },
+            { name: "Pratiksha Nayak", class: "BCA" },
+            { name: "Kavana U Rao", class: "BCA" },
+            { name: "Sadhana", class: "BCA" },
+            { name: "Jayalaxmi Anchan", class: "BCA" },
+            { name: "Amrutha Acharya", class: "BCA" },
+            { name: "Sunidhi Sudhakar", class: "BCA" },
+            { name: "Nithish Poojary", class: "B.Sc (MPC)" },
+            { name: "Chaithra Bhat", class: "B.Sc (MPSCs)" },
+            { name: "Smitha R", class: "B.Sc (MPC)" },
+            { name: "Rakshitha A R", class: "B.Sc (MPCs)" },
+            { name: "Shwetha S N", class: "B.Sc (MPC)" },
+            { name: "Gaurav Shetty", class: "B.Sc (MPCs)" },
+            { name: "Shubhanidhi Mestha", class: "B.Sc (MPCs)" },
+            { name: "Rhia Agha", class: "B.Sc (MPCs)" },
+            { name: "Shruthi S", class: "B.Sc (MPCs)" },
+            { name: "Swathi S", class: "B.Sc (MSP)" },
+            { name: "Mahima Marlene Rodrigues", class: "B.Sc (MPC)" },
+            { name: "Kanchi Sadanand Kotian", class: "B.Sc (MSCs)" }
+          ]
+        },
+        {
+          companyName: "Infosys Technologies",
+          totalSelected: 51,
+          students: [
+            { name: "Amrutha Acharya", class: "BCA" },
+            { name: "Annabelle D’souza", class: "BCA" },
+            { name: "Anush S", class: "BCA" },
+            { name: "Anusha S", class: "BCA" },
+            { name: "Gilroy Maynard Lobo", class: "BCA" },
+            { name: "Harshitha H V", class: "BCA" },
+            { name: "Jayalaxmi Anchan", class: "BCA" },
+            { name: "Kartik Ganesh Hegde", class: "BCA" },
+            { name: "Kavana U Rao", class: "BCA" },
+            { name: "Kavya Bhatta", class: "BCA" },
+            { name: "Keneith Wilton Maben", class: "BCA" },
+            { name: "Manjunath Naik", class: "BCA" },
+            { name: "Muthahir", class: "BCA" },
+            { name: "Nitesh P", class: "BCA" },
+            { name: "Nithesh Shetty", class: "BCA" },
+            { name: "Pooja H B", class: "BCA" },
+            { name: "Prashanth Madivala", class: "BCA" },
+            { name: "Pushpak Sanil", class: "BCA" },
+            { name: "Rachana Shet", class: "BCA" },
+            { name: "Raghavendra Pai", class: "BCA" },
+            { name: "Rakshitha Acharya N", class: "BCA" },
+            { name: "Rashfiya Razak", class: "BCA" },
+            { name: "Reem", class: "BCA" },
+            { name: "Sadhana Acharya", class: "BCA" },
+            { name: "Sheikh Simra Begum", class: "BCA" },
+            { name: "Sheetal Salian", class: "BCA" },
+            { name: "Srikanth Bhat", class: "BCA" },
+            { name: "Sumeeth Kumar S Naik", class: "BCA" },
+            { name: "Sunidhi Sudhakar", class: "BCA" },
+            { name: "Prathiksha Nayak", class: "BCA" },
+            { name: "Swathi S", class: "B.Sc (MSP)" },
+            { name: "A Chinmay Rao", class: "B.Sc (MPC)" },
+            { name: "Anusha R Bhat", class: "B.Sc (MPC)" },
+            { name: "Chaithra Bhat", class: "B.Sc (MSCs)" },
+            { name: "Harshitha Kunder", class: "B.Sc (MPCs)" },
+            { name: "Harshitha Shetty", class: "B.Sc (MPC)" },
+            { name: "Kanchi sadananda kotian", class: "B.Sc (MSCs)" },
+            { name: "Kruthika A G", class: "B.Sc (MSP)" },
+            { name: "Mahima Marlene Rodrigues", class: "B.Sc (MPC)" },
+            { name: "Nandan Hegde", class: "B.Sc (MSCs)" },
+            { name: "P Prajna Rao", class: "B.Sc (MPC)" },
+            { name: "Prathibha Bharathi S D", class: "B.Sc (MPCs)" },
+            { name: "Prathik R Shetty", class: "B.Sc (MPC)" },
+            { name: "Rhia", class: "B.Sc (MPCs)" },
+            { name: "Shubhanidhi Mestha", class: "B.Sc (MPCs)" },
+            { name: "Shwetha S N", class: "B.Sc (MPC)" },
+            { name: "Sowmya", class: "B.Sc (MPC)" },
+            { name: "Swarna Mendon", class: "B.Sc (MPCs)" },
+            { name: "Varshala Hegde", class: "B.Sc (MPC)" },
+            { name: "Vishnu N", class: "B.Sc (MPCs)" },
+            { name: "Vidya", class: "B.Sc (MPCs)" }
+          ]
+        },
+        {
+          companyName: "Concentrix",
+          totalSelected: 6,
+          students: [
+            { name: "Skanda", class: "BCA" },
+            { name: "Roopa", class: "BCA" },
+            { name: "Prathiksha kotian", class: "BCA" },
+            { name: "Shreyas", class: "BCA" },
+            { name: "Nidha", class: "BCA" },
+            { name: "Chaithanya", class: "BCA" }
+          ]
+        },
+        {
+          companyName: "Infosys BPM",
+          totalSelected: 46,
+          students: [
+            { name: "Keerthan", class: "BCA" },
+            { name: "Kaushik M R", class: "BCA" },
+            { name: "Shreyas", class: "BCA" },
+            { name: "Vignesh", class: "BCA" },
+            { name: "Renukha", class: "BCA" },
+            { name: "Harshitha", class: "BCA" },
+            { name: "Prathiksha Rao", class: "BCA" },
+            { name: "Prathiksha kotian", class: "BCA" },
+            { name: "Swathi Bhat", class: "B.Com" },
+            { name: "Dhatri K S", class: "B.Com" },
+            { name: "Niriksha R Prasad", class: "B.Com" },
+            { name: "Shamita B U", class: "B.Com" },
+            { name: "Sumana R", class: "B.Com" },
+            { name: "Pooja shetty", class: "B.Com" },
+            { name: "Srnidhi C Rao", class: "B.Com" },
+            { name: "Pooja Nayak", class: "B.Com" },
+            { name: "Namrata Prabhu", class: "B.Com" },
+            { name: "Dhanya Prabhu", class: "B.Com" },
+            { name: "Nethravathi kini", class: "B.Com" },
+            { name: "Akshata", class: "B.Com" },
+            { name: "Archana", class: "B.Com" },
+            { name: "Nidhi M Shetty", class: "B.Com" },
+            { name: "Bhava Bhat M B", class: "B.Com" },
+            { name: "Aqsa Suraiya", class: "B.Com" },
+            { name: "Varsha Prakash", class: "B.Com" },
+            { name: "Sumitra Shenoy", class: "B.Com" },
+            { name: "Anusha Kini", class: "B.Com" },
+            { name: "Madhavi H V", class: "B.Com" },
+            { name: "Madhupal", class: "B.Com" },
+            { name: "Aman Chandrashekar shetty", class: "B.Com" },
+            { name: "Ashray Acharya", class: "B.Com" },
+            { name: "Sachidananda T S", class: "B.Com" },
+            { name: "Maneesh Hegde", class: "B.Com" },
+            { name: "Ashish", class: "B.Com" },
+            { name: "Sandesh", class: "B.Com" },
+            { name: "Pradeep", class: "B.Com" },
+            { name: "Ajay Kamath", class: "B.Com" },
+            { name: "Afrin", class: "B.Com" },
+            { name: "Rachitha", class: "B.Com" },
+            { name: "Ashwitha", class: "B.Com" },
+            { name: "Swathi V", class: "B.Com" },
+            { name: "Rahul", class: "B.Com" },
+            { name: "Vignesh kamath", class: "B.Com" },
+            { name: "Manish", class: "B.Com" },
+            { name: "Karthik", class: "B.Com" },
+            { name: "Marwah", class: "B.Com" }
+          ]
+        },
+        {
+          companyName: "TCS",
+          totalSelected: 12,
+          students: [
+            { name: "Kartik Ganesh Hegde", class: "BCA" },
+            { name: "Sumeeth Kumar S Naik", class: "BCA" },
+            { name: "Anusha T A", class: "BCA" },
+            { name: "Keneith Wilton Maben", class: "BCA" },
+            { name: "Gilroy Maynard Lobo", class: "BCA" },
+            { name: "Sadhana", class: "BCA" },
+            { name: "Sudharma", class: "BCA" },
+            { name: "Amrutha Acharya", class: "BCA" },
+            { name: "Sunidhi Sudhakar", class: "BCA" },
+            { name: "Rhia Agha", class: "BSc (MPCs)" },
+            { name: "Nandan Nagapati Hegde", class: "BSc (MSCs)" },
+            { name: "Swarna Mendon", class: "BSc (MSCs)" }
+          ]
+        },
+        {
+          companyName: "JARO Education",
+          totalSelected: 2
+        }
+      ]
+    },
+    {
+      year: "2017-18",
+      totalSelected: 111,
+      companies: [
+        {
+          companyName: "Wipro (WASE & WIMS & GIS)",
+          totalSelected: 17,
+          students: [
+            { name: "Anam Alvira", class: "BCA" },
+            { name: "Ankush Prabhu", class: "BCA" },
+            { name: "Suraksha", class: "BCA" },
+            { name: "Shriraj Narayan Gaonkar", class: "BCA" },
+            { name: "Sapna", class: "BCA" },
+            { name: "Shivani", class: "BCA" },
+            { name: "Prajwal", class: "BCA" },
+            { name: "Deepika", class: "BCA" },
+            { name: "Rohan", class: "B.Sc" },
+            { name: "Divyashree", class: "B.Sc" },
+            { name: "Sanjana", class: "B.Sc" },
+            { name: "Divyashree Nayak", class: "B.Sc" },
+            { name: "Shriram Chethan", class: "B.Sc" },
+            { name: "Kavya Pai", class: "B.Sc" },
+            { name: "Raeesa", class: "B.Sc" },
+            { name: "Preethi S", class: "B.Sc" },
+            { name: "Bharathi K", class: "B.Com" }
+          ]
+        },
+        {
+          companyName: "Concentrix",
+          totalSelected: 4,
+          students: [
+            { name: "Shreyas", class: "BCA" },
+            { name: "Pooja K", class: "BCA" },
+            { name: "Niyathi", class: "BCA" },
+            { name: "Vedamata M", class: "BCA" }
+          ]
+        },
+        {
+          companyName: "Deloitte",
+          totalSelected: 12,
+          students: [
+            { name: "Santhosh V", class: "BCA" },
+            { name: "Kiran Kamath", class: "BCA" },
+            { name: "Ankush Prabhu", class: "BCA" },
+            { name: "Akarsh Salian", class: "BCA" },
+            { name: "Anam Alvira", class: "BCA" },
+            { name: "Aravid Patkar", class: "BCA" },
+            { name: "Jason Noronha", class: "BCA" },
+            { name: "Prajwal Augustine", class: "BCA" },
+            { name: "Shriraj Gaonkar", class: "BCA" },
+            { name: "Viraj Kanchan", class: "B.Sc(MSCs)" },
+            { name: "Megha R", class: "B.Sc(MPCs)" },
+            { name: "Sanjana Bhat", class: "B.Sc(MPCs)" }
+          ]
+        },
+        {
+          companyName: "Infosys BPM",
+          totalSelected: 25,
+          students: [
+            { name: "T Madhava Pai", class: "BA" },
+            { name: "Amruthavarshini K P", class: "B.Com" },
+            { name: "Nikita R Shettigar", class: "B.Com" },
+            { name: "Rahel Sharlet", class: "B.Com" },
+            { name: "Bharath Kumar A S", class: "B.Com" },
+            { name: "Raksha Kamath", class: "B.Com" },
+            { name: "Anjana", class: "B.Com" },
+            { name: "Kiran N G", class: "B.Com" },
+            { name: "Nishma H", class: "B.Com" },
+            { name: "Akshay", class: "B.Com" },
+            { name: "Shivani", class: "B.Com" },
+            { name: "Shredhar Rao", class: "B.Com" },
+            { name: "Edrine R Dsouza", class: "B.Com" },
+            { name: "Rausa Jasleem", class: "B.Com" },
+            { name: "M B Bhargavi", class: "B.Com" },
+            { name: "Sharadhi S M", class: "B.Com" },
+            { name: "Sahana S Shetty", class: "B.Com" },
+            { name: "Soujanya Bhat B", class: "B.Com" },
+            { name: "Shreyas Kamath", class: "B.Com" },
+            { name: "Sushmitha H Patil", class: "B.Com" },
+            { name: "B Saishree", class: "B.Com" },
+            { name: "Gaurav Padiyar", class: "B.Com" },
+            { name: "Kavyashree K R", class: "B.Com" },
+            { name: "Divyashree H S", class: "B.Com" },
+            { name: "Sudharshan", class: "B.Com" }
+          ]
+        },
+        {
+          companyName: "Tata Consultancy Services (TCS)",
+          totalSelected: 23,
+          students: [
+            { name: "T Madhava Pai", class: "BA" },
+            { name: "Shanthi S Rao K", class: "BA" },
+            { name: "K Karthik Pai", class: "BA" },
+            { name: "Vishwanatha", class: "B.Com" },
+            { name: "Kavyashree K R", class: "B.Com" },
+            { name: "Amrutha varshini K P", class: "B.Com" },
+            { name: "Ganapathi Pai", class: "B.Com" },
+            { name: "Deeksha", class: "B.Com" },
+            { name: "Bhargavi M B", class: "B.Com" },
+            { name: "Aishwarya G S", class: "B.Com" },
+            { name: "B A Deeksha", class: "B.Com" },
+            { name: "Kumari Rashmitha", class: "B.Com" },
+            { name: "Unnath K A", class: "B.Com" },
+            { name: "Sindhu Shetty", class: "B.Com" },
+            { name: "Princslie Gloria Lewis", class: "B.Com" },
+            { name: "Shridhar Ganapathi Bhat", class: "B.Com" },
+            { name: "B Saishree", class: "B.Com" },
+            { name: "Prathima", class: "B.Com" },
+            { name: "Jyothi Madhav Bhat", class: "B.Com" },
+            { name: "Bharath B S", class: "B.Com" },
+            { name: "Gleeven Cristi Lewis", class: "B.Com" },
+            { name: "Edrine Reachel D’Souza", class: "B.Com" },
+            { name: "Shettigar Nikitha Raju", class: "B.Com" }
+          ]
+        },
+        {
+          companyName: "Infosys Technologies",
+          totalSelected: 30,
+          students: [
+            { name: "Anam Alvira", class: "BCA" },
+            { name: "Avanish Anil Chippalkatti", class: "BCA" },
+            { name: "Ankush Prabhu", class: "BCA" },
+            { name: "Kiran Kamath", class: "BCA" },
+            { name: "Hamna Siraj Bava", class: "BCA" },
+            { name: "Shriraj Narayan Gaonkar", class: "BCA" },
+            { name: "Vineeth R", class: "BCA" },
+            { name: "Rajath Kedlaya K", class: "BCA" },
+            { name: "Suraksha R Poojary", class: "BCA" },
+            { name: "Amritha Nayak", class: "B.Sc" },
+            { name: "Ancilla Maria Saldanha", class: "B.Sc" },
+            { name: "Anupama", class: "B.Sc" },
+            { name: "Abhishek B", class: "B.Sc" },
+            { name: "Deola Helena Vas", class: "B.Sc" },
+            { name: "Divyashree", class: "B.Sc" },
+            { name: "Divyashree V. Nayak", class: "B.Sc" },
+            { name: "Pooja S P", class: "B.Sc" },
+            { name: "Prajna Nayak", class: "B.Sc" },
+            { name: "Prajna Shreedhar Hegde", class: "B.Sc" },
+            { name: "Pranitha", class: "B.Sc" },
+            { name: "Priyanka", class: "B.Sc" },
+            { name: "Priyanka Milind Datar", class: "B.Sc" },
+            { name: "Rachana P", class: "B.Sc" },
+            { name: "Sanjana Sandesh Bhat", class: "B.Sc" },
+            { name: "Sharath Shettigar", class: "B.Sc" },
+            { name: "Shreenidhi Shridhar Bhat", class: "B.Sc" },
+            { name: "Siri S Rao", class: "B.Sc" },
+            { name: "Sriramachetan S", class: "B.Sc" },
+            { name: "Tripthi B Palan", class: "B.Sc" },
+            { name: "Sushma Bhat", class: "B.Sc" }
+          ]
+        }
+      ]
+    },
+    {
+      year: "2016-17",
+      totalSelected: 130,
+      companies: [
+        {
+          companyName: "Infosys BPO",
+          totalSelected: 43,
+          students: [
+            { name: "Anarghya Y", class: "BCA" },
+            { name: "Shrishaila", class: "BCA" },
+            { name: "Gaelyn B Rodrigues", class: "BCA" },
+            { name: "Anjum Ali", class: "BCA" },
+            { name: "Pavithra", class: "BCA" },
+            { name: "Abhishek", class: "BCA" },
+            { name: "Prathiksha", class: "BCA" },
+            { name: "Manorama", class: "B.Sc" },
+            { name: "Raksha Prabhu", class: "B.Sc" },
+            { name: "H Sharvya", class: "B.Sc" },
+            { name: "Shreegandha M R", class: "B.Sc" },
+            { name: "Vandana A S", class: "B.Sc" },
+            { name: "Kavitha Umanath Bangera", class: "B.Sc" },
+            { name: "Guruprasad", class: "B.Sc" },
+            { name: "Anuapa A R", class: "B.Sc" },
+            { name: "Anvayee B P", class: "B.Sc" },
+            { name: "Niveditha", class: "B.Sc" },
+            { name: "Ramya", class: "B.Sc" },
+            { name: "Lavanya", class: "B.Sc" },
+            { name: "Lakshmeesh Umesh Hegde", class: "BCom" },
+            { name: "Akanksha Sham Shetty", class: "BCom" },
+            { name: "Shwetha H G", class: "BCom" },
+            { name: "Veeraj S K", class: "BCom" },
+            { name: "Sushmitha", class: "BCom" },
+            { name: "Ashwini Nayak H", class: "BCom" },
+            { name: "Ashwini", class: "BCom" },
+            { name: "Lakshmeesha Shettigar", class: "BCom" },
+            { name: "Ashwini Ganesh Hegde", class: "BCom" },
+            { name: "Huda Anwar", class: "BCom" },
+            { name: "Achinthya M B", class: "BCom" },
+            { name: "Swathi G R", class: "BCom" },
+            { name: "Roystan", class: "BCom" },
+            { name: "Manisha", class: "BCom" },
+            { name: "K Dhanusha Kini", class: "BCom" },
+            { name: "Swathi D Nayak", class: "BCom" },
+            { name: "Ridha", class: "BCom" },
+            { name: "Manvitha", class: "BCom" },
+            { name: "Kiran Ganesh Shettigar", class: "BCom" },
+            { name: "Akhila Hande", class: "BCom" },
+            { name: "Anushree K Salian", class: "BCom" },
+            { name: "Pooja Nayak", class: "BCom" },
+            { name: "Arjun Shetty", class: "BCom" },
+            { name: "Aishwarya Holla", class: "BCom" }
+          ]
+        },
+        {
+          companyName: "Infosys Technology",
+          totalSelected: 42,
+          students: [
+            { name: "Adithya Bhagavat", class: "BCA" },
+            { name: "Akshara Chakrapani Bhat", class: "BCA" },
+            { name: "Akshay Kumar", class: "BCA" },
+            { name: "Anoop H N", class: "BCA" },
+            { name: "Anusha Devadiga", class: "BCA" },
+            { name: "Arfan M Rafique", class: "BCA" },
+            { name: "Latha B", class: "BCA" },
+            { name: "Maina M V", class: "BCA" },
+            { name: "Mithesha Kumara", class: "BCA" },
+            { name: "Mohammed Adil Taj", class: "BCA" },
+            { name: "Nikhitha Salian", class: "BCA" },
+            { name: "Pranathi S Acharya", class: "BCA" },
+            { name: "Raksha S Rao", class: "BCA" },
+            { name: "Rashmi R Upadhya", class: "BCA" },
+            { name: "Sanjana Poojary", class: "BCA" },
+            { name: "Saurabh K Saralaya", class: "BCA" },
+            { name: "Shreeya Acharya", class: "BCA" },
+            { name: "Shweta Bhagwath", class: "BCA" },
+            { name: "Veena Harish Prabhu", class: "BCA" },
+            { name: "Vidya Kamath", class: "BCA" },
+            { name: "Aysh Minaz", class: "B.Sc" },
+            { name: "Ayishathul Rameeza", class: "B.Sc" },
+            { name: "Akanksh A Shetty", class: "B.Sc" },
+            { name: "Amrutha B.U", class: "B.Sc" },
+            { name: "Amrutha H S", class: "B.Sc" },
+            { name: "Chaithra", class: "B.Sc" },
+            { name: "Chaithra Poojary", class: "B.Sc" },
+            { name: "Isra Shaikh", class: "B.Sc" },
+            { name: "Nafeesath salwa Niha", class: "B.Sc" },
+            { name: "Divya.K.Aithal", class: "B.Sc" },
+            { name: "Deepika B.R.", class: "B.Sc" },
+            { name: "Deeksha B.R Kamath", class: "B.Sc" },
+            { name: "Chethan Kumar", class: "B.Sc" },
+            { name: "Ravish Subrahmanya Hegde", class: "B.Sc" },
+            { name: "Rithika Prabhu", class: "B.Sc" },
+            { name: "Shwetha Bhat", class: "B.Sc" },
+            { name: "Pallavi Shriram Bhagavath", class: "B.Sc" },
+            { name: "Prathvi Shetty", class: "B.Sc" },
+            { name: "Supritha Rama Handa", class: "B.Sc" },
+            { name: "Usha Prabhu", class: "B.Sc" },
+            { name: "Vidyashri", class: "B.Sc" },
+            { name: "Vindhya H L Lingappa", class: "B.Sc" }
+          ]
+        },
+        {
+          companyName: "Deloitte",
+          totalSelected: 3,
+          students: [
+            { name: "Pranathi Acharya", class: "BCA" },
+            { name: "Akshara", class: "BCA" },
+            { name: "Ravish", class: "B.Sc" }
+          ]
+        },
+        {
+          companyName: "Cognizant Technologies",
+          totalSelected: 5,
+          students: [
+            { name: "Arfan M", class: "BCA" },
+            { name: "Sanjana Poojary", class: "BCA" },
+            { name: "Anarghya", class: "BCA" },
+            { name: "Pavithra", class: "BCA" },
+            { name: "Sanjana Kidiyoor", class: "B.Sc" }
+          ]
+        },
+        { companyName: "TCS", totalSelected: 26 },
+        { companyName: "Concentrix", totalSelected: 9 },
+        { companyName: "Northern Trust Bank", totalSelected: 2 }
+      ]
+    },
+    {
+      year: "2015-16",
+      totalSelected: 228,
+      companies: [
+        {
+          companyName: "Northern Trust Bank",
+          totalSelected: 2,
+          students: [
+            { name: "SMITHA MOHAN RAO", class: "B.Com" },
+            { name: "SHEIKH MOHAMMAD FARAN", class: "B.Com" }
+          ]
+        },
+        {
+          companyName: "WASE/WiSTA & GIS",
+          totalSelected: 12,
+          students: [
+            { name: "Adarsh Shetty", class: "BCA" },
+            { name: "Akash S", class: "BCA" },
+            { name: "Manoj Amin", class: "BCA" },
+            { name: "Naveesh Kumar", class: "BCA" },
+            { name: "Sandesh U", class: "BCA" },
+            { name: "Rashmitha Kulal", class: "BCA" },
+            { name: "Saurabh Kaup", class: "BCA" },
+            { name: "Vasundhara Mallya", class: "B.Sc" },
+            { name: "Brahmananda Nayak", class: "B.Sc" },
+            { name: "Jeevith Shetty", class: "B.Sc" },
+            { name: "Harshitha Shanbhag", class: "B.Sc" },
+            { name: "Vinaya Naik", class: "B.Sc" }
+          ]
+        },
+        {
+          companyName: "TCS (Technical)",
+          totalSelected: 35,
+          students: [
+            { name: "Nayamratha", class: "BCA" },
+            { name: "Vijetha", class: "BCA" },
+            { name: "Dayasagar Salian", class: "BCA" },
+            { name: "Sudhindra Nayak", class: "BCA" },
+            { name: "Sunil", class: "BCA" },
+            { name: "Mahendra Hegde", class: "BCA" },
+            { name: "Sowmya Kamath", class: "BCA" },
+            { name: "Akshitha", class: "BCA" },
+            { name: "Christan Dsouza", class: "BCA" },
+            { name: "Manoj Amin", class: "BCA" },
+            { name: "Sandeep Nayak", class: "BCA" },
+            { name: "Ashwin Karkada", class: "BCA" },
+            { name: "Shrividya Rao", class: "BCA" },
+            { name: "Naveesh Kumar", class: "BCA" },
+            { name: "Manjunatha Upadhya", class: "BCA" },
+            { name: "Arun Kunder", class: "BCA" },
+            { name: "Mukesh Nayak", class: "B.Sc" },
+            { name: "Vinay Borkar", class: "B.Sc" },
+            { name: "Ashwath Jadhava", class: "B.Sc" },
+            { name: "Brahmananda Nayak", class: "B.Sc" },
+            { name: "Supradha", class: "B.Sc" },
+            { name: "Pramoda Bs", class: "B.Sc" },
+            { name: "Chakitha", class: "B.Sc" },
+            { name: "Anushree", class: "B.Sc" },
+            { name: "Pratheeksha", class: "B.Sc" },
+            { name: "Madhavi", class: "B.Sc" },
+            { name: "Soumya", class: "B.Sc" },
+            { name: "Sanjana As", class: "B.Sc" },
+            { name: "Shruthi Kamath", class: "B.Sc" },
+            { name: "Srinidhi", class: "B.Sc" },
+            { name: "Agraj", class: "B.Sc" },
+            { name: "Suraksha Naik", class: "B.Sc" },
+            { name: "Deepthi K", class: "B.Sc" },
+            { name: "Shachidevi", class: "B.Sc" },
+            { name: "Pratheek", class: "B.Sc" }
+          ]
+        },
+        {
+          companyName: "Infosys BPO",
+          totalSelected: 21,
+          students: [
+            { name: "Anisha", class: "BCA" },
+            { name: "Adarsh Shetty", class: "BCA" },
+            { name: "Dhanya Shenoy", class: "BCA" },
+            { name: "Faiza Iqbal", class: "B.Sc" },
+            { name: "Anusha S Poojary", class: "B.Sc" },
+            { name: "Nayak Deeksha Dayanand", class: "B.Sc" },
+            { name: "Aparna Dravid U", class: "B.Sc" },
+            { name: "Athoofa Qareen", class: "B.Sc" },
+            { name: "Ritesh S Suvarna", class: "B.Sc" },
+            { name: "Navya Acharya M V", class: "B.Sc" },
+            { name: "Fathima Nikhar D", class: "B.Sc" },
+            { name: "Srilakshmi P", class: "B.Sc" },
+            { name: "Ashwin Shanbhag", class: "B.Com" },
+            { name: "Lionel Pereira", class: "B.Com" },
+            { name: "Nisha S Amin", class: "B.Com" },
+            { name: "Jeevan", class: "B.Com" },
+            { name: "Sadhana H P", class: "B.Com" },
+            { name: "Rinu Thomas", class: "B.Com" },
+            { name: "Zareena", class: "B.Com" },
+            { name: "Rajath R K", class: "B.Com" },
+            { name: "Pooja", class: "B.Com" }
+          ]
+        },
+        {
+          companyName: "Tata Consultancy Services (TCS) - B.Com/BA",
+          totalSelected: 24,
+          students: [
+            { name: "Savitha", class: "B.Com" },
+            { name: "Afreen", class: "B.Com" },
+            { name: "Gourav", class: "B.Com" },
+            { name: "Meghana J", class: "B.Com" },
+            { name: "Chinmay", class: "B.Com" },
+            { name: "Nithesh Hegde", class: "B.Com" },
+            { name: "Mahesh", class: "B.Com" },
+            { name: "Deeksha Prabhu", class: "B.Com" },
+            { name: "Suchithra", class: "B.Com" },
+            { name: "Harshitha", class: "B.Com" },
+            { name: "Ashika", class: "B.Com" },
+            { name: "Pavan", class: "B.Com" },
+            { name: "Anupama", class: "B.Com" },
+            { name: "Prajwal", class: "B.Com" },
+            { name: "Varsha Shetty", class: "B.Com" },
+            { name: "Kajal", class: "B.Com" },
+            { name: "Namratha Ballal", class: "B.Com" },
+            { name: "Namratha", class: "B.Com" },
+            { name: "Dheeraj", class: "B.Com" },
+            { name: "Gautham", class: "B.Com" },
+            { name: "Suvarna Jois", class: "B.Com" },
+            { name: "Ravikiran", class: "B.Com" },
+            { name: "Rekha", class: "B.Com" },
+            { name: "Akhilesh", class: "BA" }
+          ]
+        },
+        {
+          companyName: "Infosys",
+          totalSelected: 26,
+          students: [
+            { name: "Akash S", class: "BCA" },
+            { name: "Christan Paul Dsouza", class: "BCA" },
+            { name: "Inchara G C", class: "BCA" },
+            { name: "Karthik Nayak", class: "BCA" },
+            { name: "Mahendra Kumar Hegde", class: "BCA" },
+            { name: "Manjunatha Upadhya", class: "BCA" },
+            { name: "Narasimha Kini", class: "BCA" },
+            { name: "Nayamratha", class: "BCA" },
+            { name: "Prabhu Pratiksha Venkatesh", class: "BCA" },
+            { name: "Prashant Hegde", class: "BCA" },
+            { name: "Vijetha", class: "BCA" },
+            { name: "Ratna Rajesh Bhat", class: "BCA" },
+            { name: "Rakshith Shetty", class: "BCA" },
+            { name: "Shrividya Rao", class: "BCA" },
+            { name: "Sunil", class: "BCA" },
+            { name: "Sandeep S Nayak", class: "BCA" },
+            { name: "Sowmya Kamath", class: "BCA" },
+            { name: "Sudhindra Nayak", class: "BCA" },
+            { name: "Rajani Salvankar", class: "B.Sc" },
+            { name: "Agraja Raghav", class: "B.Sc" },
+            { name: "Supradha", class: "B.Sc" },
+            { name: "Surabhi P P", class: "B.Sc" },
+            { name: "Suraksha Naik", class: "B.Sc" },
+            { name: "Sushmitha", class: "B.Sc" },
+            { name: "Gowtham Shetty", class: "B.Sc" },
+            { name: "Pratheeksha", class: "B.Sc" }
+          ]
+        },
+        {
+          companyName: "Accenture",
+          totalSelected: 24,
+          students: [
+            { name: "Christan Paul Dsouza", class: "BCA" },
+            { name: "Sriraksha K", class: "BCA" },
+            { name: "Pratiksha Venkatesh", class: "BCA" },
+            { name: "Akshitha Amin", class: "BCA" },
+            { name: "Sowmya Kamath", class: "BCA" },
+            { name: "Rashmitha S", class: "BCA" },
+            { name: "Sudhindra Nayak", class: "BCA" },
+            { name: "Mahendra Kumar Hegde", class: "BCA" },
+            { name: "Ratna Bhat", class: "BCA" },
+            { name: "Abhilash Kunder", class: "BCA" },
+            { name: "Sandeep S Nayak", class: "BCA" },
+            { name: "Surabhi P P", class: "B.Sc" },
+            { name: "Pooja N Kumari", class: "B.Sc" },
+            { name: "Soujanya Acharya", class: "B.Sc" },
+            { name: "Shruthi D Kamath", class: "B.Sc" },
+            { name: "Supradha", class: "B.Sc" },
+            { name: "Rajani Salvankar", class: "B.Sc" },
+            { name: "Soumya P K", class: "B.Sc" },
+            { name: "Vinay Ramesh Borkar", class: "B.Sc" },
+            { name: "Ashritha M G", class: "B.Sc" },
+            { name: "Rakshitha H S", class: "B.Sc" },
+            { name: "Chakitha Parkala", class: "B.Sc" },
+            { name: "Gowtham Shetty", class: "B.Sc" },
+            { name: "Sharanya K S", class: "B.Sc" }
+          ]
+        },
+        {
+          companyName: "WIPRO (WASE/WISTA)",
+          totalSelected: 84,
+          students: [
+            { name: "Shobitha Rao", class: "M.Sc" },
+            { name: "Poojitha Hande", class: "M.Sc" },
+            { name: "Ankita Moghe", class: "M.Sc" },
+            { name: "Deepa Shetty", class: "M.Sc" },
+            { name: "Vilasini Nayak", class: "M.Sc" },
+            { name: "Reshma K", class: "M.Sc" },
+            { name: "Sneha Prabhu", class: "M.Sc" },
+            { name: "Samyukta Naik", class: "M.Sc" },
+            { name: "Shilpa N", class: "M.Sc" },
+            { name: "Prajna Sagar", class: "M.Sc" },
+            { name: "Divya Shetty", class: "M.Sc" },
+            { name: "Preethi Prabhu", class: "M.Sc" },
+            { name: "Akshatha Pai", class: "M.Sc" },
+            { name: "Vaishnavi K", class: "M.Sc" },
+            { name: "Varna Upadhya", class: "M.Sc" },
+            { name: "Megha Prabhu", class: "BCA" },
+            { name: "Akshitha Amin", class: "BCA" },
+            { name: "Sudhindra Nayak", class: "BCA" },
+            { name: "Pratiksha Prabhu", class: "BCA" },
+            { name: "Mohammed Saqib", class: "BCA" },
+            { name: "Hemant Poojar", class: "BCA" },
+            { name: "Naveesh Kumar", class: "BCA" },
+            { name: "Sriraksha K", class: "BCA" },
+            { name: "K Swathi", class: "BCA" },
+            { name: "Ratna Bhat", class: "BCA" },
+            { name: "Sowmya Kamath", class: "BCA" },
+            { name: "Akash S", class: "BCA" },
+            { name: "Christan Dsouza", class: "BCA" },
+            { name: "Inchara GC", class: "BCA" },
+            { name: "Karthik Nayak", class: "BCA" },
+            { name: "Deevith Shetty", class: "BCA" },
+            { name: "Adarsh Shetty", class: "BCA" },
+            { name: "Anusha Shetty", class: "BCA" },
+            { name: "Sandesh U", class: "BCA" },
+            { name: "Bhavya Rani", class: "BCA" },
+            { name: "Chandrika Kamath", class: "BCA" },
+            { name: "Prashant Hegde", class: "BCA" },
+            { name: "Mohammad Rayhan", class: "BCA" },
+            { name: "Narasimha Kini", class: "BCA" },
+            { name: "Shritesh Shekar", class: "BCA" },
+            { name: "Sanketh PN", class: "BCA" },
+            { name: "Manoj Amin", class: "BCA" },
+            { name: "Vijetha Shetty", class: "BCA" },
+            { name: "Prajna Kunder", class: "BCA" },
+            { name: "Ashwin Karkada", class: "BCA" },
+            { name: "Sandeep Nayak", class: "BCA" },
+            { name: "Mahendra Hegde", class: "BCA" },
+            { name: "Archana Shetty", class: "BCA" },
+            { name: "Abhilash Kunder", class: "BCA" },
+            { name: "Anushree Bhat", class: "B.Sc" },
+            { name: "Anusha BS", class: "B.Sc" },
+            { name: "Faiza Iqbal", class: "B.Sc" },
+            { name: "Supradha PG", class: "B.Sc" },
+            { name: "Shruthi Kamath", class: "B.Sc" },
+            { name: "Vinay Borkar", class: "B.Sc" },
+            { name: "Rakshitha Devadiga", class: "B.Sc" },
+            { name: "Srinidhi Devadiga", class: "B.Sc" },
+            { name: "Aparna Dravid", class: "B.Sc" },
+            { name: "Sanjana AS", class: "B.Sc" },
+            { name: "Soumya PK", class: "B.Sc" },
+            { name: "Suraksha Naik", class: "B.Sc" },
+            { name: "Sonali Prabhu", class: "B.Sc" },
+            { name: "Varsha Shenoy", class: "B.Sc" },
+            { name: "Sharath Rao", class: "B.Sc" },
+            { name: "Navya Acharya", class: "B.Sc" },
+            { name: "Umalasya Hande", class: "B.Sc" },
+            { name: "Tribhuvan Malpe", class: "B.Sc" },
+            { name: "Rajani Salvankar", class: "B.Sc" },
+            { name: "Harshitha Shanbhag", class: "B.Sc" },
+            { name: "Raghavendre Bhat", class: "B.Sc" },
+            { name: "Megha Anchan", class: "B.Sc" },
+            { name: "Anusha Shetty", class: "B.Sc" },
+            { name: "Anushree S", class: "B.Sc" },
+            { name: "Chakitha Parkala", class: "B.Sc" },
+            { name: "Rakshitha Mayya", class: "B.Sc" },
+            { name: "Rakshapoorni Bhandary", class: "B.Sc" },
+            { name: "Deepthi K", class: "B.Sc" },
+            { name: "Chethana Kumari", class: "B.Sc" },
+            { name: "Sangeetha Devadiga", class: "B.Sc" },
+            { name: "Palguna Nayak", class: "B.Sc" },
+            { name: "Aishwarya K", class: "B.Sc" },
+            { name: "Soujanya Acharya", class: "B.Sc" },
+            { name: "Padigar Keerthi", class: "B.Sc" },
+            { name: "BG Sampada", class: "B.Sc" }
+          ]
+        }
+      ]
+    },
+    {
+      year: "2014-15",
+      totalSelected: 161,
+      companies: [
+        {
+          companyName: "WIPRO (WASE/WISTA)",
+          totalSelected: 68,
+          students: [
+            { name: "Sathpathi Prabhu", class: "M.Sc" },
+            { name: "Shilpashree", class: "M.Sc" },
+            { name: "Mehewish Sheik", class: "M.Sc" },
+            { name: "Deepa kumari D", class: "M.Sc" },
+            { name: "Sandhya", class: "M.Sc" },
+            { name: "Reema Inish Lobo", class: "M.Sc" },
+            { name: "Sumitha Lobo", class: "M.Sc" },
+            { name: "Swathi S Karanth", class: "M.Sc" },
+            { name: "Nikitha Kamath", class: "BCA" },
+            { name: "Akshatha Ballal", class: "BCA" },
+            { name: "Deepa D", class: "BCA" },
+            { name: "Chethan Kumar Hegde", class: "BCA" },
+            { name: "Nagesh M Shenoy", class: "BCA" },
+            { name: "Nihad Ismail", class: "BCA" },
+            { name: "Roshan shetty", class: "BCA" },
+            { name: "Pratheek Acharya", class: "BCA" },
+            { name: "Chaithra", class: "BCA" },
+            { name: "Balachandra Bhat", class: "BCA" },
+            { name: "Madhumitha Shet", class: "BCA" },
+            { name: "Nagendra Shet", class: "BCA" },
+            { name: "Akash Mendon", class: "BCA" },
+            { name: "Poornima Nayak", class: "BCA" },
+            { name: "Keerthan nayak", class: "BCA" },
+            { name: "Vilkinson Menezes", class: "BCA" },
+            { name: "SwarnaRekha Nayak", class: "BCA" },
+            { name: "Varsha Bhat", class: "BCA" },
+            { name: "Puneeth Kumar", class: "BCA" },
+            { name: "Threeshma Y Amin", class: "BCA" },
+            { name: "Kaushik A S", class: "BCA" },
+            { name: "Rahul Bhat", class: "BCA" },
+            { name: "Mahalakshmi", class: "B.Sc" },
+            { name: "Akshay Kumar", class: "B.Sc" },
+            { name: "Santhosh Acharya", class: "B.Sc" },
+            { name: "Soumya", class: "B.Sc" },
+            { name: "Manoj S P", class: "B.Sc" },
+            { name: "Soumyashree Bhat D", class: "B.Sc" },
+            { name: "Ranjith Hegde", class: "B.Sc" },
+            { name: "Pavan Kumar", class: "B.Sc" },
+            { name: "Pooja Hegde", class: "B.Sc" },
+            { name: "Srinidhi B", class: "B.Sc" },
+            { name: "Chaithra", class: "B.Sc" },
+            { name: "Madhuri", class: "B.Sc" },
+            { name: "Roopa", class: "B.Sc" },
+            { name: "Rohini Kini", class: "B.Sc" },
+            { name: "Ramya", class: "B.Sc" },
+            { name: "Swathi R Shettigar", class: "B.Sc" },
+            { name: "Pavithra", class: "B.Sc" },
+            { name: "Meghana P M", class: "B.Sc" },
+            { name: "Archana A J", class: "B.Sc" },
+            { name: "Jyothishree", class: "B.Sc" },
+            { name: "Prgathi", class: "B.Sc" },
+            { name: "Amulya NS", class: "B.Sc" },
+            { name: "Sumitha", class: "B.Sc" },
+            { name: "Swathi s Shetty", class: "B.Sc" },
+            { name: "Pooja", class: "B.Sc" },
+            { name: "Sudeeksha Somayaji", class: "B.Sc" },
+            { name: "Raksha", class: "B.Sc" },
+            { name: "Sushmitha J S", class: "B.Sc" },
+            { name: "Sandhya Nayak", class: "B.Sc" },
+            { name: "Shetty Niveditha Krishna", class: "B.Sc" },
+            { name: "Rachitha", class: "B.Sc" },
+            { name: "Kaushik N", class: "B.Sc" },
+            { name: "Priya K B", class: "B.Sc" },
+            { name: "Meghana N", class: "B.Sc" },
+            { name: "Prasanna Nayak", class: "B.Sc" },
+            { name: "Anarghya D", class: "B.Sc" },
+            { name: "Spoorthy A Bhat", class: "B.Sc" },
+            { name: "Deeksha Shetty", class: "B.Sc" }
+          ]
+        },
+        {
+          companyName: "L & T",
+          totalSelected: 8,
+          students: [
+            { name: "Nidhish Shetty", class: "B.Com" },
+            { name: "Pradeepa Naik", class: "B.Com" },
+            { name: "Prajwal Ravindra", class: "B.Com" },
+            { name: "Bharath Kini", class: "B.Com" },
+            { name: "Vighneshwar Bhat", class: "B.Com" },
+            { name: "Vignesh Nayak", class: "B.Com" },
+            { name: "Vijayakumar Hegde", class: "B.Com" },
+            { name: "Nazil Udupi", class: "B.Com" }
+          ]
+        },
+        {
+          companyName: "Infosys BPO",
+          totalSelected: 11,
+          students: [
+            { name: "Deepika Adiga", class: "B.Com" },
+            { name: "Keerthi Naik", class: "B.A" },
+            { name: "Sowmya Nayak", class: "BCA" },
+            { name: "Amrutha S Devadiga", class: "B.Com" },
+            { name: "Aishwarya", class: "B.Com" },
+            { name: "Madhura A K", class: "B.Com" },
+            { name: "Vivek V Nayak", class: "B.Com" },
+            { name: "Nazil Ahmed udupi", class: "B.Com" },
+            { name: "Kshama D", class: "B.Com" },
+            { name: "Prathvi K", class: "B.Com" },
+            { name: "Shubhana Shetty", class: "B.Com" }
+          ]
+        },
+        {
+          companyName: "Infosys Technologies",
+          totalSelected: 47,
+          students: [
+            { name: "Aisha Awathif", class: "BCA" },
+            { name: "Akash Mendon", class: "BCA" },
+            { name: "Akshatha Ballal", class: "BCA" },
+            { name: "Balachandra Bhat S", class: "BCA" },
+            { name: "Bhagyashree", class: "BCA" },
+            { name: "Briyon Gary Rodrigues", class: "BCA" },
+            { name: "Chaithra", class: "BCA" },
+            { name: "Dakshayini", class: "BCA" },
+            { name: "Haifa Parveen", class: "BCA" },
+            { name: "Keerthan Nayak", class: "BCA" },
+            { name: "Koushik A S", class: "BCA" },
+            { name: "M Siddarth Kumar", class: "BCA" },
+            { name: "Madhumith Shet", class: "BCA" },
+            { name: "Madhura", class: "BCA" },
+            { name: "Maithri R", class: "BCA" },
+            { name: "Nikhitha Kamath", class: "BCA" },
+            { name: "Poornima Nayak", class: "BCA" },
+            { name: "Puneeth Kumar J", class: "BCA" },
+            { name: "Raksha Bhat", class: "BCA" },
+            { name: "Ramya Hebbar", class: "BCA" },
+            { name: "Ranjan R Suvarna", class: "BCA" },
+            { name: "Sana Parveen", class: "BCA" },
+            { name: "Sharanya U", class: "BCA" },
+            { name: "Vilkinson Derick Menzes", class: "BCA" },
+            { name: "Viona Jeesal Gomes", class: "BCA" },
+            { name: "Adithi P", class: "B.Sc" },
+            { name: "Anargya D", class: "B.Sc" },
+            { name: "Arthika", class: "B.Sc" },
+            { name: "Ashish Nayak", class: "B.Sc" },
+            { name: "Ashwini Bhat", class: "B.Sc" },
+            { name: "Bhargavi", class: "B.Sc" },
+            { name: "Chaithra", class: "B.Sc" },
+            { name: "Madhuri Bhat", class: "B.Sc" },
+            { name: "Mahalaxmi Shenoy", class: "B.Sc" },
+            { name: "Manoj S P", class: "B.Sc" },
+            { name: "Meghana N", class: "B.Sc" },
+            { name: "Pooja Sridhar Hegde", class: "B.Sc" },
+            { name: "Poornima G S", class: "B.Sc" },
+            { name: "Ramya", class: "B.Sc" },
+            { name: "Rohini Kini", class: "B.Sc" },
+            { name: "Roopa", class: "B.Sc" },
+            { name: "Santhosh", class: "B.Sc" },
+            { name: "Shenoy Shridhar T Subraya", class: "B.Sc" },
+            { name: "Sinchanan D S", class: "B.Sc" },
+            { name: "Sowmya", class: "B.Sc" },
+            { name: "Swathi H S", class: "B.Sc" },
+            { name: "Swathi Rathnakar Shettigar", class: "B.Sc" }
+          ]
+        },
+        {
+          companyName: "TCS",
+          totalSelected: 19,
+          students: [
+            { name: "Amrutha S Devadiga", class: "B.Com" },
+            { name: "Pallavi Hegde", class: "B.Com" },
+            { name: "Arpita V Bhat", class: "B.Com" },
+            { name: "Swathi", class: "B.Com" },
+            { name: "Vaishnavi L", class: "B.Com" },
+            { name: "Vismitha Shenoy", class: "B.Com" },
+            { name: "Vinit Shetty", class: "B.Com" },
+            { name: "Shamoon", class: "B.Com" },
+            { name: "Prashanth", class: "B.Com" },
+            { name: "Jeevraj", class: "B.Com" },
+            { name: "Vignesh V Nayak", class: "B.Com" },
+            { name: "Ajith Bhat", class: "B.Com" },
+            { name: "Nazil Ahmed Udupi", class: "B.Com" },
+            { name: "Varun Acharya", class: "B.Com" },
+            { name: "Adarsha B Rao", class: "B.Com" },
+            { name: "Prathvi K", class: "B.Com" },
+            { name: "Vidya", class: "B.Com" },
+            { name: "Kshama D", class: "B.Com" },
+            { name: "Pragathi N G", class: "B.Com" }
+          ]
+        },
+        {
+          companyName: "Tech Mahindra",
+          totalSelected: 2,
+          students: [
+            { name: "BALACHANDRA BHAT S", class: "BCA" },
+            { name: "MANOJ S P", class: "B.Sc" }
+          ]
+        },
+        {
+          companyName: "Northern Trust Bank",
+          totalSelected: 1,
+          students: [{ name: "Vivek Nayak", class: "B.Com" }]
+        },
+        {
+          companyName: "ITC Infotech",
+          totalSelected: 1,
+          students: [{ name: "BALACHANDRA BHAT S", class: "BCA" }]
+        },
+        {
+          companyName: "Goldman Sachs (GS)",
+          totalSelected: 1,
+          students: [{ name: "Shobhitha", class: "M.Sc" }]
+        },
+        {
+          companyName: "Dheemahi",
+          totalSelected: 1,
+          students: [{ name: "Swathi Deepak", class: "M.Sc" }]
+        },
+        {
+          companyName: "MCA140",
+          totalSelected: 2,
+          students: [
+            { name: "Naveen Shet", class: "M.Sc" },
+            { name: "Deepa", class: "M.Sc" }
+          ]
+        }
+      ]
+    },
+    {
+      year: "2013-14",
+      totalSelected: 127,
+      companies: [
+        {
+          companyName: "WIPRO (WASE/WISTA)",
+          totalSelected: 21,
+          students: [
+            { name: "Shilpa K", class: "M.Sc" },
+            { name: "Sahana K", class: "M.Sc" },
+            { name: "Akshay Kumar", class: "M.Sc" },
+            { name: "Vedavyas Kamath", class: "BCA" },
+            { name: "Meenakshi Shetty", class: "BCA" },
+            { name: "Vernon Lewis", class: "BCA" },
+            { name: "Sharath Kumar", class: "BCA" },
+            { name: "Manasa", class: "BCA" },
+            { name: "Melba Lewis", class: "BCA" },
+            { name: "Sanjana Adiga", class: "BCA" },
+            { name: "Raihana M", class: "BCA" },
+            { name: "Aishwarya U", class: "BCA" },
+            { name: "Swathi U", class: "BCA" },
+            { name: "Suraksha Shetty", class: "B.Sc(BZC)" },
+            { name: "Ananya L N", class: "B.Sc(BZC)" },
+            { name: "Sowjanya Shetty", class: "B.Sc(BZC)" },
+            { name: "Shwetha Shetty", class: "B.Sc(MSP)" },
+            { name: "Shobhitha", class: "B.Sc(C.Sc)" },
+            { name: "Vijetha", class: "B.Sc(C.Sc)" },
+            { name: "Kotarimane Laxmi", class: "B.Sc(C.Sc)" },
+            { name: "Aishwarya", class: "B.Sc(MPC)" }
+          ]
+        },
+        {
+          companyName: "IBM",
+          totalSelected: 3,
+          students: [
+            { name: "Sonal Nayak", class: "B.Com" },
+            { name: "Aishwarya U", class: "BCA" },
+            { name: "Vijetha", class: "B.Sc(MPCs)" }
+          ]
+        },
+        {
+          companyName: "TCS",
+          totalSelected: 25,
+          students: [
+            { name: "Disha S P", class: "B.Com" },
+            { name: "Amitha R Nayak", class: "B.Com" },
+            { name: "Chitra Dayanand Shetty", class: "B.Com" },
+            { name: "Chetana S", class: "B.Com" },
+            { name: "Prakruthi H P", class: "B.Sc" },
+            { name: "Pratap Naik U", class: "B.Com" },
+            { name: "Raiza Verina Sequira", class: "B.Com" },
+            { name: "Sonal Nayak", class: "B.Com" },
+            { name: "Divya Silkina Maben", class: "B.Com" },
+            { name: "Swathy G Nayak", class: "B.Com" },
+            { name: "Geetha Shenoy Balkunje", class: "B.Com" },
+            { name: "Pooja D Kanchan", class: "B.Com" },
+            { name: "Bharath Shetty", class: "B.Com" },
+            { name: "Suchitra", class: "B.Com" },
+            { name: "Rakshitha R Shetty", class: "B.Com" },
+            { name: "Sapthami A", class: "B.Com" },
+            { name: "Vani S Nayak", class: "B.Com" },
+            { name: "Slany Jathanna", class: "B.Com" },
+            { name: "Ganesh P Pai", class: "B.Com" },
+            { name: "Sudheendra A Acharya", class: "B.Com" },
+            { name: "Ritesh", class: "B.Com" },
+            { name: "Pavan Kumar B", class: "B.Com" },
+            { name: "Shreesha L Kanchan", class: "B.Com" },
+            { name: "Karthika marathe", class: "B.Com" },
+            { name: "Ashwin Kumar", class: "B.Com" }
+          ]
+        },
+        {
+          companyName: "L&T",
+          totalSelected: 9,
+          students: [
+            { name: "Ganesh P Pai", class: "B.Com" },
+            { name: "Ashwath madival", class: "B.Com" },
+            { name: "Akshay kumar", class: "B.Com" },
+            { name: "Mithun", class: "B.Com" },
+            { name: "Bharath Shetty", class: "B.Com" },
+            { name: "Akhil S P", class: "B.Com" },
+            { name: "Krishna Naik", class: "B.Com" },
+            { name: "Kishor Shetty", class: "B.Com" },
+            { name: "Manjunath Subrahmanya Hegde", class: "B.Com" }
+          ]
+        },
+        {
+          companyName: "Wipro Technologies",
+          totalSelected: 19,
+          students: [
+            { name: "Adithi Nijoor S", class: "BCA" },
+            { name: "Chetan L Kamath", class: "BCA" },
+            { name: "Aprameya Aithal", class: "BCA" },
+            { name: "Yashaswini", class: "BCA" },
+            { name: "Rakshitha", class: "BCA" },
+            { name: "Kankana Deva G", class: "BCA" },
+            { name: "Ishrath Banu", class: "BCA" },
+            { name: "Ashwin Nair P", class: "BCA" },
+            { name: "Chaitra Cahndra S", class: "BCA" },
+            { name: "Nisha", class: "BCA" },
+            { name: "Prajna B", class: "BCA" },
+            { name: "Sanyuktha G", class: "BCA" },
+            { name: "Anjana S Shetty", class: "BCA" },
+            { name: "Archana U Nayak", class: "B.Sc" },
+            { name: "Shrisha Kumari", class: "B.Sc" },
+            { name: "Ramakrishna Acharya", class: "B.Sc" },
+            { name: "Shubha", class: "B.Sc" },
+            { name: "Ashalatha", class: "B.Sc" },
+            { name: "Amogha", class: "B.Sc" }
+          ]
+        },
+        {
+          companyName: "Infosys BPO",
+          totalSelected: 48,
+          students: [
+            { name: "Swathy G Nayak", class: "B.Com" },
+            { name: "Harshitha Kn", class: "B.Com" },
+            { name: "Vidya A Vasudev", class: "B.Com" },
+            { name: "Ramakrishna Acharya", class: "B.Com" },
+            { name: "Chaithra", class: "B.Com" },
+            { name: "Manasa", class: "BCA" },
+            { name: "Disha S P", class: "B.Com" },
+            { name: "Chetana Subray Hegde", class: "B.Sc" },
+            { name: "Geetha Shenoy B", class: "B.Com" },
+            { name: "Amitha R Nayak", class: "B.Com" },
+            { name: "Bhavya", class: "B.Com" },
+            { name: "Vani S Nayak", class: "B.Com" },
+            { name: "Tejaswini B Yaji", class: "B.Sc" },
+            { name: "Sumanth S Varna", class: "B.Com" },
+            { name: "Damini Damodar", class: "B.Com" },
+            { name: "Divya Ganesh Hegde", class: "B.Com" },
+            { name: "Tarunya Sharade", class: "B.Com" },
+            { name: "Deeksha D Puthran", class: "B.Com" },
+            { name: "Kankana Deva Gouda", class: "BCA" },
+            { name: "Adithi H U", class: "BCA" },
+            { name: "Supritha Rai", class: "BCA" },
+            { name: "Giridhar Prabhu", class: "B.Com" },
+            { name: "Prakrithi B", class: "B.Com" },
+            { name: "Shetty Chaitra Dayanand", class: "BCA" },
+            { name: "Slany Jathanna", class: "B.Com" },
+            { name: "Ashwin Kumar", class: "B.Com" },
+            { name: "Rakshitha R Shetty", class: "B.Com" },
+            { name: "Shreesha D Palan", class: "BCA" },
+            { name: "Chetan L Kamath", class: "BCA" },
+            { name: "Darshan D Jagathap", class: "BCA" },
+            { name: "Rakshatha Nayak", class: "B.A" },
+            { name: "Vernon Martin Lewis", class: "BCA" },
+            { name: "Sanyuktha G", class: "BCA" },
+            { name: "Akshatha G P", class: "BCA" },
+            { name: "Ganesh P Pai", class: "B.Com" },
+            { name: "Pavan Kumar B", class: "B.Com" },
+            { name: "Vikram K S", class: "B.Com" },
+            { name: "Sudheendra A Acharya", class: "B.Com" },
+            { name: "Prajna S", class: "B.Sc" },
+            { name: "Shwetha Shetty", class: "B.Sc" },
+            { name: "Prakruthi H P", class: "B.Sc" },
+            { name: "Ashalatha", class: "B.Sc" },
+            { name: "Prajna B", class: "BCA" },
+            { name: "Anjana Shetty", class: "BCA" },
+            { name: "Sapthami A", class: "B.Com" },
+            { name: "Suchithra", class: "B.Com" },
+            { name: "Melba Deena Lewis", class: "BCA" },
+            { name: "Shruthi Dinesh Shenoy", class: "BCA" }
+          ]
+        },
+        {
+          companyName: "Axis bank",
+          totalSelected: 2,
+          students: [
+            { name: "TARUNYA SHARADE", class: "B.Com" },
+            { name: "JOANNA CHALCEDONY SAMUEL", class: "B.Com" }
+          ]
+        }
+      ]
+    },
+    {
+      year: "2012-13",
+      totalSelected: 48,
+      companies: [
+        {
+          companyName: "WIPRO (WASE/WISTA)",
+          totalSelected: 11,
+          students: [
+            { name: "Sapna K", class: "BCA" },
+            { name: "Pooja Rani H S", class: "BCA" },
+            { name: "Roopesh Prabhu", class: "BCA" },
+            { name: "Pavan Kumar K", class: "B.Sc" },
+            { name: "Sakshi Shetty", class: "B.Sc" },
+            { name: "Anitha Rao", class: "B.Sc" },
+            { name: "Nagesh Shenoy", class: "B.Sc" },
+            { name: "Nischitha Hegde", class: "B.Sc" },
+            { name: "Vinay", class: "B.Sc" },
+            { name: "Sowmya", class: "B.Sc" },
+            { name: "Anusha M S", class: "B.Sc" }
+          ]
+        },
+        {
+          companyName: "INFOSYS BPO",
+          totalSelected: 19,
+          students: [
+            { name: "KRASHNANANDA DATTATRAYA BHAT", class: "B.Com." },
+            { name: "MD JUNED", class: "B.Com." },
+            { name: "POOJARY MAMTA BHUJANG", class: "B.Com." },
+            { name: "SHARADA V", class: "B.Com." },
+            { name: "SWATHI H S", class: "B.Com." },
+            { name: "K GAYATHRI NAYAK", class: "B.Com." },
+            { name: "SWATI SHETTY", class: "B.Com." },
+            { name: "ARPITHA K R", class: "B.Com." },
+            { name: "OLGA ROBERT LEWIS", class: "B.Com." },
+            { name: "SUCHITHRA NAIK", class: "B.Com." },
+            { name: "AMRITHA SHANBHOGUE", class: "B.Com." },
+            { name: "AKSHATHA A ANCHA N", class: "B.Com." },
+            { name: "ALIYA ASHRAF ALI", class: "B.Com." },
+            { name: "AKSHITA BHASKARA SHETTY", class: "B.Com." },
+            { name: "NAGMA KHANUM", class: "B.Sc." },
+            { name: "ARENZA KAREN SEQUEIRA", class: "B.Sc." },
+            { name: "SNEHA R", class: "B.Sc." },
+            { name: "SUSHMA R", class: "B.Sc." },
+            { name: "SHAMBHAVI P R", class: "B.Sc." }
+          ]
+        },
+        {
+          companyName: "Wipro WASE",
+          totalSelected: 11,
+          students: [
+            { name: "Aparna P", class: "BCA" },
+            { name: "Rashmi Poojary", class: "BCA" },
+            { name: "Swathi V", class: "BCA" },
+            { name: "Madhumitha R K", class: "BCA" },
+            { name: "Darshan", class: "BCA" },
+            { name: "Manjunath D H", class: "BCA" },
+            { name: "Rohith Nayak", class: "BSc(MPCs)" },
+            { name: "Srilaxmi Bhat", class: "BSc(MPCs)" },
+            { name: "Seema", class: "BSc(MPCs)" },
+            { name: "Namratha", class: "BSc(BZC)" },
+            { name: "Gururaj", class: "BSc" }
+          ]
+        },
+        {
+          companyName: "Axis bank",
+          totalSelected: 7,
+          students: [
+            { name: "Ravindra Mattu", class: "B.Sc" },
+            { name: "Ashish Kanchan", class: "B.Sc" },
+            { name: "Pavan Kumar", class: "B.Sc" },
+            { name: "Ashish", class: "B.Sc" },
+            { name: "Sanjaya", class: "B.Sc" },
+            { name: "Seema", class: "B.Sc" },
+            { name: "Vanishree", class: "B.Sc" }
+          ]
+        }
+      ]
+    },
+    {
+      year: "2011-12",
+      totalSelected: 114,
+      companies: [
+        {
+          companyName: "Accenture",
+          totalSelected: 3,
+          students: [
+            { name: "Shodhana Srinivas Nayak", class: "B.C.A." },
+            { name: "Sharadhi R", class: "B.C.A." },
+            { name: "Rashmi", class: "B.C.A." }
+          ]
+        },
+        {
+          companyName: "Wipro Infotech",
+          totalSelected: 29,
+          students: [
+            { name: "Samprada K J", class: "B.Sc" },
+            { name: "Saritha Bhandary", class: "B.Sc" },
+            { name: "Anona Laura Lewis", class: "B.Sc" },
+            { name: "Laxmi Pradhyumna J", class: "BCA" },
+            { name: "Shreeprabha M", class: "B.Sc" },
+            { name: "Shilpashree P", class: "BCA" },
+            { name: "Swathi N", class: "BCA" },
+            { name: "Manasa S P", class: "B.Sc" },
+            { name: "Shodhana Srinivas Nayak", class: "BCA" },
+            { name: "Reenarose A Soans", class: "BCA" },
+            { name: "Sahana K", class: "BCA" },
+            { name: "Deepa V Prabhu", class: "B.Sc" },
+            { name: "Vanditha Pai", class: "B.Sc" },
+            { name: "Sanjana N R", class: "B.Sc" },
+            { name: "Vineetha N K", class: "BCA" },
+            { name: "Deepthi K R", class: "B.Sc" },
+            { name: "Shilpa K", class: "BCA" },
+            { name: "Sanketh Shekar", class: "BCA" },
+            { name: "Shwetha Suvarna", class: "BCA" },
+            { name: "Vinutha", class: "BCA" },
+            { name: "Rajesh Nayak", class: "BCA" },
+            { name: "Namitha Ballal", class: "B.Sc" },
+            { name: "Rashmi Shanbhogue", class: "BCA" },
+            { name: "Nikhitha V Poojary", class: "BCA" },
+            { name: "Madhura R Somayaji", class: "B.Sc" },
+            { name: "Misba Naaz", class: "BCA" },
+            { name: "Chaithra N S", class: "B.Sc" },
+            { name: "Sachin P N", class: "BCA" },
+            { name: "Jakson James Monterio", class: "BCA" }
+          ]
+        },
+        {
+          companyName: "iGate Global Solutions",
+          totalSelected: 4,
+          students: [
+            { name: "Shodhana Srinivas Nayak", class: "BCA" },
+            { name: "Rashmi", class: "BCA" },
+            { name: "Shilpashree Podamale", class: "BCA" },
+            { name: "Namitha", class: "BSc" }
+          ]
+        },
+        {
+          companyName: "Wipro-Wase",
+          totalSelected: 35,
+          students: [
+            { name: "Shodhana Srinivas Nayak", class: "BCA" },
+            { name: "Vineetha N Karkera", class: "BCA" },
+            { name: "Sanketh Shekar", class: "BCA" },
+            { name: "Sachin P N", class: "BCA" },
+            { name: "Misba Naaz", class: "BCA" },
+            { name: "Archana Pai H V", class: "BCA" },
+            { name: "Vinutha Suvarna", class: "BCA" },
+            { name: "Laxmi Pradhyumna J", class: "BCA" },
+            { name: "Sharadhi R", class: "BCA" },
+            { name: "Sahana K", class: "BCA" },
+            { name: "Shilpa K", class: "BCA" },
+            { name: "Kavya B Kotian", class: "BCA" },
+            { name: "Sana", class: "BCA" },
+            { name: "Rashmi Shanbhogue", class: "BCA" },
+            { name: "Puneeth L N", class: "BSc(MPC)" },
+            { name: "Vigneshwar Bhat", class: "BSc(MPC)" },
+            { name: "Sabeena", class: "BSc(MPC)" },
+            { name: "Ashwini A T", class: "BSc(MPC)" },
+            { name: "Sharanya Shetty", class: "BSc(MPC)" },
+            { name: "Shreeprabha M", class: "BSc(MPC)" },
+            { name: "Anoosha S Shetty", class: "BSc(MPC)" },
+            { name: "Nagesh Ganiga Manjunath", class: "BSc(MPC)" },
+            { name: "Deepak Kamath", class: "BSc(MPC)" },
+            { name: "Rajani Acharya", class: "BSc(MSP)" },
+            { name: "Ashwini K", class: "BSc(MSP)" },
+            { name: "Manasa S P", class: "BSc(MPCs)" },
+            { name: "Chaitra N S Adiga", class: "BSc(MPCs)" },
+            { name: "Shwetha Kiran", class: "BSc(MPCs)" },
+            { name: "Deepthi K R", class: "BSc(MPCs)" },
+            { name: "Maithri S N", class: "BSc(MPCs)" },
+            { name: "Anusha G Shetty", class: "BSc(MPCs)" },
+            { name: "Karthika A G", class: "BSc(MPCs)" },
+            { name: "Devdas Nayak", class: "BSc(MPCs)" },
+            { name: "Vanditha Pai", class: "BSc(MSCs)" },
+            { name: "Namitha Ballal", class: "BSc(MSCs)" }
+          ]
+        },
+        {
+          companyName: "Wipro-Wista",
+          totalSelected: 15,
+          students: [
+            { name: "Vinutha H V", class: "BZC" },
+            { name: "Sridevi K Bhat", class: "BZC" },
+            { name: "Surabhi", class: "BZC" },
+            { name: "Pooja Shetty B", class: "BZC" },
+            { name: "Shetty Anusha Krishna", class: "BZC" },
+            { name: "Sushmitha K N", class: "BZC" },
+            { name: "Rakshitha A", class: "BZC" },
+            { name: "Anusha Shenoy", class: "BZC" },
+            { name: "Vinaya Kallalli", class: "BZC" },
+            { name: "Sridevi Prabhu M", class: "BZC" },
+            { name: "Shwetha", class: "BCA" },
+            { name: "Swathi N", class: "BCA" },
+            { name: "Shilpashree P", class: "BCA" },
+            { name: "Nameesha Naik", class: "BCA" },
+            { name: "Jakson Monteiro", class: "BCA" }
+          ]
+        },
+        {
+          companyName: "Winman Software",
+          totalSelected: 2,
+          students: [
+            { name: "Nikitha V Poojary", class: "B.C.A." },
+            { name: "Rashmi", class: "B.C.A." }
+          ]
+        },
+        {
+          companyName: "Infosys Technology",
+          totalSelected: 12,
+          students: [
+            { name: "ARCHANA BHOJA AMIN", class: "B.C.A." },
+            { name: "SHWETHA SUVARNA", class: "B.C.A." },
+            { name: "JACKSON JAMES MONTEIRO", class: "B.C.A." },
+            { name: "SHODHNA SRINIVAS NAYAK", class: "B.C.A." },
+            { name: "RASHMI", class: "B.C.A." },
+            { name: "PRAMOD ROLAN D'SOUZA", class: "B.C.A." },
+            { name: "MISBA NAAZ", class: "B.C.A." },
+            { name: "SHARATH KUMAR", class: "B.C.A." },
+            { name: "VINEETHA KARKERA", class: "B.C.A." },
+            { name: "CHAITHRA N S ADIGA", class: "B.Sc." },
+            { name: "DEEPA V PRABHU", class: "B.Sc." },
+            { name: "ASHWINI KANNARPADY", class: "B.Sc." }
+          ]
+        },
+        {
+          companyName: "Infosys BPO",
+          totalSelected: 14,
+          students: [
+            { name: "ASMA Y", class: "B.A." },
+            { name: "SOUMYA N V", class: "B.Com." },
+            { name: "SAHANA HEGDE", class: "B.Com." },
+            { name: "JOY SEQUEIRA", class: "B.Com." },
+            { name: "SUDHIR DSOUZA", class: "B.Com." },
+            { name: "SRIDEVI PRABHU M", class: "B.Sc" },
+            { name: "MAITHRI S N", class: "B.Sc" },
+            { name: "SUSHMA", class: "B.C.A." },
+            { name: "PRAJNA SHETTY", class: "B.C.A." },
+            { name: "RAKSHATHA S", class: "B.C.A." },
+            { name: "SWARNA RANI U P", class: "B.C.A." },
+            { name: "RAKSHITH R NADIG", class: "B.C.A." },
+            { name: "MAHESH NAYAK", class: "B.C.A." },
+            { name: "RAJESH NAYAK", class: "B.C.A." }
+          ]
+        }
+      ]
+    },
+    {
+      year: "2010-11",
+      totalSelected: 95,
+      companies: [
+        {
+          companyName: "ROBOSOFT",
+          totalSelected: 9,
+          students: [
+            { name: "Divya", class: "BCA" },
+            { name: "Suraksha Seetharama", class: "BCA" },
+            { name: "Bhavani", class: "BCA" },
+            { name: "Bhamini", class: "BCA" },
+            { name: "Archana", class: "BCA" },
+            { name: "Shwetha Shet U", class: "BCA" },
+            { name: "Salitha D'Almeida", class: "BCA" },
+            { name: "Gautham Nayak", class: "BCA" },
+            { name: "Siddarth Maiya", class: "BCA" }
+          ]
+        },
+        {
+          companyName: "WIPRO Technology",
+          totalSelected: 26,
+          students: [
+            { name: "Vinitha H Saldanha", class: "B.Sc" },
+            { name: "Hamsa Nayak", class: "B.Sc" },
+            { name: "Shruthi Rao", class: "B.Sc" },
+            { name: "Ashwini Sanil", class: "B.Sc" },
+            { name: "Amritha Puranik", class: "B.Sc" },
+            { name: "Abhilasha M", class: "B.Sc" },
+            { name: "Priya R Acharya", class: "B.Sc" },
+            { name: "Rekha Pai", class: "B.Sc" },
+            { name: "Nayana J Karkada", class: "B.Sc" },
+            { name: "Niveditha G Baliga", class: "B.Sc" },
+            { name: "Sharath G Pai", class: "B.Sc" },
+            { name: "Ambika Rani K", class: "B.Sc" },
+            { name: "Apeksha Bhat V", class: "B.Sc" },
+            { name: "Sonali Salian P", class: "B.Sc" },
+            { name: "Mridula M", class: "B.Sc" },
+            { name: "Salitha D' Almeida", class: "B.C.A." },
+            { name: "Varsha V Nayak", class: "B.C.A." },
+            { name: "Siddartha Maiya", class: "B.C.A." },
+            { name: "Vani M Shanbhag", class: "B.C.A." },
+            { name: "Shraman J Sequeira", class: "B.C.A." },
+            { name: "Usha", class: "B.C.A." },
+            { name: "Shwetha Shet U", class: "B.C.A." },
+            { name: "Archana Harish", class: "B.C.A." },
+            { name: "Rashmi", class: "B.C.A." },
+            { name: "Nagesha Acharya", class: "B.C.A." },
+            { name: "Deekshitha", class: "B.C.A." }
+          ]
+        },
+        {
+          companyName: "Infosys BPO",
+          totalSelected: 42,
+          students: [
+            { name: "PRIYANKA PAI H", class: "B.Sc(B.Z.C)" },
+            { name: "ASMITHA JYOTHI SHETTY", class: "B.Com" },
+            { name: "VANDANA K R", class: "B.Com" },
+            { name: "SHRUTI D BANGERA", class: "B.Com" },
+            { name: "MANISHA B POOJARY", class: "B.Com" },
+            { name: "DEEPIKA Y", class: "B.Com" },
+            { name: "UMESH KAJAL K", class: "B.Com" },
+            { name: "MOHAMMED ALFAZ", class: "B.Com" },
+            { name: "VANII BHAT", class: "B.Com" },
+            { name: "SAMUEL PEREIRA", class: "B.Com" },
+            { name: "GAUTHAM", class: "B.Com" },
+            { name: "KAVITHA NAYAK", class: "B.Com" },
+            { name: "TEJASWINI A R", class: "B.C.A." },
+            { name: "USHA", class: "B.C.A." },
+            { name: "HAMSA NAYAK", class: "B.Sc" },
+            { name: "MELISSA GLENDA LEWIS", class: "B.Sc" },
+            { name: "VINITHA HELVEERA SALDANHA", class: "B.Sc" },
+            { name: "RADHIKA T", class: "B.C.A." },
+            { name: "APEKSHA BHAT V", class: "B.Sc" },
+            { name: "SONALI SALIAN P", class: "B.Sc" },
+            { name: "NIVEDITA G BALIGA", class: "B.Sc" },
+            { name: "FARHANAZ", class: "B.Sc" },
+            { name: "SHETTY DEEPA SUMAN", class: "B.Sc" },
+            { name: "ARCHANA HARISH", class: "B.C.A." },
+            { name: "KIRANMAYI O", class: "B.C.A." },
+            { name: "DIVYA", class: "B.C.A." },
+            { name: "SANDHYA P R", class: "B.C.A." },
+            { name: "KRITIKA MAHALE V", class: "B.C.A." },
+            { name: "PRIYA RAVINDRA ACHARYA", class: "B.Sc" },
+            { name: "SPOORTHI SHETTY SUDHAKAR", class: "B.Sc" },
+            { name: "VAISHALI P RAO", class: "B.Sc" },
+            { name: "CHAITRA C KOTIAN", class: "B.Sc" },
+            { name: "SURAKSHA SEETHARAMA GUNDIBAIL", class: "B.C.A." },
+            { name: "JAIRAM KRISHNA DEVADIGA", class: "B.Sc" },
+            { name: "GANESH KALKURA", class: "B.Sc" },
+            { name: "AMBIKA RANI K", class: "B.Sc" },
+            { name: "RASHMI S SHETTY", class: "B.Sc" },
+            { name: "VIBHA MADA V", class: "B.Sc" },
+            { name: "KEERTHI KUMAR S D", class: "B.Sc" },
+            { name: "SHARATH G PAI", class: "B.Sc" },
+            { name: "APOORVA", class: "B.Sc" },
+            { name: "AMITHA PURANIK", class: "B.Sc" }
+          ]
+        },
+        {
+          companyName: "I-Gate",
+          totalSelected: 1,
+          students: [{ name: "ALVA ROYSTON ROBERT", class: "B.C.A." }]
+        },
+        {
+          companyName: "Vijaya Bank",
+          totalSelected: 10,
+          students: [
+            { name: "Raghuvaran", class: "B.C.A." },
+            { name: "Sushma Poojary", class: "B.Sc." },
+            { name: "Suraksha Seetharama Gundibail", class: "B.C.A." },
+            { name: "Rahul K.A.", class: "B.C.A." },
+            { name: "Shetty Deepa Suman", class: "B.Sc." },
+            { name: "Shetty Spoorthi Sudhakar", class: "B.Sc." },
+            { name: "Subramanya", class: "B.Sc." },
+            { name: "Pushpalatha B", class: "B.Sc." },
+            { name: "Askhatha", class: "B.Sc." },
+            { name: "Divya", class: "B.C.A." }
+          ]
+        },
+        {
+          companyName: "Balaji telefilms",
+          totalSelected: 2,
+          students: [
+            { name: "VAISHALI", class: "B.Sc." },
+            { name: "NISHA", class: "B.Sc." }
+          ]
+        },
+        {
+          companyName: "wipro bpo",
+          totalSelected: 5,
+          students: [
+            { name: "APOORVA POOJARY", class: "B.Sc." },
+            { name: "SHRUTHI", class: "B.Sc." },
+            { name: "CHAITRA KOTIAN", class: "B.Sc." },
+            { name: "AMBIKA RANI", class: "B.Sc." },
+            { name: "ROHAN BONNY PEREIRA", class: "B.Sc." }
+          ]
+        }
+      ]
+    }
+  ]
+};
