@@ -1,0 +1,105 @@
+.yakshagana-page {
+  min-height: 100%;
+  padding-bottom: 5rem;
+  background: #f7f8fa;
+  color: #242424;
+  font-family: 'Montserrat', sans-serif;
+
+  .inner-hero {
+    padding: 4.5rem 1.5rem 3.5rem;
+    background: #f0f2f5;
+    border-bottom: 1px solid #e1e4e8;
+    text-align: center;
+
+    .hero-content {
+      width: min(100%, 900px);
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0 0 0.85rem;
+      color: #8b0000;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+    }
+
+    .red-text {
+      max-width: 700px;
+      margin: 0 auto 1.25rem;
+      color: #666;
+      line-height: 1.65;
+    }
+
+    .breadcrumb {
+      color: #555;
+      font-size: 0.9rem;
+
+      a {
+        color: #8b0000;
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .content-section {
+    width: min(100%, 900px);
+    padding: 4rem 1.5rem;
+    margin: 0 auto;
+
+    .yakshagana-content-block {
+      h2 {
+        margin: 0 0 0.8rem;
+        padding-bottom: 0.75rem;
+        color: #8b0000;
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+        line-height: 1.2;
+        border-bottom: 2px solid #8b0000;
+
+        &:not(:first-child) {
+          margin-top: 3rem;
+        }
+      }
+
+      p {
+        margin-bottom: 1rem;
+        color: #666;
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      .training-list {
+        margin: 1.25rem 0;
+        padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+        background: #fff;
+        border-left: 4px solid #8b0000;
+        border-radius: 8px;
+        box-shadow: 0 5px 16px rgba(31, 35, 40, 0.06);
+
+        li {
+          margin-bottom: 0.65rem;
+          color: #444;
+          line-height: 1.6;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    .inner-hero {
+      padding: 3.25rem 1rem 2.5rem;
+    }
+
+    .content-section {
+      padding: 2.75rem 1rem;
+    }
+  }
+}

@@ -1,0 +1,167 @@
+/* Canteen Page Styles */
+.canteen-page {
+  background-color: #fcfcfc;
+
+  .inner-hero {
+    background-color: #f1f3f5;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid #e9ecef;
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+
+      h1 {
+        color: #8B0000;
+        font-size: 2.8rem;
+        font-weight: 900;
+        margin-bottom: 12px;
+      }
+
+      .subtitle {
+        color: #6c757d;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+      }
+
+      .breadcrumb {
+        font-size: 0.95rem;
+        color: #6c757d;
+
+        a {
+          color: #8B0000;
+          text-decoration: none;
+          font-weight: 700;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .content-section {
+    padding: 50px 20px 70px;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .canteen-content-block {
+      h2 {
+        color: #8B0000;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #eee;
+      }
+
+      .canteen-features-list {
+        background: #fff;
+        padding: 30px 30px 30px 50px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        border-left: 4px solid #8B0000;
+
+        li {
+          margin-bottom: 15px;
+          color: #444;
+          line-height: 1.7;
+          font-size: 1.05rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  /* Main Footer */
+  .main-footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+    padding: 50px 20px 20px;
+    font-size: 0.95rem;
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #333;
+
+      .footer-column {
+        h4 {
+          color: #fff;
+          font-size: 1.1rem;
+          margin-bottom: 18px;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+
+          li {
+            margin-bottom: 10px;
+
+            a {
+              color: #aaa;
+              text-decoration: none;
+              transition: color 0.2s ease;
+
+              &:hover {
+                color: #fff;
+              }
+            }
+          }
+        }
+
+        .social-links {
+          display: flex;
+          gap: 12px;
+          margin-top: 15px;
+
+          a {
+            color: #fff;
+            background: #333;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+
+            &:hover {
+              background: #8B0000;
+            }
+          }
+        }
+      }
+    }
+
+    .sub-footer {
+      max-width: 1200px;
+      margin: 20px auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      color: #888;
+      font-size: 0.85rem;
+
+      a {
+        color: #888;
+        text-decoration: none;
+
+        &:hover {
+          color: #ccc;
+        }
+      }
+    }
+  }
+}

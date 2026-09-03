@@ -1,0 +1,185 @@
+.library-page {
+  min-height: 100%;
+  padding-bottom: 5rem;
+  background: #f7f8fa;
+  color: #242424;
+
+  .inner-hero {
+    padding: 4.5rem 1.5rem 3.5rem;
+    background: #f0f2f5;
+    border-bottom: 1px solid #e1e4e8;
+
+    .hero-content {
+      width: min(100%, 1200px);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 .85rem;
+      color: #8b0000;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+    }
+
+    .red-text {
+      max-width: 700px;
+      margin: 0 auto 1.25rem;
+      color: #666;
+      line-height: 1.65;
+    }
+
+    .breadcrumb {
+      color: #555;
+      font-size: .9rem;
+
+      a {
+        color: #8b0000;
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover { text-decoration: underline; }
+      }
+    }
+  }
+
+  .slider-wrapper {
+    width: 100%;
+    margin: 2rem 0 0;
+    overflow: hidden;
+    border-top: 1px solid #e1e4e8;
+    border-bottom: 1px solid #e1e4e8;
+    background: #fff;
+    padding: 1rem 0;
+
+    .slider {
+      display: flex;
+      width: max-content;
+      animation: slide-marquee 35s linear infinite;
+
+      &:hover { animation-play-state: paused; }
+
+      img {
+        width: 300px;
+        height: 200px;
+        flex: 0 0 auto;
+        margin-right: 1rem;
+        border: 1px solid #e1e3e6;
+        border-radius: 6px;
+        box-shadow: 0 5px 16px rgba(31, 35, 40, .06);
+        object-fit: cover;
+      }
+    }
+  }
+
+  @keyframes slide-marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .content-section {
+    width: min(100%, 1200px);
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+  }
+
+  .library-content-block {
+    max-width: 900px;
+    margin: 0 auto;
+
+    h2 {
+      margin: 2.5rem 0 .85rem;
+      color: #1e1e1e;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      line-height: 1.2;
+
+      &:first-child { margin-top: 0; }
+    }
+
+    h3 {
+      margin: 2rem 0 .65rem;
+      color: #1e1e1e;
+      font-size: 1.35rem;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0 0 1rem;
+      color: #555;
+      line-height: 1.7;
+    }
+  }
+
+  .library-detail-grid,
+  .sections-info-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin: 1.75rem 0;
+  }
+
+  .detail-card,
+  .info-block,
+  .loan-rules-list,
+  .working-hours-card {
+    background: #fff;
+    border: 1px solid #e1e3e6;
+    border-radius: 8px;
+    box-shadow: 0 5px 16px rgba(31, 35, 40, .06);
+  }
+
+  .detail-card,
+  .info-block {
+    padding: 1.5rem;
+    border-top: 4px solid #8b0000;
+
+    h3 {
+      margin-top: 0;
+      color: #8b0000;
+    }
+
+    p { margin-bottom: 0; font-size: .95rem; }
+  }
+
+  .loan-rules-list {
+    margin: 1.25rem 0;
+    padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+
+    li {
+      margin-bottom: .65rem;
+      color: #333;
+      line-height: 1.6;
+
+      &:last-child { margin-bottom: 0; }
+      strong { color: #8b0000; }
+    }
+  }
+
+  .note-text { font-size: .95rem; }
+
+  .working-hours-card {
+    margin-top: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    border-left: 4px solid #8b0000;
+
+    p {
+      margin-bottom: .65rem;
+      color: #333;
+
+      &:last-child { margin-bottom: 0; }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .library-page {
+    .inner-hero { padding: 3.25rem 1rem 2.5rem; }
+    .content-section { padding: 2.75rem 1rem; }
+    .library-detail-grid,
+    .sections-info-wrapper { grid-template-columns: 1fr; }
+    .slider-wrapper .slider img {
+      width: 240px;
+      height: 160px;
+    }
+  }
+}

@@ -29,6 +29,11 @@ import Clubs from './components/Clubs';
 import Profile from './components/Profile';
 import Contact from './components/Contact';
 import NaacPeerPhotos from './components/naac-peer-photos';
+import Library from './components/Library';
+import Yakshagana from './components/Yakshagana';
+import Sports from './components/Sports';
+import Museum from './components/Museum';
+import Canteen from './components/Canteen';
 
 
 
@@ -84,8 +89,12 @@ function AppLayout() {
           <Route path="/clubs" element={<Clubs />} />
           <Route path="/profiles/:profileSlug" element={<Profile />} />
           <Route path="/contact" element={<Contact />} />
-          // Inside your Router / Routes block:
-<Route path="/naac-peer-photos" element={<NaacPeerPhotos />} />
+          <Route path="/naac-peer-photos" element={<NaacPeerPhotos />} />
+          <Route path="/library" element={<Library />} />
+          <Route path="/yakshagana" element={<Yakshagana />} />
+          <Route path="/sports" element={<Sports />} />
+          <Route path="/museum" element={<Museum />} />
+          <Route path="/canteen" element={<Canteen />} />
         </Routes>
       </main>
 
