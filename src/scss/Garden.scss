@@ -1,0 +1,246 @@
+/* Garden Page SCSS - Combined Layout & Slider Styles */
+
+// Variable Definitions
+$maroon: #8b0000;
+$ink: #17202a;
+$muted: #66727d;
+$paper: #f7f5f1;
+$line: #ddd8d0;
+$kicker-red: #b64e4e;
+
+.garden-page {
+  min-height: 100%;
+  padding-bottom: 5rem;
+  color: $ink;
+  background: #f7f8fa;
+  font-family: 'Montserrat', sans-serif;
+
+  main {
+    width: 100%;
+  }
+
+  .eyebrow, .section-kicker {
+    color: $kicker-red;
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  /* Inner Hero Section */
+  .inner-hero {
+    padding: 60px 20px;
+    background-color: #f1f3f5;
+    border-bottom: 1px solid #e9ecef;
+    text-align: center;
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+
+      .eyebrow {
+        margin-bottom: 0.75rem;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        color: $maroon;
+        font-size: 2.8rem;
+        line-height: 1.1;
+        font-weight: 900;
+        letter-spacing: -0.5px;
+      }
+
+      .hero-description, p {
+        max-width: 700px;
+        margin: 0 auto 20px;
+        color: #6c757d;
+        font-size: 1.05rem;
+        line-height: 1.65;
+        font-weight: 400;
+      }
+
+      .breadcrumb {
+        font-size: 0.95rem;
+        color: #6c757d;
+
+        a {
+          color: $maroon;
+          font-weight: 700;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  /* Seamless Marquee Slider Section */
+  .slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+    margin: 30px 0;
+    border-top: 2px solid $maroon;
+    border-bottom: 2px solid $maroon;
+    background: #f9f9f9;
+    padding: 15px 0;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+
+    .slider {
+      display: flex;
+      width: max-content;
+      animation: slideMarquee 35s linear infinite;
+
+      img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        margin-right: 15px;
+        border: 2px solid #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+
+      .no-images {
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+        color: $muted;
+      }
+
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+  }
+
+  /* Content Layout */
+  .garden-content {
+    width: min(100%, 1100px);
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+
+    /* Poem Card Section */
+    .poem-section {
+      background-color: #f0f7f1;
+      border-left: 5px solid #3b7a57;
+      padding: 30px;
+      margin-bottom: 3.5rem;
+      border-radius: 0 8px 8px 0;
+
+      .section-kicker {
+        margin-bottom: 8px;
+      }
+
+      h3 {
+        color: #1e4620;
+        margin: 0 0 15px;
+        font-size: 1.5rem;
+      }
+
+      .poem-content {
+        font-style: italic;
+        color: #2c4c32;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 15px;
+      }
+
+      .poem-author {
+        font-weight: 600;
+        color: #556b2f;
+        text-align: right;
+      }
+    }
+
+    /* Grid Layout for Details and Highlights */
+    .split-details {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+
+      .detail-block {
+        padding: 32px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        border-left: 4px solid $maroon;
+
+        .section-kicker {
+          margin-bottom: 10px;
+        }
+
+        h2 {
+          margin: 0 0 20px;
+          color: $maroon;
+          font-size: 1.5rem;
+          line-height: 1.25;
+          padding-bottom: 8px;
+          border-bottom: 2px solid #eee;
+        }
+
+        ul {
+          margin: 0;
+          padding-left: 18px;
+          color: #444;
+          font-size: 0.95rem;
+          line-height: 1.65;
+
+          li {
+            margin-bottom: 10px;
+            font-weight: 500;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Responsive Breakpoints */
+  @media (max-width: 900px) {
+    .garden-content {
+      .split-details {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  @media (max-width: 760px) {
+    .inner-hero {
+      padding: 3.25rem 1rem 2.5rem;
+    }
+
+    .garden-content {
+      padding: 1.5rem 1rem 3rem;
+
+      .poem-section {
+        padding: 20px;
+      }
+
+      .split-details .detail-block {
+        padding: 20px;
+      }
+    }
+  }
+}
+
+/* Continuous Marquee Animation */
+@keyframes slideMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

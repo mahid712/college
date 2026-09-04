@@ -1,0 +1,369 @@
+$maroon: #8b0000;
+$ink: #17202a;
+$muted: #66727d;
+$paper: #f7f5f1;
+$line: #ddd8d0;
+$kicker-red: #b64e4e;
+
+.cultural-page {
+  min-height: 100%;
+  padding-bottom: 5rem;
+  color: $ink;
+  background: #f7f8fa;
+  font-family: 'Montserrat', sans-serif;
+
+  main {
+    width: 100%;
+  }
+
+  /* Hero Section */
+  .cultural-hero {
+    padding: 4.5rem 1.5rem 3.5rem;
+    background: #f0f2f5;
+    border-bottom: 1px solid #e1e4e8;
+  }
+
+  .cultural-hero-content,
+  .cultural-content {
+    width: min(100%, 1200px);
+    margin: 0 auto;
+  }
+
+  .cultural-hero-content {
+    text-align: center;
+  }
+
+  .eyebrow,
+  .section-kicker,
+  .role,
+  .card-kicker {
+    color: $kicker-red;
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  .cultural-hero .eyebrow {
+    margin-bottom: 0.75rem;
+  }
+
+  h1, h2, h3, p {
+    margin-top: 0;
+  }
+
+  h1 {
+    margin: 0 0 0.85rem;
+    color: $maroon;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+  }
+
+  .hero-description {
+    max-width: 750px;
+    margin: 0 auto 1.25rem;
+    color: #666666;
+    line-height: 1.65;
+  }
+
+  .breadcrumb {
+    color: #555555;
+    font-size: 0.9rem;
+
+    a {
+      color: $maroon;
+      font-weight: 700;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .back-btn {
+      background: none;
+      border: none;
+      color: $maroon;
+      font-weight: 700;
+      font-size: 0.9rem;
+      font-family: inherit;
+      cursor: pointer;
+      padding: 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  /* Main Content Layout */
+  .cultural-content {
+    padding: 0 1.5rem 4rem;
+  }
+
+  .cultural-section {
+    padding: 3.5rem 0;
+  }
+
+  .section-heading {
+    max-width: 720px;
+    margin-bottom: 32px;
+
+    .section-kicker {
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: $ink;
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      line-height: 1.1;
+    }
+
+    p {
+      color: $muted;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+  }
+
+  /* Grid Layout for Main Selection View */
+  .cultural-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+
+    .cultural-card-link {
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+
+      .cultural-card {
+        height: 100%;
+        padding: 25px;
+        background: $paper;
+        border-top: 3px solid $maroon;
+        transition: transform 0.2s ease, background-color 0.2s ease;
+
+        .role {
+          margin-bottom: 6px;
+        }
+
+        h3 {
+          margin: 6px 0 12px;
+          font-size: 1.1rem;
+          color: $ink;
+          line-height: 1.3;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .arrow {
+            color: $maroon;
+            transition: transform 0.2s ease;
+          }
+        }
+
+        p {
+          margin: 0;
+          color: $muted;
+          font-size: 0.88rem;
+          line-height: 1.65;
+        }
+      }
+
+      &:hover {
+        .cultural-card {
+          background: #ffffff;
+          transform: translateY(-2px);
+
+          h3 {
+            color: $maroon;
+
+            .arrow {
+              transform: translateX(4px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Detail View Styles */
+  .center-details {
+    .links-banner {
+      background: $paper;
+      padding: 20px 25px;
+      border-top: 3px solid $maroon;
+      margin-bottom: 40px;
+
+      .section-kicker {
+        margin-bottom: 12px;
+      }
+
+      .external-links-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px 25px;
+
+        a {
+          color: $maroon;
+          font-weight: 700;
+          font-size: 0.92rem;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .detail-block {
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid $line;
+
+      &:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+
+      .section-kicker {
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        color: $ink;
+        margin-bottom: 16px;
+      }
+
+      p {
+        color: $muted;
+        font-size: 0.96rem;
+        line-height: 1.8;
+        margin-bottom: 16px;
+      }
+
+      /* Faculty List */
+      .guides-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 20px;
+        margin: 15px 0 0;
+        padding-left: 20px;
+
+        li {
+          color: $ink;
+          font-weight: 600;
+          font-size: 0.92rem;
+        }
+      }
+
+      /* Awards Grid Layout */
+      .awards-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+
+        .award-card {
+          padding: 20px;
+          background: $paper;
+          border-top: 2px solid $maroon;
+
+          .card-kicker {
+            margin-bottom: 4px;
+          }
+
+          h3 {
+            font-size: 1.05rem;
+            color: $ink;
+            margin: 4px 0 8px;
+          }
+
+          p {
+            margin: 0;
+            font-size: 0.88rem;
+            line-height: 1.6;
+          }
+        }
+      }
+
+      /* Projects Table Styling */
+      .projects-table-wrapper {
+        overflow-x: auto;
+        margin-top: 15px;
+
+        .projects-table {
+          width: 100%;
+          border-collapse: collapse;
+          background: $paper;
+          border-top: 3px solid $maroon;
+
+          th, td {
+            padding: 14px 18px;
+            text-align: left;
+            border-bottom: 1px solid $line;
+            font-size: 0.9rem;
+          }
+
+          th {
+            background: #eae7e1;
+            color: $ink;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+          }
+
+          td {
+            color: $muted;
+
+            &.dept-cell {
+              color: $maroon;
+              font-weight: 700;
+            }
+
+            &.title-cell {
+              color: $ink;
+              font-weight: 600;
+            }
+
+            &.funding-cell {
+              font-weight: 700;
+              color: $ink;
+            }
+          }
+
+          tbody tr:hover {
+            background-color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+
+  /* Mobile Responsive Breakpoints */
+  @media (max-width: 760px) {
+    .cultural-hero {
+      padding: 3.25rem 1rem 2.5rem;
+    }
+
+    .cultural-content {
+      padding: 0 1rem 2.75rem;
+    }
+
+    .cultural-section {
+      padding: 32px 0;
+    }
+
+    .cultural-grid,
+    .center-details .detail-block .awards-grid,
+    .center-details .detail-block .guides-list {
+      grid-template-columns: 1fr;
+    }
+  }
+}

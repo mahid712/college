@@ -34,6 +34,13 @@ import Yakshagana from './components/Yakshagana';
 import Sports from './components/Sports';
 import Museum from './components/Museum';
 import Canteen from './components/Canteen';
+import Ncc from './components/Ncc';
+import Alumni from './components/Alumni';
+import CampusCells from './components/CampusCells';
+import Facilities from './components/Facilities';
+import Garden from './components/Garden';
+import Block from './components/Block';
+import Cultural from './components/Cultural';
 
 
 
@@ -95,6 +102,13 @@ function AppLayout() {
           <Route path="/sports" element={<Sports />} />
           <Route path="/museum" element={<Museum />} />
           <Route path="/canteen" element={<Canteen />} />
+          <Route path="/ncc" element={<Ncc />} />
+          <Route path="/alumni" element={<Alumni />} />
+          <Route path="/cells" element={<CampusCells />} />
+          <Route path="/facilities" element={<Facilities />} />
+          <Route path="/garden" element={<Garden />} />
+          <Route path="/block" element={<Block />} />
+          <Route path="/cultural" element={<Cultural />} />
         </Routes>
       </main>
 

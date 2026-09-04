@@ -1,0 +1,233 @@
+// Scss/Facilities.scss
+
+// Editorial Design System Variables
+$maroon: #8b0000;
+$ink: #17202a;
+$muted: #66727d;
+$paper: #f7f5f1;
+$line: #ddd8d0;
+$kicker-red: #b64e4e;
+
+.facilities-page {
+  min-height: 100%;
+  padding-bottom: 5rem;
+  color: $ink;
+  background: #f7f8fa;
+  font-family: 'Montserrat', sans-serif;
+
+  main {
+    width: 100%;
+  }
+
+  .eyebrow, .section-kicker, .role {
+    color: $kicker-red;
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  /* Inner Hero Section */
+  .inner-hero {
+    padding: 4.5rem 1.5rem 3.5rem;
+    background: #f0f2f5;
+    border-bottom: 1px solid #e1e4e8;
+    text-align: center;
+
+    .hero-content {
+      width: min(100%, 1200px);
+      margin: 0 auto;
+
+      .eyebrow {
+        margin-bottom: 0.75rem;
+      }
+
+      h1 {
+        margin: 0 0 0.85rem;
+        color: $maroon;
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.1;
+        font-weight: 900;
+      }
+
+      .hero-description {
+        max-width: 700px;
+        margin: 0 auto 1.25rem;
+        color: #666;
+        font-size: 1.05rem;
+        line-height: 1.65;
+      }
+    }
+
+    .breadcrumb {
+      color: #555;
+      font-size: 0.9rem;
+
+      a {
+        color: $maroon;
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  /* Content Container */
+  .facilities-content {
+    width: min(100%, 1200px);
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 32px;
+
+      .section-kicker {
+        margin-bottom: 14px;
+      }
+
+      h2 {
+        margin-top: 0;
+        color: $ink;
+        font-size: clamp(1.8rem, 3vw, 2.7rem);
+        line-height: 1.1;
+      }
+    }
+
+    .amenities-heading {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid $line;
+    }
+
+    /* Major Facilities Card Grid */
+    .facilities-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+
+      .facility-card {
+        padding: 28px;
+        background: $paper;
+        border-top: 3px solid $maroon;
+
+        .role {
+          margin-bottom: 8px;
+        }
+
+        h3 {
+          margin: 0 0 12px;
+          font-size: 1.2rem;
+          color: $ink;
+        }
+
+        .card-desc {
+          color: $muted;
+          font-size: 0.9rem;
+          line-height: 1.6;
+          margin-bottom: 14px;
+        }
+
+        ul {
+          margin: 0;
+          padding-left: 18px;
+          color: $muted;
+          font-size: 0.88rem;
+          line-height: 1.65;
+
+          li + li {
+            margin-top: 8px;
+          }
+        }
+
+        .incharge-block {
+          margin-top: 20px;
+          padding-top: 14px;
+          border-top: 1px dashed $line;
+
+          strong {
+            display: block;
+            font-size: 0.82rem;
+            color: $ink;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+          }
+
+          ul {
+            list-style: none;
+            padding-left: 0;
+
+            li {
+              font-weight: 600;
+              color: $ink;
+            }
+          }
+        }
+      }
+    }
+
+    /* General Amenities Grid */
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+
+      .amenity-item {
+        padding: 20px;
+        background: $paper;
+        border: 1px solid transparent;
+        transition: border-color 0.2s, transform 0.2s;
+
+        h3 {
+          margin: 0 0 8px;
+          font-size: 1rem;
+          color: $maroon;
+        }
+
+        p {
+          margin: 0;
+          color: $muted;
+          font-size: 0.85rem;
+          line-height: 1.55;
+        }
+
+        &:hover {
+          border-color: $maroon;
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+
+  /* Responsive Breakpoints */
+  @media (max-width: 900px) {
+    .facilities-content {
+      .facilities-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .amenities-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  @media (max-width: 760px) {
+    .inner-hero {
+      padding: 3.25rem 1rem 2.5rem;
+    }
+
+    .facilities-content {
+      padding: 2.5rem 1rem 3rem;
+
+      .amenities-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

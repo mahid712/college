@@ -1,0 +1,243 @@
+// Editorial Design System Variables
+$maroon: #8b0000;
+$ink: #17202a;
+$muted: #66727d;
+$paper: #f7f5f1;
+$line: #ddd8d0;
+$kicker-red: #b64e4e;
+
+.block-page {
+  min-height: 100%;
+  padding-bottom: 5rem;
+  color: $ink;
+  background: #f7f8fa;
+  font-family: 'Montserrat', sans-serif;
+
+  main {
+    width: 100%;
+  }
+
+  .eyebrow, 
+  .section-kicker, 
+  .card-kicker {
+    color: $kicker-red;
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  /* Inner Hero Section */
+  .inner-hero {
+    padding: 4.5rem 1.5rem 3.5rem;
+    background-color: #f0f2f5;
+    border-bottom: 1px solid #e1e4e8;
+    text-align: center;
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+
+      h1 {
+        margin: 0 0 0.85rem;
+        color: $maroon;
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.1;
+        font-weight: 900;
+      }
+
+      p {
+        max-width: 700px;
+        margin: 0 auto 1.25rem;
+        color: #666666;
+        font-size: 1.05rem;
+        line-height: 1.65;
+        font-weight: 400;
+      }
+
+      .breadcrumb {
+        font-size: 0.9rem;
+        color: #555555;
+
+        a {
+          color: $maroon;
+          font-weight: 700;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  /* Seamless Marquee Slider Section */
+  .slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    border-bottom: 1px solid $line;
+    background: #ffffff;
+    padding: 20px 0;
+
+    .slider {
+      display: flex;
+      width: max-content;
+      animation: slideMarquee 35s linear infinite;
+
+      img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        margin-right: 15px;
+        border: 1px solid $line;
+        border-radius: 4px;
+        transition: transform 0.2s ease;
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+      }
+
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+  }
+
+  @keyframes slideMarquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Main Content Section */
+  .content-section {
+    padding: 4rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .section-header {
+      margin-bottom: 32px;
+
+      .section-kicker {
+        margin-bottom: 14px;
+      }
+
+      h2 {
+        color: $ink;
+        font-size: clamp(1.8rem, 3vw, 2.7rem);
+        font-weight: 800;
+        margin: 0;
+        padding-bottom: 15px;
+        border-bottom: 1px solid $line;
+        line-height: 1.1;
+      }
+    }
+
+    /* Table Layout Styling */
+    .blocks-grid {
+      display: table;
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: $paper;
+      border-top: 3px solid $maroon;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+      .block-card {
+        display: table-row;
+        border-bottom: 1px solid $line;
+        transition: background-color 0.2s ease;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $line;
+        }
+
+        &:hover {
+          background-color: #ffffff;
+        }
+
+        .card-kicker {
+          display: table-cell;
+          width: 15%;
+          padding: 20px;
+          vertical-align: top;
+          border-bottom: 1px solid $line;
+          border-right: 1px solid $line;
+          font-weight: 800;
+          color: $kicker-red;
+        }
+
+        .block-title {
+          display: table-cell;
+          width: 30%;
+          padding: 20px;
+          vertical-align: top;
+          border-bottom: 1px solid $line;
+          border-right: 1px solid $line;
+          font-size: 1.05rem;
+          font-weight: 700;
+          color: $ink;
+          margin: 0;
+          line-height: 1.3;
+        }
+
+        .block-desc {
+          display: table-cell;
+          width: 55%;
+          padding: 20px;
+          vertical-align: top;
+          border-bottom: 1px solid $line;
+          font-size: 0.9rem;
+          color: $muted;
+          line-height: 1.65;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  /* Mobile Responsive Table Fallback */
+  @media (max-width: 760px) {
+    .inner-hero {
+      padding: 3.25rem 1rem 2.5rem;
+    }
+
+    .content-section {
+      padding: 2.75rem 1rem;
+
+      .blocks-grid {
+        display: block;
+
+        .block-card {
+          display: block;
+          padding: 20px;
+          border-bottom: 1px solid $line;
+
+          .card-kicker,
+          .block-title,
+          .block-desc {
+            display: block;
+            width: 100%;
+            padding: 0;
+            border: none;
+          }
+
+          .card-kicker {
+            margin-bottom: 6px;
+          }
+
+          .block-title {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}

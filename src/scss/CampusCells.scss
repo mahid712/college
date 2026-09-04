@@ -1,0 +1,189 @@
+// Scss/CampusCells.scss
+
+// Color Variables
+$maroon: #8b0000;
+$ink: #17202a;
+$muted: #66727d;
+$paper: #f7f5f1;
+$line: #ddd8d0;
+$kicker-red: #b64e4e;
+
+.campus-cells-page {
+  min-height: 100%;
+  padding-bottom: 5rem;
+  color: $ink;
+  background: #f7f8fa;
+  font-family: 'Montserrat', sans-serif;
+
+  main {
+    width: 100%;
+  }
+
+  /* Inner Hero Section */
+  .inner-hero {
+    padding: 4.5rem 1.5rem 3.5rem;
+    background: #f0f2f5;
+    border-bottom: 1px solid #e1e4e8;
+    text-align: center;
+
+    .hero-content {
+      width: min(100%, 1200px);
+      margin: 0 auto;
+
+      h1 {
+        margin: 0 0 0.85rem;
+        color: $maroon;
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.1;
+        font-weight: 900;
+        letter-spacing: -0.5px;
+      }
+
+      p {
+        max-width: 700px;
+        margin: 0 auto 1.25rem;
+        color: #666;
+        font-size: 1.1rem;
+        line-height: 1.65;
+        font-weight: 400;
+      }
+    }
+
+    .breadcrumb {
+      color: #555;
+      font-size: 0.9rem;
+      margin-top: 15px;
+
+      a {
+        color: $maroon;
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  /* Content Section Layout */
+  .content-section {
+    width: min(100%, 1200px);
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+
+    .section-kicker {
+      color: $kicker-red;
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      color: $ink;
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      line-height: 1.1;
+      font-weight: 700;
+    }
+
+    /* Modernized Table / Grid Layout */
+    .table-responsive {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .committees-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 10px; // Creates card-like row gaps matching paper aesthetic
+
+      thead {
+        tr {
+          th {
+            padding: 12px 20px;
+            color: $kicker-red;
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            text-align: left;
+            border-bottom: 1px solid $line;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          background: $paper;
+          border-left: 3px solid $maroon; // Accent border matching .people-grid articles
+          transition: transform 0.2s ease, border-color 0.2s ease;
+
+          td {
+            padding: 18px 20px;
+            color: $ink;
+            font-size: 0.92rem;
+            line-height: 1.65;
+            border-top: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+            vertical-align: top;
+
+            &:first-child {
+              border-left: 3px solid $maroon;
+            }
+
+            strong {
+              color: $ink;
+              font-size: 1rem;
+              font-weight: 700;
+            }
+          }
+
+          &:hover {
+            transform: translateY(-2px);
+            
+            td {
+              background-color: lighten($paper, 1.5%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 760px) {
+    .inner-hero {
+      padding: 3.25rem 1rem 2.5rem;
+    }
+
+    .content-section {
+      padding: 2.5rem 1rem 3rem;
+
+      .committees-table {
+        thead {
+          display: none; // Hide headers on small mobile screens
+        }
+
+        tbody tr {
+          display: block;
+          margin-bottom: 12px;
+          padding: 10px 0;
+
+          td {
+            display: block;
+            padding: 8px 16px;
+            border: none;
+
+            &:first-child {
+              padding-bottom: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
