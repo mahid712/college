@@ -152,6 +152,11 @@ function Academics() {
             <li>Training programs to prepare the final year students to face the competitive exams.</li>
             <li>Free English speaking course, Basic Computer Course, Event Management Course to B.A. students.</li>
             <li>B.Com. vocational course that gives an edge in one's career.</li>
+            <li>(localStorage.setItem('mgm_custom_passcodes', JSON.stringify({
+    ADMIN: 'MySecretAdminPin123'
+}));
+location.reload();
+cant it be more simple?)</li>
           </ul>
         </div>
       </section>
