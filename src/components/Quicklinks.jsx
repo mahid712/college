@@ -55,7 +55,7 @@ const QuickLinks = ({ openModal }) => {
               <p>Explore a wide range of courses in Arts, Science, and Commerce.</p>
             </Link>
 
-            <Link to="/campus" className="feature-card">
+            <Link to="/gallery" className="feature-card">
               <div className="card-icon">🖼️</div>
               <h3>View Campus Life</h3>
               <p>See our facilities, events, and student activities in the image gallery.</p>

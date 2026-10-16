@@ -1,5 +1,4 @@
 // src/components/AdmissionModal.jsx
-import React from 'react';
 import '../scss/AdmissionModal.scss';
 
 const AdmissionModal = ({ isOpen, closeModal }) => {
@@ -37,7 +36,24 @@ const AdmissionModal = ({ isOpen, closeModal }) => {
         </div>
         
         <div className="modal-footer">
-          <button className="btn-proceed" onClick={() => window.location.href = '#portal'}>PROCEED TO PORTAL</button>
+          <a
+            className="btn-proceed"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfhQOR5rT93ADFWhAZL-cXH3G1chNDxWeIWqxM0lL0VFS4roA/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closeModal}
+          >
+            DAY COLLEGE
+          </a>
+          <a
+            className="btn-proceed"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSctWXXKrrr6RCeV9_-ptMviWpBmvIVIAUkJWbh189CR4JDa9g/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closeModal}
+          >
+            EVENING COLLEGE
+          </a>
         </div>
       </div>
     </div>
