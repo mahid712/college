@@ -11,10 +11,12 @@ import Research from './components/Research';
 import CampusLife from './components/CampusLife';
 import Vision from './components/Vision';
 import Principal from './components/Principal';
+import VicePrincipal from './components/VicePrincipal';
 import Management from './components/Management';
 import History from './components/History';
 import ImageGallery from './components/ImageGallery';
 import Scholarship from './components/Scholarship';
+import ScholarshipPortal from './components/ScholarshipPortal';
 import Rules from './components/Rules';
 import Placement from './components/Placement';
 import Syllabus from './components/Syllabus';
@@ -41,6 +43,7 @@ import Facilities from './components/Facilities';
 import Garden from './components/Garden';
 import Block from './components/Block';
 import Cultural from './components/Cultural';
+import Announcement from './components/Announcement';
 
 
 
@@ -48,6 +51,7 @@ function AppLayout() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const location = useLocation();
   const isScholarshipPage = location.pathname === '/scholarships';
+  const isScholarshipPortal = location.pathname === '/scholarship-portal';
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -56,7 +60,7 @@ function AppLayout() {
   return (
     <div className="app-container" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       {/* Render global Navbar ONLY when not on the scholarship page */}
-      {!isScholarshipPage && (
+      {!isScholarshipPage && !isScholarshipPortal && (
         <Navbar isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
       )}
       
@@ -79,10 +83,12 @@ function AppLayout() {
           <Route path="/campus" element={<CampusLife />} />
           <Route path="/vision" element={<Vision />} />
           <Route path="/principal" element={<Principal />} />
+          <Route path="/vice-principal" element={<VicePrincipal />} />
           <Route path="/management" element={<Management />} />
           <Route path="/history" element={<History />} />
           <Route path="/gallery" element={<ImageGallery />} />
           <Route path="/scholarships" element={<Scholarship />} />
+          <Route path="/scholarship-portal" element={<ScholarshipPortal />} />
           <Route path="/rules" element={<Rules />} />
           <Route path="/placements" element={<Placement />} />
           <Route path="/syllabus" element={<Syllabus />} />
@@ -109,6 +115,7 @@ function AppLayout() {
           <Route path="/garden" element={<Garden />} />
           <Route path="/block" element={<Block />} />
           <Route path="/cultural" element={<Cultural />} />
+          <Route path="/announcements" element={<Announcement />} />
         </Routes>
       </main>
 
@@ -117,7 +124,7 @@ function AppLayout() {
         closeModal={() => setIsModalOpen(false)}
       />
 
-      <Footer openModal={() => setIsModalOpen(true)} />
+      {!isScholarshipPortal && <Footer openModal={() => setIsModalOpen(true)} />}
     </div>
   );
 }

@@ -1,0 +1,391 @@
+.scholarship-portal {
+  min-height: 100vh;
+  background: #f4f7f9;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+
+  .portal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 5%;
+    border-bottom: 4px solid #b8860b;
+    background: #002347;
+    color: #fff;
+
+    h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    small {
+      color: #ffc107;
+    }
+
+    a {
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .dashboard-container {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 1.5rem;
+    width: min(100% - 2rem, 1400px);
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .side-panel,
+  .main-form {
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  .side-panel {
+    align-self: start;
+    padding: 1.5rem;
+
+    h2 {
+      margin: 0 0 0.75rem;
+      color: #002347;
+      font-size: 1.15rem;
+    }
+
+    hr {
+      margin: 1rem 0;
+      border: 0;
+      border-top: 1px solid #e5e7eb;
+    }
+  }
+
+  .status-badge {
+    display: inline-block;
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+    background: #e2e8f0;
+    color: #4a5568;
+    font-size: 0.8rem;
+  }
+
+  .step-list {
+    display: grid;
+    gap: 0.25rem;
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .step-item {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 0;
+    color: #999;
+    font-size: 0.85rem;
+
+    &.active {
+      color: #002347;
+      font-weight: 700;
+    }
+
+    &.completed {
+      color: #218838;
+    }
+  }
+
+  .step-number {
+    display: grid;
+    width: 1.5rem;
+    height: 1.5rem;
+    flex: 0 0 1.5rem;
+    place-items: center;
+    border-radius: 50%;
+    background: #edf0f3;
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    .active & {
+      background: #002347;
+      color: #fff;
+    }
+
+    .completed & {
+      background: #e7f5eb;
+    }
+  }
+
+  .file-size-note {
+    margin: 0;
+    color: #666;
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .main-form {
+    min-width: 0;
+    padding: 2rem;
+
+    h2 {
+      margin: 0 0 1.5rem;
+      color: #002347;
+      font-size: 1.45rem;
+    }
+  }
+
+  .form-section {
+    display: grid;
+    gap: 0.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+
+    label {
+      margin-top: 1rem;
+      font-size: 0.92rem;
+      font-weight: 600;
+
+      span {
+        color: #dc3545;
+      }
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: #fff;
+      color: #333;
+      font: inherit;
+
+      &:focus {
+        border-color: #b8860b;
+        outline: 2px solid rgba(184, 134, 11, 0.18);
+      }
+
+      &[aria-invalid='true'] {
+        border-color: #dc3545;
+      }
+    }
+  }
+
+  .error-txt,
+  .submission-error {
+    margin: 0.25rem 0 0;
+    color: #dc3545;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .required-note {
+    margin: -0.75rem 0 1.25rem;
+    color: #dc3545;
+    font-size: 0.85rem;
+  }
+
+  .upload-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .file-input-wrapper {
+    min-width: 0;
+    padding: 1rem;
+    border: 2px dashed #cbd5e0;
+    border-radius: 8px;
+    background: #fafafa;
+    transition: border-color 0.2s, background-color 0.2s;
+
+    &:hover,
+    &:focus-within {
+      border-color: #b8860b;
+      background: #fffdf5;
+    }
+
+    &.input-error {
+      border-color: #dc3545;
+      background: #fff5f5;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.75rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+
+      span {
+        color: #dc3545;
+      }
+    }
+
+    input {
+      width: 100%;
+      font-size: 0.78rem;
+    }
+  }
+
+  .selected-file {
+    display: block;
+    overflow: hidden;
+    margin-top: 0.5rem;
+    color: #4a5568;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .btn-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    transition: opacity 0.2s, transform 0.2s;
+
+    &:hover:not(:disabled) {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.65;
+    }
+  }
+
+  .btn-next {
+    background: #002347;
+    color: #fff;
+  }
+
+  .btn-prev {
+    background: #e2e8f0;
+    color: #4a5568;
+  }
+
+  .btn-submit {
+    width: 100%;
+    margin-top: 1.25rem;
+    background: #28a745;
+    color: #fff;
+  }
+
+  .declaration {
+    margin-bottom: 1.25rem;
+    padding: 1.25rem;
+    border-left: 5px solid #b8860b;
+    background: #fff9e6;
+  }
+
+  .confirm-label {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 0.9rem;
+
+    input {
+      width: auto;
+    }
+  }
+
+  .portal-status-warning {
+    margin: 0 0 1rem;
+    padding: 0.85rem 1rem;
+    border-left: 4px solid #b8860b;
+    background: #fff9e6;
+    color: #5d4a18;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .submission-success,
+  .portal-closed-card {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+    > span {
+      color: #28a745;
+      font-size: 3rem;
+      font-weight: 800;
+    }
+
+    h2 {
+      color: #002347;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 0.75rem;
+      color: #8b0000;
+      font-weight: 700;
+    }
+  }
+
+  .portal-closed {
+    padding: 2rem;
+  }
+
+  .portal-closed-card > span {
+    color: #b8860b;
+  }
+}
+
+@media (max-width: 900px) {
+  .scholarship-portal {
+    .dashboard-container {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .scholarship-portal {
+    .portal-header {
+      align-items: flex-start;
+      padding: 1rem;
+
+      h1 {
+        font-size: 1.15rem;
+      }
+
+      small {
+        font-size: 0.7rem;
+      }
+    }
+
+    .main-form,
+    .side-panel {
+      padding: 1.25rem;
+    }
+
+    .upload-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .btn-group {
+      flex-wrap: wrap;
+    }
+  }
+}

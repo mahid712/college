@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ScholarshipNavbar from './ScholarshipNavbar';
 import '../scss/Scholarship.scss';
 
@@ -245,8 +245,8 @@ const scholarshipsAndPrizesData = {
 };
 
 const Scholarship = () => {
-  // State hook to control the modal visibility
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="scholarships-page-wrapper">
@@ -359,8 +359,8 @@ const Scholarship = () => {
               <button 
                 className="proceed-btn" 
                 onClick={() => {
-                  alert("Proceeding to application portal...");
                   setIsModalOpen(false);
+                  navigate('/scholarship-portal');
                 }}
               >
                 I HAVE THE DOCUMENTS, PROCEED

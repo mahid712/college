@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import princiImg from '../assets/mgm-pic/princi.png'; // 1. Import the image at the top
 
@@ -27,25 +26,45 @@ export default function Principal() {
                             <div className="principal-photo-block">
                                 <img 
                                     src={princiImg} /* 2. Use the imported variable here */
-                                    alt="Photo of Prof. Vanitha Maiya" 
+                                    alt="Principal of MGM College"
                                     className="principal-photo" 
                                 />
-                                <h3>Prof. Vanitha Maiya</h3>
+                                <h3>Dr. Gayathri Pai</h3>
                                 <p className="designation">Principal, MGM College, Udupi</p>
                                 <a href="#contact" className="contact-link">📧 Contact Principal</a>
                             </div>
                             
                             <div className="principal-message-block">
-                                <p>We are all proud of our - Mahatma Gandhi Memorial College. Our college makes one of the recognizable landmarks, located near the Lord Krishna temple of Udupi. We are creating responsible and educated students and equipping them with necessary skills to tackle the needs of today's career and life. I welcome your interest in MGM College and hope you will find the courses suitably matching your aptitude, aspirations and the goals of your life.</p>
+                                <p>
+                                    We are all proud of our - Mahatma Gandhi Memorial College. Our college makes one of the
+                                    recognizable landmarks, located near the Lord Krishna temple of Udupi. We are creating
+                                    responsible and educated students and equipping them with necessary skills to tackle the
+                                    needs of today's career and life. I welcome your interest in MGM College and hope you will
+                                    find the courses suitably matching your aptitude, aspirations and the goals of your life.
+                                </p>
                                 
-                                <p>Our College is a great place to learn. Our teaching staff are energetic, enthusiastic and passionate in what they teach. We have eminent local personalities and countless accomplished personalities spread far and wide in the globe and you might hear many of them call M.G.M their ‘Alma Mater’. And most of all, our teachers are optimistic about the future of India, that is… YOU. They see great artists, creative minds, technocrats sprouting in you. We have a highly skilled and professional team of staff waiting to guide and support you through your learning experience at college. We, at MGM strongly believe that the only constant thing about life is ‘change’. And we offer courses to meet the ever-changing needs of the society from creative social sciences to fundamental sciences and applied sciences. We never tire in improving ourselves, for we believe that he who thinks that the improvement is complete stagnates himself. In MGM, students are helped to focus on confidence building, while nurturing a strong sense of social and environmental responsibility through academic and co-curricular activities.</p>
+                                <p>
+                                    Our College is a great place to learn. Our teaching staff are energetic, enthusiastic and
+                                    passionate in what they teach. We have eminent local personalities and countless accomplished
+                                    personalities spread far and wide in the globe and you might hear many of them call M.G.M
+                                    their ‘Alma Mater’. And most of all, our teachers are optimistic about the future of India,
+                                    that is… YOU. They see great artists, creative minds, technocrats sprouting in you. We have
+                                    a highly skilled and professional team of staff waiting to guide and support you through your
+                                    learning experience at college. We, at MGM strongly believe that the only constant thing
+                                    about life is ‘change’. And we offer courses to meet the ever-changing needs of the society
+                                    from creative social sciences to fundamental sciences and applied sciences. We never tire in
+                                    improving ourselves, for we believe that he who thinks that the improvement is complete
+                                    stagnates himself. In MGM, students are helped to focus on confidence building, while
+                                    nurturing a strong sense of social and environmental responsibility through academic and
+                                    co-curricular activities.
+                                </p>
                                 
                                 <p>I look forward to welcome you to the college in the near future.</p>
                                 
                                 <p className="signature-line">
                                     Thanking you<br />
                                     Yours Sincerely<br />
-                                    Prof. Vanitha Maiya<br />
+                                    Dr. Gayathri Pai<br />
                                     (Principal)
                                 </p>
                             </div>

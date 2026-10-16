@@ -3,27 +3,194 @@ import '../scss/Department.scss';
 import noDataProfile from '../assets/profiles/no-data-found.html?url';
 
 const departments = [
-  { name: 'Administration', type: 'admin', staff: [['Prof. Vanitha Maiya, M.Com', 'Principal'], ['Dr. Vishwanatha Pai M., B.E., M.Sc., Ph.D', 'Vice Principal']] },
-  { name: 'Department of English', staff: [['Mrs. Ashwini C. Acharya, M.A.', 'HOD'], ['Mrs. Spoorthy S. Fernandes, M.A, B.Ed'], ['Mrs. Manasa S., M.A., B.Ed.'], ['Ms. Coleen Antonitha Lobo, M.A'], ['Ms. Sowmya, M.A., B.Ed.'], ['Ms. Mythreyi, M.A.']] },
-  { name: 'Department of Kannada', staff: [['Dr. Puthi Vasanth Kumar, M.A., Ph.D.', 'HOD'], ['Dr. Shailaja, M.A., Ph.D.'], ['Dr. Kathyayini Kunjibettu, M.A., Ph.D.'], ['Mr. Raghavendra Thunga, M.A.'], ['Mrs. Ambika, M.A, B.Ed.']] },
-  { name: 'Department of Hindi', staff: [['Dr. Santosh C. Shetti, M.A., Ph.D.', 'HOD'], ['Ms. Swathi K., M.A., B.Ed.'], ['Mr. Madanlal Saini, M.A., B.Ed.']] },
-  { name: 'Department of Journalism', staff: [['Mr. Suchith Kotian, M.C.J., M.A., B.Ed.', 'HOD'], ['Mrs. Ashwini Aigal, M.C.J.']] },
-  { name: 'Department of Mathematics', staff: [['Ms. Navya, M.Sc., B.Ed', 'HOD'], ['Mrs. Umadevi P., M.Sc., B.Ed.'], ['Mrs. Vasavi, M.Sc.'], ['Ms. Shreya, M.Sc.']] },
-  { name: 'Department of Physics', staff: [['Mrs. Shailaja H., M.Sc., M.Phil.', 'HOD'], ['Mrs. Swathi, M.Sc.'], ['Ms. Prajna Nayak, M.Sc.']] },
-  { name: 'Department of Chemistry', staff: [['Mrs. Veera Ida Pinto, M.Sc.', 'HOD'], ['Mrs. Jyothi Alphonso, M.Sc., M.Phil'], ['Mr. Sandeep Shenoy K., M.Sc.'], ['Ms. Shraddha Dayananda K., M.Sc.']] },
-  { name: 'Department of Statistics', staff: [['Ms. Sharanya, M.Sc.', 'HOD'], ['Mr. Umesh Pai, M.Sc. (on Deputation)'], ['Mr. Naveena, M.Sc.']] },
-  { name: 'Department of Botany', staff: [['Dr. Gayathri Pai, M.Sc., M.Phil, Ph.D.', 'HOD'], ['Mrs. Shruthi Nayak, M.Sc.'], ['Dr. Sohani Bhat G, M.Sc., Ph.D.']] },
-  { name: 'Department of Zoology', staff: [['Dr. Vijaya Kumar K.M., M.Sc., M.Phil, Ph.D.', 'HOD'], ['Dr. Maneetha T. K., M.Sc., B.Ed, Ph.D.'], ['Mrs. Yashashwini B., M.Sc.']] },
-  { name: 'Physical Education', staff: [['Mr. Tilak Kini, M.P.Ed.', 'Physical Director']] },
-  { name: 'Library & Info Centre', staff: [['Mr. Kishore H.V., MLISc.', 'Librarian']] },
-  { name: 'Department of Computer Science', staff: [['Dr. Vishwanatha Pai M., Ph.D.', 'Vice Principal'], ['Mrs. Rekha N. Chandra, M.Sc.(IT), M.Phil.', 'HOD'], ['Mrs. Anupama Ajith, M.C.A.'], ['Mr. Rajamoorthi Rao, B.E.'], ['Mrs. Deepali Kamath, M.C.A.'], ['Mrs. Jayanthi R. Prabhu, B.E.'], ['Mrs. Pavithra, M.Sc.'], ['Mrs. Shilpa Shanubhog, M.Sc.(IT)'], ['Ms. Ramya Kotian, M.Sc.'], ['Mrs. Rashmi, M.Sc. (IT)'], ['Ms. Akshatha Shettigar, M.Sc.'], ['Mr. Sanath, M.Sc.'], ['Mrs. Sushma Bangera, M.Sc.'], ['Mr. Mithun, M.C.A.'], ['Ms. Pallavi, M.Sc.'], ['Ms. Prajnashree, M.Sc.'], ['Mr. Damodar Pai BP, MCA'], ['Mr. Prakash, M.Sc.'], ['Ms. Rakshitha, M.Sc.'], ['Ms. Abhijna S., M.Sc.'], ['Mr. Gautham, M.C.A.'], ['Mrs. Chitra K., B.Sc., PGDCA, M.Sc.(IT)', 'Programmer'], ['Mrs. Shaila M., M.C.A.', 'Programmer'], ['Mrs. Akshatha Nayak, B.C.A.', 'Programmer'], ['Ms. Sheethal Salian, M.Sc.', 'Programmer'], ['Ms. Surabhi Naik, BCA', 'Programmer'], ['Ms. Sumalatha, BCA', 'Programmer'], ['Mr. Dheeraj, M.Sc.', 'Programmer'], ['Ms. Likitha, BCA', 'Programmer'], ['Mr. Niranjan, BCA', 'Programmer'], ['Ms. Prathiksha, BCA', 'Programmer']] },
-  { name: 'Department of Commerce', staff: [['Prof. Vanitha Maiya, M.Com.', 'Principal'], ['Mr. Anil Kumar B., M.Com.', 'HOD'], ['Mrs. Mamatha, M.Com.', 'Co-ordinator'], ['Dr. Mallika A. Shetty, M.Com., M.B.A., Ph.D.', 'Co-ordinator'], ['Mrs. Raksha Shenoy, M.Com'], ['Ms. Kavya K B, M.Com'], ['C.A. Adarsh Shenoy'], ['C.A. Suresh Prabhu'], ['Mr. Vikas Shetty, M.Com'], ['Mr. Girish Rao S, M.Com'], ['Mrs. Mamatha Poojarthy, M.Com'], ['C.A. Vignesh Bhat'], ['C.A. Sowmya'], ['C.A. Rashmi'], ['Mr. Sandeep Kumar Shetty, M.Com'], ['Mr. Manoj S., M.Com'], ['Ms. Apoorva, M.Com'], ['Ms. Krupa Ballal, M.Com']] },
-  { name: 'Gandhian Studies', staff: [['Mr. Vinith Rao, M.A.', 'Co-ordinator']] },
+  {
+    name: 'Department of Botany',
+    staff: [
+      ['Dr. Gayathri Pai, M.Sc., M.Phil, Ph.D.', 'Principal'],
+      ['Mrs. Shruthi Nayak, M.Sc.', 'Lecturer'],
+      ['Dr. Sohani Bhat G, M.Sc., Ph.D.', 'Lecturer'],
+    ],
+  },
+  {
+    name: 'Department of Chemistry',
+    staff: [
+      ['Mrs. Veera Ida Pinto, M.Sc.', 'HOD'],
+      ['Mrs. Jyothi M Alphonso, M.Sc., M.Phil', 'Assistant Professor'],
+      ['Mr. Sandeep Shenoy K, M.Sc.', 'Lecturer'],
+      ['Ms. Shraddha Dayananda K, M.Sc.', 'Lecturer'],
+    ],
+  },
+  {
+    name: 'Department of Commerce',
+    staff: [
+      ['Mr. Anil Kumar B, M.Com.', 'HOD'],
+      ['Mrs. Mamatha, M.Com.', 'Lecturer'],
+      ['Dr. Mallika A Shetty, M.Com., MBA, Ph.D.', 'Lecturer'],
+      ['Dr. Raksha Shenoy, M.Com, Ph.D.', 'Lecturer'],
+      ['Ms. Kavya K B, M.Com', 'Lecturer'],
+      ['C.A. Adarsh shenoy'],
+      ['C.A. Suresh Prabhu'],
+      ['Mr. Vikas Shetty, M.Com', 'Lecturer'],
+      ['Mr. Girish Rao S, M.Com', 'Lecturer'],
+      ['Ms. Mamatha Poojarthy, M.Com', 'Lecturer'],
+      ['C.A. Vignesh Bhat'],
+      ['C.A. Sowmya'],
+      ['C.A. Rashmi'],
+      ['Mr. Sandeep Kumar Shetty, M.Com', 'Lecturer'],
+      ['Mr. Manoj S, M.Com', 'Lecturer'],
+      ['Ms. Apoorva, M.Com', 'Lecturer'],
+      ['Ms. Krupa Ballal, M.Com', 'Lecturer'],
+    ],
+  },
+  {
+    name: 'Department of Computer Science',
+    staff: [
+      ['Dr. M. Vishwanatha Pai, B.E, CNE, M.Sc.(IT), M.Phil., Ph.D.', 'Vice Principal'],
+      ['Dr. Rekha N Chandra, M.Sc.(IT), M.Phil, Ph.D.', 'HOD'],
+      ['Mrs. Anupama Ajith, MCA', 'Lecturer'],
+      ['Mr. Rajamoorthi Rao, B.E', 'Lecturer'],
+      ['Mrs. Deepali Kamath, MCA', 'Lecturer'],
+      ['Mrs. Jayanthi R Prabhu B.E., MCA', 'Lecturer'],
+      ['Mrs. Pavithra K, M.Sc', 'Lecturer'],
+      ['Mrs. Shilpa Shanubhog, M.Sc(IT)', 'Lecturer'],
+      ['Ms. Ramya Kotian, M.Sc', 'Lecturer'],
+      ['Mrs. Rashmi, MCA', 'Lecturer'],
+      ['Mrs. Akshatha Shettigar, M.Sc', 'Lecturer'],
+      ['Mr. Sanath Shet, M.Sc.', 'Lecturer'],
+      ['Mrs. Sushma Bangera, M.Sc.', 'Lecturer'],
+      ['Mr. Mithun S, MCA.', 'Lecturer'],
+      ['Ms. Pallavi, M.Sc.', 'Lecturer'],
+      ['Ms. Pranjnashree, M.Sc.', 'Lecturer'],
+      ['Mr. Damodar Pai BP, MCA', 'Lecturer'],
+      ['Mr. Prakash, M.Sc.', 'Lecturer'],
+      ['Ms. Rakshitha, M.Sc.', 'Lecturer'],
+      ['Ms. Abhijna S S, M.Sc.', 'Lecturer'],
+      ['Mr Gowtham, MCA', 'Lecturer'],
+      ['Mrs. Chitra Bhat, B.Sc., PGDCA, MSc(IT)', 'Computer Programmer'],
+      ['Mrs. Shaila M, MCA', 'Computer Programmer'],
+      ['Mrs. Akshatha Kamath, BCA.', 'Computer Programmer'],
+      ['Mrs. Sheethal Salian, M.Sc.', 'Computer Programmer'],
+      ['Ms. Surabhi Naik, BCA', 'Computer Programmer'],
+      ['Mrs. Sumalatha, BCA', 'Computer Programmer'],
+      ['Ms. Likhitha, BCA', 'Computer Programmer'],
+      ['Mr. Niranjan, BCA', 'Computer Programmer'],
+      ['Ms. Prathiksha, BCA', 'Computer Programmer'],
+      ['Mr. Sumanth B, BCA', 'Computer Programmer'],
+    ],
+  },
+  {
+    name: 'Department of Economics',
+    staff: [
+      ['Mr. M Channa Poojary, M.A.', 'HOD'],
+      ['Mrs. Jyothsna, M.A., B.Ed.', 'Lecturer'],
+      ['Mrs. Priyashree K T, M.A.', 'Lecturer'],
+    ],
+  },
+  {
+    name: 'Department of English',
+    staff: [
+      ['Mrs. Ashwini C Acharya, M.A.', 'HOD'],
+      ['Mrs. Spoorthy S Fernandes, M.A., B.Ed.', 'Lecturer'],
+      ['Mrs. Manasa S, M.A., B.Ed', 'Lecturer'],
+      ['Ms. Coleen Antonitha Lobo, M.A.', 'Lecturer'],
+      ['Ms. Mythreyi, M.A.', 'Lecturer'],
+    ],
+  },
+  {
+    name: 'Department of Hindi',
+    staff: [
+      ['Dr. Santosh C Shetti, M.A., B.Ed., Ph.D.', 'HOD'],
+      ['Mr. Madhanlal Saini, M.A., B.Ed.', 'Lecturer'],
+      ['Ms. Swathi K, M.A., B.Ed.', 'Lecturer'],
+    ],
+  },
+  {
+    name: 'Department of History',
+    staff: [
+      ['Mr. Subodh Pai, M.A.', 'HOD, Lecturer'],
+      ['Mrs. Latha Nayak, M.A., M.Phil.', 'Lecturer'],
+    ],
+  },
+  {
+    name: 'Department of Kannada',
+    staff: [
+      ['Dr. Puthi Vasanth Kumar, M.A., M.Phil., Ph.D.', 'HOD'],
+      ['Dr. Shailaja, M.A., Ph.D.', 'Lecturer'],
+      ['Dr. Kathyayini Kunjibettu, M.A., Ph.D.', 'Lecturer'],
+      ['Mr. Raghavendra Thunga, M.A.', 'Lecturer'],
+      ['Mrs. Ambika, M.A., B.Ed', 'Lecturer'],
+    ],
+  },
+  {
+    name: 'Department of Library',
+    staff: [['Mr. Kishore H V, MLiSc', 'Librarian']],
+  },
+  {
+    name: 'Department of Mathematics',
+    staff: [
+      ['Ms. Navya, M.Sc., B.Ed.', 'HOD'],
+      ['Mrs. Umadevi P, M.Sc., B.Ed.', 'Lecturer'],
+      ['Mrs. Vasavi, M.Sc.', 'Lecturer'],
+      ['Ms. Shreya, M.Sc.', 'Lecturer'],
+    ],
+  },
+  {
+    name: 'Department of Physical Education',
+    staff: [['Mr. Tilak Kini, M.P.Ed']],
+  },
+  {
+    name: 'Department of Physics',
+    staff: [
+      ['Mrs. Shailaja H, M.Sc., M.Phil.', 'HOD'],
+      ['Mrs. Swathi, M.Sc.', 'Lecturer'],
+    ],
+  },
+  {
+    name: 'Department of Political Science',
+    staff: [
+      ['Mr. Vidyanath K, M.A.', 'HOD, Lecturer'],
+      ['Mrs. Adithi Bhat, M.A.', 'Lecturer'],
+      ['Mrs. Padmaja K, M.A.', 'Lecturer'],
+    ],
+  },
+  {
+    name: 'Department of Sanskrit',
+    staff: [
+      ['Dr. Vasumathi Bhat, M.A., Ph.D.', 'HOD'],
+      ['Dr. Vijayalakshmi M., M.A., Ph.D.', 'Lecturer'],
+    ],
+  },
+  {
+    name: 'Department of Statistics',
+    staff: [
+      ['Ms. Sharanya, M.Sc.', 'HOD'],
+      ['Mr. Naveena, M.Sc.', 'Lecturer'],
+    ],
+  },
+  {
+    name: 'Department of Zoology',
+    staff: [
+      ['Dr. Vijay Kumar K M, M.Sc., M.Phil., Ph.D.', 'HOD'],
+      ['Dr. Maneetha T K, M.Sc., B.Ed., Ph.D.', 'Lecturer'],
+      ['Mrs. Yashashwini, M.Sc.', 'Lecturer'],
+    ],
+  },
+  {
+    name: 'Department of Journalism',
+    staff: [
+      ['Mr. Suchith Kotian, M.C.J., M.A., B.Ed.', 'HOD'],
+      ['Mrs. Ashwini Aigal, M.C.J.', 'Lecturer'],
+    ],
+  },
+  {
+    name: 'Department of Gandhian Studies',
+    staff: [['Mr. U. Vinith Rao, M.A.', 'Researcher & Co-ordinator']],
+  },
 ];
 
 const sortedDepartments = [...departments].sort((firstDepartment, secondDepartment) => {
-  if (firstDepartment.type === 'admin') return -1;
-  if (secondDepartment.type === 'admin') return 1;
+  if (firstDepartment.name === 'Department of Botany') return -1;
+  if (secondDepartment.name === 'Department of Botany') return 1;
   return firstDepartment.staff.length - secondDepartment.staff.length;
 });
 
@@ -55,7 +222,7 @@ export default function Department() {
       <main className="department-content">
         <div className="department-intro"><p className="section-kicker">Faculty directory</p><h2>People behind the work</h2><p>Explore the academic departments and institutional teams at Mahatma Gandhi Memorial College, Udupi.</p></div>
         <div className="staff-grid">
-          {sortedDepartments.map((department) => <section className={`staff-dept-card ${department.type === 'admin' ? 'admin-highlight' : ''}`} key={department.name}><h2 className="staff-dept-header">{department.name}</h2><div className="staff-list">{department.staff.map((member) => <StaffMember key={`${department.name}-${member[0]}`} member={member} />)}</div></section>)}
+          {sortedDepartments.map((department) => <section className="staff-dept-card" key={department.name}><h2 className="staff-dept-header">{department.name}</h2><div className="staff-list">{department.staff.map((member) => <StaffMember key={`${department.name}-${member[0]}`} member={member} />)}</div></section>)}
         </div>
       </main>
     </div>

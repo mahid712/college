@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import '../scss/Quicklinks.scss';
 
@@ -64,7 +63,7 @@ const QuickLinks = ({ openModal }) => {
           </div>
 
           <div className="center-btn-container">
-            <a href="#announcements" className="btn-dark-pill">View All Announcements</a>
+            <Link to="/announcements" className="btn-dark-pill">View All Announcements</Link>
           </div>
         </div>
       </section>

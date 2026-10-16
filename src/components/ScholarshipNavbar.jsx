@@ -1,5 +1,5 @@
 // src/components/ScholarshipNavbar.jsx
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import gandhiPdf from '../assets/pdf/mgm-ghandi.pdf';
 import '../scss/Navbar.scss';
@@ -37,7 +37,7 @@ const ScholarshipNavbar = ({ onOpenModal }) => {
           </div>
 
           <Link to="/contact">Contact Us</Link>
-          <a href="#login" className="login-link">Login</a>
+          <a href="https://mgm-mapas.vercel.app/" className="login-link" target="_blank" rel="noopener noreferrer">Login</a>
         </nav>
 
         {/* This triggers the parent function passed via props */}

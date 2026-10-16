@@ -1,5 +1,5 @@
 // src/components/Navbar.jsx
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../scss/Navbar.scss';
 import gandhiPdf from '../assets/pdf/mgm-ghandi.pdf';
@@ -34,6 +34,7 @@ const Navbar = ({ setIsModalOpen }) => {
   <div className="dropdown-content">
     <Link to="/vision">Vision & Mission</Link>
     <Link to="/principal">Principal</Link>
+    <Link to="/vice-principal">Vice Principal</Link>
     <Link to="/management">Management</Link>
     <Link to="/history">History</Link>
     <Link to="/gallery">Image Gallery</Link>
@@ -45,7 +46,7 @@ const Navbar = ({ setIsModalOpen }) => {
   </div>
 </div>
 <Link to="/contact">Contact Us</Link>
-            <a href="#login" className="login-link">Login</a>
+            <a href="https://mgm-mapas.vercel.app/" className="login-link" target="_blank" rel="noopener noreferrer">Login</a>
           </nav>
 
           <button className="btn-apply" onClick={() => setIsModalOpen(true)}>APPLY NOW</button>
