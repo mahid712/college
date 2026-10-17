@@ -3876,13 +3876,24 @@ body,
 }
 
 #root .site-main .faculty-profile-page--vishwanatha .content-area .accordion .acc-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  max-height: none !important;
   border: 0 !important;
   border-radius: 0 !important;
   background: transparent !important;
   box-shadow: none !important;
+  transition: grid-template-rows 450ms ease, opacity 300ms ease;
+}
+
+#root .site-main .faculty-profile-page--vishwanatha .content-area .accordion .acc-item.is-active .acc-panel {
+  grid-template-rows: 1fr;
+  max-height: none !important;
+  opacity: 1;
 }
 
 #root .site-main .faculty-profile-page--vishwanatha .content-area .accordion .acc-content {
+  min-height: 0;
   padding: 0.25rem 1.25rem 1.25rem;
   color: var(--color-muted);
   font-size: 1rem;
@@ -3941,6 +3952,7 @@ body,
 }
 
 :root[data-theme='dark'] #root .site-main .faculty-profile-page--vishwanatha .content-area .accordion .acc-panel {
+  max-height: none !important;
   border: 0 !important;
   border-radius: 0 !important;
   background: transparent !important;
