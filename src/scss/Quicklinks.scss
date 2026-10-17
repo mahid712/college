@@ -1,9 +1,9 @@
 .info-section {
   padding: 5rem 2rem;
-  background-color: #fafbfc;
+  background-color: var(--color-paper);
 
   &.alt-bg {
-    background-color: #f4f5f7;
+    background-color: var(--color-ice);
   }
 
   .container {
@@ -14,13 +14,13 @@
     h2 {
       font-size: 2.5rem;
       font-weight: 800;
-      color: #1a1a1a;
+      color: var(--color-ink);
       margin-bottom: 0.5rem;
     }
 
     .section-subtitle {
       font-size: 1.1rem;
-      color: #555555;
+      color: var(--color-muted);
       font-style: italic;
       margin-bottom: 3rem;
     }
@@ -32,19 +32,18 @@
       text-align: left;
 
       .feature-card {
-        background: #ffffff;
+        background: var(--color-surface-raised);
         color: inherit;
         padding: 2.5rem 2rem;
         border-radius: 12px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-        border-top: none; /* Removed the crimson top bar to match your exact layout */
-        border: 1px solid rgba(0, 0, 0, 0.04);
+        box-shadow: var(--shadow-soft);
+        border: 1px solid var(--color-border);
         text-decoration: none;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
 
         &:hover {
           transform: translateY(-5px);
-          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+          box-shadow: var(--shadow-raised);
         }
 
         .card-icon {
@@ -55,13 +54,13 @@
         h3 {
           font-size: 1.35rem;
           font-weight: 700;
-          color: #1a1a1a;
+          color: var(--color-ink);
           margin-bottom: 0.75rem;
         }
 
         p {
           font-size: 0.95rem;
-          color: #555555;
+          color: var(--color-muted);
           line-height: 1.6;
           margin-bottom: 1.5rem;
         }
@@ -69,7 +68,7 @@
         .card-link {
           font-size: 0.9rem;
           font-weight: 700;
-          color: #8b0000;
+          color: var(--color-accent);
           text-decoration: none;
 
           &:hover {
@@ -84,16 +83,18 @@
 
       .btn-dark-pill {
         display: inline-block;
-        background-color: #333333;
-        color: #ffffff;
+        background-color: var(--color-action);
+        color: var(--color-action-ink);
         padding: 0.75rem 2rem;
         border-radius: 50px;
         font-weight: 600;
         text-decoration: none;
-        transition: background-color 0.2s;
+        transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 
         &:hover {
-          background-color: #1a1a1a;
+          background-color: var(--color-action-hover);
+          transform: translateY(-2px);
+          box-shadow: var(--shadow-soft);
         }
       }
     }

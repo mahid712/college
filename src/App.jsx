@@ -49,6 +49,9 @@ import Announcement from './components/Announcement';
 
 function AppLayout() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(
+    () => window.localStorage.getItem('mgm-theme') === 'dark',
+  );
   const location = useLocation();
   const isScholarshipPage = location.pathname === '/scholarships';
   const isScholarshipPortal = location.pathname === '/scholarship-portal';
@@ -57,14 +60,27 @@ function AppLayout() {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  useEffect(() => {
+    const theme = isDarkMode ? 'dark' : 'light';
+    document.documentElement.dataset.theme = theme;
+    window.localStorage.setItem('mgm-theme', theme);
+  }, [isDarkMode]);
+
+  const toggleTheme = () => setIsDarkMode((currentTheme) => !currentTheme);
+
   return (
-    <div className="app-container" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div className="app-container">
       {/* Render global Navbar ONLY when not on the scholarship page */}
       {!isScholarshipPage && !isScholarshipPortal && (
-        <Navbar isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+        <Navbar
+          isModalOpen={isModalOpen}
+          setIsModalOpen={setIsModalOpen}
+          isDarkMode={isDarkMode}
+          onToggleTheme={toggleTheme}
+        />
       )}
       
-      <main style={{ flex: '1' }}>
+      <main className="site-main">
         <Routes>
           <Route path="/" element={
             <>
@@ -87,8 +103,18 @@ function AppLayout() {
           <Route path="/management" element={<Management />} />
           <Route path="/history" element={<History />} />
           <Route path="/gallery" element={<ImageGallery />} />
-          <Route path="/scholarships" element={<Scholarship />} />
-          <Route path="/scholarship-portal" element={<ScholarshipPortal />} />
+          <Route
+            path="/scholarships"
+            element={
+              <Scholarship isDarkMode={isDarkMode} onToggleTheme={toggleTheme} />
+            }
+          />
+          <Route
+            path="/scholarship-portal"
+            element={
+              <ScholarshipPortal isDarkMode={isDarkMode} onToggleTheme={toggleTheme} />
+            }
+          />
           <Route path="/rules" element={<Rules />} />
           <Route path="/placements" element={<Placement />} />
           <Route path="/syllabus" element={<Syllabus />} />

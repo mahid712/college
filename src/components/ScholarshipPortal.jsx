@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import ThemeToggle from './ThemeToggle';
 import '../scss/ScholarshipPortal.scss';
 
 const databaseUrl = 'https://mgm-scholarship-default-rtdb.asia-southeast1.firebasedatabase.app';
@@ -78,7 +79,7 @@ function readFileAsDataUrl(file) {
   });
 }
 
-function ScholarshipPortal() {
+function ScholarshipPortal({ isDarkMode, onToggleTheme }) {
   const [step, setStep] = useState(1);
   const [formValues, setFormValues] = useState({ name: '', community: '', scholarship: '' });
   const [selectedFiles, setSelectedFiles] = useState({});
@@ -242,7 +243,10 @@ function ScholarshipPortal() {
             <h1>MGM SCHOLARSHIP PORTAL</h1>
             <small>Student Financial Aid &amp; Endowment Management</small>
           </div>
-          <Link to="/scholarships">Exit Portal</Link>
+          <div className="portal-header-actions">
+            <ThemeToggle isDarkMode={isDarkMode} onToggle={onToggleTheme} />
+            <Link to="/scholarships">Exit Portal</Link>
+          </div>
         </header>
         <main className="portal-closed">
           <div className="portal-closed-card">
@@ -263,7 +267,10 @@ function ScholarshipPortal() {
           <h1>MGM SCHOLARSHIP PORTAL</h1>
           <small>Student Financial Aid &amp; Endowment Management</small>
         </div>
-        <Link to="/scholarships">Exit Portal</Link>
+        <div className="portal-header-actions">
+          <ThemeToggle isDarkMode={isDarkMode} onToggle={onToggleTheme} />
+          <Link to="/scholarships">Exit Portal</Link>
+        </div>
       </header>
 
       <div className="dashboard-container">

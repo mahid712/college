@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 // Scss/CampusCells.scss
 
 // Color Variables
@@ -146,7 +148,7 @@ $kicker-red: #b64e4e;
             transform: translateY(-2px);
             
             td {
-              background-color: lighten($paper, 1.5%);
+              background-color: color.adjust($paper, $lightness: 1.5%);
             }
           }
         }

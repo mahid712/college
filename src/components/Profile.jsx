@@ -98,7 +98,7 @@ export default function Profile() {
   }, [innerMarkup, profile.isNative]);
 
   return (
-    <div className="faculty-profile-page">
+    <div className={`faculty-profile-page${profileSlug === 'vishwanatha-pai' ? ' faculty-profile-page--vishwanatha' : ''}`}>
       <section className="faculty-profile-hero">
         <div>
           <p className="eyebrow">Faculty portfolio</p>

@@ -3,8 +3,9 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../scss/Navbar.scss';
 import gandhiPdf from '../assets/pdf/mgm-ghandi.pdf';
+import ThemeToggle from './ThemeToggle';
 
-const Navbar = ({ setIsModalOpen }) => {
+const Navbar = ({ setIsModalOpen, isDarkMode, onToggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -20,7 +21,7 @@ const Navbar = ({ setIsModalOpen }) => {
       <header className="site-header">
         <div className="nav-container">
           <div className="nav-brand">
-            <span className="brand-title">MGM Udupi</span>
+            <Link to="/" className="brand-title">MGM Udupi</Link>
           </div>
         
           <nav className={`nav-links ${isOpen ? 'active' : ''}`}>
@@ -49,13 +50,21 @@ const Navbar = ({ setIsModalOpen }) => {
             <a href="https://mgm-mapas.vercel.app/" className="login-link" target="_blank" rel="noopener noreferrer">Login</a>
           </nav>
 
+          <ThemeToggle isDarkMode={isDarkMode} onToggle={onToggleTheme} />
+
           <button className="btn-apply" onClick={() => setIsModalOpen(true)}>APPLY NOW</button>
 
-          <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+          <button
+            type="button"
+            className="hamburger"
+            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isOpen}
+            onClick={() => setIsOpen(!isOpen)}
+          >
             <span></span>
             <span></span>
             <span></span>
-          </div>
+          </button>
         </div>
       </header>
 

@@ -244,13 +244,17 @@ const scholarshipsAndPrizesData = {
   note: "Note: These scholarships shall be extended to the subsequent years only if the student passes the Semester examination in one attempt."
 };
 
-const Scholarship = () => {
+const Scholarship = ({ isDarkMode, onToggleTheme }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
 
   return (
     <div className="scholarships-page-wrapper">
-      <ScholarshipNavbar onOpenModal={() => setIsModalOpen(true)} />
+      <ScholarshipNavbar
+        onOpenModal={() => setIsModalOpen(true)}
+        isDarkMode={isDarkMode}
+        onToggleTheme={onToggleTheme}
+      />
 
       <div className="scholarships-container">
         {/* Header Section */}

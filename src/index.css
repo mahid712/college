@@ -1,8 +1,8 @@
 :root {
   font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
-  color-scheme: light dark;
-  color: #333333;
-  background-color: #ffffff;
+  color-scheme: light;
+  color: var(--color-ink, #303a34);
+  background-color: var(--color-paper, #e7e9e5);
   box-sizing: border-box;
 }
 
