@@ -47,7 +47,7 @@ const Navbar = ({ setIsModalOpen, isDarkMode, onToggleTheme }) => {
   </div>
 </div>
 <Link to="/contact">Contact Us</Link>
-            <a href="https://mgm-mapas.vercel.app/" className="login-link" target="_blank" rel="noopener noreferrer">Login</a>
+           <a href="https://mgm-mapas.vercel.app/" className="login-link" target="_blank" rel="noopener noreferrer">Login</a>
           </nav>
 
           <ThemeToggle isDarkMode={isDarkMode} onToggle={onToggleTheme} />
