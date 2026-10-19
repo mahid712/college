@@ -59,13 +59,13 @@ function EResources() {
               <div className="resource-links">
                 {resource.title === 'Open Access Repositories' ? (
                   <>
-                    <a href="https://shodhganga.inflibnet.ac.in/" target="_blank" rel="noreferrer">Visit Shodhganga</a>
-                    <a href="https://ndl.iitkgp.ac.in/" target="_blank" rel="noreferrer">Visit NDLI</a>
+                    <a className="resource-action" href="https://shodhganga.inflibnet.ac.in/" target="_blank" rel="noreferrer">Visit Shodhganga</a>
+                    <a className="resource-action" href="https://ndl.iitkgp.ac.in/" target="_blank" rel="noreferrer">Visit NDLI</a>
                   </>
                 ) : (
                   <>
-                    <a href="https://nlist.inflibnet.ac.in/" target="_blank" rel="noreferrer">Visit N-LIST</a>
-                    <a href="https://delnet.in/" target="_blank" rel="noreferrer">Visit DELNET</a>
+                    <a className="resource-action" href="https://nlist.inflibnet.ac.in/" target="_blank" rel="noreferrer">Visit N-LIST</a>
+                    <a className="resource-action" href="https://delnet.in/" target="_blank" rel="noreferrer">Visit DELNET</a>
                   </>
                 )}
               </div>

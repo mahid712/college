@@ -2348,7 +2348,8 @@ body {
   .btn-dark-pill,
   .btn-next,
   .btn-submit,
-  .theme-toggle
+  .theme-toggle,
+  .resource-action
 ) {
   color: var(--color-accent) !important;
 }
@@ -2998,7 +2999,8 @@ body,
   .apply-scholarship-btn,
   .btn-dark-pill,
   .btn-next,
-  .btn-submit
+  .btn-submit,
+  .resource-action
 ) {
   color: var(--color-accent) !important;
 }
@@ -3231,7 +3233,7 @@ body,
 }
 
 :root[data-theme='dark'] .site-main [class$="-card"]:not(.vision-intro-card):not(.vision-page-main .content-card),
-:root[data-theme='dark'] .site-main [class*="panel"] {
+:root[data-theme='dark'] .site-main [class*="panel"]:not(.panel-label):not(.panel-description) {
   border-color: var(--color-border) !important;
   background-color: var(--color-surface) !important;
   color: var(--color-ink) !important;
@@ -3550,7 +3552,7 @@ body,
 
 :root[data-theme='dark'] #root .site-main :is(
   [class$="-card"]:not(.vision-intro-card):not(.vision-page-main .content-card),
-  [class*="panel"],
+  [class*="panel"]:not(.panel-number):not(.panel-label):not(.panel-description),
   .quality-block,
   .history-block,
   .detail-block,
@@ -3597,7 +3599,7 @@ body,
 
 :root[data-theme='dark'] #root .site-main :is(
   [class$="-card"],
-  [class*="panel"],
+  [class*="panel"]:not(.panel-number):not(.panel-label):not(.panel-description),
   .quality-block,
   .history-block,
   .detail-block,
